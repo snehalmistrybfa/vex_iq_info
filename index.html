@@ -3,1370 +3,436 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A complete, free guide for 5th graders and families to build their first VEX IQ robot. Consolidates official VEX Robotics tutorials, Placer Robotics Academy resources, and the best community videos into one step-by-step path.">
+  <meta name="description" content="Organized VEX IQ robotics resources for Team 295U: kit, parts, robot builds, game strategy, programming, Placer Academy, and video creators.">
   <meta name="author" content="Arian Mistry, Team 295U">
-  <title>VEX IQ First Robot Guide | Build, Code & Compete</title>
+  <title>VEX IQ Resource Hub | Team 295U</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+    body { min-width: 320px; }
+    section { scroll-margin-top: 82px; }
+    .navbar-inner { gap: 16px; }
+    .navbar-links { overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+    .navbar-links a, .tab, .btn, .card-link, .parts-search, .back-to-top { min-height: 44px; }
+    .navbar-links a, .tab { display: inline-flex; align-items: center; }
+    .tabs { -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: 2px; }
+    .hero { background: linear-gradient(135deg, #1a2430 0%, #213847 52%, #1f5f73 100%); }
+    .quick-links, .resource-list, .build-links, .topic-index, .creator-group-list { display: grid; gap: 12px; }
+    .quick-links { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-top: 20px; }
+    .resource-list, .build-links { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 18px 0 24px; }
+    .resource-pill, .build-link, .topic-pill { background: var(--white); border: 1px solid rgba(0,0,0,0.08); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); color: var(--secondary); display: flex; flex-direction: column; gap: 4px; justify-content: center; min-height: 72px; padding: 14px 16px; text-decoration: none; }
+    .resource-pill:hover, .build-link:hover, .topic-pill:hover { box-shadow: var(--shadow-md); color: var(--secondary); text-decoration: none; transform: translateY(-1px); }
+    .resource-pill strong, .build-link strong, .topic-pill strong { font-family: var(--font-heading); font-size: 0.94rem; line-height: 1.25; }
+    .resource-pill span, .build-link span, .topic-pill span { color: var(--medium-gray); font-size: 0.82rem; }
+    .section-subhead { margin: 32px 0 14px; }
+    .section-subhead h3 { font-size: 1.25rem; margin-bottom: 4px; }
+    .section-subhead p { color: var(--medium-gray); font-size: 0.94rem; }
+    .parts-search { background: var(--white); border: 2px solid var(--light-gray); border-radius: var(--radius-sm); color: var(--secondary); display: block; font: inherit; margin: 0 0 18px; padding: 12px 14px; width: 100%; }
+    .parts-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .video-card { cursor: pointer; }
+    .video-meta { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 8px; }
+    .video-info .video-meta { color: var(--medium-gray); font-size: 0.82rem; }
+    .creator-group-list { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 26px; }
+    .creator-card { background: var(--white); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 18px; }
+    .creator-card h4 { font-size: 1rem; margin-bottom: 8px; }
+    .creator-card p { color: var(--medium-gray); font-size: 0.9rem; margin: 10px 0 0; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .topic-index { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+    .back-to-top { align-items: center; background: var(--primary); border-radius: 50%; bottom: 18px; box-shadow: var(--shadow-lg); color: var(--white); display: flex; font-family: var(--font-heading); font-size: 1.2rem; height: 48px; justify-content: center; opacity: 0; pointer-events: none; position: fixed; right: 18px; text-decoration: none; transform: translateY(10px); transition: opacity 0.2s, transform 0.2s; width: 48px; z-index: 1001; }
+    .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .back-to-top:hover { background: var(--primary-dark); color: var(--white); text-decoration: none; }
+    @media (max-width: 900px) {
+      .navbar { padding: 0 12px; }
+      .navbar-inner { max-width: none; }
+      .navbar-brand { flex: 0 0 auto; font-size: 0.95rem; }
+      .navbar-toggle { display: none !important; }
+      .navbar-links { display: flex !important; flex: 1 1 auto; gap: 2px; }
+      .navbar-links.open { position: static; flex-direction: row; padding: 0; }
+      .navbar-links a { padding: 10px 12px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .parts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .video-card { display: grid; grid-template-columns: 168px 1fr; min-height: 118px; }
+      .video-thumb { min-height: 118px; padding-top: 0; }
+      .video-info { padding: 14px; }
+    }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .hero { padding: 38px 16px 34px; }
+      .hero h1 { font-size: 1.7rem; }
+      .hero .subtitle, .section-header p, .info-box p, .info-box li, .card p, .video-info p, .topic-table td { font-size: 0.95rem; }
+      .timeline::before { left: 18px; }
+      .timeline-item { padding-left: 46px; }
+      .timeline-dot { left: 8px; }
+      .timeline-content { padding: 18px; }
+      .timeline-content .timeline-links a { align-items: flex-start; min-height: 44px; padding: 5px 0; }
+      .parts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .part-card { min-height: 132px; padding: 14px 10px; }
+      .video-card { grid-template-columns: 132px 1fr; }
+      .video-thumb { min-height: 112px; }
+      .video-play { height: 46px; width: 46px; }
+      .video-card:hover .video-play { height: 50px; width: 50px; }
+      .video-info h4 { font-size: 0.95rem; }
+      .topic-table { min-width: 720px; }
+    }
+    @media (min-width: 1100px) { .parts-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+  </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
-<body>
-
-  <!-- ============ NAVBAR ============ -->
+<body id="top">
   <nav class="navbar">
     <div class="navbar-inner">
-      <a href="index.html" class="navbar-brand">
-        <span class="logo-icon">🤖</span>
-        VEX IQ First Robot
-      </a>
+      <a href="#top" class="navbar-brand"><span class="logo-icon">IQ</span>VEX IQ Hub</a>
       <button class="navbar-toggle" aria-label="Toggle menu">☰</button>
       <ul class="navbar-links">
-        <li><a href="#path" class="active">The Path</a></li>
-        <li><a href="#kits">Meet the Kit</a></li>
-        <li><a href="#build">Build a Robot</a></li>
-        <li><a href="#game">Level Up Game</a></li>
+        <li><a href="#path" class="active">Start Here</a></li>
+        <li><a href="#kit">Kit &amp; Parts</a></li>
+        <li><a href="#builds">Robot Builds</a></li>
+        <li><a href="#game">Game &amp; Strategy</a></li>
         <li><a href="#code">Programming</a></li>
-        <li><a href="#driving">Driving</a></li>
-        <li><a href="#placer">Placer Academy</a></li>
-        <li><a href="#videos">All Videos</a></li>
-        <li><a href="#creators">Creators</a></li>
-        <li><a href="#parts">Parts Guide</a></li>
+        <li><a href="#academy">Academy</a></li>
+        <li><a href="#videos">Videos &amp; Creators</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ============ HERO ============ -->
   <header class="hero">
     <div class="hero-content">
-      <span class="hero-badge">⭐ For 5th Graders & Families — Free & Public</span>
-      <h1>Build Your First VEX IQ Robot</h1>
-      <p class="subtitle">One place for everything: official VEX tutorials, Placer Robotics Academy guides, and the best YouTube videos — organized into a clear path from unboxing to competing.</p>
+      <span class="hero-badge">For Arian Mistry, Team 295U</span>
+      <h1>VEX IQ Robotics Resource Hub</h1>
+      <p class="subtitle">A cleaner path for learning the kit, building robots, understanding the game, writing code, and finding the right video at the right time.</p>
       <div class="hero-cta">
-        <a href="#path" class="btn btn-primary">Start the Journey →</a>
-        <a href="#build" class="btn btn-outline">Jump to Build Instructions</a>
+        <a href="#path" class="btn btn-primary">Start Here</a>
+        <a href="#builds" class="btn btn-outline">Find Build Instructions</a>
       </div>
     </div>
   </header>
 
-  <!-- ============ MAIN ============ -->
   <main>
-
-    <!-- ===== INFO BOX ===== -->
-    <div class="info-box">
-      <h4>📌 How this site works</h4>
-      <p>This guide consolidates resources from <strong>three trusted sources</strong> into one path:</p>
-      <ul>
-        <li><strong>Placer Robotics Academy</strong> — the gated curriculum from hub.placerrobotics.org, organized into 9 sequential topics with Placer-written guides and links to official VEX sources. <em>(Team 295U members get full Academy access — ask your coach for a code+PIN.)</em></li>
-        <li><strong>VEX Robotics Official</strong> — free public knowledge base articles, STEM Labs, interactive 3D build instructions, and VEXcode tutorials from VEX Robotics.</li>
-        <li><strong>Community Videos</strong> — carefully selected YouTube tutorials and official VEX game/herobot reveal videos.</li>
-      </ul>
-      <p style="margin-top:10px;">Follow the <a href="#path">6-step path</a> below in order — it takes a complete beginner from unboxing the kit to driving a competition robot.</p>
-    </div>
-
-    <!-- ===== THE PATH ===== -->
     <section id="path">
-      <div class="section-header">
-        <div class="section-number">🚀</div>
-        <h2>The 6-Step Path: From Box to Competition</h2>
-        <p>Follow these steps in order — each one builds on the last.</p>
-      </div>
-
+      <div class="section-header"><div class="section-number">1</div><h2>Start Here</h2><p>Use this six-step path to move from the box to a working competition robot.</p></div>
       <div class="timeline">
-        <!-- Step 1 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="step-num">STEP 1 — WEEK 1</span>
-            <h3>Unbox &amp; Meet the Kit</h3>
-            <p>Open the VEX IQ (2nd gen) kit, identify every part, charge the battery and controller, and pair the Brain to the Controller. Learn the names of beams, pins, gears, sensors, and motors so you can follow build instructions.</p>
-            <div class="timeline-links">
-              <a href="#kits">📦 Jump to Kit Guide &amp; Videos ↓</a>
-              <a href="https://kb.vex.com/hc/en-us/articles/4410278576020-VEX-IQ-2nd-gen-Interactive-Parts-Poster" target="_blank" rel="noopener">🖼️ Interactive Parts Poster (official VEX) ↗</a>
-              <a href="https://link.vex.com/docs/pdf/iq-gen-2-education-poster" target="_blank" rel="noopener">📋 Parts Poster PDF (downloadable) ↗</a>
-              <a href="https://kb.vex.com/hc/en-us/articles/4406898936724-Charging-the-VEX-IQ-2nd-gen-Battery" target="_blank" rel="noopener">🔋 How to Charge the Battery ↗</a>
-              <a href="https://kb.vex.com/hc/en-us/articles/4406902962708-Charging-the-Controller-IQ-2nd-gen" target="_blank" rel="noopener">🎮 How to Charge the Controller ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="step-num">STEP 2 — WEEK 1-2</span>
-            <h3>Build the BaseBot (Your First Robot)</h3>
-            <p>Build the official BaseBot — a simple drivetrain robot that teaches chassis assembly, motor mounting, Brain installation, and wheel attachment. This is the foundation robot every VEX IQ student builds first. Use the 3D interactive instructions in your browser and follow along with the build video.</p>
-            <div class="timeline-links">
-              <a href="https://link.vex.com/iq/builds/basebot/iq-2nd-gen-basebot" target="_blank" rel="noopener">🔧 BaseBot 3D Build Instructions (interactive) ↗</a>
-              <a href="https://content.vexrobotics.com/stem-labs/iq/builds/basebot/iq-2nd-gen-basebot-rev12.pdf" target="_blank" rel="noopener">📄 BaseBot PDF Instructions (download) ↗</a>
-              <a href="https://kb.vex.com/hc/en-us/articles/4463836707476-Building-Your-First-Robot-with-VEX-IQ-2nd-gen" target="_blank" rel="noopener">📖 Building Your First Robot — VEX Library Guide ↗</a>
-              <a href="#videos">🎥 Watch BaseBot Build Videos ↓</a>
-              <a href="https://www.youtube.com/watch?v=FjkT8jdOeyA" target="_blank" rel="noopener">▶️ BaseBot Assembly Tutorial (VEX IQ Guide) ↗</a>
-              <a href="https://www.youtube.com/watch?v=ahhcMxlHwbI" target="_blank" rel="noopener">▶️ Gen2 BaseBot Build Walkthrough ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="step-num">STEP 3 — WEEK 2-3</span>
-            <h3>Drive It! Test the Built-in Drive Program</h3>
-            <p>Before coding anything, use the Brain's built-in Driver Control program to drive your BaseBot with the Controller. This teaches you how the robot feels, turns, and moves. Practice driving straight, turning, and stopping — these are the skills you'll need for competition.</p>
-            <div class="timeline-links">
-              <a href="https://kb.vex.com/hc/en-us/articles/4407010512276-Running-the-Driver-Control-Program-IQ-Brain-2nd-gen" target="_blank" rel="noopener">🎮 Run the Driver Control Program ↗</a>
-              <a href="https://placerrobotics.org/programs/vex-iq" target="_blank" rel="noopener">🏆 Learn How a VEX IQ Competition Works ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="step-num">STEP 4 — WEEK 3-5</span>
-            <h3>Build "Flop" — the Level Up Hero Bot</h3>
-            <p>The Hero Bot is the official starter competition robot for the 2026-27 season game "Level Up." Flop is designed to play the game and is competition-legal. Build it, drive it, and then modify it — that's what real teams do. The Hero Bot is a starting point, not the final robot.</p>
-            <div class="timeline-links">
-              <a href="https://instructions.online/?id=4063-2026-2027_viqrc_herobot_flop" target="_blank" rel="noopener">🔧 Flop 3D Build Instructions (interactive) ↗</a>
-              <a href="https://kb.vex.com/hc/en-us/articles/40169141573140-An-Introduction-to-Huey-the-VIQRC-Mix-Match-Hero-Bot" target="_blank" rel="noopener">📖 How Hero Bots Work (VEX Library) ↗</a>
-              <a href="#game">🎮 Learn the Level Up Game &amp; Flop ↓</a>
-              <a href="https://www.youtube.com/watch?v=jPaarRbLjaE" target="_blank" rel="noopener">▶️ Flop Hero Bot Part 1 (official VEX video) ↗</a>
-              <a href="https://www.youtube.com/watch?v=n_fWxHqSMPs" target="_blank" rel="noopener">▶️ Flop Hero Bot Part 2 (official VEX video) ↗</a>
-              <a href="https://www.youtube.com/watch?v=KP0FYPW604E" target="_blank" rel="noopener">▶️ Level Up Game Reveal Video ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="step-num">STEP 5 — WEEK 4-6</span>
-            <h3>Learn to Code with VEXcode IQ Blocks</h3>
-            <p>Programming in VEX IQ uses drag-and-drop blocks (like Scratch). Start with the basics: configure your robot, make motors move, map controller joysticks, then add loops, conditions, and sensor reading. The goal is a robot that can do autonomous tasks (no driver) and respond to sensor input.</p>
-            <div class="timeline-links">
-              <a href="#code">💻 Jump to Programming Guide ↓</a>
-              <a href="https://kb.vex.com/hc/en-us/sections/360007204852-Blocks-Tutorials" target="_blank" rel="noopener">📚 VEXcode IQ Blocks Tutorials ↗</a>
-              <a href="https://www.youtube.com/watch?v=nzM0JE7vFaQ" target="_blank" rel="noopener">▶️ VEXcode IQ Blocks — Getting Started Tutorial ↗</a>
-              <a href="https://www.youtube.com/watch?v=MSX9LLQLvmk" target="_blank" rel="noopener">▶️ VEXcode IQ — Downloading &amp; Running Projects ↗</a>
-              <a href="https://www.youtube.com/watch?v=7Feo7YOs9E8" target="_blank" rel="noopener">▶️ VEXcode IQ — Using Loops Tutorial ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="step-num">STEP 6 — ONGOING</span>
-            <h3>Compete, Iterate &amp; Join the Community</h3>
-            <p>Practice driving, attend league nights, iterate on your robot design, keep an engineering notebook, and have fun. Join a team through Placer Robotics or form your own school/independent team. Email vexiq@placerrobotics.org to get connected.</p>
-            <div class="timeline-links">
-              <a href="https://placerrobotics.org/programs/vex-iq" target="_blank" rel="noopener">🏆 VEX IQ Program at Placer Robotics ↗</a>
-              <a href="https://placerrobotics.org/join" target="_blank" rel="noopener">📝 Join a Team ↗</a>
-              <a href="https://placerrobotics.org/join/faq" target="_blank" rel="noopener">❓ Parent FAQ ↗</a>
-              <a href="https://placerrobotics.org/camps" target="_blank" rel="noopener">🏕️ Summer Camps ↗</a>
-              <a href="#placer">🏛️ Full Placer Academy Guide ↓</a>
-            </div>
-          </div>
-        </div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="step-num">STEP 1</span><h3>Meet the kit</h3><p>Learn the Brain, Controller, battery, motors, sensors, structure pieces, pins, gears, wheels, and pin tool.</p><div class="timeline-links"><a href="#kit">Open Kit &amp; Parts</a><a href="#academy">Academy Topic 1</a></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="step-num">STEP 2</span><h3>Build a starter robot</h3><p>Start with BaseBot or Clawbot so the drivetrain, motors, Brain, and Controller make sense before designing.</p><div class="timeline-links"><a href="#builds">Open Robot Builds</a><a href="#kit">Check parts while building</a></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="step-num">STEP 3</span><h3>Drive and test</h3><p>Use driver control, tune the drivetrain, check battery access, and practice clean turns and lining up.</p><div class="timeline-links"><a href="#game">Driving tips and competition prep</a><a href="#builds">Improve the build</a></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="step-num">STEP 4</span><h3>Learn the game</h3><p>Read the rules, understand scoring, watch the reveal, and decide what jobs the robot must do first.</p><div class="timeline-links"><a href="#game">Open Game &amp; Strategy</a><a href="#academy">Academy Topic 2</a></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="step-num">STEP 5</span><h3>Write useful code</h3><p>Install VEXcode IQ, run first programs, map driver controls, then add mechanisms, autonomous, and sensors.</p><div class="timeline-links"><a href="#code">Open Programming</a><a href="#academy">Academy Topic 5</a></div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="step-num">STEP 6</span><h3>Compete and iterate</h3><p>Practice, inspect, keep an engineering notebook, compare designs, and improve one mechanism at a time.</p><div class="timeline-links"><a href="#game">Competition prep</a><a href="#academy">Placer Robotics Academy</a></div></div></div>
       </div>
     </section>
 
-    <!-- ===== KIT GUIDE ===== -->
-    <section id="kits">
-      <div class="section-header">
-        <div class="section-number">📦</div>
-        <h2>Meet the VEX IQ Kit</h2>
-        <p>Two boxes make up one kit. Here's what's inside and how to get started.</p>
-      </div>
-
+    <section id="kit">
+      <div class="section-header"><div class="section-number">2</div><h2>Kit &amp; Parts</h2><p>One place for the kit overview, both boxes, searchable parts, and kit videos.</p></div>
       <div class="tabs-container">
         <div class="tabs">
           <button class="tab active" data-tab="kit-overview">Overview</button>
-          <button class="tab" data-tab="kit-box1">Box 1: Structure</button>
-          <button class="tab" data-tab="kit-box2">Box 2: Electronics &amp; Motion</button>
+          <button class="tab" data-tab="kit-box1">Box 1</button>
+          <button class="tab" data-tab="kit-box2">Box 2</button>
+          <button class="tab" data-tab="kit-parts">Parts Guide</button>
           <button class="tab" data-tab="kit-videos">Kit Videos</button>
         </div>
-
-        <!-- Overview tab -->
         <div class="tab-content active" id="kit-overview">
-          <div class="info-box">
-            <h4>📦 The kit comes in two snap-latch cases</h4>
-            <p><strong>Box 1</strong> contains structural pieces: beams, plates, pins, connectors, angle pieces, standoff connectors, and the pin removal tool.</p>
-            <p><strong>Box 2</strong> contains electronics (Brain, Controller, battery, motors, sensors), motion parts (gears, sprockets, chain, shafts, wheels), and small hardware (jewel cases with specialty pins, cable retainers, string/spool kit).</p>
-            <p style="margin-top:10px;">There are <strong>no paper instructions in the kit</strong> — all build instructions are online and interactive (3D step-by-step). This is intentional: VEX updates instructions regularly and wants students to explore, not just follow one fixed build.</p>
-          </div>
-
-          <div class="card-grid mt-20">
-            <div class="card">
-              <div class="card-body">
-                <span class="card-tag tag-official">Official VEX</span>
-                <h3>IQ (2nd gen) Interactive Parts Poster</h3>
-                <p>Identify every part in the kit with this interactive poster — click any part to learn its name and see it in context.</p>
-                <a href="https://kb.vex.com/hc/en-us/articles/4410278576020-VEX-IQ-2nd-gen-Interactive-Parts-Poster" target="_blank" rel="noopener" class="card-link">Open Poster <span class="arrow">→</span></a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <span class="card-tag tag-official">Official VEX</span>
-                <h3>Get Started with VEX IQ (2nd gen)</h3>
-                <p>The official getting-started hub — charge battery &amp; controller, pair the Brain, update firmware, download VEXcode, build your first robot, drive with built-in programs, and start coding. Links to every individual setup article.</p>
-                <a href="https://kb.vex.com/hc/en-us/articles/5854801817620-Get-Started-with-VEX-IQ-2nd-generation" target="_blank" rel="noopener" class="card-link">Open Guide <span class="arrow">→</span></a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <span class="card-tag tag-official">Official VEX</span>
-                <h3>All VEX IQ Build Instructions</h3>
-                <p>Official download page for every VEX IQ build instruction — BaseBot, Clawbot, Hero Bots, and more. Filter by kit and download PDFs or use interactive 3D instructions.</p>
-                <a href="https://www.vexrobotics.com/iq/downloads/build-instructions" target="_blank" rel="noopener" class="card-link">Browse All Builds <span class="arrow">→</span></a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <span class="card-tag tag-official">Official VEX</span>
-                <h3>Parts Poster PDF (downloadable)</h3>
-                <p>Print this out and keep it next to your kit — a quick visual reference for identifying every piece.</p>
-                <a href="https://link.vex.com/docs/pdf/iq-gen-2-education-poster" target="_blank" rel="noopener" class="card-link">Download PDF <span class="arrow">→</span></a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <span class="card-tag tag-placer">Placer Academy</span>
-                <h3>Topic 1: Start Here and Meet the Kit</h3>
-                <p>Placer's own guide to the kit — meet the Brain, Controller, battery, motors, sensors, and cables. Then charge, inspect, pair, connect, and update firmware.</p>
-                <a href="https://hub.placerrobotics.org/academy/iq/learn/start-here-and-meet-the-kit" target="_blank" rel="noopener" class="card-link">Academy Login Required <span class="arrow">→</span></a>
-              </div>
-            </div>
+          <div class="info-box"><h4>The VEX IQ 2nd generation kit</h4><p>Box 1 holds structure pieces. Box 2 holds electronics, motors, sensors, motion parts, smart cables, shafts, wheels, gears, chain, sprockets, and small hardware.</p></div>
+          <div class="card-grid">
+            <div class="card"><div class="card-body"><span class="card-tag tag-official">Official VEX</span><h3>Get Started with VEX IQ</h3><p>Official setup hub for charging, pairing, firmware, VEXcode, first builds, driving, and coding.</p><a href="https://kb.vex.com/hc/en-us/articles/5854801817620-Get-Started-with-VEX-IQ-2nd-generation" target="_blank" rel="noopener" class="card-link">Open guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-official">Official VEX</span><h3>Interactive Parts Poster</h3><p>Identify each kit part by name, shape, and category.</p><a href="https://kb.vex.com/hc/en-us/articles/4410278576020-VEX-IQ-2nd-gen-Interactive-Parts-Poster" target="_blank" rel="noopener" class="card-link">Open poster <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-official">Official VEX</span><h3>Parts Poster PDF</h3><p>A printable visual reference for the major VEX IQ 2nd generation parts.</p><a href="https://link.vex.com/docs/pdf/iq-gen-2-education-poster" target="_blank" rel="noopener" class="card-link">Download PDF <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-official">Official VEX</span><h3>All Build Instructions</h3><p>Official index for VEX IQ build instructions, including BaseBot, Clawbot, and Hero Bots.</p><a href="https://www.vexrobotics.com/iq/downloads/build-instructions" target="_blank" rel="noopener" class="card-link">Browse builds <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-placer">Placer Academy</span><h3>Topic 1: Start Here and Meet the Kit</h3><p>Placer's kit orientation for parts, electronics, charging, pairing, connecting, and firmware.</p><a href="https://hub.placerrobotics.org/academy/iq/learn/start-here-and-meet-the-kit" target="_blank" rel="noopener" class="card-link">Open Academy topic <span class="arrow">→</span></a></div></div>
           </div>
         </div>
-
-        <!-- Box 1 tab -->
         <div class="tab-content" id="kit-box1">
-          <h3 style="margin-bottom:16px;">Box 1: Structural Pieces</h3>
-          <p style="margin-bottom:20px;color:var(--medium-gray);">The first case holds all the structural parts you'll use to build the robot's frame, chassis, and mechanisms.</p>
-
+          <div class="section-subhead"><h3>Box 1: Structure</h3><p>These pieces form the frame, chassis, bracing, and mechanism supports.</p></div>
           <div class="card-grid">
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Structure</span>
-              <h3>Beams</h3>
-              <p>1x, 2x, 2x4, 2x6, 2x8, 2x12, and 4x4 beams in various lengths. The backbone of every robot structure.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Structure</span>
-              <h3>Plates</h3>
-              <p>Flat plates for reinforcing structures, mounting electronics, and creating platforms.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Connectors</span>
-              <h3>Pins &amp; Capped Pins</h3>
-              <p>The primary connector. Standard pins slide in; capped pins have a "hat" to stop them from going all the way through.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Connectors</span>
-              <h3>Corner Connectors</h3>
-              <p>90, 30, 45, and 60 degree angle connectors — color-coded by angle so you can find the right one fast.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Tools</span>
-              <h3>Pin Removal Tool</h3>
-              <p>New to the 2nd gen kit. Squeeze to grip pins for removal, pry pieces apart, or push pins out from the other side. <strong>Worth its weight in gold.</strong></p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Structure</span>
-              <h3>Standoffs &amp; Connectors</h3>
-              <p>Create space between beams for mechanisms. New 90-degree standoff connectors allow perpendicular connections.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Structure</span>
-              <h3>Low-Profile Lock Beams</h3>
-              <p>Compact beams with a lock hole for shafts — ideal for swing arms and tight spaces. You get 4 of these.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Structure</span>
-              <h3>Angle Pieces &amp; Crank Arms</h3>
-              <p>Pre-made angle brackets and crank arms with integrated gears — perfect for building claws and linkages.</p>
-            </div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Structure</span><h3>Beams</h3><p>1x, 2x, 2x4, 2x6, 2x8, 2x12, and 4x4 beams for robot frames and mechanisms.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Structure</span><h3>Plates</h3><p>Flat pieces for reinforcement, electronics mounting, shields, and platforms.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Connectors</span><h3>Pins &amp; Capped Pins</h3><p>Standard pins connect most parts; capped pins stop at the outer face.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Connectors</span><h3>Corner Connectors</h3><p>Angle connectors make 90, 30, 45, and 60 degree structures easier to build.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Tools</span><h3>Pin Removal Tool</h3><p>Use it to pull pins, pry pieces apart, or push pins out from the opposite side.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Structure</span><h3>Standoffs &amp; Connectors</h3><p>Create space between beams and support perpendicular or layered structures.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Structure</span><h3>Low-Profile Lock Beams</h3><p>Compact lock beams help capture shafts and build swing arms in tight spaces.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Mechanisms</span><h3>Angle Pieces &amp; Crank Arms</h3><p>Pre-shaped pieces for claws, linkages, lifts, and moving arms.</p></div></div>
           </div>
-
-          <div class="info-box mt-20">
-            <h4>💡 Pro tip from the kit video</h4>
-            <p>The angle connectors are <strong>color-coded by degree</strong>: look at the color to quickly find the 30, 45, or 60 degree angle you need. The number of degrees is also molded into the plastic.</p>
-          </div>
+          <div class="info-box"><h4>Box 1 tip</h4><p>Sort angle connectors by color and shape before building. It makes step-by-step instructions much faster to follow.</p></div>
         </div>
-
-        <!-- Box 2 tab -->
         <div class="tab-content" id="kit-box2">
-          <h3 style="margin-bottom:16px;">Box 2: Electronics, Motion &amp; Hardware</h3>
-          <p style="margin-bottom:20px;color:var(--medium-gray);">The second case holds the "brains" and "muscles" of the robot, plus all the motion components.</p>
-
+          <div class="section-subhead"><h3>Box 2: Electronics, Motion &amp; Hardware</h3><p>These parts make the robot move, sense, compute, and connect.</p></div>
           <div class="card-grid">
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Electronics</span>
-              <h3>IQ Brain (2nd gen)</h3>
-              <p>The robot's computer. Color screen, 12 smart ports, built-in radio (no external radio needed), USB-C connection, backward compatible with 1st gen batteries.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/4407024174996-Navigating-Menus-IQ-Brain-2nd-gen" target="_blank" rel="noopener" class="card-link">Brain Menu Guide <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Electronics</span>
-              <h3>IQ Controller (2nd gen)</h3>
-              <p>Designed like an Xbox/PlayStation controller. Built-in rechargeable lithium-ion battery, USB-C charging, pairs wirelessly with the Brain.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/4407237011860-Calibrating-the-Controller-IQ-2nd-gen" target="_blank" rel="noopener" class="card-link">Calibrate Controller <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Electronics</span>
-              <h3>Robot Battery</h3>
-              <p>Lighter than 1st gen. USB-C charging. Battery indicator shows charge level. Don't leave fully charged or fully empty for long storage.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/4406898936724-Charging-the-VEX-IQ-2nd-gen-Battery" target="_blank" rel="noopener" class="card-link">Charging Guide <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Electronics</span>
-              <h3>IQ Smart Motors</h3>
-              <p>Same motors as 1st gen. Smart cables carry both power and data. Used for drivetrain, lifts, claws, and mechanisms.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/18130095316884-Understanding-and-Mounting-the-IQ-Smart-Motor" target="_blank" rel="noopener" class="card-link">Motor Guide <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Sensors</span>
-              <h3>Distance Sensor</h3>
-              <p>Laser-based distance sensor — precise directional measurement. Know exactly how far away objects are.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener" class="card-link">Sensor Overview <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Sensors</span>
-              <h3>Optical Sensor</h3>
-              <p>Detects colors accurately — new to the 2nd gen kit. Use it for sorting objects, following lines, or detecting game pieces.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener" class="card-link">Sensor Overview <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Sensors</span>
-              <h3>Bumper Switch &amp; Touch LED</h3>
-              <p>Bumper switch detects physical contact (hit a wall, grab an object). Touch LED provides visual feedback and touch input.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Motion</span>
-              <h3>Gears (12T, 24T, 36T, 48T)</h3>
-              <p>Blue spur gears, color-coded by size. Tooth count is molded into the gear. All gears mesh together — mix sizes for gear ratios (speed vs. force).</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/360039539291-Using-VEX-IQ-Plastic-Gears-Chain-Sprockets-and-Pulleys" target="_blank" rel="noopener" class="card-link">Gears Guide <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Motion</span>
-              <h3>Chain &amp; Sprockets</h3>
-              <p>New to the 2nd gen kit. Orange sprockets (visually distinct from blue spur gears). Use with chain for long-distance power transfer.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Motion</span>
-              <h3>Shafts (Color-Coded)</h3>
-              <p>Plastic shafts are color-coded by length (orange, blue, green). New metal shafts, cap shafts, and catch shafts for durability. Motor shafts have a green collar.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/360035955151-Selecting-Capturing-and-Supporting-VEX-IQ-Shafts" target="_blank" rel="noopener" class="card-link">Shafts Guide <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Motion</span>
-              <h3>Wheels</h3>
-              <p>Omni-directional wheels (for multi-directional movement) and balloon/traction wheels (for grip). Wheels come pre-assembled.</p>
-              <a href="https://kb.vex.com/hc/en-us/articles/360035955171-Understanding-VEX-IQ-Wheels" target="_blank" rel="noopener" class="card-link">Wheels Guide <span class="arrow">→</span></a>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Motion</span>
-              <h3>Spool &amp; String Kit</h3>
-              <p>New part! Wind string onto the spool to create a winch/lift mechanism. Strong string with pin-attachable ends.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Hardware</span>
-              <h3>Smart Cable Retainers</h3>
-              <p>Clip smart cables to the robot frame to keep them tidy and out of the way of mechanisms. New to 2nd gen.</p>
-            </div></div>
-            <div class="card"><div class="card-body">
-              <span class="card-tag tag-kits">Hardware</span>
-              <h3>USB-C Cable</h3>
-              <p>One cable for everything: charge the Controller, charge the Brain battery, and connect the Brain to a computer for programming.</p>
-            </div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Electronics</span><h3>IQ Brain</h3><p>The robot computer with screen, smart ports, radio, and USB-C connection.</p><a href="https://kb.vex.com/hc/en-us/articles/4407024174996-Navigating-Menus-IQ-Brain-2nd-gen" target="_blank" rel="noopener" class="card-link">Brain menu guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Electronics</span><h3>IQ Controller</h3><p>Wireless driver controller with joysticks, buttons, and USB-C charging.</p><a href="https://kb.vex.com/hc/en-us/articles/4407237011860-Calibrating-the-Controller-IQ-2nd-gen" target="_blank" rel="noopener" class="card-link">Calibrate controller <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Electronics</span><h3>Robot Battery</h3><p>Rechargeable robot power source with charge indicator and USB-C charging.</p><a href="https://kb.vex.com/hc/en-us/articles/4406898936724-Charging-the-VEX-IQ-2nd-gen-Battery" target="_blank" rel="noopener" class="card-link">Charging guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Electronics</span><h3>IQ Smart Motors</h3><p>Motors for drivetrains, lifts, claws, intakes, and other mechanisms.</p><a href="https://kb.vex.com/hc/en-us/articles/18130095316884-Understanding-and-Mounting-the-IQ-Smart-Motor" target="_blank" rel="noopener" class="card-link">Motor guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Sensors</span><h3>Distance Sensor</h3><p>Measures how far the robot is from an object or wall.</p><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener" class="card-link">Sensor overview <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Sensors</span><h3>Optical Sensor</h3><p>Detects colors, light, and nearby objects for smarter programs.</p><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener" class="card-link">Sensor overview <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Sensors</span><h3>Bumper Switch &amp; Touch LED</h3><p>Simple input devices for contact, touch, and visual feedback.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Motion</span><h3>Gears</h3><p>12T, 24T, 36T, and 48T gears change speed and torque.</p><a href="https://kb.vex.com/hc/en-us/articles/360039539291-Using-VEX-IQ-Plastic-Gears-Chain-Sprockets-and-Pulleys" target="_blank" rel="noopener" class="card-link">Gears guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Motion</span><h3>Chain &amp; Sprockets</h3><p>Transfer motion across longer distances than direct gears.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Motion</span><h3>Shafts</h3><p>Square shafts carry rotation from motors to wheels, gears, and arms.</p><a href="https://kb.vex.com/hc/en-us/articles/360035955151-Selecting-Capturing-and-Supporting-VEX-IQ-Shafts" target="_blank" rel="noopener" class="card-link">Shafts guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Motion</span><h3>Wheels</h3><p>Traction and omni wheels affect grip, turning, and sideways sliding.</p><a href="https://kb.vex.com/hc/en-us/articles/360035955171-Understanding-VEX-IQ-Wheels" target="_blank" rel="noopener" class="card-link">Wheels guide <span class="arrow">→</span></a></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Motion</span><h3>Spool &amp; String Kit</h3><p>A winch-style part set for lifts and pulling mechanisms.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Hardware</span><h3>Smart Cable Retainers</h3><p>Clip cables out of the way of gears, wheels, arms, and claws.</p></div></div>
+            <div class="card"><div class="card-body"><span class="card-tag tag-kits">Hardware</span><h3>USB-C Cable</h3><p>Charges devices and connects the Brain to a computer for programming.</p></div></div>
           </div>
-
-          <div class="info-box mt-20">
-            <h4>💡 Pro tip from the kit video</h4>
-            <p>Orange parts = sprockets (use with chain). Blue parts = spur gears (use with gears). This color coding helps students avoid trying to mesh a sprocket with a spur gear, which doesn't work.</p>
+          <div class="info-box"><h4>Box 2 tip</h4><p>Blue gears mesh with gears. Orange sprockets run with chain. Keep those families sorted so mechanisms go together cleanly.</p></div>
+        </div>
+        <div class="tab-content" id="kit-parts">
+          <div class="section-subhead"><h3>Searchable Parts Guide</h3><p>Type a part name to narrow the grid. Links open the official VEX Library reference where available.</p></div>
+          <input id="part-search" class="parts-search" type="search" placeholder="Search parts: Brain, motor, gear, wheel, pin..." aria-label="Search VEX IQ parts">
+          <div class="parts-grid">
+            <div class="part-card" data-category="electronics"><div class="part-icon">🧠</div><h4>Brain</h4><a href="https://kb.vex.com/hc/en-us/articles/4407024174996-Navigating-Menus-IQ-Brain-2nd-gen" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="electronics"><div class="part-icon">🔋</div><h4>Battery</h4><a href="https://kb.vex.com/hc/en-us/articles/4406898936724-Charging-the-VEX-IQ-2nd-gen-Battery" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="electronics"><div class="part-icon">🎮</div><h4>Controller</h4><a href="https://kb.vex.com/hc/en-us/articles/4407237011860-Calibrating-the-Controller-IQ-2nd-gen" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="electronics"><div class="part-icon">⚙️</div><h4>Smart Motor</h4><a href="https://kb.vex.com/hc/en-us/articles/18130095316884-Understanding-and-Mounting-the-IQ-Smart-Motor" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="sensors"><div class="part-icon">📡</div><h4>Distance Sensor</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="sensors"><div class="part-icon">🌈</div><h4>Optical Sensor</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="sensors"><div class="part-icon">🔘</div><h4>Bumper Switch</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="sensors"><div class="part-icon">💡</div><h4>Touch LED</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="structure"><div class="part-icon">📏</div><h4>Beam</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955191-Understanding-VEX-IQ-Beams-and-Plates" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="structure"><div class="part-icon">▦</div><h4>Plate</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955191-Understanding-VEX-IQ-Beams-and-Plates" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="connectors"><div class="part-icon">📌</div><h4>Connector Pin</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="connectors"><div class="part-icon">📍</div><h4>Capped Pin</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="connectors"><div class="part-icon">📐</div><h4>Corner Connector</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="connectors"><div class="part-icon">▥</div><h4>Standoff</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="motion"><div class="part-icon">—</div><h4>Square Shaft</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955151-Selecting-Capturing-and-Supporting-VEX-IQ-Shafts" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="motion"><div class="part-icon">○</div><h4>Shaft Collar</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955151-Selecting-Capturing-and-Supporting-VEX-IQ-Shafts" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="motion"><div class="part-icon">⚙️</div><h4>Gear</h4><a href="https://kb.vex.com/hc/en-us/articles/360039539291-Using-VEX-IQ-Plastic-Gears-Chain-Sprockets-and-Pulleys" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="motion"><div class="part-icon">◉</div><h4>Wheel</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955171-Understanding-VEX-IQ-Wheels" target="_blank" rel="noopener">Learn →</a></div>
+            <div class="part-card" data-category="tools"><div class="part-icon">🔧</div><h4>Pin Tool</h4><a href="https://kb.vex.com/hc/en-us/articles/10716840441364-Using-the-VEX-Pin-Tool-with-VEX-IQ" target="_blank" rel="noopener">Learn →</a></div>
           </div>
         </div>
-
-        <!-- Kit Videos tab -->
         <div class="tab-content" id="kit-videos">
-          <h3 style="margin-bottom:16px;">Kit Unboxing &amp; Walkthrough Videos</h3>
-          <p style="margin-bottom:20px;color:var(--medium-gray);">Watch these before opening your kit — they show every part and explain what each one does.</p>
-
           <div class="card-grid">
-            <div class="video-card" data-video="https://youtu.be/KbBNJlZNqeI">
-              <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/KbBNJlZNqeI/hqdefault.jpg" alt="VEX IQ 2nd Gen Education Kit">
-                <div class="video-play"></div>
-              </div>
-              <div class="video-info">
-                <h4>VEX IQ 2nd Gen Education Kit — Full Walkthrough</h4>
-                <p>Complete tour of both boxes: every structural piece, the pin removal tool, electronics, sensors, new parts (chain, spool, metal shafts), and the Brain's color screen. <strong>Start here.</strong></p>
-              </div>
-            </div>
-
-            <div class="video-card" data-video="https://www.youtube.com/watch?v=w7yXXJmg1Do">
-              <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/w7yXXJmg1Do/hqdefault.jpg" alt="What's in the Box: VEX IQ">
-                <div class="video-play"></div>
-              </div>
-              <div class="video-info">
-                <h4>What's in the Box: VEX IQ Robotics Kit</h4>
-                <p>A kid-friendly walkthrough of the VEX IQ kit — over 750 pieces, the Brain, Controller, and all the construction parts.</p>
-              </div>
-            </div>
-
-            <div class="video-card" data-video="https://www.youtube.com/watch?v=JvohEXX-FiY">
-              <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/JvohEXX-FiY/hqdefault.jpg" alt="Getting Started with VEX IQ Gen 2">
-                <div class="video-play"></div>
-              </div>
-              <div class="video-info">
-                <h4>Getting Started with VEX IQ (Gen 2)</h4>
-                <p>Official VEX Robotics getting-started video — setup, charging, pairing, and first steps.</p>
-              </div>
-            </div>
-
-            <div class="video-card" data-video="https://www.youtube.com/watch?v=G9avDKpz5yY">
-              <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/G9avDKpz5yY/hqdefault.jpg" alt="Mix and Match elements unboxing">
-                <div class="video-play"></div>
-              </div>
-              <div class="video-info">
-                <h4>VEX IQ Competition Game Elements Unboxing</h4>
-                <p>Unboxing the field elements for the competition game — what comes in the game component box.</p>
-              </div>
-            </div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=KbBNJlZNqeI" id="video-KbBNJlZNqeI"><div class="video-thumb"><img src="https://img.youtube.com/vi/KbBNJlZNqeI/hqdefault.jpg" alt="VEX IQ 2nd Gen Kit Walkthrough"><div class="video-play"></div></div><div class="video-info"><h4>VEX IQ 2nd Gen Kit Walkthrough</h4><p class="video-meta"><a href="https://www.youtube.com/@MarkJohnston" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Mark Johnston</a><span class="card-tag tag-kits">Kit</span></p><p>A walkthrough of the VEX IQ 2nd generation kit and its major components.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=w7yXXJmg1Do" id="video-w7yXXJmg1Do"><div class="video-thumb"><img src="https://img.youtube.com/vi/w7yXXJmg1Do/hqdefault.jpg" alt="What's in the Box"><div class="video-play"></div></div><div class="video-info"><h4>What's in the Box</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Unknown Creator</a><span class="card-tag tag-kits">Kit</span></p><p>A quick look at what comes with a VEX IQ robotics kit.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=JvohEXX-FiY" id="video-JvohEXX-FiY"><div class="video-thumb"><img src="https://img.youtube.com/vi/JvohEXX-FiY/hqdefault.jpg" alt="Getting Started with VEX IQ Gen 2"><div class="video-play"></div></div><div class="video-info"><h4>Getting Started with VEX IQ Gen 2</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official setup video for beginning with the VEX IQ 2nd generation system.</p></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== BUILD INSTRUCTIONS ===== -->
-    <section id="build">
-      <div class="section-header">
-        <div class="section-number">🔧</div>
-        <h2>Build Instructions: BaseBot &amp; Hero Bot</h2>
-        <p>Two robots to build: the BaseBot (learn the basics) and Flop (compete in Level Up).</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="card" style="border-left: 4px solid var(--success);">
-          <div class="card-body">
-            <span class="card-tag tag-build">Build First</span>
-            <h3>The BaseBot</h3>
-            <p>The official first robot for VEX IQ (2nd gen). A simple 2-motor drivetrain that teaches chassis assembly, motor mounting, Brain installation, and wheel attachment. No sensors, no claw — just driving basics. <strong>Build this before the Hero Bot.</strong></p>
-            <div class="badge-row">
-              <span class="card-tag tag-official">Official VEX</span>
-              <span class="card-tag tag-build">Beginner</span>
-            </div>
-            <a href="https://link.vex.com/iq/builds/basebot/iq-2nd-gen-basebot" target="_blank" rel="noopener" class="card-link">3D Build Instructions (interactive) <span class="arrow">→</span></a>
-            <a href="https://content.vexrobotics.com/stem-labs/iq/builds/basebot/iq-2nd-gen-basebot-rev12.pdf" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">PDF Build Instructions (download) <span class="arrow">→</span></a>
-            <a href="https://kb.vex.com/hc/en-us/articles/4463836707476-Building-Your-First-Robot-with-VEX-IQ-2nd-gen" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">VEX Library Guide (with video) <span class="arrow">→</span></a>
+    <section id="builds">
+      <div class="section-header"><div class="section-number">3</div><h2>Robot Builds</h2><p>Build instructions and build videos grouped by robot type.</p></div>
+      <div class="info-box"><h4>Build tips from the Placer Robotics Academy</h4><ul><li><strong>Build one short section at a time</strong> and ask a teammate to check it against the picture before moving on.</li><li><strong>Join parts correctly</strong> by choosing the right pin type and checking orientation instead of forcing parts.</li><li><strong>Make it strong and square</strong> with beams, plates, corners, and two-point connections.</li><li><strong>Check motion before powering on</strong> by spinning gears and wheels by hand first.</li><li><strong>Route cables carefully</strong> so wires stay away from gears, wheels, and arms.</li><li><strong>Compare ideas with quick trials</strong> using the same test for each mechanism.</li></ul></div>
+      <div class="tabs-container">
+        <div class="tabs">
+          <button class="tab active" data-tab="build-basebot">BaseBot</button>
+          <button class="tab" data-tab="build-clawbot">Clawbot</button>
+          <button class="tab" data-tab="build-flop">Flop Hero Bot</button>
+          <button class="tab" data-tab="build-starters">Starter Robots</button>
+          <button class="tab" data-tab="build-catapults">Catapults</button>
+          <button class="tab" data-tab="build-past">Past Seasons</button>
+        </div>
+        <div class="tab-content active" id="build-basebot">
+          <div class="build-links"><a class="build-link" href="https://link.vex.com/iq/builds/basebot/iq-2nd-gen-basebot" target="_blank" rel="noopener"><strong>BaseBot 3D Instructions</strong><span>Interactive official build</span></a><a class="build-link" href="https://content.vexrobotics.com/stem-labs/iq/builds/basebot/iq-2nd-gen-basebot-rev12.pdf" target="_blank" rel="noopener"><strong>BaseBot PDF</strong><span>Printable build instructions</span></a><a class="build-link" href="https://kb.vex.com/hc/en-us/articles/4463836707476-Building-Your-First-Robot-with-VEX-IQ-2nd-gen" target="_blank" rel="noopener"><strong>BaseBot VEX Library</strong><span>First robot guide</span></a></div>
+          <div class="card-grid">
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=FjkT8jdOeyA" id="video-FjkT8jdOeyA"><div class="video-thumb"><img src="https://img.youtube.com/vi/FjkT8jdOeyA/hqdefault.jpg" alt="BaseBot Assembly"><div class="video-play"></div></div><div class="video-info"><h4>BaseBot Assembly</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-build">Beginner</span></p><p>Step-by-step assembly guidance for the official VEX IQ BaseBot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=ahhcMxlHwbI" id="video-ahhcMxlHwbI"><div class="video-thumb"><img src="https://img.youtube.com/vi/ahhcMxlHwbI/hqdefault.jpg" alt="Gen2 BaseBot Build"><div class="video-play"></div></div><div class="video-info"><h4>Gen2 BaseBot Build</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Thief River Falls Youth Robotics</a><span class="card-tag tag-build">Beginner</span></p><p>A full build walkthrough for the second-generation BaseBot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=ma4PYfs1DYo" id="video-ma4PYfs1DYo"><div class="video-thumb"><img src="https://img.youtube.com/vi/ma4PYfs1DYo/hqdefault.jpg" alt="BaseBot Build Walk-through"><div class="video-play"></div></div><div class="video-info"><h4>BaseBot Build Walk-through</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Evan M. Jones</a><span class="card-tag tag-build">Beginner</span></p><p>A practical walkthrough of building the BaseBot from kit parts.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=LAJvwdfGPM0" id="video-LAJvwdfGPM0"><div class="video-thumb"><img src="https://img.youtube.com/vi/LAJvwdfGPM0/hqdefault.jpg" alt="First Robot Build Standard Drive Base"><div class="video-play"></div></div><div class="video-info"><h4>First Robot Build Standard Drive Base</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By ButterAndCheeseStudios</a><span class="card-tag tag-build">Drive Base</span></p><p>A starter drive base build that reinforces drivetrain layout basics.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=_9VaV5RO7TQ" id="video-_9VaV5RO7TQ"><div class="video-thumb"><img src="https://img.youtube.com/vi/_9VaV5RO7TQ/hqdefault.jpg" alt="Meet the Bots"><div class="video-play"></div></div><div class="video-info"><h4>Meet the Bots</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official overview of VEX IQ robot builds and what each bot is for.</p></div></div>
           </div>
         </div>
-
-        <div class="card" style="border-left: 4px solid var(--primary);">
-          <div class="card-body">
-            <span class="card-tag tag-game">2026-27 Season</span>
-            <h3>"Flop" — Level Up Hero Bot</h3>
-            <p>The official starter competition robot for the 2026-27 VIQRC Level Up game. Designed by VEX as a starting point — build it, drive it, then modify and improve it. Has a 2-motor drivetrain, claw, and lift mechanism. Competition-legal out of the box.</p>
-            <div class="badge-row">
-              <span class="card-tag tag-official">Official VEX</span>
-              <span class="card-tag tag-game">Competition Legal</span>
-            </div>
-            <a href="https://instructions.online/?id=4063-2026-2027_viqrc_herobot_flop" target="_blank" rel="noopener" class="card-link">3D Build Instructions (interactive) <span class="arrow">→</span></a>
-            <a href="https://www.youtube.com/watch?v=jPaarRbLjaE" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">Flop Build Video Part 1 <span class="arrow">→</span></a>
-            <a href="https://www.youtube.com/watch?v=n_fWxHqSMPs" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">Flop Build Video Part 2 <span class="arrow">→</span></a>
-            <a href="https://www.youtube.com/watch?v=pghmsMOFOc4" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">Build Phase: Building Flop (community) <span class="arrow">→</span></a>
+        <div class="tab-content" id="build-clawbot">
+          <div class="build-links"><a class="build-link" href="https://link.vex.com/iq/builds/clawbot/iq-2nd-gen-clawbot" target="_blank" rel="noopener"><strong>Clawbot 3D Instructions</strong><span>Interactive official build</span></a><a class="build-link" href="https://content.vexrobotics.com/stem-labs/iq/builds/clawbot/clawbot-rev4.pdf" target="_blank" rel="noopener"><strong>Clawbot PDF</strong><span>Printable build instructions</span></a></div>
+          <div class="card-grid">
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=S_Ajr4CC6c8" id="video-S_Ajr4CC6c8"><div class="video-thumb"><img src="https://img.youtube.com/vi/S_Ajr4CC6c8/hqdefault.jpg" alt="Clawbot Assembly"><div class="video-play"></div></div><div class="video-info"><h4>Clawbot Assembly</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-build">Clawbot</span></p><p>Step-by-step assembly help for the official VEX IQ Clawbot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=KdyAAXKcHec" id="video-KdyAAXKcHec"><div class="video-thumb"><img src="https://img.youtube.com/vi/KdyAAXKcHec/hqdefault.jpg" alt="Clawbot Build + Code"><div class="video-play"></div></div><div class="video-info"><h4>Clawbot Build + Code</h4><p class="video-meta"><a href="https://www.youtube.com/@TheRobotUnderground" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The Robot Underground</a><span class="card-tag tag-build">Clawbot</span></p><p>A combined build and coding tutorial for a working Clawbot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=aZ4qt_ASagk" id="video-aZ4qt_ASagk"><div class="video-thumb"><img src="https://img.youtube.com/vi/aZ4qt_ASagk/hqdefault.jpg" alt="Clawbot Tutorial"><div class="video-play"></div></div><div class="video-info"><h4>Clawbot Tutorial</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The Mr. Kriz Classroom</a><span class="card-tag tag-build">Clawbot</span></p><p>A classroom-style Clawbot tutorial for following the build process.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=niNGv1zAdVA" id="video-niNGv1zAdVA"><div class="video-thumb"><img src="https://img.youtube.com/vi/niNGv1zAdVA/hqdefault.jpg" alt="Clawbot Steps 1-6"><div class="video-play"></div></div><div class="video-info"><h4>Clawbot Steps 1-6</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By CITRIS UC MERCED</a><span class="card-tag tag-build">Clawbot</span></p><p>A focused walkthrough of the early Clawbot build steps.</p></div></div>
           </div>
         </div>
-
-        <div class="card" style="border-left: 4px solid var(--medium-gray);">
-          <div class="card-body">
-            <span class="card-tag tag-official">2025-26 Season</span>
-            <h3>"Huey" — Mix &amp; Match Hero Bot (previous season)</h3>
-            <p>Last season's Hero Bot for VIQRC Mix &amp; Match. Claw + lift design. Useful as a reference if you want to understand how Hero Bots evolve each season and how to modify them.</p>
-            <a href="https://kb.vex.com/hc/en-us/articles/40169141573140-An-Introduction-to-Huey-the-VIQRC-Mix-Match-Hero-Bot" target="_blank" rel="noopener" class="card-link">Huey Guide &amp; 3D Instructions <span class="arrow">→</span></a>
-            <a href="https://www.youtube.com/watch?v=LZVko5doG-w" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">Huey Build Video Part 1 <span class="arrow">→</span></a>
-            <a href="https://www.youtube.com/watch?v=sMZ-SxT3SSI" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">Huey Build Video Part 2 <span class="arrow">→</span></a>
+        <div class="tab-content" id="build-flop">
+          <div class="build-links"><a class="build-link" href="https://instructions.online/?id=4063-2026-2027_viqrc_herobot_flop" target="_blank" rel="noopener"><strong>Flop 3D Instructions</strong><span>2026-2027 Level Up Hero Bot</span></a></div>
+          <div class="card-grid">
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=jPaarRbLjaE" id="video-jPaarRbLjaE"><div class="video-thumb"><img src="https://img.youtube.com/vi/jPaarRbLjaE/hqdefault.jpg" alt="Flop Part 1"><div class="video-play"></div></div><div class="video-info"><h4>Flop Part 1</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official first build video for the Level Up Hero Bot, Flop.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=n_fWxHqSMPs" id="video-n_fWxHqSMPs"><div class="video-thumb"><img src="https://img.youtube.com/vi/n_fWxHqSMPs/hqdefault.jpg" alt="Flop Part 2"><div class="video-play"></div></div><div class="video-info"><h4>Flop Part 2</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official second build video for the Level Up Hero Bot, Flop.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=pghmsMOFOc4" id="video-pghmsMOFOc4"><div class="video-thumb"><img src="https://img.youtube.com/vi/pghmsMOFOc4/hqdefault.jpg" alt="Build Phase: Building Flop"><div class="video-play"></div></div><div class="video-info"><h4>Build Phase: Building Flop</h4><p class="video-meta"><a href="https://www.youtube.com/@TechPointYouth" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TechPoint Youth</a><span class="card-tag tag-build">Hero Bot</span></p><p>A team build phase video focused on assembling Flop.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=2gTnF5b_krE" id="video-2gTnF5b_krE"><div class="video-thumb"><img src="https://img.youtube.com/vi/2gTnF5b_krE/hqdefault.jpg" alt="HEROBOT FLOP from instructions"><div class="video-play"></div></div><div class="video-info"><h4>HEROBOT FLOP from Instructions</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Hero Bot</span></p><p>A build-through of Flop using the official instructions as the base.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=ZI7Kc7Y2X0k" id="video-ZI7Kc7Y2X0k"><div class="video-thumb"><img src="https://img.youtube.com/vi/ZI7Kc7Y2X0k/hqdefault.jpg" alt="Hero Bot Breakdown"><div class="video-play"></div></div><div class="video-info"><h4>Hero Bot Breakdown</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By CosmosTech</a><span class="card-tag tag-build">Mechanisms</span></p><p>A breakdown of Hero Bot design choices and mechanisms.</p></div></div>
           </div>
         </div>
-
-        <div class="card" style="border-left: 4px solid var(--accent);">
-          <div class="card-body">
-            <span class="card-tag tag-official">Official VEX</span>
-            <h3>Competition 101 STEM Lab</h3>
-            <p>A 5-session unit that walks a team through building the Hero Bot, understanding the game, and iterating. Session 2 = build the Hero Bot. Session 5 = modify and improve it. Station-based so all team members stay engaged.</p>
-            <a href="https://education.vex.com/stemlabs/iq/competition-101-viqrc-mix-match" target="_blank" rel="noopener" class="card-link">Open STEM Lab <span class="arrow">→</span></a>
+        <div class="tab-content" id="build-starters">
+          <div class="build-links"><a class="build-link" href="https://www.vexrobotics.com/iq/downloads/build-instructions" target="_blank" rel="noopener"><strong>All VEX IQ Builds</strong><span>Official build instruction index</span></a></div>
+          <div class="card-grid">
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=azJmUY9SMWo" id="video-azJmUY9SMWo"><div class="video-thumb"><img src="https://img.youtube.com/vi/azJmUY9SMWo/hqdefault.jpg" alt="How to Design and Build"><div class="video-play"></div></div><div class="video-info"><h4>How to Design and Build</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Design</span></p><p>A beginner design-and-build walkthrough for starting a competition robot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=Gzlb2LeHteE" id="video-Gzlb2LeHteE"><div class="video-thumb"><img src="https://img.youtube.com/vi/Gzlb2LeHteE/hqdefault.jpg" alt="Simple Robot 100 Points"><div class="video-play"></div></div><div class="video-info"><h4>Simple Robot 100 Points</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Starter</span></p><p>A simple robot concept aimed at scoring reliably with a basic design.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=llx-4XKeo6E" id="video-llx-4XKeo6E"><div class="video-thumb"><img src="https://img.youtube.com/vi/llx-4XKeo6E/hqdefault.jpg" alt="Kickoff First Designs"><div class="video-play"></div></div><div class="video-info"><h4>Kickoff First Designs</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Starter</span></p><p>Early design ideas for beginning robot concepts after kickoff.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=NCFRLzl9ELE" id="video-NCFRLzl9ELE"><div class="video-thumb"><img src="https://img.youtube.com/vi/NCFRLzl9ELE/hqdefault.jpg" alt="Design a Robot in 10 Min"><div class="video-play"></div></div><div class="video-info"><h4>Design a Robot in 10 Min</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Design</span></p><p>A fast design exercise for turning game needs into robot concepts.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=fVZv7ml504k" id="video-fVZv7ml504k"><div class="video-thumb"><img src="https://img.youtube.com/vi/fVZv7ml504k/hqdefault.jpg" alt="Super Simple Robot 24 hours"><div class="video-play"></div></div><div class="video-info"><h4>Super Simple Robot 24 Hours</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Starter</span></p><p>A quick-build starter robot approach for getting something working fast.</p></div></div>
           </div>
         </div>
-      </div>
-
-      <div class="info-box mt-20">
-        <h4>🛠️ Build tips from the Placer Robotics Academy</h4>
-        <ul>
-          <li><strong>Build one short section at a time</strong> and ask a teammate to check it against the picture before moving on.</li>
-          <li><strong>Join parts correctly</strong> — choose the right pin type, don't force parts. If it doesn't go in smoothly, check the orientation.</li>
-          <li><strong>Make it strong and square</strong> — use beams, plates, corners, and two-point connections. A wobbly robot falls apart.</li>
-          <li><strong>Check motion before powering on</strong> — spin gears and wheels by hand first. If something rubs or binds, fix it before turning on the motors.</li>
-          <li><strong>Route cables carefully</strong> — use smart cable retainers to keep wires away from gears and wheels. Keep the battery and Brain reachable for swaps.</li>
-          <li><strong>Compare ideas with quick trials</strong> — build a small test of each mechanism and use the same test for each one. Data beats opinion.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== CLAWBOT ===== -->
-    <section id="clawbot">
-      <div class="section-header">
-        <div class="section-number">🦾</div>
-        <h2>Next Step: Build the Clawbot</h2>
-        <p>After the BaseBot, build the Clawbot to learn arms, claws, and mechanisms.</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="card" style="border-left: 4px solid var(--accent);">
-          <div class="card-body">
-            <span class="card-tag tag-build">Build Second</span>
-            <h3>The Clawbot</h3>
-            <p>The Clawbot adds a claw and arm to the BaseBot drivetrain. This teaches mechanisms, gear ratios for lifting, and claw control — the skills you need before building a competition robot.</p>
-            <div class="badge-row">
-              <span class="card-tag tag-official">Official VEX</span>
-              <span class="card-tag tag-build">Beginner</span>
-            </div>
-            <a href="https://link.vex.com/iq/builds/clawbot/iq-2nd-gen-clawbot" target="_blank" rel="noopener" class="card-link">Clawbot 3D Build Instructions (interactive) <span class="arrow">→</span></a>
-            <a href="https://content.vexrobotics.com/stem-labs/iq/builds/clawbot/clawbot-rev4.pdf" target="_blank" rel="noopener" class="card-link" style="margin-top:6px;">Clawbot PDF Instructions (download) <span class="arrow">→</span></a>
+        <div class="tab-content" id="build-catapults">
+          <div class="card-grid">
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=GR4DzbxyPp8" id="video-GR4DzbxyPp8"><div class="video-thumb"><img src="https://img.youtube.com/vi/GR4DzbxyPp8/hqdefault.jpg" alt="Shooting Robot Step-by-Step"><div class="video-play"></div></div><div class="video-info"><h4>Shooting Robot Step-by-Step</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Catapult</span></p><p>A step-by-step shooting robot build focused on launching mechanisms.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=nCA_dIps6qQ" id="video-nCA_dIps6qQ"><div class="video-thumb"><img src="https://img.youtube.com/vi/nCA_dIps6qQ/hqdefault.jpg" alt="Shooting Robot Step-by-Step Starter"><div class="video-play"></div></div><div class="video-info"><h4>Shooting Robot Step-by-Step Starter</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Catapult</span></p><p>A starter-friendly shooting robot build using VEX IQ parts.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=7_E9J5yBB4o" id="video-7_E9J5yBB4o"><div class="video-thumb"><img src="https://img.youtube.com/vi/7_E9J5yBB4o/hqdefault.jpg" alt="Catapult Launcher"><div class="video-play"></div></div><div class="video-info"><h4>Catapult Launcher</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Catapult</span></p><p>A catapult launcher concept for learning stored-energy mechanisms.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=rSOqphR0N2s" id="video-rSOqphR0N2s"><div class="video-thumb"><img src="https://img.youtube.com/vi/rSOqphR0N2s/hqdefault.jpg" alt="Ratchet + Catapult"><div class="video-play"></div></div><div class="video-info"><h4>Ratchet + Catapult</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Hackers IQ</a><span class="card-tag tag-build">Mechanism</span></p><p>A mechanism-focused explanation of combining a ratchet with a catapult.</p></div></div>
           </div>
         </div>
-      </div>
-
-      <h3 style="margin-top:24px;margin-bottom:16px;">Clawbot Build Videos</h3>
-      <div class="card-grid">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=S_Ajr4CC6c8">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/S_Ajr4CC6c8/hqdefault.jpg" alt="VEX IQ Clawbot Assembly Simple and Clear Guide"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Clawbot Assembly - Simple &amp; Clear Guide</h4><p>By The VEX IQ Guide. Step-by-step clawbot assembly with clear explanations.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=KdyAAXKcHec">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/KdyAAXKcHec/hqdefault.jpg" alt="VEX IQ Clawbot Build Code Level 1 Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Clawbot! | Build + Code | Level 1 Tutorial</h4><p>By The Robot Underground. Build the clawbot and code it for a cube battle.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=aZ4qt_ASagk">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/aZ4qt_ASagk/hqdefault.jpg" alt="VEXCode IQ Clawbot Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEXCode IQ Clawbot Tutorial</h4><p>By The Mr. Kriz Classroom. Coding tutorial for the clawbot.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=LAJvwdfGPM0">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/LAJvwdfGPM0/hqdefault.jpg" alt="First Robot Build with VEX IQ Standard Drive Base"><div class="video-play"></div></div>
-          <div class="video-info"><h4>First Robot Build with VEX IQ - Standard Drive Base</h4><p>By ButterAndCheeseStudios. A kid-friendly build of the standard drive base from scratch.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=_9VaV5RO7TQ">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/_9VaV5RO7TQ/hqdefault.jpg" alt="VEX IQ Meet the Bots Starter Kit Robots"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Meet the Bots - Starter Kit Robots</h4><p>Official VEX Robotics video showing the starter robots you can build.</p></div>
+        <div class="tab-content" id="build-past">
+          <div class="card-grid">
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=LZVko5doG-w" id="video-LZVko5doG-w"><div class="video-thumb"><img src="https://img.youtube.com/vi/LZVko5doG-w/hqdefault.jpg" alt="Huey Part 1"><div class="video-play"></div></div><div class="video-info"><h4>Huey Part 1</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Past Season</span></p><p>Official first build video for Huey, the Mix and Match Hero Bot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=sMZ-SxT3SSI" id="video-sMZ-SxT3SSI"><div class="video-thumb"><img src="https://img.youtube.com/vi/sMZ-SxT3SSI/hqdefault.jpg" alt="Huey Part 2"><div class="video-play"></div></div><div class="video-info"><h4>Huey Part 2</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Past Season</span></p><p>Official second build video for Huey, the Mix and Match Hero Bot.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=RN-UyJbe_yg" id="video-RN-UyJbe_yg"><div class="video-thumb"><img src="https://img.youtube.com/vi/RN-UyJbe_yg/hqdefault.jpg" alt="Mix and Match Game Reveal"><div class="video-play"></div></div><div class="video-info"><h4>Mix and Match Game Reveal</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-game">Past Season</span></p><p>The reveal video for the prior VIQRC Mix and Match game.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=G9avDKpz5yY" id="video-G9avDKpz5yY"><div class="video-thumb"><img src="https://img.youtube.com/vi/G9avDKpz5yY/hqdefault.jpg" alt="Mix and Match Elements Unboxing"><div class="video-play"></div></div><div class="video-info"><h4>Mix and Match Elements Unboxing</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Unknown Creator</a><span class="card-tag tag-game">Past Season</span></p><p>An unboxing of field elements from the prior VIQRC season.</p></div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== STEP-BY-STEP COMPETITION ROBOTS ===== -->
-    <section id="ben-lipper">
-      <div class="section-header">
-        <div class="section-number">📋</div>
-        <h2>Step-by-Step Competition Robot Builds (Level Up)</h2>
-        <p>Follow along with these detailed build videos — every step shown, every part explained.</p>
-      </div>
-
-      <div class="info-box">
-        <h4>⭐ Ben Lipper's Step-by-Step Robot Series</h4>
-        <p>Ben Lipper creates the best step-by-step VEX IQ robot build videos on YouTube. He shows every piece, every step, and every adjustment. Perfect for kids who want to follow along at home. His Level Up playlist covers simple starter robots through advanced catapult designs.</p>
-        <a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-weight:600;">Visit Ben Lipper's Channel →</a>
-      </div>
-
-      <div class="card-grid mt-20">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=2gTnF5b_krE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/2gTnF5b_krE/hqdefault.jpg" alt="HEROBOT FLOP Built from step-by-step instructions"><div class="video-play"></div></div>
-          <div class="video-info"><h4>HEROBOT FLOP — Built from Step-by-Step Instructions</h4><p>By Ben Lipper. Builds the official Flop Hero Bot from the VEX 3D instructions, with commentary on what works and what to improve.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=jPaarRbLjaE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/jPaarRbLjaE/hqdefault.jpg" alt="VEX IQ Level Up Hero Bot Flop Part 1"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Flop Hero Bot — Part 1 (official VEX)</h4><p>Official VEX Robotics build walkthrough. Bailey introduces Flop and builds it step by step.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=n_fWxHqSMPs">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/n_fWxHqSMPs/hqdefault.jpg" alt="VEX IQ Level Up Hero Bot Flop Part 2"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Flop Hero Bot — Part 2 (official VEX)</h4><p>Part 2 of the official VEX Flop build walkthrough — completing the Hero Bot.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=pghmsMOFOc4">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/pghmsMOFOc4/hqdefault.jpg" alt="Build Phase Building Flop VEX IQ Level Up Herobot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Build Phase: Building Flop (Tips &amp; Tricks)</h4><p>By TechPoint Youth. Full build of the Flop Hero Bot with tips and explanations for each step.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=azJmUY9SMWo">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/azJmUY9SMWo/hqdefault.jpg" alt="VEX IQ Level Up how to design and build a robot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Level Up - How to Design and Build a Robot</h4><p>By Ben Lipper. Overview of designing a robot for the Level Up game.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=Gzlb2LeHteE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/Gzlb2LeHteE/hqdefault.jpg" alt="Simple Robot 100 Points easy to build starter robot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>SIMPLE ROBOT ~100 POINTS! Easy Starter Robot</h4><p>Ben Lipper's easiest Level Up robot — scores 100+ points and is simple to build.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=llx-4XKeo6E">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/llx-4XKeo6E/hqdefault.jpg" alt="VEX IQ Level Up Kickoff first robot designs in 45 min"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Level Up Kickoff - First Robot Designs in 45 Min</h4><p>Ben designs a robot from scratch in 45 minutes. Great for understanding the design process.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=NCFRLzl9ELE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/NCFRLzl9ELE/hqdefault.jpg" alt="Design a VEX IQ Robot in 10 Min"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Design a VEX IQ Robot in 10 Min!</h4><p>Quick design walkthrough — see how experienced builders think about robot design.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=GR4DzbxyPp8">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/GR4DzbxyPp8/hqdefault.jpg" alt="Shooting Robot Step by Step Instructions VEX IQ Level Up"><div class="video-play"></div></div>
-          <div class="video-info"><h4>SHOOTING ROBOT with STEP-BY-STEP Instructions</h4><p>Full catapult robot build with step-by-step instructions for Level Up.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=nCA_dIps6qQ">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/nCA_dIps6qQ/hqdefault.jpg" alt="Shooting Robot Step by Step VEX IQ Level Up starter robot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>SHOOTING ROBOT, STEP-BY-STEP - Level Up Starter</h4><p>Another detailed step-by-step shooting robot build for Level Up.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=7_E9J5yBB4o">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/7_E9J5yBB4o/hqdefault.jpg" alt="Step by Step robot for Shooting VEX IQ Level Up catapult"><div class="video-play"></div></div>
-          <div class="video-info"><h4>STEP-BY-STEP Robot for SHOOTING - Catapult Launcher</h4><p>Ben's catapult launcher build with full step-by-step instructions.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=rSOqphR0N2s">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/rSOqphR0N2s/hqdefault.jpg" alt="Ratchet Catapult Tutorial with instructions Vex IQ Level Up"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Ratchet + Catapult Tutorial w/ Instructions</h4><p>By Hackers IQ. Ratchet and catapult mechanism with build instructions.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== LEVEL UP GAME ===== -->
     <section id="game">
-      <div class="section-header">
-        <div class="section-number">🎮</div>
-        <h2>The 2026-27 Game: Level Up</h2>
-        <p>Understand the game before you build — the rules tell you what your robot needs to do.</p>
+      <div class="section-header"><div class="section-number">4</div><h2>Game &amp; Strategy</h2><p>Reveal videos, rules, scoring, driving, inspection, notebook, and competition prep.</p></div>
+      <div class="section-subhead"><h3>Official Game Resources</h3><p>Start with the game page, manual, Q&amp;A, skills standings, and Placer Academy Topic 2.</p></div>
+      <div class="resource-list">
+        <a class="resource-pill" href="https://www.vexrobotics.com/iq/competition/viqc-current-game" target="_blank" rel="noopener"><strong>Game Page</strong><span>Current VIQRC game hub</span></a>
+        <a class="resource-pill" href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener"><strong>Game Manual</strong><span>Rules, scoring, field, and robot rules</span></a>
+        <a class="resource-pill" href="https://www.vexforum.com/forum/vex-iq-robotics-competition/viqrc-current-game" target="_blank" rel="noopener"><strong>Game Q&amp;A</strong><span>Official question and answer forum</span></a>
+        <a class="resource-pill" href="https://www.robotevents.com/robot-competitions/vex-iq/standings" target="_blank" rel="noopener"><strong>Skills Standings</strong><span>Robot skills rankings</span></a>
+        <a class="resource-pill" href="https://hub.placerrobotics.org/academy/iq/learn/current-game-and-rules" target="_blank" rel="noopener"><strong>Placer Topic 2</strong><span>Current game and rules</span></a>
       </div>
-
+      <div class="section-subhead"><h3>Reveal, Manual &amp; Rules</h3><p>Use these to understand what scores points and what limits the robot.</p></div>
       <div class="card-grid">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=KP0FYPW604E">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/KP0FYPW604E/hqdefault.jpg" alt="VEX IQ Level Up Game Reveal">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>VEX IQ Level Up — 2026-2027 Game Reveal</h4>
-            <p>Official game reveal video. Watch this first to understand the field, scoring objects, and match format.</p>
-          </div>
-        </div>
-
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=jPaarRbLjaE">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/jPaarRbLjaE/hqdefault.jpg" alt="Flop Hero Bot Part 1">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>Flop Hero Bot — Part 1 (official VEX)</h4>
-            <p>VEX's official build walkthrough of the Level Up Hero Bot, Part 1.</p>
-          </div>
-        </div>
-
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=n_fWxHqSMPs">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/n_fWxHqSMPs/hqdefault.jpg" alt="Flop Hero Bot Part 2">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>Flop Hero Bot — Part 2 (official VEX)</h4>
-            <p>Part 2 of the official Flop build walkthrough — completing the Hero Bot.</p>
-          </div>
-        </div>
-
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=wJpjTm775Q0">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/wJpjTm775Q0/hqdefault.jpg" alt="Level Up Worlds Reveal">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>Level Up — Worlds Reveal</h4>
-            <p>The Level Up game as revealed at the VEX Worlds Championship 2026.</p>
-          </div>
-        </div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=KP0FYPW604E" id="video-KP0FYPW604E"><div class="video-thumb"><img src="https://img.youtube.com/vi/KP0FYPW604E/hqdefault.jpg" alt="Level Up Game Reveal"><div class="video-play"></div></div><div class="video-info"><h4>Level Up Game Reveal</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official reveal video for the VIQRC Level Up game.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=wJpjTm775Q0" id="video-wJpjTm775Q0"><div class="video-thumb"><img src="https://img.youtube.com/vi/wJpjTm775Q0/hqdefault.jpg" alt="Level Up Worlds Reveal"><div class="video-play"></div></div><div class="video-info"><h4>Level Up Worlds Reveal</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Worlds-stage reveal coverage for Level Up.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=AMZ8p5u8UHY" id="video-AMZ8p5u8UHY"><div class="video-thumb"><img src="https://img.youtube.com/vi/AMZ8p5u8UHY/hqdefault.jpg" alt="Game Manual Breakdown"><div class="video-play"></div></div><div class="video-info"><h4>Game Manual Breakdown</h4><p class="video-meta"><a href="https://www.youtube.com/@RoboSTEM" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By RoboSTEM</a><span class="card-tag tag-game">Rules</span></p><p>A game manual walkthrough focused on rules and strategic implications.</p></div></div>
       </div>
-
-      <h3 style="margin-top:30px;margin-bottom:16px;">Flop Hero Bot Deep Dives</h3>
-      <div class="card-grid mb-40">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=ZI7Kc7Y2X0k">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/ZI7Kc7Y2X0k/hqdefault.jpg" alt="Vex IQ level up hero bot breakdown"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Level Up Hero Bot Breakdown</h4><p>By CosmosTech. Detailed breakdown of the Flop Hero Bot and what it can do.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=AMZ8p5u8UHY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/AMZ8p5u8UHY/hqdefault.jpg" alt="VEX IQ Level Up Game Manual Full Breakdown"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Level Up Game Manual FULL BREAKDOWN</h4><p>By RoboSTEM. Complete walkthrough of the Level Up game manual — every rule explained.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=pghmsMOFOc4">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/pghmsMOFOc4/hqdefault.jpg" alt="Build Phase Building Flop VEX IQ Level Up Herobot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Build Phase: Building Flop</h4><p>By TechPoint Youth. Full build of the Flop Hero Bot with explanations.</p></div>
-        </div>
-      </div>
-
-      <h3 style="margin-top:30px;margin-bottom:16px;">Official Level Up Resources</h3>
+      <div class="section-subhead"><h3>Scoring &amp; Strategy</h3><p>Turn game objects, scoring zones, and robot limits into design priorities.</p></div>
+      <div class="card-grid"><div class="video-card" data-video="https://www.youtube.com/watch?v=mEfmoMzmXxc" id="video-mEfmoMzmXxc"><div class="video-thumb"><img src="https://img.youtube.com/vi/mEfmoMzmXxc/hqdefault.jpg" alt="Exploring Robot Design"><div class="video-play"></div></div><div class="video-info"><h4>Exploring Robot Design</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Strategy</span></p><p>Official design thinking video for comparing robot ideas against game tasks.</p></div></div></div>
+      <div class="section-subhead"><h3>Driving Tips</h3><p>Good driving turns a simple robot into a more reliable match robot.</p></div>
+      <div class="card-grid"><div class="video-card" data-video="https://www.youtube.com/watch?v=tepeFAA7Gbo" id="video-tepeFAA7Gbo"><div class="video-thumb"><img src="https://img.youtube.com/vi/tepeFAA7Gbo/hqdefault.jpg" alt="5 Tips to Improve Driving"><div class="video-play"></div></div><div class="video-info"><h4>5 Tips to Improve Driving</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-game">Driving</span></p><p>Practical driving advice for better control during skills and teamwork matches.</p></div></div></div>
+      <div class="section-subhead"><h3>Inspection, Notebook &amp; Competition Prep</h3><p>Prepare the robot and team materials before tournament day.</p></div>
       <div class="card-grid">
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>Level Up Game Page</h3>
-          <p>Official VEX page for the Level Up game — field, scoring, match types.</p>
-          <a href="https://www.vexrobotics.com/iq/competition/viqc-current-game" target="_blank" rel="noopener" class="card-link">Open Page <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>Level Up Game Manual</h3>
-          <p>The complete official rule book — definitions, scoring, robot rules, inspection criteria.</p>
-          <a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener" class="card-link">Download Manual <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>Gameplay Q&amp;A</h3>
-          <p>Official answers to questions about game and robot rules. When in doubt, search here.</p>
-          <a href="https://www.vexforum.com/forum/vex-iq-robotics-competition/viqrc-current-game" target="_blank" rel="noopener" class="card-link">Search Q&amp;A <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>World Skills Standings</h3>
-          <p>Current public Robot Skills rankings — see how teams around the world are scoring.</p>
-          <a href="https://www.robotevents.com/robot-competitions/vex-iq/standings" target="_blank" rel="noopener" class="card-link">View Standings <span class="arrow">→</span></a>
-        </div></div>
-      </div>
-
-      <div class="info-box mt-20">
-        <h4>🏛️ Placer Academy: Current Game &amp; Rules (Topic 2)</h4>
-        <p>Placer Robotics organizes game learning into three sub-topics: <strong>Play Level Up</strong> (meet the field, match types, alliance, scoring), <strong>Start with Flop</strong> (build the Hero Bot, understand it, choose what to improve), and <strong>Find the real rule</strong> (use definitions, rule numbers, the current manual, and official Q&amp;A).</p>
-        <a href="https://hub.placerrobotics.org/academy/iq/learn/current-game-and-rules" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-weight:600;">Open Academy Topic 2 (login required) →</a>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=afrdGr4ue9Y" id="video-afrdGr4ue9Y"><div class="video-thumb"><img src="https://img.youtube.com/vi/afrdGr4ue9Y/hqdefault.jpg" alt="Full Inspection Guide"><div class="video-play"></div></div><div class="video-info"><h4>Full Inspection Guide</h4><p class="video-meta"><a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Caution Tape Robotics</a><span class="card-tag tag-game">Inspection</span></p><p>A tournament inspection walkthrough for checking common robot requirements.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=O0El_fts9ns" id="video-O0El_fts9ns"><div class="video-thumb"><img src="https://img.youtube.com/vi/O0El_fts9ns/hqdefault.jpg" alt="Award Winning Notebook"><div class="video-play"></div></div><div class="video-info"><h4>Award Winning Notebook</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By 8931B V-Bots Trifecta</a><span class="card-tag tag-game">Notebook</span></p><p>A guide to engineering notebook practices used by an award-winning team.</p></div></div>
       </div>
     </section>
 
-    <!-- ===== PROGRAMMING ===== -->
     <section id="code">
-      <div class="section-header">
-        <div class="section-number">💻</div>
-        <h2>Programming with VEXcode IQ Blocks</h2>
-        <p>Drag-and-drop coding — no typing required. Start here if you've never programmed before.</p>
+      <div class="section-header"><div class="section-number">5</div><h2>Programming</h2><p>Learn VEXcode IQ in levels: setup, first programs, controls, mechanisms, autonomous, and sensors.</p></div>
+      <div class="resource-list">
+        <a class="resource-pill" href="https://kb.vex.com/hc/en-us/sections/360007297211-Install" target="_blank" rel="noopener"><strong>VEXcode Install</strong><span>Download and install VEXcode IQ</span></a>
+        <a class="resource-pill" href="https://kb.vex.com/hc/en-us/sections/360007204852-Blocks-Tutorials" target="_blank" rel="noopener"><strong>VEXcode Tutorials</strong><span>Official blocks tutorials</span></a>
+        <a class="resource-pill" href="https://kb.vex.com/hc/en-us/sections/32136526548372-Virtual-Coding-Skills-Overview" target="_blank" rel="noopener"><strong>Virtual Skills</strong><span>Practice autonomous coding virtually</span></a>
+        <a class="resource-pill" href="https://hub.placerrobotics.org/academy/iq/learn/programming-and-sensors" target="_blank" rel="noopener"><strong>Placer Academy Topic 5</strong><span>Programming and sensors</span></a>
       </div>
-
-      <div class="info-box">
-        <h4>🎯 What you'll learn (Placer Academy Topic 5)</h4>
-        <p>The Placer Academy breaks programming into 8 sub-skills, in order:</p>
-        <ul>
-          <li><strong>Open VEXcode IQ</strong> — start a Blocks project for the correct IQ Brain generation</li>
-          <li><strong>Tell code what is connected</strong> — configure motors, drivetrain, and sensors with the ports on the real robot</li>
-          <li><strong>Make a sequence</strong> — download, run, stop, and change a short motion sequence</li>
-          <li><strong>Make driver controls</strong> — map Controller inputs and compare drive configurations</li>
-          <li><strong>Repeat and decide</strong> — use events, loops, conditions, and simple variables</li>
-          <li><strong>Let the robot sense</strong> — read sensor data and use one value in code</li>
-          <li><strong>Build a repeatable skills path</strong> — plan, measure, and repeat a short autonomous path</li>
-          <li><strong>Find a code problem</strong> — check hardware, firmware, configuration, data, and code in order</li>
-        </ul>
-      </div>
-
-      <h3 style="margin-top:30px;margin-bottom:16px;">Programming Resources</h3>
-      <div class="card-grid">
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-code">Free Tool</span>
-          <h3>VEXcode IQ (Download or Web)</h3>
-          <p>The official programming environment for VEX IQ. Blocks mode for beginners, Python for advanced. Free download for Mac, Windows, Chromebook, iPad, Android. Also available as web-based version.</p>
-          <a href="https://kb.vex.com/hc/en-us/sections/360007297211-Install" target="_blank" rel="noopener" class="card-link">Install VEXcode IQ <span class="arrow">→</span></a>
+      <div class="tabs-container">
+        <div class="tabs"><button class="tab active" data-tab="code-start">Getting Started</button><button class="tab" data-tab="code-first">First Code</button><button class="tab" data-tab="code-driver">Driver Controls</button><button class="tab" data-tab="code-mechanisms">Mechanism Code</button><button class="tab" data-tab="code-auto">Autonomous</button><button class="tab" data-tab="code-sensors">Sensors</button></div>
+        <div class="tab-content active" id="code-start"><div class="card-grid">
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=nzM0JE7vFaQ" id="video-nzM0JE7vFaQ"><div class="video-thumb"><img src="https://img.youtube.com/vi/nzM0JE7vFaQ/hqdefault.jpg" alt="VEXcode IQ Getting Started"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Getting Started</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official introduction to opening VEXcode IQ and beginning a project.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=MSX9LLQLvmk" id="video-MSX9LLQLvmk"><div class="video-thumb"><img src="https://img.youtube.com/vi/MSX9LLQLvmk/hqdefault.jpg" alt="Downloading and Running"><div class="video-play"></div></div><div class="video-info"><h4>Downloading and Running</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official instructions for sending a VEXcode project to the robot Brain.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=yJvA-QpKvKI" id="video-yJvA-QpKvKI"><div class="video-thumb"><img src="https://img.youtube.com/vi/yJvA-QpKvKI/hqdefault.jpg" alt="Example Projects"><div class="video-play"></div></div><div class="video-info"><h4>Example Projects</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>How to use VEXcode IQ example projects as working starting points.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=SYGwyNmK9Jk" id="video-SYGwyNmK9Jk"><div class="video-thumb"><img src="https://img.youtube.com/vi/SYGwyNmK9Jk/hqdefault.jpg" alt="Robotics With VEX IQ Beginners Course"><div class="video-play"></div></div><div class="video-info"><h4>Robotics With VEX IQ Beginners Course</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Letslearn TV</a><span class="card-tag tag-code">Beginner</span></p><p>A beginner course-style introduction to robotics concepts with VEX IQ.</p></div></div>
         </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>VEXcode IQ Blocks Tutorials</h3>
-          <p>Official tutorials: creating projects, configuring devices, using blocks, downloading, running, and debugging.</p>
-          <a href="https://kb.vex.com/hc/en-us/sections/360007204852-Blocks-Tutorials" target="_blank" rel="noopener" class="card-link">Browse Tutorials <span class="arrow">→</span></a>
+        <div class="tab-content" id="code-first"><div class="card-grid">
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=7Feo7YOs9E8" id="video-7Feo7YOs9E8"><div class="video-thumb"><img src="https://img.youtube.com/vi/7Feo7YOs9E8/hqdefault.jpg" alt="Using Loops"><div class="video-play"></div></div><div class="video-info"><h4>Using Loops</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial on repeating actions with loops in VEXcode IQ Blocks.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=uKL38GKP0zE" id="video-uKL38GKP0zE"><div class="video-thumb"><img src="https://img.youtube.com/vi/uKL38GKP0zE/hqdefault.jpg" alt="If-Then-Else"><div class="video-play"></div></div><div class="video-info"><h4>If-Then-Else</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial on decisions and conditional logic in Blocks.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=PwLPVbLclqk" id="video-PwLPVbLclqk"><div class="video-thumb"><img src="https://img.youtube.com/vi/PwLPVbLclqk/hqdefault.jpg" alt="Drive and Code a VEX IQ Robot"><div class="video-play"></div></div><div class="video-info"><h4>Drive and Code a VEX IQ Robot</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Unknown Creator</a><span class="card-tag tag-code">Beginner</span></p><p>A beginner video for connecting robot driving concepts to basic code.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=q-X4Q_mXOfY" id="video-q-X4Q_mXOfY"><div class="video-thumb"><img src="https://img.youtube.com/vi/q-X4Q_mXOfY/hqdefault.jpg" alt="Basic BaseBot Blocks Programming"><div class="video-play"></div></div><div class="video-info"><h4>Basic BaseBot Blocks Programming</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Coding with Culp</a><span class="card-tag tag-code">Blocks</span></p><p>A basic blocks-programming tutorial using the BaseBot as the robot.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=IGbHbtC5wKU" id="video-IGbHbtC5wKU"><div class="video-thumb"><img src="https://img.youtube.com/vi/IGbHbtC5wKU/hqdefault.jpg" alt="VEXcode IQ Blocks Tutorial Beginner"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Blocks Tutorial Beginner</h4><p class="video-meta"><a href="https://www.youtube.com/@TechPointYouth" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TechPoint Youth</a><span class="card-tag tag-code">Beginner</span></p><p>A beginner Blocks tutorial for writing and running first VEX IQ programs.</p></div></div>
         </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>VEX IQ Activities</h3>
-          <p>Hands-on coding activities designed for the IQ kit — each one teaches a specific coding or sensor concept.</p>
-          <a href="https://kb.vex.com/hc/en-us/articles/9527699292820-Using-VEX-IQ-Activities-in-the-Classroom" target="_blank" rel="noopener" class="card-link">Browse Activities <span class="arrow">→</span></a>
+        <div class="tab-content" id="code-driver"><div class="card-grid">
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=ap39M61F1l0" id="video-ap39M61F1l0"><div class="video-thumb"><img src="https://img.youtube.com/vi/ap39M61F1l0/hqdefault.jpg" alt="Code 2- and 4-Motor Drivetrain"><div class="video-play"></div></div><div class="video-info"><h4>Code 2- and 4-Motor Drivetrain</h4><p class="video-meta"><a href="https://www.youtube.com/@VEXTalk" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Talk</a><span class="card-tag tag-code">Driver</span></p><p>How to code two-motor and four-motor drivetrains for driver control.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=6WQirZ0DK8g" id="video-6WQirZ0DK8g"><div class="video-thumb"><img src="https://img.youtube.com/vi/6WQirZ0DK8g/hqdefault.jpg" alt="Master Basic Classes"><div class="video-play"></div></div><div class="video-info"><h4>Master Basic Classes</h4><p class="video-meta"><a href="https://www.youtube.com/@VEXTalk" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Talk</a><span class="card-tag tag-code">Concepts</span></p><p>A programming concepts video that supports cleaner drivetrain code.</p></div></div>
         </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>VEX IQ Virtual Skills</h3>
-          <p>Code a virtual IQ robot in your browser — no hardware needed! Level Up playground for the 26-27 season. Practice coding while waiting for your kit.</p>
-          <a href="https://kb.vex.com/hc/en-us/sections/32136526548372-Virtual-Coding-Skills-Overview" target="_blank" rel="noopener" class="card-link">Open Virtual Skills <span class="arrow">→</span></a>
+        <div class="tab-content" id="code-mechanisms"><div class="card-grid">
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=d8gI02Ecig0" id="video-d8gI02Ecig0"><div class="video-thumb"><img src="https://img.youtube.com/vi/d8gI02Ecig0/hqdefault.jpg" alt="Opening the Claw"><div class="video-play"></div></div><div class="video-info"><h4>Opening the Claw</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial for coding a claw mechanism in VEXcode IQ.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=voZIL4Gf7Zk" id="video-voZIL4Gf7Zk"><div class="video-thumb"><img src="https://img.youtube.com/vi/voZIL4Gf7Zk/hqdefault.jpg" alt="Device Setup Sensors"><div class="video-play"></div></div><div class="video-info"><h4>Device Setup Sensors</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official guide to adding sensors and devices to a VEXcode IQ project.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=2ZhxhHAEDB0" id="video-2ZhxhHAEDB0"><div class="video-thumb"><img src="https://img.youtube.com/vi/2ZhxhHAEDB0/hqdefault.jpg" alt="Master Procedures"><div class="video-play"></div></div><div class="video-info"><h4>Master Procedures</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By STEAM Labs</a><span class="card-tag tag-code">Procedures</span></p><p>A coding lesson on procedures for organizing repeated robot actions.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=NoxCacvxoiI" id="video-NoxCacvxoiI"><div class="video-thumb"><img src="https://img.youtube.com/vi/NoxCacvxoiI/hqdefault.jpg" alt="Coding Huey Pinhead Clawbot"><div class="video-play"></div></div><div class="video-info"><h4>Coding Huey Pinhead Clawbot</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-code">Mechanisms</span></p><p>A coding walkthrough for controlling a Clawbot-style mechanism.</p></div></div>
         </div></div>
-      </div>
-
-      <h3 style="margin-top:30px;margin-bottom:16px;">Programming Video Tutorials</h3>
-      <div class="card-grid">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=nzM0JE7vFaQ">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/nzM0JE7vFaQ/hqdefault.jpg" alt="VEXcode IQ Getting Started">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>VEXcode IQ Blocks — Getting Started</h4>
-            <p>Official tutorial: create your first Blocks project and understand the interface.</p>
-          </div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=MSX9LLQLvmk">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/MSX9LLQLvmk/hqdefault.jpg" alt="Downloading and Running">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>Downloading &amp; Running Projects</h4>
-            <p>How to download your code to the Brain and run it on the robot.</p>
-          </div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=7Feo7YOs9E8">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/7Feo7YOs9E8/hqdefault.jpg" alt="Using Loops">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>Using Loops in VEXcode IQ</h4>
-            <p>Make your robot repeat actions with loops — essential for autonomous routines.</p>
-          </div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=uKL38GKP0zE">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/uKL38GKP0zE/hqdefault.jpg" alt="If Then Else Blocks">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>If-Then-Else Blocks Tutorial</h4>
-            <p>Teach your robot to make decisions based on sensor input.</p>
-          </div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=yJvA-QpKvKI">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/yJvA-QpKvKI/hqdefault.jpg" alt="Example Projects">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>Using Example Projects &amp; Templates</h4>
-            <p>Start from a working example and modify it — the fastest way to learn.</p>
-          </div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=PwLPVbLclqk">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/PwLPVbLclqk/hqdefault.jpg" alt="Drive and Code">
-            <div class="video-play"></div>
-          </div>
-          <div class="video-info">
-            <h4>How to Drive and Code a VEX IQ Robot</h4>
-            <p>Full walkthrough: from unboxing to driving and coding your first robot.</p>
-          </div>
-        </div>
-      </div>
-
-      <h3 style="margin-top:30px;margin-bottom:16px;">In-Depth Coding Tutorials</h3>
-      <div class="card-grid">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=ucOT-ENP21M">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/ucOT-ENP21M/hqdefault.jpg" alt="Learn Autonomous Programming in VEX IQ Step by Step"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Learn Autonomous Programming in VEX IQ - Step-by-Step</h4><p>By The VEX IQ Guide. Full autonomous coding walkthrough.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=IGbHbtC5wKU">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/IGbHbtC5wKU/hqdefault.jpg" alt="VEXcode IQ Blocks Tutorial Beginner"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEXcode IQ Blocks Tutorial - Beginner</h4><p>By TechPoint Youth. Complete beginner coding tutorial.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=ap39M61F1l0">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/ap39M61F1l0/hqdefault.jpg" alt="VEX IQ Coding Beginners 2 and 4 Motor Drivetrain"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Coding: How to Code a 2- and 4-Motor Drivetrain</h4><p>By VEX Talk. Detailed drivetrain coding for beginners.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=6WQirZ0DK8g">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/6WQirZ0DK8g/hqdefault.jpg" alt="How to Code in VEX IQ Step 1 Master Basic Classes"><div class="video-play"></div></div>
-          <div class="video-info"><h4>How to Code in VEX IQ: Step 1 - Master the Basic Classes</h4><p>By VEX Talk. Understanding the code classes in VEXcode IQ.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=2ZhxhHAEDB0">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/2ZhxhHAEDB0/hqdefault.jpg" alt="VEX IQ Coding Master Procedures"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Coding: Master Procedures &amp; Level Up Your Program</h4><p>By STEAM Labs. Learn procedures/functions to organize your code.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=voZIL4Gf7Zk">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/voZIL4Gf7Zk/hqdefault.jpg" alt="VEXcode IQ Device Setup Sensors Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEXcode IQ Blocks - Device Setup: Sensors</h4><p>Official VEX Robotics tutorial on configuring sensors in VEXcode.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=d8gI02Ecig0">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/d8gI02Ecig0/hqdefault.jpg" alt="VEXcode IQ Opening the Claw Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEXcode IQ Blocks - Opening the Claw</h4><p>Official VEX Robotics tutorial on coding the claw mechanism.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=13Rsxcc9T-w">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/13Rsxcc9T-w/hqdefault.jpg" alt="VEXcode IQ Programming Sensors"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEXcode IQ: Programming Sensors</h4><p>By Mitch Norris. How to read and use sensor data in your code.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=w6g0GOcKUYg">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/w6g0GOcKUYg/hqdefault.jpg" alt="VEX IQ Autonomous Coding with Basebot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Autonomous Coding with Basebot</h4><p>By TechyRobot Teacher. Learn autonomous coding with the BaseBot.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=3q-AZdmNImY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/3q-AZdmNImY/hqdefault.jpg" alt="Autonomous Programming VEX IQ"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Autonomous Programming VEX IQ</h4><p>By TUSD Robotics. Full autonomous programming tutorial.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=uv_YP8dgVMY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/uv_YP8dgVMY/hqdefault.jpg" alt="How to accurately turn with Gyro Sensor VEX IQ"><div class="video-play"></div></div>
-          <div class="video-info"><h4>How to Accurately Turn with the Gyro Sensor</h4><p>By AllDayStem. Precise turning using the gyro/inertial sensor.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=_QuhyOZFfLU">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/_QuhyOZFfLU/hqdefault.jpg" alt="Basic sensor based autonomous with VEXcode IQ"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Basic Sensor-Based Autonomous with VEXcode IQ</h4><p>By Travis Burroughs. Using sensors for autonomous navigation.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=PMvg_vx1MQY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/PMvg_vx1MQY/hqdefault.jpg" alt="How to Code the OPTICAL SENSOR for VEX IQ"><div class="video-play"></div></div>
-          <div class="video-info"><h4>How to Code the OPTICAL SENSOR for VEX IQ</h4><p>By Chewbotca. Sensor coding tip for the optical sensor.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=nF0kPc77mxo">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/nF0kPc77mxo/hqdefault.jpg" alt="VEX IQ Sensing Distance"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ - Sensing Distance</h4><p>By Kai Nakamura. Using the distance sensor in code.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=NoxCacvxoiI">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/NoxCacvxoiI/hqdefault.jpg" alt="Coding Huey Pinhead and Clawbot for VEX IQ"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Coding Huey, Pinhead, and Clawbot for VEX IQ</h4><p>By Ben Lipper. Coding walkthrough for multiple robot types.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=q-X4Q_mXOfY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/q-X4Q_mXOfY/hqdefault.jpg" alt="Basic Base bot Blocks Programming on the Vex IQ"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Basic BaseBot Blocks Programming</h4><p>By Coding with Culp. Scratch-style programming for the BaseBot.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=SYGwyNmK9Jk">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/SYGwyNmK9Jk/hqdefault.jpg" alt="Robotics Tutorial Robotics With Vex IQ Beginners Course"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Robotics With VEX IQ [Beginners Course]</h4><p>By Letslearn TV. Full beginner course covering VEX IQ basics.</p></div>
-        </div>
-      </div>
-
-      <div class="info-box mt-20">
-        <p>Placer's own programming curriculum with 8 guided sub-topics covering everything from opening VEXcode to building repeatable autonomous paths and debugging code problems.</p>
-        <a href="https://hub.placerrobotics.org/academy/iq/learn/programming-and-sensors" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-weight:600;">Open Academy Topic 5 (login required) →</a>
-      </div>
-    </section>
-
-    <!-- ===== PLACER ACADEMY ===== -->
-    <section id="placer">
-      <div class="section-header">
-        <div class="section-number">🏛️</div>
-        <h2>Placer Robotics Academy: Full 9-Topic Curriculum</h2>
-        <p>The gated curriculum from hub.placerrobotics.org — organized into 9 sequential topics.</p>
-      </div>
-
-      <div class="info-box">
-        <h4>🔐 Access note</h4>
-        <p>The Placer Robotics Academy requires login. Team 295U members (and all Placer Robotics VEX IQ families) get access — ask your coach for a student code + PIN, or sign in with your email at <a href="https://hub.placerrobotics.org" target="_blank" rel="noopener">hub.placerrobotics.org</a>. The links below go to the Academy pages; you'll need to be logged in to view them.</p>
-      </div>
-
-      <div class="topic-table-wrapper mt-20">
-      <table class="topic-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Topic</th>
-            <th>What it covers</th>
-            <th>Key sub-pages</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="topic-num">1</span></td>
-            <td><strong>Start Here and Meet the Kit</strong></td>
-            <td>Identify Brain, Controller, battery, motors, sensors, cables; charge &amp; inspect; pair, connect, update firmware</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/start-here-and-meet-the-kit" target="_blank" rel="noopener">Start Here &amp; Meet the Kit →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">2</span></td>
-            <td><strong>Current Game and Rules</strong></td>
-            <td>The 2026-27 game "Level Up" — field, match types, scoring, official rules, Hero Bot "Flop"</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/current-game-and-rules" target="_blank" rel="noopener">Current Game &amp; Rules →</a>
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/hero-bot-and-ownership" target="_blank" rel="noopener">Start with Flop →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">3</span></td>
-            <td><strong>Competition Drivetrains</strong></td>
-            <td>Drivetrain layouts, wheel choices, drive program, shaft support, gear ratios (speed vs. force)</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/competition-drivetrains" target="_blank" rel="noopener">Competition Drivetrains →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">4</span></td>
-            <td><strong>Building and Mechanisms</strong></td>
-            <td>Build a first robot, join parts correctly, strong &amp; square structures, free motion, cable routing, comparing ideas</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/building-and-mechanisms" target="_blank" rel="noopener">Building &amp; Mechanisms →</a>
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/build-your-first-robot" target="_blank" rel="noopener">Build a First Robot →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">5</span></td>
-            <td><strong>Programming and Sensors</strong></td>
-            <td>VEXcode IQ Blocks, configure devices, sequences, driver controls, loops/conditions, sensor data, autonomous paths, debugging</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq/learn/programming-and-sensors" target="_blank" rel="noopener">Programming &amp; Sensors →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">6</span></td>
-            <td><strong>Strategy, Skills, and Driver Practice</strong></td>
-            <td>Turn scoring rules into a plan, focused measured practice</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">View in Academy →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">7</span></td>
-            <td><strong>Notebook and Engineering Process</strong></td>
-            <td>Record decisions, test one change at a time, use evidence to improve the robot</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">View in Academy →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">8</span></td>
-            <td><strong>Events, Inspection, Judging, and Awards</strong></td>
-            <td>Inspection prep, event operations, judging, a reliable competition day</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">View in Academy →</a>
-            </td>
-          </tr>
-          <tr>
-            <td><span class="topic-num">9</span></td>
-            <td><strong>Team Practices and Working Together</strong></td>
-            <td>Share technical work, keep decisions student-led, work well with alliance partners</td>
-            <td class="topic-links">
-              <a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">View in Academy →</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-
-      <h3 style="margin-top:30px;margin-bottom:16px;">Additional Academy Resources</h3>
-      <div class="card-grid">
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-placer">Placer Academy</span>
-          <h3>The IQ Parts Guide</h3>
-          <p>Interactive searchable parts guide with categories: Structure, Connectors, Shafts, Motion, Electronics, Sensors, Tools. Filter by "In our standard kit." Each part has a "Learn how to use it" link.</p>
-          <a href="https://hub.placerrobotics.org/academy/iq/parts" target="_blank" rel="noopener" class="card-link">Open Parts Guide <span class="arrow">→</span></a>
+        <div class="tab-content" id="code-auto"><div class="card-grid">
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=ucOT-ENP21M" id="video-ucOT-ENP21M"><div class="video-thumb"><img src="https://img.youtube.com/vi/ucOT-ENP21M/hqdefault.jpg" alt="Autonomous Programming Step-by-Step"><div class="video-play"></div></div><div class="video-info"><h4>Autonomous Programming Step-by-Step</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-code">Autonomous</span></p><p>A step-by-step approach to programming autonomous robot movement.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=w6g0GOcKUYg" id="video-w6g0GOcKUYg"><div class="video-thumb"><img src="https://img.youtube.com/vi/w6g0GOcKUYg/hqdefault.jpg" alt="Autonomous Coding with BaseBot"><div class="video-play"></div></div><div class="video-info"><h4>Autonomous Coding with BaseBot</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TechyRobot Teacher</a><span class="card-tag tag-code">Autonomous</span></p><p>A BaseBot-focused autonomous coding tutorial for beginner drivers.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=3q-AZdmNImY" id="video-3q-AZdmNImY"><div class="video-thumb"><img src="https://img.youtube.com/vi/3q-AZdmNImY/hqdefault.jpg" alt="Autonomous Programming"><div class="video-play"></div></div><div class="video-info"><h4>Autonomous Programming</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TUSD Robotics</a><span class="card-tag tag-code">Autonomous</span></p><p>An autonomous programming lesson for sequencing robot actions.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=_QuhyOZFfLU" id="video-_QuhyOZFfLU"><div class="video-thumb"><img src="https://img.youtube.com/vi/_QuhyOZFfLU/hqdefault.jpg" alt="Sensor-Based Autonomous"><div class="video-play"></div></div><div class="video-info"><h4>Sensor-Based Autonomous</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Travis Burroughs</a><span class="card-tag tag-code">Sensors</span></p><p>An autonomous lesson that uses sensor feedback instead of only timing.</p></div></div>
         </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-placer">Placer Academy</span>
-          <h3>Saturday Session Recaps</h3>
-          <p>Recaps and activities from Placer's Saturday training sessions. Currently empty (season just starting) — sessions will be posted as they happen.</p>
-          <a href="https://hub.placerrobotics.org/academy/iq/sessions" target="_blank" rel="noopener" class="card-link">View Sessions <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-placer">Placer Academy</span>
-          <h3>Coach Course (V5 &amp; IQ)</h3>
-          <p>For parent coaches: team operations, the IQ season, IQ teams and families, participant releases, and useful activities.</p>
-          <a href="https://hub.placerrobotics.org/academy" target="_blank" rel="noopener" class="card-link">Open Academy <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-placer">Placer Public</span>
-          <h3>For Families: Season, Events, Kit Care</h3>
-          <p>Public Placer Robotics page explaining the VEX IQ season, how events work, kit care, and student ownership (parents don't build the robot!).</p>
-          <a href="https://placerrobotics.org/programs/vex-iq" target="_blank" rel="noopener" class="card-link">Open Page <span class="arrow">→</span></a>
+        <div class="tab-content" id="code-sensors"><div class="card-grid">
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=13Rsxcc9T-w" id="video-13Rsxcc9T-w"><div class="video-thumb"><img src="https://img.youtube.com/vi/13Rsxcc9T-w/hqdefault.jpg" alt="Programming Sensors"><div class="video-play"></div></div><div class="video-info"><h4>Programming Sensors</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Mitch Norris</a><span class="card-tag tag-code">Sensors</span></p><p>A sensor-programming overview for using robot data in code.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=uv_YP8dgVMY" id="video-uv_YP8dgVMY"><div class="video-thumb"><img src="https://img.youtube.com/vi/uv_YP8dgVMY/hqdefault.jpg" alt="Accurately Turn with Gyro"><div class="video-play"></div></div><div class="video-info"><h4>Accurately Turn with Gyro</h4><p class="video-meta"><a href="https://www.youtube.com" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By AllDayStem</a><span class="card-tag tag-code">Gyro</span></p><p>A gyro-based turning tutorial for more repeatable autonomous movement.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=PMvg_vx1MQY" id="video-PMvg_vx1MQY"><div class="video-thumb"><img src="https://img.youtube.com/vi/PMvg_vx1MQY/hqdefault.jpg" alt="Code the Optical Sensor"><div class="video-play"></div></div><div class="video-info"><h4>Code the Optical Sensor</h4><p class="video-meta"><a href="https://www.youtube.com/@Chewbotca7163BRobotics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Chewbotca</a><span class="card-tag tag-code">Optical</span></p><p>A focused tutorial on using the optical sensor in robot programs.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=nF0kPc77mxo" id="video-nF0kPc77mxo"><div class="video-thumb"><img src="https://img.youtube.com/vi/nF0kPc77mxo/hqdefault.jpg" alt="Sensing Distance"><div class="video-play"></div></div><div class="video-info"><h4>Sensing Distance</h4><p class="video-meta"><a href="https://www.youtube.com/playlist?list=PL49dF5loXCunQO-Fnx2JYFAsxjAtfytil" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Kai Nakamura</a><span class="card-tag tag-code">Distance</span></p><p>A distance-sensor lesson for reacting to objects and walls.</p></div></div>
         </div></div>
       </div>
     </section>
 
-    <!-- ===== DRIVING TIPS ===== -->
-    <section id="driving">
-      <div class="section-header">
-        <div class="section-number">🎮</div>
-        <h2>Driving Tips &amp; Practice</h2>
-        <p>Driving is a skill — these videos help you get better fast.</p>
+    <section id="academy">
+      <div class="section-header"><div class="section-number">6</div><h2>Academy</h2><p>A compact Placer Academy map with cross-links back to the matching site sections.</p></div>
+      <div class="table-scroll">
+        <table class="topic-table">
+          <thead><tr><th>Topic</th><th>Academy Lesson</th><th>Use With</th><th>Section</th></tr></thead>
+          <tbody>
+            <tr><td><span class="topic-num">1</span></td><td><a href="https://hub.placerrobotics.org/academy/iq/learn/start-here-and-meet-the-kit" target="_blank" rel="noopener">Start Here and Meet the Kit</a></td><td>Kit setup, parts, electronics, charging, pairing</td><td><a href="#kit">Kit &amp; Parts</a></td></tr>
+            <tr><td><span class="topic-num">2</span></td><td><a href="https://hub.placerrobotics.org/academy/iq/learn/current-game-and-rules" target="_blank" rel="noopener">Current Game and Rules</a><br><a href="https://hub.placerrobotics.org/academy/iq/learn/hero-bot-and-ownership" target="_blank" rel="noopener">Hero Bot and Ownership</a></td><td>Manual, reveal, scoring, Hero Bot roles</td><td><a href="#game">Game &amp; Strategy</a></td></tr>
+            <tr><td><span class="topic-num">3</span></td><td><a href="https://hub.placerrobotics.org/academy/iq/learn/competition-drivetrains" target="_blank" rel="noopener">Competition Drivetrains</a></td><td>Drive base choices, speed, control, reliability</td><td><a href="#builds">Robot Builds</a></td></tr>
+            <tr><td><span class="topic-num">4</span></td><td><a href="https://hub.placerrobotics.org/academy/iq/learn/building-and-mechanisms" target="_blank" rel="noopener">Building and Mechanisms</a><br><a href="https://hub.placerrobotics.org/academy/iq/learn/build-your-first-robot" target="_blank" rel="noopener">Build Your First Robot</a></td><td>Frames, claws, lifts, catapults, iteration</td><td><a href="#builds">Robot Builds</a></td></tr>
+            <tr><td><span class="topic-num">5</span></td><td><a href="https://hub.placerrobotics.org/academy/iq/learn/programming-and-sensors" target="_blank" rel="noopener">Programming and Sensors</a></td><td>VEXcode, driver control, autonomous, sensors</td><td><a href="#code">Programming</a></td></tr>
+            <tr><td><span class="topic-num">6</span></td><td><a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">Driver Practice</a></td><td>Driving drills and teamwork readiness</td><td><a href="#game">Game &amp; Strategy</a></td></tr>
+            <tr><td><span class="topic-num">7</span></td><td><a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">Strategy and Scouting</a></td><td>Scoring paths, match planning, skills priorities</td><td><a href="#game">Game &amp; Strategy</a></td></tr>
+            <tr><td><span class="topic-num">8</span></td><td><a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">Engineering Notebook</a></td><td>Design process, testing evidence, awards prep</td><td><a href="#game">Game &amp; Strategy</a></td></tr>
+            <tr><td><span class="topic-num">9</span></td><td><a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener">Competition Ready</a></td><td>Inspection, packing, roles, and next improvements</td><td><a href="#game">Game &amp; Strategy</a></td></tr>
+          </tbody>
+        </table>
       </div>
-
-      <div class="card-grid">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=tepeFAA7Gbo">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/tepeFAA7Gbo/hqdefault.jpg" alt="5 Tips to Instantly Improve Your VEX Robot Driving"><div class="video-play"></div></div>
-          <div class="video-info"><h4>5 Tips to Instantly Improve Your VEX Robot Driving</h4><p>By The VEX IQ Guide. The best driving tips video for VEX IQ — joystick control, turning, and practice drills.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=mEfmoMzmXxc">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/mEfmoMzmXxc/hqdefault.jpg" alt="Exploring VEX Robot Design"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Exploring VEX | Robot Design</h4><p>Official VEX Robotics video on robot design principles.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=afrdGr4ue9Y">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/afrdGr4ue9Y/hqdefault.jpg" alt="VEX IQ Full Inspection Guide"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ Full Inspection Guide</h4><p>By Caution Tape Robotics. What to expect at competition inspection.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=O0El_fts9ns">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/O0El_fts9ns/hqdefault.jpg" alt="How to Start an Award Winning VEX Notebook"><div class="video-play"></div></div>
-          <div class="video-info"><h4>How to Start an Award Winning VEX Notebook</h4><p>By 8931B V-Bots Trifecta. Engineering notebook guide for awards.</p></div>
-        </div>
-      </div>
-
-      <div class="info-box mt-20">
-        <h4>🏛️ Placer Academy: Strategy, Skills &amp; Driver Practice (Topic 6)</h4>
-        <p>Placer's curriculum covers turning scoring rules into a plan, then improving with focused, measured practice. Topics 7-9 also cover the engineering notebook, events/inspection/judging, and team practices.</p>
-        <a href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-weight:600;">Open Academy (login required) →</a>
+      <div class="section-subhead"><h3>Additional Academy Resources</h3><p>Use these alongside the topic table when joining, practicing, or preparing for camps.</p></div>
+      <div class="resource-list">
+        <a class="resource-pill" href="https://placerrobotics.org/programs/vex-iq" target="_blank" rel="noopener"><strong>Placer Robotics VEX IQ</strong><span>Program overview</span></a>
+        <a class="resource-pill" href="https://placerrobotics.org/join" target="_blank" rel="noopener"><strong>Join Placer Robotics</strong><span>Team registration and next steps</span></a>
+        <a class="resource-pill" href="https://placerrobotics.org/join/faq" target="_blank" rel="noopener"><strong>Placer FAQ</strong><span>Family and joining questions</span></a>
+        <a class="resource-pill" href="https://placerrobotics.org/camps" target="_blank" rel="noopener"><strong>Placer Camps</strong><span>Camp opportunities</span></a>
+        <a class="resource-pill" href="https://kb.vex.com/hc/en-us/articles/4410278576020-VEX-IQ-2nd-gen-Interactive-Parts-Poster" target="_blank" rel="noopener"><strong>Parts Guide</strong><span>Official interactive poster</span></a>
+        <a class="resource-pill" href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener"><strong>Academy Sessions</strong><span>Main Academy hub</span></a>
+        <a class="resource-pill" href="https://hub.placerrobotics.org/academy/iq" target="_blank" rel="noopener"><strong>Coach Course</strong><span>Coach-facing Academy material</span></a>
       </div>
     </section>
 
-    <!-- ===== ALL VIDEOS ===== -->
     <section id="videos">
-      <div class="section-header">
-        <div class="section-number">🎥</div>
-        <h2>All Videos in One Place</h2>
-        <p>Every video on this page, organized by category. Click any card to watch on YouTube.</p>
+      <div class="section-header"><div class="section-number">7</div><h2>Video Library &amp; Creators</h2><p>Use the topic index to jump to videos, or browse creators by specialty.</p></div>
+      <div class="section-subhead"><h3>Topic Index</h3><p>Video cards live in the section where they are most useful.</p></div>
+      <div class="topic-index">
+        <a class="topic-pill" href="#kit"><strong>Kit Videos</strong><span>3 videos</span></a>
+        <a class="topic-pill" href="#builds"><strong>Robot Build Videos</strong><span>27 videos</span></a>
+        <a class="topic-pill" href="#game"><strong>Game &amp; Strategy Videos</strong><span>7 videos</span></a>
+        <a class="topic-pill" href="#code"><strong>Programming Videos</strong><span>23 videos</span></a>
+        <a class="topic-pill" href="#videos"><strong>Total Library</strong><span>60 video cards</span></a>
       </div>
-
-      <h3 style="margin-bottom:14px;">📦 Kit &amp; Unboxing</h3>
-      <div class="card-grid mb-40">
-        <div class="video-card" data-video="https://youtu.be/KbBNJlZNqeI">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/KbBNJlZNqeI/hqdefault.jpg" alt="VEX IQ 2nd Gen Education Kit Full Walkthrough"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEX IQ 2nd Gen Education Kit — Full Walkthrough</h4><p>Complete tour of both boxes. Start here.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=w7yXXJmg1Do">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/w7yXXJmg1Do/hqdefault.jpg" alt="What's in the Box VEX IQ Robotics Kit"><div class="video-play"></div></div>
-          <div class="video-info"><h4>What's in the Box: VEX IQ</h4><p>Kid-friendly kit walkthrough.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=JvohEXX-FiY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/JvohEXX-FiY/hqdefault.jpg" alt="Getting Started with VEX IQ Gen 2"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Getting Started with VEX IQ (Gen 2)</h4><p>Official VEX getting-started video.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=G9avDKpz5yY">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/G9avDKpz5yY/hqdefault.jpg" alt="VEX IQ Competition Game Elements Unboxing"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Competition Game Elements Unboxing</h4><p>What's in the game component box.</p></div>
-        </div>
-      </div>
-
-      <h3 style="margin-bottom:14px;">🔧 Building the BaseBot</h3>
-      <div class="card-grid mb-40">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=FjkT8jdOeyA">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/FjkT8jdOeyA/hqdefault.jpg" alt="VEX IQ Basebot Assembly Simple Clear Guide"><div class="video-play"></div></div>
-          <div class="video-info"><h4>BaseBot Assembly — Simple &amp; Clear Guide</h4><p>Step-by-step basebot build tutorial.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=ahhcMxlHwbI">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/ahhcMxlHwbI/hqdefault.jpg" alt="Vex IQ build Gen2 BaseBot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Vex IQ Gen2 BaseBot Build Walkthrough</h4><p>Full build walkthrough of the Gen2 BaseBot.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=ma4PYfs1DYo">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/ma4PYfs1DYo/hqdefault.jpg" alt="Vex IQ Gen 2 Basebot Build Walkthrough"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Gen2 BaseBot Build Walk-through</h4><p>Another full BaseBot build walkthrough.</p></div>
-        </div>
-      </div>
-
-      <h3 style="margin-bottom:14px;">🎮 Level Up Game &amp; Flop Hero Bot</h3>
-      <div class="card-grid mb-40">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=KP0FYPW604E">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/KP0FYPW604E/hqdefault.jpg" alt="VEX IQ Level Up 2026-2027 Game Reveal"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Level Up — 2026-2027 Game Reveal</h4><p>Official game reveal. Watch first!</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=jPaarRbLjaE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/jPaarRbLjaE/hqdefault.jpg" alt="VEX IQ Level Up Hero Bot Flop Part 1"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Flop Hero Bot — Part 1</h4><p>Official VEX build walkthrough, Part 1.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=n_fWxHqSMPs">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/n_fWxHqSMPs/hqdefault.jpg" alt="VEX IQ Level Up Hero Bot Flop Part 2"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Flop Hero Bot — Part 2</h4><p>Official VEX build walkthrough, Part 2.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=pghmsMOFOc4">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/pghmsMOFOc4/hqdefault.jpg" alt="Build Phase Building Flop VEX IQ Level Up Herobot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Build Phase: Building Flop</h4><p>Community walkthrough of building Flop.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=2gTnF5b_krE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/2gTnF5b_krE/hqdefault.jpg" alt="HEROBOT FLOP Built from step-by-step instructions"><div class="video-play"></div></div>
-          <div class="video-info"><h4>HEROBOT FLOP — Built from Step-by-Step Instructions</h4><p>Ben Lipper builds Flop from the official 3D instructions.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=wJpjTm775Q0">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/wJpjTm775Q0/hqdefault.jpg" alt="Level Up Worlds Reveal VEX Robotics"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Level Up — Worlds Reveal</h4><p>Game reveal at VEX Worlds 2026.</p></div>
-        </div>
-      </div>
-
-      <h3 style="margin-bottom:14px;">💻 Programming Tutorials</h3>
-      <div class="card-grid mb-40">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=nzM0JE7vFaQ">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/nzM0JE7vFaQ/hqdefault.jpg" alt="VEXcode IQ Blocks Getting Started Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>VEXcode IQ Blocks — Getting Started</h4><p>Create your first Blocks project.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=MSX9LLQLvmk">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/MSX9LLQLvmk/hqdefault.jpg" alt="VEXcode IQ Downloading and Running Projects"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Downloading &amp; Running Projects</h4><p>Download code to the Brain and run it.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=7Feo7YOs9E8">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/7Feo7YOs9E8/hqdefault.jpg" alt="VEXcode IQ Using Loops Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Using Loops</h4><p>Repeat actions with loops.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=uKL38GKP0zE">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/uKL38GKP0zE/hqdefault.jpg" alt="VEXcode Blocks If Then Else Blocks Tutorial"><div class="video-play"></div></div>
-          <div class="video-info"><h4>If-Then-Else Blocks</h4><p>Make decisions based on sensor input.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=yJvA-QpKvKI">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/yJvA-QpKvKI/hqdefault.jpg" alt="VEXcode IQ Using Example Projects and Templates"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Example Projects &amp; Templates</h4><p>Start from working examples.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=PwLPVbLclqk">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/PwLPVbLclqk/hqdefault.jpg" alt="How to Drive and Code a VEX IQ Robot"><div class="video-play"></div></div>
-          <div class="video-info"><h4>How to Drive and Code a VEX IQ Robot</h4><p>Full walkthrough: unboxing to driving and coding.</p></div>
-        </div>
-      </div>
-
-      <h3 style="margin-bottom:14px;">🤖 Previous Season: Huey (Mix &amp; Match)</h3>
-      <div class="card-grid mb-40">
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=LZVko5doG-w">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/LZVko5doG-w/hqdefault.jpg" alt="VEX IQ Mix and Match Hero Bot Huey Part 1"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Huey Hero Bot — Part 1</h4><p>Previous season's Hero Bot build, Part 1.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=sMZ-SxT3SSI">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/sMZ-SxT3SSI/hqdefault.jpg" alt="VEX IQ Mix and Match Hero Bot Huey Part 2"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Huey Hero Bot — Part 2</h4><p>Previous season's Hero Bot build, Part 2.</p></div>
-        </div>
-        <div class="video-card" data-video="https://www.youtube.com/watch?v=RN-UyJbe_yg">
-          <div class="video-thumb"><img src="https://img.youtube.com/vi/RN-UyJbe_yg/hqdefault.jpg" alt="VEX IQ Mix and Match Game Reveal 2025-2026"><div class="video-play"></div></div>
-          <div class="video-info"><h4>Mix &amp; Match Game Reveal (2025-26)</h4><p>Last season's game reveal for reference.</p></div>
-        </div>
-      </div>
+      <div class="section-subhead"><h3>Official Updates</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-official">Official</span><h4><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener">VEX Robotics (@vexroboticstv)</a></h4><p>Game reveals, Hero Bot builds, official tutorials, and VEXcode lessons.</p></div></div>
+      <div class="section-subhead"><h3>Beginner Builds</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-build">Beginner Builds</span><h4><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener">The VEX IQ Guide (@TheVEXIQGuide)</a></h4><p>Build walkthroughs, autonomous coding, and driving tips for VEX IQ teams.</p></div><div class="creator-card"><span class="card-tag tag-build">Beginner Builds</span><h4><a href="https://www.youtube.com/@TheRobotUnderground" target="_blank" rel="noopener">The Robot Underground (@TheRobotUnderground)</a></h4><p>Build and code tutorials with classroom-style robot challenges.</p></div></div>
+      <div class="section-subhead"><h3>Step-by-Step Builds</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-build">Step-by-Step</span><h4><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener">Ben Lipper (@BenLipper)</a></h4><p>Detailed step-by-step robot builds and design ideas for Level Up.</p></div><div class="creator-card"><span class="card-tag tag-build">Step-by-Step</span><h4><a href="https://www.youtube.com/@TechPointYouth" target="_blank" rel="noopener">TechPoint Youth (@TechPointYouth)</a></h4><p>Build phases and beginner coding tutorials for youth robotics teams.</p></div></div>
+      <div class="section-subhead"><h3>Mechanisms</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-build">Mechanisms</span><h4><a href="https://www.youtube.com" target="_blank" rel="noopener">Hackers IQ</a></h4><p>Ratchet and catapult mechanism explanations using VEX IQ parts.</p></div><div class="creator-card"><span class="card-tag tag-build">Mechanisms</span><h4><a href="https://www.youtube.com" target="_blank" rel="noopener">CosmosTech</a></h4><p>Hero Bot breakdowns and mechanism observations.</p></div></div>
+      <div class="section-subhead"><h3>Coding</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-code">Coding</span><h4><a href="https://www.youtube.com/@VEXTalk" target="_blank" rel="noopener">VEX Talk (@VEXTalk)</a></h4><p>Drivetrain coding and programming concept videos.</p></div><div class="creator-card"><span class="card-tag tag-code">Coding</span><h4><a href="https://www.youtube.com" target="_blank" rel="noopener">Coding with Culp</a></h4><p>Scratch-style VEX IQ Blocks programming lessons.</p></div><div class="creator-card"><span class="card-tag tag-code">Coding</span><h4><a href="https://www.youtube.com/playlist?list=PL49dF5loXCunQO-Fnx2JYFAsxjAtfytil" target="_blank" rel="noopener">Kai Nakamura</a></h4><p>Sensors and getting-started coding lessons in playlist form.</p></div><div class="creator-card"><span class="card-tag tag-code">Coding</span><h4><a href="https://www.youtube.com" target="_blank" rel="noopener">STEAM Labs</a></h4><p>Programming procedure lessons used for organizing repeated robot actions.</p></div></div>
+      <div class="section-subhead"><h3>Sensors</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-code">Sensors</span><h4><a href="https://www.youtube.com" target="_blank" rel="noopener">AllDayStem</a></h4><p>Gyro and sensor tutorials for more accurate robot movement.</p></div><div class="creator-card"><span class="card-tag tag-code">Sensors</span><h4><a href="https://www.youtube.com/@Chewbotca7163BRobotics" target="_blank" rel="noopener">Chewbotca (@Chewbotca7163BRobotics)</a></h4><p>Sensor coding tips, including optical sensor use.</p></div></div>
+      <div class="section-subhead"><h3>Game/Strategy</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-game">Strategy</span><h4><a href="https://www.youtube.com/@RoboSTEM" target="_blank" rel="noopener">RoboSTEM (@RoboSTEM)</a></h4><p>Game manual breakdowns and strategy analysis.</p></div></div>
+      <div class="section-subhead"><h3>Competition Prep</h3></div>
+      <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-game">Competition Prep</span><h4><a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener">Caution Tape Robotics (@CautionTapeRobotics)</a></h4><p>Inspection guides and tournament preparation videos.</p></div><div class="creator-card"><span class="card-tag tag-game">Competition Prep</span><h4><a href="https://www.youtube.com" target="_blank" rel="noopener">8931B V-Bots Trifecta</a></h4><p>Engineering notebook guidance from a VEX IQ team.</p></div></div>
     </section>
-
-    <!-- ===== TOP CREATORS & INFLUENCERS ===== -->
-    <section id="creators">
-      <div class="section-header">
-        <div class="section-number">⭐</div>
-        <h2>Top VEX IQ Creators &amp; Channels</h2>
-        <p>The best YouTube channels for VEX IQ tips, tricks, builds, and coding tutorials.</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-video">Best Educational</span>
-          <h3>The VEX IQ Guide</h3>
-          <p>The best educational VEX IQ channel — build guides, coding tutorials, driving tips, and step-by-step walkthroughs. Clear explanations designed for kids and beginners.</p>
-          <a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-build">Step-by-Step Builds</span>
-          <h3>Ben Lipper</h3>
-          <p>The best step-by-step robot build videos for Level Up. Shows every piece, every step, every adjustment. His playlist covers simple starter robots through advanced catapult designs.</p>
-          <a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-official">Official VEX</span>
-          <h3>VEX Robotics</h3>
-          <p>Official VEX Robotics YouTube channel — game reveals, Hero Bot build videos, product announcements, and Worlds coverage. The source for all official VEX content.</p>
-          <a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-code">Coding Focus</span>
-          <h3>VEX Talk</h3>
-          <p>Coding-focused channel — drivetrain coding, basic classes, and programming concepts for VEX IQ. Great for kids learning to code.</p>
-          <a href="https://www.youtube.com/@VEXTalk" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-build">Build Tutorials</span>
-          <h3>TechPoint Youth</h3>
-          <p>VEXcode IQ Blocks tutorials for beginners, plus full Hero Bot build phases. Great for kids starting out.</p>
-          <a href="https://www.youtube.com/@TechPointYouth" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-video">Tutorials Playlist</span>
-          <h3>Kai Nakamura</h3>
-          <p>VEX IQ Tutorials playlist covering getting started, sensors, coding, and building. Well-organized for beginners.</p>
-          <a href="https://www.youtube.com/playlist?list=PL49dF5loXCunQO-Fnx2JYFAsxjAtfytil" target="_blank" rel="noopener" class="card-link">Open Playlist <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-game">Game Analysis</span>
-          <h3>RoboSTEM</h3>
-          <p>Game manual breakdowns, robot reviews, and competition strategy analysis.</p>
-          <a href="https://www.youtube.com/@RoboSTEM" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-code">Tips Series</span>
-          <h3>Chewbotca 7163B Robotics</h3>
-          <p>Tips series including sensor coding, mechanism design, and competition preparation.</p>
-          <a href="https://www.youtube.com/@Chewbotca7163BRobotics" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-kits">Competition Prep</span>
-          <h3>Caution Tape Robotics</h3>
-          <p>Inspection guides, competition preparation, and VEX IQ tips for tournament day.</p>
-          <a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-build">Notebook Guide</span>
-          <h3>8931B V-Bots Trifecta</h3>
-          <p>Award-winning engineering notebook guide — how to document your design process for judging.</p>
-          <a href="https://www.youtube.com/watch?v=O0El_fts9ns" target="_blank" rel="noopener" class="card-link">Watch Guide <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-build">Build + Code</span>
-          <h3>The Robot Underground</h3>
-          <p>Build + Code tutorial series with fun challenges. Level 1 Clawbot build and battle tutorial is great for beginners.</p>
-          <a href="https://www.youtube.com/@TheRobotUnderground" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-        <div class="card"><div class="card-body">
-          <span class="card-tag tag-code">Autonomous Coding</span>
-          <h3>Creator Academy Australia</h3>
-          <p>Autonomous programming tutorials, clawbot coding, and VEX IQ robot challenges.</p>
-          <a href="https://www.youtube.com/@CreatorAcademyAustralia" target="_blank" rel="noopener" class="card-link">Visit Channel <span class="arrow">→</span></a>
-        </div></div>
-      </div>
-    </section>
-
-    <!-- ===== PARTS GUIDE ===== -->
-    <section id="parts">
-      <div class="section-header">
-        <div class="section-number">🧩</div>
-        <h2>Interactive Parts Guide</h2>
-        <p>Every part in the VEX IQ (2nd gen) kit, categorized and linked to official VEX usage guides.</p>
-      </div>
-
-      <div class="info-box">
-        <h4>🖼️ Quick reference</h4>
-        <p>For the full visual poster, open the <a href="https://kb.vex.com/hc/en-us/articles/4410278576020-VEX-IQ-2nd-gen-Interactive-Parts-Poster" target="_blank" rel="noopener">Interactive Parts Poster</a> or download the <a href="https://link.vex.com/docs/pdf/iq-gen-2-education-poster" target="_blank" rel="noopener">Parts Poster PDF</a>.</p>
-      </div>
-
-      <div class="parts-grid mt-20">
-        <div class="part-card"><div class="part-icon">🧠</div><h4>IQ Brain (2nd gen)</h4><a href="https://kb.vex.com/hc/en-us/articles/4407024174996-Navigating-Menus-IQ-Brain-2nd-gen" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🔋</div><h4>Robot Battery</h4><a href="https://kb.vex.com/hc/en-us/articles/4406898936724-Charging-the-VEX-IQ-2nd-gen-Battery" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🎮</div><h4>IQ Controller</h4><a href="https://kb.vex.com/hc/en-us/articles/4407237011860-Calibrating-the-Controller-IQ-2nd-gen" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">⚙️</div><h4>IQ Smart Motor</h4><a href="https://kb.vex.com/hc/en-us/articles/18130095316884-Understanding-and-Mounting-the-IQ-Smart-Motor" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">📡</div><h4>Distance Sensor</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🌈</div><h4>Optical Sensor</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🔘</div><h4>Bumper Switch</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">💡</div><h4>Touch LED</h4><a href="https://kb.vex.com/hc/en-us/articles/14021137100308-Overview-of-VEX-IQ-2nd-gen-Sensors" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">📏</div><h4>Beam</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955191-Understanding-VEX-IQ-Beams-and-Plates" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🔡</div><h4>Plate</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955191-Understanding-VEX-IQ-Beams-and-Plates" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">📌</div><h4>Connector Pin</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">📍</div><h4>Capped Pin</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">📐</div><h4>Corner Connector</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🧱</div><h4>Standoff</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955131-Understanding-VEX-IQ-Pins-Connectors-and-Standoffs" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">➖</div><h4>Square Shaft</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955151-Selecting-Capturing-and-Supporting-VEX-IQ-Shafts" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">⭕</div><h4>Shaft Collar</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955151-Selecting-Capturing-and-Supporting-VEX-IQ-Shafts" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">⚙️</div><h4>Gear</h4><a href="https://kb.vex.com/hc/en-us/articles/360039539291-Using-VEX-IQ-Plastic-Gears-Chain-Sprockets-and-Pulleys" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🛞</div><h4>Wheel</h4><a href="https://kb.vex.com/hc/en-us/articles/360035955171-Understanding-VEX-IQ-Wheels" target="_blank" rel="noopener">Learn →</a></div>
-        <div class="part-card"><div class="part-icon">🔧</div><h4>Pin Tool</h4><a href="https://kb.vex.com/hc/en-us/articles/10716840441364-Using-the-VEX-Pin-Tool-with-VEX-IQ" target="_blank" rel="noopener">Learn →</a></div>
-      </div>
-    </section>
-
-    <!-- ===== CALL OUT ===== -->
-    <div class="callout">
-      <h3>Ready to start building?</h3>
-      <p>Open the BaseBot 3D build instructions and follow along with the video. You'll have a driving robot in under 2 hours.</p>
-      <a href="https://link.vex.com/iq/builds/basebot/iq-2nd-gen-basebot" target="_blank" rel="noopener" class="btn btn-primary">Open BaseBot 3D Build →</a>
-      <a href="https://content.vexrobotics.com/stem-labs/iq/builds/basebot/iq-2nd-gen-basebot-rev12.pdf" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left:10px;">BaseBot PDF ↓</a>
-      <a href="https://instructions.online/?id=4063-2026-2027_viqrc_herobot_flop" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left:10px;">Flop 3D Build →</a>
-    </div>
-
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="footer-brand">🤖 VEX IQ First Robot Guide</div>
     <ul class="footer-links">
-      <li><a href="#path">The Path</a></li>
-      <li><a href="#kits">Meet the Kit</a></li>
-      <li><a href="#build">Build a Robot</a></li>
-      <li><a href="#game">Level Up Game</a></li>
-      <li><a href="#code">Programming</a></li>
-      <li><a href="#driving">Driving</a></li>
-      <li><a href="#placer">Placer Academy</a></li>
-      <li><a href="#videos">All Videos</a></li>
-      <li><a href="#creators">Creators</a></li>
-      <li><a href="#parts">Parts Guide</a></li>
+      <li><a href="#path">Start Here</a></li><li><a href="#kit">Kit &amp; Parts</a></li><li><a href="#builds">Robot Builds</a></li><li><a href="#game">Game &amp; Strategy</a></li><li><a href="#code">Programming</a></li><li><a href="#academy">Academy</a></li><li><a href="#videos">Videos &amp; Creators</a></li>
     </ul>
-    <p>Consolidated from VEX Robotics official resources, Placer Robotics Academy, and selected community videos.<br>
-    Built for Arian Mistry, Team 295U — free for everyone to use.</p>
-    <p style="margin-top:8px;">VEX and VEX Robotics are trademarks of Innovation First, Inc. This site is an independent resource guide, not affiliated with or endorsed by VEX Robotics or Placer Robotics.</p>
+    <div class="footer-brand">Built for Arian Mistry, Team 295U</div>
+    <p>VEX, VEX Robotics, VEX IQ, and VIQRC are trademarks or registered trademarks of Innovation First International, Inc. This independent resource hub links to official and community resources.</p>
   </footer>
-
+  <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (!backToTop) return;
+      const updateBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 500);
+      updateBackToTop();
+      window.addEventListener('scroll', updateBackToTop, { passive: true });
+    });
+  </script>
 </body>
 </html>
