@@ -23,6 +23,7 @@
     h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
     h1, h2 { letter-spacing: -0.3px; }
     section { scroll-margin-top: 82px; }
+    .day-card { scroll-margin-top: 82px; }
     .section-header p, .section-subhead p, .info-box p, .info-box li, .card p, .video-info p, .creator-card p, .topic-table td, .resource-pill span, .build-link span, .topic-pill span { color: #4f5b65; }
     .navbar-inner { gap: 16px; }
     .navbar-links { overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
@@ -161,6 +162,7 @@
       .video-info p { font-size: 0.85rem; }
       .video-meta { gap: 6px; }
       .card-tag { font-size: 0.68rem; padding: 3px 7px; }
+      .day-meta { display: none; }
     }
     @media (min-width: 1100px) { .parts-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
   </style>
@@ -295,6 +297,9 @@
             <a class="resource-pill" href="concepts/friction.html"><strong>Friction</strong><span>Use with Day 2</span></a>
             <a class="resource-pill" href="concepts/what-is-torque.html"><strong>Torque and Gears</strong><span>Use with Day 3</span></a>
             <a class="resource-pill" href="concepts/levers.html"><strong>Levers</strong><span>Use with Day 4</span></a>
+            <a class="resource-pill" href="concepts/center-of-gravity.html"><strong>Center of Gravity</strong><span>Use with Day 5</span></a>
+            <a class="resource-pill" href="concepts/omni-wheels.html"><strong>Omni Wheels</strong><span>Use with Day 6</span></a>
+            <a class="resource-pill" href="concepts/linkages.html"><strong>Linkages</strong><span>Use with Day 9</span></a>
           </div>
           <div class="card-grid">
             <div class="video-card" data-video="https://www.youtube.com/watch?v=eUeGNe4eDAw" id="video-eUeGNe4eDAw" role="button" tabindex="0" aria-label="Open video: VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage">
@@ -409,12 +414,24 @@
                 <p>Official tip for mounting small shaft hardware cleanly.</p>
               </div>
             </div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=kQNM7glk2qg" id="video-kQNM7glk2qg" role="button" tabindex="0" aria-label="Open video: VEX IQ Free spin test - bad spacing">
+              <div class="video-thumb"><img src="https://img.youtube.com/vi/kQNM7glk2qg/hqdefault.jpg" alt="VEX IQ Free spin test - bad spacing"><div class="video-play"></div></div>
+              <div class="video-info"><h4>VEX IQ Free spin test - bad spacing</h4><p class="video-meta"><a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Caution Tape Robotics</a><span class="card-tag tag-kits">Friction</span></p><p>Shows what happens when shaft spacing is wrong — the wheel barely spins.</p></div>
+            </div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=J5P3tjDWoL8" id="video-J5P3tjDWoL8" role="button" tabindex="0" aria-label="Open video: VEX IQ Free spin test - good spacing">
+              <div class="video-thumb"><img src="https://img.youtube.com/vi/J5P3tjDWoL8/hqdefault.jpg" alt="VEX IQ Free spin test - good spacing"><div class="video-play"></div></div>
+              <div class="video-info"><h4>VEX IQ Free spin test - good spacing</h4><p class="video-meta"><a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Caution Tape Robotics</a><span class="card-tag tag-kits">Friction</span></p><p>Shows a smooth free-spinning shaft with correct spacing — the comparison to the bad version.</p></div>
+            </div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=0UkQkdVcxWo" id="video-0UkQkdVcxWo" role="button" tabindex="0" aria-label="Open video: VEX Camp IQ Session 1 Building with IQ">
+              <div class="video-thumb"><img src="https://img.youtube.com/vi/0UkQkdVcxWo/hqdefault.jpg" alt="VEX Camp IQ Session 1 Building with IQ"><div class="video-play"></div></div>
+              <div class="video-info"><h4>VEX Camp | IQ Session 1: Building with IQ</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official VEX camp session covering building fundamentals with IQ parts.</p></div>
+            </div>
           </div>
         </div>
         <div class="tab-content" id="kit-videos">
           <div class="card-grid">
             <div class="video-card" data-video="https://www.youtube.com/watch?v=KbBNJlZNqeI" id="video-KbBNJlZNqeI" role="button" tabindex="0" aria-label="Open video: VEX IQ 2nd Gen Kit Walkthrough"><div class="video-thumb"><img src="https://img.youtube.com/vi/KbBNJlZNqeI/hqdefault.jpg" alt="VEX IQ 2nd Gen Kit Walkthrough"><div class="video-play"></div></div><div class="video-info"><h4>VEX IQ 2nd Gen Kit Walkthrough</h4><p class="video-meta"><a href="https://www.youtube.com/@MarkJohnston" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Mark Johnston</a><span class="card-tag tag-kits">Kit</span></p><p>A walkthrough of the VEX IQ 2nd generation kit and its major components.</p></div></div>
-            <div class="video-card" data-video="https://www.youtube.com/watch?v=w7yXXJmg1Do" id="video-w7yXXJmg1Do" role="button" tabindex="0" aria-label="Open video: What's in the Box"><div class="video-thumb"><img src="https://img.youtube.com/vi/w7yXXJmg1Do/hqdefault.jpg" alt="What's in the Box"><div class="video-play"></div></div><div class="video-info"><h4>What's in the Box</h4><p class="video-meta"><span class="creator-name">By Unknown Creator</span><span class="card-tag tag-kits">Kit</span></p><p>A quick look at what comes with a VEX IQ robotics kit.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=w7yXXJmg1Do" id="video-w7yXXJmg1Do" role="button" tabindex="0" aria-label="Open video: What's in the Box"><div class="video-thumb"><img src="https://img.youtube.com/vi/w7yXXJmg1Do/hqdefault.jpg" alt="What's in the Box"><div class="video-play"></div></div><div class="video-info"><h4>What's in the Box</h4><p class="video-meta"><a href="https://www.youtube.com/@CuriousPlanetAu" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Curious Planet</a><span class="card-tag tag-kits">Kit</span></p><p>A quick look at what comes with a VEX IQ robotics kit.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=JvohEXX-FiY" id="video-JvohEXX-FiY" role="button" tabindex="0" aria-label="Open video: Getting Started with VEX IQ Gen 2"><div class="video-thumb"><img src="https://img.youtube.com/vi/JvohEXX-FiY/hqdefault.jpg" alt="Getting Started with VEX IQ Gen 2"><div class="video-play"></div></div><div class="video-info"><h4>Getting Started with VEX IQ Gen 2</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official setup video for beginning with the VEX IQ 2nd generation system.</p></div></div>
           </div>
         </div>
@@ -461,6 +478,7 @@
             <div class="video-card" data-video="https://www.youtube.com/watch?v=pghmsMOFOc4" id="video-pghmsMOFOc4" role="button" tabindex="0" aria-label="Open video: Build Phase: Building Flop"><div class="video-thumb"><img src="https://img.youtube.com/vi/pghmsMOFOc4/hqdefault.jpg" alt="Build Phase: Building Flop"><div class="video-play"></div></div><div class="video-info"><h4>Build Phase: Building Flop</h4><p class="video-meta"><a href="https://www.youtube.com/@TechPointYouth" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TechPoint Youth</a><span class="card-tag tag-build">Hero Bot</span></p><p>A team build phase video focused on assembling Flop.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=2gTnF5b_krE" id="video-2gTnF5b_krE" role="button" tabindex="0" aria-label="Open video: HEROBOT FLOP from Instructions"><div class="video-thumb"><img src="https://img.youtube.com/vi/2gTnF5b_krE/hqdefault.jpg" alt="HEROBOT FLOP from instructions"><div class="video-play"></div></div><div class="video-info"><h4>HEROBOT FLOP from Instructions</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Hero Bot</span></p><p>A build-through of Flop using the official instructions as the base.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=ZI7Kc7Y2X0k" id="video-ZI7Kc7Y2X0k" role="button" tabindex="0" aria-label="Open video: Hero Bot Breakdown"><div class="video-thumb"><img src="https://img.youtube.com/vi/ZI7Kc7Y2X0k/hqdefault.jpg" alt="Hero Bot Breakdown"><div class="video-play"></div></div><div class="video-info"><h4>Hero Bot Breakdown</h4><p class="video-meta"><a href="https://www.youtube.com/@CosmosTech" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By CosmosTech</a><span class="card-tag tag-build">Mechanisms</span></p><p>A breakdown of Hero Bot design choices and mechanisms.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=KvWHQ6d3_hM" id="video-KvWHQ6d3_hM" role="button" tabindex="0" aria-label="Open video: Introducing the 180 Mod Flop First Practice Runs"><div class="video-thumb"><img src="https://img.youtube.com/vi/KvWHQ6d3_hM/hqdefault.jpg" alt="Introducing the 180 Mod Flop First Practice Runs"><div class="video-play"></div></div><div class="video-info"><h4>Introducing the 180 Mod Flop! First Practice Runs</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Hero Bot</span></p><p>First practice runs of a modified Flop hero bot showing real-world driving and scoring.</p></div></div>
           </div>
         </div>
         <div class="tab-content" id="build-starters">
@@ -471,6 +489,13 @@
             <div class="video-card" data-video="https://www.youtube.com/watch?v=llx-4XKeo6E" id="video-llx-4XKeo6E" role="button" tabindex="0" aria-label="Open video: Kickoff First Designs"><div class="video-thumb"><img src="https://img.youtube.com/vi/llx-4XKeo6E/hqdefault.jpg" alt="Kickoff First Designs"><div class="video-play"></div></div><div class="video-info"><h4>Kickoff First Designs</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Starter</span></p><p>Early design ideas for beginning robot concepts after kickoff.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=NCFRLzl9ELE" id="video-NCFRLzl9ELE" role="button" tabindex="0" aria-label="Open video: Design a Robot in 10 Min"><div class="video-thumb"><img src="https://img.youtube.com/vi/NCFRLzl9ELE/hqdefault.jpg" alt="Design a Robot in 10 Min"><div class="video-play"></div></div><div class="video-info"><h4>Design a Robot in 10 Min</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Design</span></p><p>A fast design exercise for turning game needs into robot concepts.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=fVZv7ml504k" id="video-fVZv7ml504k" role="button" tabindex="0" aria-label="Open video: Super Simple Robot 24 Hours"><div class="video-thumb"><img src="https://img.youtube.com/vi/fVZv7ml504k/hqdefault.jpg" alt="Super Simple Robot 24 hours"><div class="video-play"></div></div><div class="video-info"><h4>Super Simple Robot 24 Hours</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-build">Starter</span></p><p>A quick-build starter robot approach for getting something working fast.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=XhwBI1EbspE" id="video-XhwBI1EbspE" role="button" tabindex="0" aria-label="Open video: Center of Gravity and Wiggly Driving Test"><div class="video-thumb"><img src="https://img.youtube.com/vi/XhwBI1EbspE/hqdefault.jpg" alt="Center of Gravity and Wiggly Driving Test"><div class="video-play"></div></div><div class="video-info"><h4>Center of Gravity and Wiggly Driving Test</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Stability</span></p><p>A driving test showing how center of gravity affects robot stability in motion.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=e1hRWg0WG9I" id="video-e1hRWg0WG9I" role="button" tabindex="0" aria-label="Open video: Agilibot"><div class="video-thumb"><img src="https://img.youtube.com/vi/e1hRWg0WG9I/hqdefault.jpg" alt="Agilibot"><div class="video-play"></div></div><div class="video-info"><h4>Agilibot</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Starter</span></p><p>An agile robot design example showing build choices for stability and movement.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=X4JHUDGzyv0" id="video-X4JHUDGzyv0" role="button" tabindex="0" aria-label="Open video: Vex IQ Claw Ideas - How to Design Yours"><div class="video-thumb"><img src="https://img.youtube.com/vi/X4JHUDGzyv0/hqdefault.jpg" alt="Vex IQ Claw Ideas - How to Design Yours"><div class="video-play"></div></div><div class="video-info"><h4>Vex IQ Claw Ideas - How to Design Yours</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Claw</span></p><p>Design ideas for building a VEX IQ claw mechanism that grips reliably.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=2DNQQKckmLk" id="video-2DNQQKckmLk" role="button" tabindex="0" aria-label="Open video: Vex IQ Claw Design Video"><div class="video-thumb"><img src="https://img.youtube.com/vi/2DNQQKckmLk/hqdefault.jpg" alt="Vex IQ Claw Design Video"><div class="video-play"></div></div><div class="video-info"><h4>Vex IQ Claw Design Video</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Claw</span></p><p>A walkthrough of claw design choices for holding and releasing game objects.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=80ZmWH89pjE" id="video-80ZmWH89pjE" role="button" tabindex="0" aria-label="Open video: Vex Robotics Chain Bar Guide Tutorial"><div class="video-thumb"><img src="https://img.youtube.com/vi/80ZmWH89pjE/hqdefault.jpg" alt="Vex Robotics Chain Bar Guide Tutorial"><div class="video-play"></div></div><div class="video-info"><h4>Vex Robotics Chain Bar Guide/Tutorial</h4><p class="video-meta"><a href="https://www.youtube.com/@9MotorGang" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By 9MotorGang</a><span class="card-tag tag-build">Linkage</span></p><p>A chain-bar lift guide showing how to build and tune this lift type.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=LUvIH5k8HWY" id="video-LUvIH5k8HWY" role="button" tabindex="0" aria-label="Open video: Kepler's Guide to Chain-Bar Lifts"><div class="video-thumb"><img src="https://img.youtube.com/vi/LUvIH5k8HWY/hqdefault.jpg" alt="Kepler's Guide to Chain-Bar Lifts"><div class="video-play"></div></div><div class="video-info"><h4>Kepler&#x27;s Guide to Chain-Bar Lifts</h4><p class="video-meta"><a href="https://www.youtube.com/@KeplerElectronics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Kepler Electronics</a><span class="card-tag tag-build">Linkage</span></p><p>A detailed chain-bar lift tutorial from Kepler Electronics.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=sl7DbBqcYbA" id="video-sl7DbBqcYbA" role="button" tabindex="0" aria-label="Open video: How to use the Engineering Design Process"><div class="video-thumb"><img src="https://img.youtube.com/vi/sl7DbBqcYbA/hqdefault.jpg" alt="How to use the Engineering Design Process"><div class="video-play"></div></div><div class="video-info"><h4>How to use the Engineering Design Process</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Design</span></p><p>A team presentation on applying the engineering design process to VEX IQ.</p></div></div>
           </div>
         </div>
         <div class="tab-content" id="build-drivetrains">
@@ -579,6 +604,10 @@
                 <p>Compares lift styles such as 4-bars, 6-bars, and chain-bar mechanisms.</p>
               </div>
             </div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=2Pnj9Jq9JiU" id="video-2Pnj9Jq9JiU" role="button" tabindex="0" aria-label="Open video: Vex Robotics Drivebase Types Explained"><div class="video-thumb"><img src="https://img.youtube.com/vi/2Pnj9Jq9JiU/hqdefault.jpg" alt="Vex Robotics Drivebase Types Explained"><div class="video-play"></div></div><div class="video-info"><h4>Vex Robotics Drivebase Types Explained</h4><p class="video-meta"><a href="https://www.youtube.com/@9MotorGang" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By 9MotorGang</a><span class="card-tag tag-build">Drivetrain</span></p><p>Compares tank, H-drive, mecanum, and X-drive drivetrain types with chapters.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=-vm_UsnZt-k" id="video--vm_UsnZt-k" role="button" tabindex="0" aria-label="Open video: Fast and Efficient VEX IQ Drivetrain"><div class="video-thumb"><img src="https://img.youtube.com/vi/-vm_UsnZt-k/hqdefault.jpg" alt="Fast and Efficient VEX IQ Drivetrain"><div class="video-play"></div></div><div class="video-info"><h4>Tutorial: Fast &amp; Efficient VEX IQ Drivetrain (2:1 Speed, 2 Motors)</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-build">Drivetrain</span></p><p>A tutorial on building a fast and efficient 2-motor drivetrain with a 2:1 speed ratio.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=sek_rTkf2-o" id="video-sek_rTkf2-o" role="button" tabindex="0" aria-label="Open video: 5 Tips Every VEX Team Should Know about Drivetrains"><div class="video-thumb"><img src="https://img.youtube.com/vi/sek_rTkf2-o/hqdefault.jpg" alt="5 Tips Every VEX Team Should Know about Drivetrains"><div class="video-play"></div></div><div class="video-info"><h4>5 Tips Every VEX Team Should Know about Drivetrains</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-build">Drivetrain</span></p><p>Five practical tips for building and tuning a reliable VEX IQ drivetrain.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=leIM-EVbhGY" id="video-leIM-EVbhGY" role="button" tabindex="0" aria-label="Open video: VEX IQ Wheel Guide for Beginners"><div class="video-thumb"><img src="https://img.youtube.com/vi/leIM-EVbhGY/hqdefault.jpg" alt="VEX IQ Wheel Guide for Beginners"><div class="video-play"></div></div><div class="video-info"><h4>VEX IQ Wheel Guide for Beginners | Drive Smarter</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-build">Wheels</span></p><p>A beginner-friendly guide to choosing VEX IQ wheels for smarter driving.</p></div></div>
           </div>
         </div>
         <div class="tab-content" id="build-catapults">
@@ -608,7 +637,7 @@
             <div class="video-card" data-video="https://www.youtube.com/watch?v=LZVko5doG-w" id="video-LZVko5doG-w" role="button" tabindex="0" aria-label="Open video: Huey Part 1"><div class="video-thumb"><img src="https://img.youtube.com/vi/LZVko5doG-w/hqdefault.jpg" alt="Huey Part 1"><div class="video-play"></div></div><div class="video-info"><h4>Huey Part 1</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Past Season</span></p><p>Official first build video for Huey, the Mix and Match Hero Bot.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=sMZ-SxT3SSI" id="video-sMZ-SxT3SSI" role="button" tabindex="0" aria-label="Open video: Huey Part 2"><div class="video-thumb"><img src="https://img.youtube.com/vi/sMZ-SxT3SSI/hqdefault.jpg" alt="Huey Part 2"><div class="video-play"></div></div><div class="video-info"><h4>Huey Part 2</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Past Season</span></p><p>Official second build video for Huey, the Mix and Match Hero Bot.</p></div></div>
             <div class="video-card" data-video="https://www.youtube.com/watch?v=RN-UyJbe_yg" id="video-RN-UyJbe_yg" role="button" tabindex="0" aria-label="Open video: Mix and Match Game Reveal"><div class="video-thumb"><img src="https://img.youtube.com/vi/RN-UyJbe_yg/hqdefault.jpg" alt="Mix and Match Game Reveal"><div class="video-play"></div></div><div class="video-info"><h4>Mix and Match Game Reveal</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-game">Past Season</span></p><p>The reveal video for the prior VIQRC Mix and Match game.</p></div></div>
-            <div class="video-card" data-video="https://www.youtube.com/watch?v=G9avDKpz5yY" id="video-G9avDKpz5yY" role="button" tabindex="0" aria-label="Open video: Mix and Match Elements Unboxing"><div class="video-thumb"><img src="https://img.youtube.com/vi/G9avDKpz5yY/hqdefault.jpg" alt="Mix and Match Elements Unboxing"><div class="video-play"></div></div><div class="video-info"><h4>Mix and Match Elements Unboxing</h4><p class="video-meta"><span class="creator-name">By Unknown Creator</span><span class="card-tag tag-game">Past Season</span></p><p>An unboxing of field elements from the prior VIQRC season.</p></div></div>
+            <div class="video-card" data-video="https://www.youtube.com/watch?v=G9avDKpz5yY" id="video-G9avDKpz5yY" role="button" tabindex="0" aria-label="Open video: Mix and Match Elements Unboxing"><div class="video-thumb"><img src="https://img.youtube.com/vi/G9avDKpz5yY/hqdefault.jpg" alt="Mix and Match Elements Unboxing"><div class="video-play"></div></div><div class="video-info"><h4>Mix and Match Elements Unboxing</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Past Season</span></p><p>An unboxing of field elements from the prior VIQRC season.</p></div></div>
           </div>
         </div>
       </div>
@@ -639,6 +668,25 @@
         <div class="video-card" data-video="https://www.youtube.com/watch?v=afrdGr4ue9Y" id="video-afrdGr4ue9Y" role="button" tabindex="0" aria-label="Open video: Full Inspection Guide"><div class="video-thumb"><img src="https://img.youtube.com/vi/afrdGr4ue9Y/hqdefault.jpg" alt="Full Inspection Guide"><div class="video-play"></div></div><div class="video-info"><h4>Full Inspection Guide</h4><p class="video-meta"><a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Caution Tape Robotics</a><span class="card-tag tag-game">Inspection</span></p><p>A tournament inspection walkthrough for checking common robot requirements.</p></div></div>
         <div class="video-card" data-video="https://www.youtube.com/watch?v=O0El_fts9ns" id="video-O0El_fts9ns" role="button" tabindex="0" aria-label="Open video: Award Winning Notebook"><div class="video-thumb"><img src="https://img.youtube.com/vi/O0El_fts9ns/hqdefault.jpg" alt="Award Winning Notebook"><div class="video-play"></div></div><div class="video-info"><h4>Award Winning Notebook</h4><p class="video-meta"><a href="https://www.youtube.com/@8931BV-BotsTrifecta" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By 8931B V-Bots Trifecta</a><span class="card-tag tag-game">Notebook</span></p><p>A guide to engineering notebook practices used by an award-winning team.</p></div></div>
       </div>
+      <div class="section-subhead"><h3>Strategy &amp; Skills Footage</h3><p>Watch real Level Up runs and strategy breakdowns to see what works on the field.</p></div>
+      <div class="card-grid">
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=hRSUs7ChPW0" id="video-hRSUs7ChPW0" role="button" tabindex="0" aria-label="Open video: Cracked 87 Points in VEX IQ Level Up Today"><div class="video-thumb"><img src="https://img.youtube.com/vi/hRSUs7ChPW0/hqdefault.jpg" alt="Cracked 87 Points in VEX IQ Level Up Today"><div class="video-play"></div></div><div class="video-info"><h4>Cracked 87 Points in VEX IQ Level Up Today!</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Skills</span></p><p>A Level Up skills run showing what a strong solo score looks like.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=yBdO3xBeAp4" id="video-yBdO3xBeAp4" role="button" tabindex="0" aria-label="Open video: Vex IQ Level Up Solo TW PR 102 Points"><div class="video-thumb"><img src="https://img.youtube.com/vi/yBdO3xBeAp4/hqdefault.jpg" alt="Vex IQ Level Up Solo TW PR 102 Points"><div class="video-play"></div></div><div class="video-info"><h4>Vex Iq Level Up | Solo TW PR | 102 Points!</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Skills</span></p><p>A 102-point solo skills run in Level Up — high-level inspiration for route planning.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=EMYxGGUh_ls" id="video-EMYxGGUh_ls" role="button" tabindex="0" aria-label="Open video: Hero Bot Scores 92 Points"><div class="video-thumb"><img src="https://img.youtube.com/vi/EMYxGGUh_ls/hqdefault.jpg" alt="Hero Bot Scores 92 Points"><div class="video-play"></div></div><div class="video-info"><h4>Hero Bot Scores 92 Points?! Breaking Down This INSANE Match</h4><p class="video-meta"><a href="https://www.youtube.com/@VEXTalk" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Talk</a><span class="card-tag tag-game">Strategy</span></p><p>A breakdown of a 92-point hero bot match with strategy analysis.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=M_u3zQwBzyI" id="video-M_u3zQwBzyI" role="button" tabindex="0" aria-label="Open video: Boost Your VEX IQ Teamwork Skills with These Strategies"><div class="video-thumb"><img src="https://img.youtube.com/vi/M_u3zQwBzyI/hqdefault.jpg" alt="Boost Your VEX IQ Teamwork Skills with These Strategies"><div class="video-play"></div></div><div class="video-info"><h4>Boost Your VEX IQ Teamwork Skills with These Strategies</h4><p class="video-meta"><a href="https://www.youtube.com/@RoboSTEM" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By RoboSTEM</a><span class="card-tag tag-game">Strategy</span></p><p>Strategies for improving teamwork match performance through communication and role assignment.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=ptJ-CkMJpNY" id="video-ptJ-CkMJpNY" role="button" tabindex="0" aria-label="Open video: VEX IQ Level Up Explained"><div class="video-thumb"><img src="https://img.youtube.com/vi/ptJ-CkMJpNY/hqdefault.jpg" alt="VEX IQ Level Up Explained"><div class="video-play"></div></div><div class="video-info"><h4>VEX IQ Level Up Explained - What Teams Need to Know First</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Rules</span></p><p>An explainer video covering what teams need to know about Level Up before competing.</p></div></div>
+      </div>
+      <div class="section-subhead"><h3>Alignment, Notebook &amp; Competition Prep</h3><p>Practical tips for aligning, notebook keeping, judging, and attending competitions.</p></div>
+      <div class="card-grid">
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=eQTbkWwIJ-Q" id="video-eQTbkWwIJ-Q" role="button" tabindex="0" aria-label="Open video: How to Build Passive Aligners"><div class="video-thumb"><img src="https://img.youtube.com/vi/eQTbkWwIJ-Q/hqdefault.jpg" alt="How to Build Passive Aligners"><div class="video-play"></div></div><div class="video-info"><h4>How to Build Passive Aligners</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Alignment</span></p><p>A guide to building passive aligners that help the robot line up consistently.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=ftq1_O9gfMQ" id="video-ftq1_O9gfMQ" role="button" tabindex="0" aria-label="Open video: VEX IQ Wheel Alignment Tips"><div class="video-thumb"><img src="https://img.youtube.com/vi/ftq1_O9gfMQ/hqdefault.jpg" alt="VEX IQ Wheel Alignment Tips"><div class="video-play"></div></div><div class="video-info"><h4>VEX IQ: Wheel Alignment Tips</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Alignment</span></p><p>Practical wheel alignment tips for more repeatable driving and scoring.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=GERezk11oUY" id="video-GERezk11oUY" role="button" tabindex="0" aria-label="Open video: The VEX Notebook Rubric Explained"><div class="video-thumb"><img src="https://img.youtube.com/vi/GERezk11oUY/hqdefault.jpg" alt="The VEX Notebook Rubric Explained"><div class="video-play"></div></div><div class="video-info"><h4>The VEX Notebook Rubric, Explained</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Notebook</span></p><p>An explanation of the VEX engineering notebook rubric and what judges look for.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=D8JT7D8gq5g" id="video-D8JT7D8gq5g" role="button" tabindex="0" aria-label="Open video: How to Manage Your Engineering Design Notebook"><div class="video-thumb"><img src="https://img.youtube.com/vi/D8JT7D8gq5g/hqdefault.jpg" alt="How to Manage Your Engineering Design Notebook"><div class="video-play"></div></div><div class="video-info"><h4>How to Manage Your Engineering Design Notebook</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Notebook</span></p><p>Practical advice for managing and organizing an engineering design notebook.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=VK6lzPPhuXA" id="video-VK6lzPPhuXA" role="button" tabindex="0" aria-label="Open video: Attending a VEX IQ Robotics Competition"><div class="video-thumb"><img src="https://img.youtube.com/vi/VK6lzPPhuXA/hqdefault.jpg" alt="Attending a VEX IQ Robotics Competition"><div class="video-play"></div></div><div class="video-info"><h4>Attending a VEX IQ Robotics Competition</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Competition</span></p><p>What to expect when attending a VEX IQ robotics competition for the first time.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=5q_y2vifuXo" id="video-5q_y2vifuXo" role="button" tabindex="0" aria-label="Open video: Engineering Notebook Tips Every VEX Team Should Know"><div class="video-thumb"><img src="https://img.youtube.com/vi/5q_y2vifuXo/hqdefault.jpg" alt="Engineering Notebook Tips Every VEX Team Should Know"><div class="video-play"></div></div><div class="video-info"><h4>Engineering Notebook Tips Every VEX Team Should Know</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-game">Notebook</span></p><p>Key notebook tips that help teams document their design process effectively.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=zekAzwe8j0c" id="video-zekAzwe8j0c" role="button" tabindex="0" aria-label="Open video: How to Master the Judges Interview"><div class="video-thumb"><img src="https://img.youtube.com/vi/zekAzwe8j0c/hqdefault.jpg" alt="How to Master the Judges Interview"><div class="video-play"></div></div><div class="video-info"><h4>How to Master the Judges Interview</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Judging</span></p><p>Tips for preparing and delivering a confident judges interview at a VEX IQ tournament.</p></div></div>
+        <div class="video-card" data-video="https://www.youtube.com/watch?v=SW4-CeAHvo8" id="video-SW4-CeAHvo8" role="button" tabindex="0" aria-label="Open video: 2023 VIQC Worlds Matches and Amaze Award"><div class="video-thumb"><img src="https://img.youtube.com/vi/SW4-CeAHvo8/hqdefault.jpg" alt="2023 VIQC Worlds Matches and Amaze Award"><div class="video-play"></div></div><div class="video-info"><h4>2023 VIQC Worlds Matches &amp; Amaze Award</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-game">Past Season</span></p><p>Worlds matches and Amaze Award footage from 2023 — past season inspiration (field and scoring differ from Level Up).</p></div></div>
+      </div>
     </section>
 
     <section id="code">
@@ -656,11 +704,14 @@
           <div class="video-card" data-video="https://www.youtube.com/watch?v=MSX9LLQLvmk" id="video-MSX9LLQLvmk" role="button" tabindex="0" aria-label="Open video: Downloading and Running"><div class="video-thumb"><img src="https://img.youtube.com/vi/MSX9LLQLvmk/hqdefault.jpg" alt="Downloading and Running"><div class="video-play"></div></div><div class="video-info"><h4>Downloading and Running</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official instructions for sending a VEXcode project to the robot Brain.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=yJvA-QpKvKI" id="video-yJvA-QpKvKI" role="button" tabindex="0" aria-label="Open video: Example Projects"><div class="video-thumb"><img src="https://img.youtube.com/vi/yJvA-QpKvKI/hqdefault.jpg" alt="Example Projects"><div class="video-play"></div></div><div class="video-info"><h4>Example Projects</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>How to use VEXcode IQ example projects as working starting points.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=SYGwyNmK9Jk" id="video-SYGwyNmK9Jk" role="button" tabindex="0" aria-label="Open video: Robotics With VEX IQ Beginners Course"><div class="video-thumb"><img src="https://img.youtube.com/vi/SYGwyNmK9Jk/hqdefault.jpg" alt="Robotics With VEX IQ Beginners Course"><div class="video-play"></div></div><div class="video-info"><h4>Robotics With VEX IQ Beginners Course</h4><p class="video-meta"><a href="https://www.youtube.com/@LetslearnTV" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Letslearn TV</a><span class="card-tag tag-code">Beginner</span></p><p>A beginner course-style introduction to robotics concepts with VEX IQ.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=TbaOMMKLGG4" id="video-TbaOMMKLGG4" role="button" tabindex="0" aria-label="Open video: VEXcode IQ Blocks Device Setup Motors Tutorial"><div class="video-thumb"><img src="https://img.youtube.com/vi/TbaOMMKLGG4/hqdefault.jpg" alt="VEXcode IQ Blocks Device Setup Motors Tutorial"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Blocks - Device Setup - Motors Tutorial</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial for setting up motors in VEXcode IQ Blocks device configuration.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=PxSzAq0-upE" id="video-PxSzAq0-upE" role="button" tabindex="0" aria-label="Open video: VEXcode IQ Blocks Device Setup Controller Tutorial"><div class="video-thumb"><img src="https://img.youtube.com/vi/PxSzAq0-upE/hqdefault.jpg" alt="VEXcode IQ Blocks Device Setup Controller Tutorial"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Blocks - Device Setup - Controller Tutorial</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial for setting up the Controller in VEXcode IQ Blocks.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=9xSPQnfn390" id="video-9xSPQnfn390" role="button" tabindex="0" aria-label="Open video: Displaying Information on the Screen"><div class="video-thumb"><img src="https://img.youtube.com/vi/9xSPQnfn390/hqdefault.jpg" alt="Displaying Information on the Screen"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Blocks - Displaying Information on the Screen</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial for displaying information on the Brain screen in VEXcode IQ.</p></div></div>
         </div></div>
         <div class="tab-content" id="code-first"><div class="card-grid">
           <div class="video-card" data-video="https://www.youtube.com/watch?v=7Feo7YOs9E8" id="video-7Feo7YOs9E8" role="button" tabindex="0" aria-label="Open video: Using Loops"><div class="video-thumb"><img src="https://img.youtube.com/vi/7Feo7YOs9E8/hqdefault.jpg" alt="Using Loops"><div class="video-play"></div></div><div class="video-info"><h4>Using Loops</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial on repeating actions with loops in VEXcode IQ Blocks.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=uKL38GKP0zE" id="video-uKL38GKP0zE" role="button" tabindex="0" aria-label="Open video: If-Then-Else"><div class="video-thumb"><img src="https://img.youtube.com/vi/uKL38GKP0zE/hqdefault.jpg" alt="If-Then-Else"><div class="video-play"></div></div><div class="video-info"><h4>If-Then-Else</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial on decisions and conditional logic in Blocks.</p></div></div>
-          <div class="video-card" data-video="https://www.youtube.com/watch?v=PwLPVbLclqk" id="video-PwLPVbLclqk" role="button" tabindex="0" aria-label="Open video: Drive and Code a VEX IQ Robot"><div class="video-thumb"><img src="https://img.youtube.com/vi/PwLPVbLclqk/hqdefault.jpg" alt="Drive and Code a VEX IQ Robot"><div class="video-play"></div></div><div class="video-info"><h4>Drive and Code a VEX IQ Robot</h4><p class="video-meta"><span class="creator-name">By Unknown Creator</span><span class="card-tag tag-code">Beginner</span></p><p>A beginner video for connecting robot driving concepts to basic code.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=PwLPVbLclqk" id="video-PwLPVbLclqk" role="button" tabindex="0" aria-label="Open video: Drive and Code a VEX IQ Robot"><div class="video-thumb"><img src="https://img.youtube.com/vi/PwLPVbLclqk/hqdefault.jpg" alt="Drive and Code a VEX IQ Robot"><div class="video-play"></div></div><div class="video-info"><h4>Drive and Code a VEX IQ Robot</h4><p class="video-meta"><a href="https://www.youtube.com/@mariselaalvarado1488" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Marisela Alvarado</a><span class="card-tag tag-code">Beginner</span></p><p>A beginner video for connecting robot driving concepts to basic code.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=q-X4Q_mXOfY" id="video-q-X4Q_mXOfY" role="button" tabindex="0" aria-label="Open video: Basic BaseBot Blocks Programming"><div class="video-thumb"><img src="https://img.youtube.com/vi/q-X4Q_mXOfY/hqdefault.jpg" alt="Basic BaseBot Blocks Programming"><div class="video-play"></div></div><div class="video-info"><h4>Basic BaseBot Blocks Programming</h4><p class="video-meta"><a href="https://www.youtube.com/@CodingwithCulp" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Coding with Culp</a><span class="card-tag tag-code">Blocks</span></p><p>A basic blocks-programming tutorial using the BaseBot as the robot.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=IGbHbtC5wKU" id="video-IGbHbtC5wKU" role="button" tabindex="0" aria-label="Open video: VEXcode IQ Blocks Tutorial Beginner"><div class="video-thumb"><img src="https://img.youtube.com/vi/IGbHbtC5wKU/hqdefault.jpg" alt="VEXcode IQ Blocks Tutorial Beginner"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Blocks Tutorial Beginner</h4><p class="video-meta"><a href="https://www.youtube.com/@TechPointYouth" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TechPoint Youth</a><span class="card-tag tag-code">Beginner</span></p><p>A beginner Blocks tutorial for writing and running first VEX IQ programs.</p></div></div>
         </div></div>
@@ -673,12 +724,15 @@
           <div class="video-card" data-video="https://www.youtube.com/watch?v=voZIL4Gf7Zk" id="video-voZIL4Gf7Zk" role="button" tabindex="0" aria-label="Open video: Device Setup Sensors"><div class="video-thumb"><img src="https://img.youtube.com/vi/voZIL4Gf7Zk/hqdefault.jpg" alt="Device Setup Sensors"><div class="video-play"></div></div><div class="video-info"><h4>Device Setup Sensors</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official guide to adding sensors and devices to a VEXcode IQ project.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=2ZhxhHAEDB0" id="video-2ZhxhHAEDB0" role="button" tabindex="0" aria-label="Open video: Master Procedures"><div class="video-thumb"><img src="https://img.youtube.com/vi/2ZhxhHAEDB0/hqdefault.jpg" alt="Master Procedures"><div class="video-play"></div></div><div class="video-info"><h4>Master Procedures</h4><p class="video-meta"><a href="https://www.youtube.com/@STEAMLabs" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By STEAM Labs</a><span class="card-tag tag-code">Procedures</span></p><p>A coding lesson on procedures for organizing repeated robot actions.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=NoxCacvxoiI" id="video-NoxCacvxoiI" role="button" tabindex="0" aria-label="Open video: Coding Huey Pinhead Clawbot"><div class="video-thumb"><img src="https://img.youtube.com/vi/NoxCacvxoiI/hqdefault.jpg" alt="Coding Huey Pinhead Clawbot"><div class="video-play"></div></div><div class="video-info"><h4>Coding Huey Pinhead Clawbot</h4><p class="video-meta"><a href="https://www.youtube.com/@BenLipper" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Ben Lipper</a><span class="card-tag tag-code">Mechanisms</span></p><p>A coding walkthrough for controlling a Clawbot-style mechanism.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=cKZAaWWCTpU" id="video-cKZAaWWCTpU" role="button" tabindex="0" aria-label="Open video: VEX IQ Controlling Motors"><div class="video-thumb"><img src="https://img.youtube.com/vi/cKZAaWWCTpU/hqdefault.jpg" alt="VEX IQ Controlling Motors"><div class="video-play"></div></div><div class="video-info"><h4>VEX IQ - Controlling Motors</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-code">Motors</span></p><p>A tutorial on controlling motors in VEXcode IQ for mechanisms like arms and intakes.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=H0W3Lf-VHcI" id="video-H0W3Lf-VHcI" role="button" tabindex="0" aria-label="Open video: VEXcode IQ Blocks Moving the Arm Tutorial"><div class="video-thumb"><img src="https://img.youtube.com/vi/H0W3Lf-VHcI/hqdefault.jpg" alt="VEXcode IQ Blocks Moving the Arm Tutorial"><div class="video-play"></div></div><div class="video-info"><h4>VEXcode IQ Blocks - Moving the Arm Tutorial</h4><p class="video-meta"><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By VEX Robotics</a><span class="card-tag tag-official">Official</span></p><p>Official tutorial for coding an arm mechanism in VEXcode IQ Blocks.</p></div></div>
         </div></div>
         <div class="tab-content" id="code-auto"><div class="card-grid">
           <div class="video-card" data-video="https://www.youtube.com/watch?v=ucOT-ENP21M" id="video-ucOT-ENP21M" role="button" tabindex="0" aria-label="Open video: Autonomous Programming Step-by-Step"><div class="video-thumb"><img src="https://img.youtube.com/vi/ucOT-ENP21M/hqdefault.jpg" alt="Autonomous Programming Step-by-Step"><div class="video-play"></div></div><div class="video-info"><h4>Autonomous Programming Step-by-Step</h4><p class="video-meta"><a href="https://www.youtube.com/@TheVEXIQGuide" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By The VEX IQ Guide</a><span class="card-tag tag-code">Autonomous</span></p><p>A step-by-step approach to programming autonomous robot movement.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=w6g0GOcKUYg" id="video-w6g0GOcKUYg" role="button" tabindex="0" aria-label="Open video: Autonomous Coding with BaseBot"><div class="video-thumb"><img src="https://img.youtube.com/vi/w6g0GOcKUYg/hqdefault.jpg" alt="Autonomous Coding with BaseBot"><div class="video-play"></div></div><div class="video-info"><h4>Autonomous Coding with BaseBot</h4><p class="video-meta"><a href="https://www.youtube.com/@TechyRobotTeacher" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TechyRobot Teacher</a><span class="card-tag tag-code">Autonomous</span></p><p>A BaseBot-focused autonomous coding tutorial for beginner drivers.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=3q-AZdmNImY" id="video-3q-AZdmNImY" role="button" tabindex="0" aria-label="Open video: Autonomous Programming"><div class="video-thumb"><img src="https://img.youtube.com/vi/3q-AZdmNImY/hqdefault.jpg" alt="Autonomous Programming"><div class="video-play"></div></div><div class="video-info"><h4>Autonomous Programming</h4><p class="video-meta"><a href="https://www.youtube.com/@TUSDRobotics" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By TUSD Robotics</a><span class="card-tag tag-code">Autonomous</span></p><p>An autonomous programming lesson for sequencing robot actions.</p></div></div>
           <div class="video-card" data-video="https://www.youtube.com/watch?v=_QuhyOZFfLU" id="video-_QuhyOZFfLU" role="button" tabindex="0" aria-label="Open video: Sensor-Based Autonomous"><div class="video-thumb"><img src="https://img.youtube.com/vi/_QuhyOZFfLU/hqdefault.jpg" alt="Sensor-Based Autonomous"><div class="video-play"></div></div><div class="video-info"><h4>Sensor-Based Autonomous</h4><p class="video-meta"><a href="https://www.youtube.com/@TravisBurroughs" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Travis Burroughs</a><span class="card-tag tag-code">Sensors</span></p><p>An autonomous lesson that uses sensor feedback instead of only timing.</p></div></div>
+          <div class="video-card" data-video="https://www.youtube.com/watch?v=TkxUQsWnBEw" id="video-TkxUQsWnBEw" role="button" tabindex="0" aria-label="Open video: Debugging and Autonomous Left and Right Functions"><div class="video-thumb"><img src="https://img.youtube.com/vi/TkxUQsWnBEw/hqdefault.jpg" alt="Debugging and Autonomous Left and Right Functions"><div class="video-play"></div></div><div class="video-info"><h4>VEX 1961Z VexCode Lesson 4: Debugging and Autonomous Left and Right Functions</h4><p class="video-meta"><span class="creator-name">Community video</span><span class="card-tag tag-code">Autonomous</span></p><p>A lesson on debugging autonomous code and creating reusable left/right drive functions.</p></div></div>
         </div></div>
         <div class="tab-content" id="code-sensors"><div class="card-grid">
           <div class="video-card" data-video="https://www.youtube.com/watch?v=13Rsxcc9T-w" id="video-13Rsxcc9T-w" role="button" tabindex="0" aria-label="Open video: Programming Sensors"><div class="video-thumb"><img src="https://img.youtube.com/vi/13Rsxcc9T-w/hqdefault.jpg" alt="Programming Sensors"><div class="video-play"></div></div><div class="video-info"><h4>Programming Sensors</h4><p class="video-meta"><a href="https://www.youtube.com/@MitchNorris" target="_blank" rel="noopener" onclick="event.stopPropagation()" style="font-weight:600;color:var(--accent);">By Mitch Norris</a><span class="card-tag tag-code">Sensors</span></p><p>A sensor-programming overview for using robot data in code.</p></div></div>
@@ -724,12 +778,13 @@
       <input id="video-search" class="video-search" type="search" placeholder="Search videos by title..." aria-label="Search video cards by title">
       <div class="section-subhead"><h3>Topic Index</h3><p>Video cards live in the section where they are most useful.</p></div>
       <div class="topic-index">
-        <a class="topic-pill" href="#kit"><strong>Kit Videos</strong><span>11 videos</span></a>
-        <a class="topic-pill" href="#builds"><strong>Robot Build Videos</strong><span>35 videos</span></a>
-        <a class="topic-pill" href="#game"><strong>Game &amp; Strategy Videos</strong><span>7 videos</span></a>
-        <a class="topic-pill" href="#code"><strong>Programming Videos</strong><span>23 videos</span></a>
-        <a class="topic-pill" href="#videos"><strong>Total Library</strong><span>76 video cards</span></a>
+        <a class="topic-pill" href="#kit"><strong>Kit Videos</strong><span>14 videos</span></a>
+        <a class="topic-pill" href="#builds"><strong>Robot Build Videos</strong><span>47 videos</span></a>
+        <a class="topic-pill" href="#game"><strong>Game &amp; Strategy Videos</strong><span>20 videos</span></a>
+        <a class="topic-pill" href="#code"><strong>Programming Videos</strong><span>29 videos</span></a>
+        <a class="topic-pill" href="#videos"><strong>Total Library</strong><span>110 video cards</span></a>
       </div>
+      <p style="font-size:0.85rem;color:#6b7785;margin-top:8px;">Some videos appear in the section where they're most useful — search by title to find any video anywhere.</p>
       <div class="section-subhead"><h3>Official Updates</h3></div>
       <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-official">Official</span><h4><a href="https://www.youtube.com/@vexroboticstv" target="_blank" rel="noopener">VEX Robotics (@vexroboticstv)</a></h4><p>Game reveals, Hero Bot builds, official tutorials, and VEXcode lessons.</p></div></div>
       <div class="section-subhead"><h3>Beginner Builds</h3></div>
@@ -757,7 +812,7 @@
 
       <div class="info-box curriculum-intro">
         <h3>How This Works</h3>
-        <p>Every day follows the same rhythm: <strong>Hook</strong> (a puzzle that makes you curious) → <strong>Think First</strong> (write your guess) → <strong>Learn</strong> (watch videos) → <strong>Connect</strong> (the aha moment) → <strong>Try It</strong> (hands-on challenge) → <strong>Reflect</strong> (deepen understanding).</p>
+        <p>Every day follows the same rhythm: <strong>Hook</strong> (a puzzle that makes you curious) → <strong>Think First</strong> (write your guess) → <strong>Concepts</strong> (the vocabulary) → <strong>Learn</strong> (watch videos) → <strong>Connect</strong> (the aha moment) → <strong>Try It</strong> (hands-on challenge) → <strong>Reflect</strong> (deepen understanding).</p>
         <p>You won't get answers spoon-fed. You'll discover them. That's how real engineers think.</p>
       </div>
 
@@ -784,7 +839,6 @@
               <span class="day-meta">45-60 min</span>
             </button>
             <div class="day-panel" id="day-1-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>Two robots each move four Bean Bags. One earns far more points, while the other finishes sooner. How could both outcomes be sensible—and what would you need to know before designing either robot?</p>
@@ -834,6 +888,7 @@
                   <li>Which sentence in the manual changed one of your original guesses?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
           <article class="day-card" id="day-2" data-day="2" data-phase="phase-a" data-keywords="shafts friction pins connectors bushings spacers">
@@ -876,8 +931,8 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=kQNM7glk2qg" target="_blank" rel="noopener">VEX IQ Free spin test - bad spacing</a> — Caution Tape Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=J5P3tjDWoL8" target="_blank" rel="noopener">VEX IQ Free spin test - good spacing</a> — Caution Tape Robotics</li>
+                  <li><a href="#video-kQNM7glk2qg">VEX IQ Free spin test - bad spacing</a> — Caution Tape Robotics</li>
+                  <li><a href="#video-J5P3tjDWoL8">VEX IQ Free spin test - good spacing</a> — Caution Tape Robotics</li>
                   <li><a href="#video-g2nOzbhcjv4">Introduction to VEX: Drive Shaft and Shaft Collars</a> — STEM with Steph</li>
                   <li><a href="#video-uh_CwnbeH9I">VEX IQ Tip - Mounting Small Hardware on Shafts</a> — VEX Robotics</li>
                   <li><a href="concepts/friction.html">Friction</a> — concept page</li>
@@ -1062,9 +1117,9 @@
                 <h3>Learn</h3>
                 <ol>
                   <li><a href="#video-D6cY3riTe-o">Center of Gravity: The Key to a Stable Robot</a> — Chris Briere</li>
-                  <li><a href="https://www.youtube.com/watch?v=0UkQkdVcxWo" target="_blank" rel="noopener">VEX Camp | IQ Session 1: Building with IQ</a> — VEX Robotics; use chapters 12:55-31:50</li>
-                  <li><a href="https://www.youtube.com/watch?v=XhwBI1EbspE" target="_blank" rel="noopener">Center of Gravity and Wiggly Driving Test</a> — Robot Rampage</li>
-                  <li><a href="https://www.youtube.com/watch?v=e1hRWg0WG9I" target="_blank" rel="noopener">Agilibot</a> — Brian Meierdiercks</li>
+                  <li><a href="#video-0UkQkdVcxWo">VEX Camp | IQ Session 1: Building with IQ</a> — VEX Robotics; use chapters 12:55-31:50</li>
+                  <li><a href="#video-XhwBI1EbspE">Center of Gravity and Wiggly Driving Test</a> — Robot Rampage</li>
+                  <li><a href="#video-e1hRWg0WG9I">Agilibot</a> — Brian Meierdiercks</li>
                   <li><a href="concepts/center-of-gravity.html">Center of Gravity</a> — concept page</li>
                   <li><a href="concepts/friction.html">Friction</a> — concept page</li>
                 </ol>
@@ -1134,7 +1189,7 @@
                   <li><a href="#video-F3G0sUz3_Jw">Common Steering Methods</a> — ServoCity</li>
                   <li><a href="#video-xQorNQ13Cyk">vex wheel selection: solid versus omni</a> — turbodog99</li>
                   <li><a href="#video-VfuA2EqaIso">The Ultimate Guide To Omniwheels</a> — Kepler Electronics</li>
-                  <li><a href="https://www.youtube.com/watch?v=2Pnj9Jq9JiU" target="_blank" rel="noopener">Vex Robotics Drivebase Types Explained</a> — 9MotorGang; use tank/H/mecanum/X chapters</li>
+                  <li><a href="#video-2Pnj9Jq9JiU">Vex Robotics Drivebase Types Explained</a> — 9MotorGang; use tank/H/mecanum/X chapters</li>
                   <li><a href="concepts/omni-wheels.html">Omni Wheels</a> — concept page</li>
                 </ol>
               </div>
@@ -1195,9 +1250,9 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=-vm_UsnZt-k" target="_blank" rel="noopener">Tutorial: Fast &amp; Efficient VEX IQ Drivetrain (2:1 Speed, 2 Motors)</a> — The VEX IQ Guide</li>
-                  <li><a href="https://www.youtube.com/watch?v=sek_rTkf2-o" target="_blank" rel="noopener">5 Tips Every VEX Team Should Know about Drivetrains</a> — Joseph973</li>
-                  <li><a href="https://www.youtube.com/watch?v=leIM-EVbhGY" target="_blank" rel="noopener">VEX IQ Wheel Guide for Beginners | Drive Smarter</a> — The VEX IQ Guide</li>
+                  <li><a href="#video--vm_UsnZt-k">Tutorial: Fast &amp; Efficient VEX IQ Drivetrain (2:1 Speed, 2 Motors)</a> — The VEX IQ Guide</li>
+                  <li><a href="#video-sek_rTkf2-o">5 Tips Every VEX Team Should Know about Drivetrains</a> — Joseph973</li>
+                  <li><a href="#video-leIM-EVbhGY">VEX IQ Wheel Guide for Beginners | Drive Smarter</a> — The VEX IQ Guide</li>
                   <li><a href="#video-xQorNQ13Cyk">vex wheel selection: solid versus omni</a> — turbodog99</li>
                   <li><a href="concepts/omni-wheels.html">Omni Wheels</a> — concept page</li>
                   <li><a href="concepts/what-is-torque.html">What is Torque?</a> — concept page</li>
@@ -1259,9 +1314,9 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=X4JHUDGzyv0" target="_blank" rel="noopener">Vex IQ Claw Ideas - How to Design Yours</a> — Mechanical Max</li>
-                  <li><a href="https://www.youtube.com/watch?v=hRSUs7ChPW0" target="_blank" rel="noopener">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=2DNQQKckmLk" target="_blank" rel="noopener">Vex IQ Claw Design Video</a> — Tiffany Mounts</li>
+                  <li><a href="#video-X4JHUDGzyv0">Vex IQ Claw Ideas - How to Design Yours</a> — Mechanical Max</li>
+                  <li><a href="#video-hRSUs7ChPW0">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-2DNQQKckmLk">Vex IQ Claw Design Video</a> — Tiffany Mounts</li>
                   <li><a href="#video-d8gI02Ecig0">Opening the Claw</a> — VEX Robotics</li>
                   <li><a href="concepts/friction.html">Friction</a> — concept page</li>
                 </ol>
@@ -1324,8 +1379,8 @@
                 <ol>
                   <li><a href="#video-1Ty_1LF3Qv0">Basic Mechanisms: 4 Bar Linkage</a> — Mr. Dillman&#x27;s Tech Channel</li>
                   <li><a href="#video-9iSmW7dMuB8">Vex Robotics Lift Types Explained</a> — 9MotorGang; use chapters 2-bar/4-bar/6-bar/chain-bar/DR4B</li>
-                  <li><a href="https://www.youtube.com/watch?v=80ZmWH89pjE" target="_blank" rel="noopener">Vex Robotics Chain Bar Guide/Tutorial</a> — 9MotorGang</li>
-                  <li><a href="https://www.youtube.com/watch?v=LUvIH5k8HWY" target="_blank" rel="noopener">Kepler&#x27;s Guide to Chain-Bar Lifts</a> — Kepler Electronics</li>
+                  <li><a href="#video-80ZmWH89pjE">Vex Robotics Chain Bar Guide/Tutorial</a> — 9MotorGang</li>
+                  <li><a href="#video-LUvIH5k8HWY">Kepler&#x27;s Guide to Chain-Bar Lifts</a> — Kepler Electronics</li>
                   <li><a href="concepts/linkages.html">Linkages</a> — concept page</li>
                   <li><a href="concepts/center-of-gravity.html">Center of Gravity</a> — concept page</li>
                 </ol>
@@ -1454,7 +1509,7 @@
                 <h3>Learn</h3>
                 <ol>
                   <li><a href="#video-KbBNJlZNqeI">VEX IQ 2nd Gen Kit Walkthrough</a> — Mark Johnston</li>
-                  <li><a href="#video-w7yXXJmg1Do">What&#x27;s in the Box</a> — Unknown Creator</li>
+                  <li><a href="#video-w7yXXJmg1Do">What&#x27;s in the Box</a> — Curious Planet</li>
                   <li><a href="#video-JvohEXX-FiY">Getting Started with VEX IQ Gen 2</a> — VEX Robotics</li>
                   <li><a href="#video-jPaarRbLjaE">Flop Part 1</a> — VEX Robotics</li>
                 </ol>
@@ -1580,7 +1635,7 @@
                   <li><a href="#video-jPaarRbLjaE">Flop Part 1</a> — VEX Robotics</li>
                   <li><a href="#video-n_fWxHqSMPs">Flop Part 2</a> — VEX Robotics</li>
                   <li><a href="#video-ZI7Kc7Y2X0k">Hero Bot Breakdown</a> — CosmosTech</li>
-                  <li><a href="https://www.youtube.com/watch?v=KvWHQ6d3_hM" target="_blank" rel="noopener">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-KvWHQ6d3_hM">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
                   <li><a href="concepts/friction.html">Friction</a> — concept page</li>
                   <li><a href="concepts/omni-wheels.html">Omni Wheels</a> — concept page</li>
                 </ol>
@@ -1644,8 +1699,8 @@
                 <ol>
                   <li><a href="#video-n_fWxHqSMPs">Flop Part 2</a> — VEX Robotics</li>
                   <li><a href="#video-ZI7Kc7Y2X0k">Hero Bot Breakdown</a> — CosmosTech</li>
-                  <li><a href="https://www.youtube.com/watch?v=hRSUs7ChPW0" target="_blank" rel="noopener">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=KvWHQ6d3_hM" target="_blank" rel="noopener">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-hRSUs7ChPW0">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-KvWHQ6d3_hM">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
                   <li><a href="concepts/what-is-torque.html">What is Torque?</a> — concept page</li>
                   <li><a href="concepts/friction.html">Friction</a> — concept page</li>
                   <li><a href="concepts/linkages.html">Linkages</a> — concept page</li>
@@ -1680,7 +1735,6 @@
               <span class="day-meta">60 min</span>
             </button>
             <div class="day-panel" id="day-15-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>If Flop misses a score, should you rebuild the intake, change the arm, practice driving, alter code, or do nothing until more data exists? How can one improvement beat five guesses?</p>
@@ -1711,9 +1765,9 @@
                 <h3>Learn</h3>
                 <ol>
                   <li><a href="#video-azJmUY9SMWo">How to Design and Build</a> — Ben Lipper</li>
-                  <li><a href="https://www.youtube.com/watch?v=sl7DbBqcYbA" target="_blank" rel="noopener">99808A presents: How to use the Engineering Design Process</a> — Team 99808</li>
-                  <li><a href="https://www.youtube.com/watch?v=KvWHQ6d3_hM" target="_blank" rel="noopener">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=hRSUs7ChPW0" target="_blank" rel="noopener">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-sl7DbBqcYbA">99808A presents: How to use the Engineering Design Process</a> — Team 99808</li>
+                  <li><a href="#video-KvWHQ6d3_hM">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-hRSUs7ChPW0">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
                   <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
                 </ol>
               </div>
@@ -1737,6 +1791,7 @@
                   <li>Why might a slower robot or mechanism score more points in a real match?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
         </div>
@@ -1784,7 +1839,7 @@
                   <li><a href="#video-tepeFAA7Gbo">5 Tips to Instantly Improve Your VEX Robot Driving</a> — The VEX IQ Guide</li>
                   <li><a href="https://www.youtube.com/watch?v=sFrmMckQfqY" target="_blank" rel="noopener">VEX IQ Wireless Driver Control</a> — Vex ICutie</li>
                   <li><a href="https://www.youtube.com/watch?v=0i0oArJgu90" target="_blank" rel="noopener">VEX IQ - Driving and Turning</a> — Kai Nakamura</li>
-                  <li><a href="#video-PwLPVbLclqk">Drive and Code a VEX IQ Robot</a> — Unknown Creator</li>
+                  <li><a href="#video-PwLPVbLclqk">Drive and Code a VEX IQ Robot</a> — Marisela Alvarado</li>
                 </ol>
               </div>
               <div class="day-block day-connect">
@@ -1842,9 +1897,9 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=eQTbkWwIJ-Q" target="_blank" rel="noopener">How to Build Passive Aligners</a> — Lemon Vex Robotics</li>
+                  <li><a href="#video-eQTbkWwIJ-Q">How to Build Passive Aligners</a> — Lemon Vex Robotics</li>
                   <li><a href="https://www.youtube.com/watch?v=yC_6j7vawfk" target="_blank" rel="noopener">VEX Build Masterclass #3 - Squaring</a> — Ryan Liao</li>
-                  <li><a href="https://www.youtube.com/watch?v=ftq1_O9gfMQ" target="_blank" rel="noopener">VEX IQ: Wheel Alignment Tips</a> — WIS Robotics</li>
+                  <li><a href="#video-ftq1_O9gfMQ">VEX IQ: Wheel Alignment Tips</a> — WIS Robotics</li>
                   <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
                 </ol>
               </div>
@@ -1877,7 +1932,6 @@
               <span class="day-meta">60 min</span>
             </button>
             <div class="day-panel" id="day-18-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>In Driver Skills, a risky high-value path might score 20 points once, while a safe path scores fewer points three times. Which one wins after 60 seconds?</p>
@@ -1907,8 +1961,8 @@
                 <ol>
                   <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
                   <li><a href="#video-AMZ8p5u8UHY">Game Manual Breakdown</a> — RoboSTEM</li>
-                  <li><a href="https://www.youtube.com/watch?v=yBdO3xBeAp4" target="_blank" rel="noopener">Vex Iq Level Up | Solo TW PR | 102 Points!</a> — Auburn Community Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=EMYxGGUh_ls" target="_blank" rel="noopener">Hero Bot Scores 92 Points?! Breaking Down This INSANE Match</a> — VEX Talk</li>
+                  <li><a href="#video-yBdO3xBeAp4">Vex Iq Level Up | Solo TW PR | 102 Points!</a> — Auburn Community Robotics</li>
+                  <li><a href="#video-EMYxGGUh_ls">Hero Bot Scores 92 Points?! Breaking Down This INSANE Match</a> — VEX Talk</li>
                   <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
                 </ol>
               </div>
@@ -1932,6 +1986,7 @@
                   <li>What should the driver do after a miss: retry immediately, abandon, or switch route?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
           <article class="day-card" id="day-19" data-day="19" data-phase="phase-d" data-keywords="teamwork alliance strategy collaboration roles">
@@ -1941,7 +1996,6 @@
               <span class="day-meta">45-60 min</span>
             </button>
             <div class="day-panel" id="day-19-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>Two good robots can get in each other&#x27;s way and score less than one organized pair. What must alliance partners decide before the match starts?</p>
@@ -1970,8 +2024,8 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=M_u3zQwBzyI" target="_blank" rel="noopener">Boost Your VEX IQ Teamwork Skills with These Strategies</a> — RoboSTEM</li>
-                  <li><a href="https://www.youtube.com/watch?v=ptJ-CkMJpNY" target="_blank" rel="noopener">VEX IQ Level Up Explained - What Teams Need to Know First</a> — Vector Motion</li>
+                  <li><a href="#video-M_u3zQwBzyI">Boost Your VEX IQ Teamwork Skills with These Strategies</a> — RoboSTEM</li>
+                  <li><a href="#video-ptJ-CkMJpNY">VEX IQ Level Up Explained - What Teams Need to Know First</a> — Vector Motion</li>
                   <li><a href="https://www.youtube.com/watch?v=-Z5vRmfvT-o" target="_blank" rel="noopener">358 POINTS #1 Finals: 81777A &amp; 95014X | VEX IQ Mix &amp; Match</a> — Chewbotca</li>
                   <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
                   <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
@@ -1997,6 +2051,7 @@
                   <li>When is it smarter to let the partner score while Flop clears space or collects?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
           <article class="day-card" id="day-20" data-day="20" data-phase="phase-d" data-keywords="practice logbook data improvement drills">
@@ -2006,7 +2061,6 @@
               <span class="day-meta">45-60 min</span>
             </button>
             <div class="day-panel" id="day-20-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>If a driver says, &quot;I practiced for an hour,&quot; does that prove improvement? What data would show the practice actually made the robot score better?</p>
@@ -2036,8 +2090,8 @@
                 <h3>Learn</h3>
                 <ol>
                   <li><a href="#video-tepeFAA7Gbo">5 Tips to Improve Driving</a> — The VEX IQ Guide</li>
-                  <li><a href="https://www.youtube.com/watch?v=GERezk11oUY" target="_blank" rel="noopener">The VEX Notebook Rubric, Explained</a> — BennyBuildsRobots</li>
-                  <li><a href="https://www.youtube.com/watch?v=D8JT7D8gq5g" target="_blank" rel="noopener">How to Manage Your Engineering Design Notebook</a> — Last Minute Fix OCS Robotics</li>
+                  <li><a href="#video-GERezk11oUY">The VEX Notebook Rubric, Explained</a> — BennyBuildsRobots</li>
+                  <li><a href="#video-D8JT7D8gq5g">How to Manage Your Engineering Design Notebook</a> — Last Minute Fix OCS Robotics</li>
                   <li><a href="#video-O0El_fts9ns">Award Winning Notebook</a> — 8931B V-Bots Trifecta</li>
                   <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
                 </ol>
@@ -2062,6 +2116,7 @@
                   <li>How can you tell the difference between a robot that improved and a driver who simply learned to work around a flaw?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
         </div>
@@ -2170,7 +2225,7 @@
                 <h3>Learn</h3>
                 <ol>
                   <li><a href="#video-ap39M61F1l0">Code 2- and 4-Motor Drivetrain</a> — VEX Talk</li>
-                  <li><a href="#video-PwLPVbLclqk">Drive and Code a VEX IQ Robot</a> — Unknown Creator</li>
+                  <li><a href="#video-PwLPVbLclqk">Drive and Code a VEX IQ Robot</a> — Marisela Alvarado</li>
                   <li><a href="#video-q-X4Q_mXOfY">Basic BaseBot Blocks Programming</a> — Coding with Culp</li>
                   <li><a href="#video-IGbHbtC5wKU">VEXcode IQ Blocks Tutorial Beginner</a> — TechPoint Youth</li>
                 </ol>
@@ -2232,10 +2287,10 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=cKZAaWWCTpU" target="_blank" rel="noopener">VEX IQ - Controlling Motors</a> — Kai Nakamura</li>
-                  <li><a href="https://www.youtube.com/watch?v=TbaOMMKLGG4" target="_blank" rel="noopener">VEXcode IQ Blocks - Device Setup - Motors Tutorial</a> — VEX Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=PxSzAq0-upE" target="_blank" rel="noopener">VEXcode IQ Blocks - Device Setup - Controller Tutorial</a> — VEX Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=H0W3Lf-VHcI" target="_blank" rel="noopener">VEXcode IQ Blocks - Moving the Arm Tutorial</a> — VEX Robotics</li>
+                  <li><a href="#video-cKZAaWWCTpU">VEX IQ - Controlling Motors</a> — Kai Nakamura</li>
+                  <li><a href="#video-TbaOMMKLGG4">VEXcode IQ Blocks - Device Setup - Motors Tutorial</a> — VEX Robotics</li>
+                  <li><a href="#video-PxSzAq0-upE">VEXcode IQ Blocks - Device Setup - Controller Tutorial</a> — VEX Robotics</li>
+                  <li><a href="#video-H0W3Lf-VHcI">VEXcode IQ Blocks - Moving the Arm Tutorial</a> — VEX Robotics</li>
                 </ol>
               </div>
               <div class="day-block day-connect">
@@ -2559,8 +2614,8 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=TkxUQsWnBEw" target="_blank" rel="noopener">VEX 1961Z VexCode Lesson 4: Debugging and Autonomous Left and Right Functions</a> — Eagles 1961Z</li>
-                  <li><a href="https://www.youtube.com/watch?v=9xSPQnfn390" target="_blank" rel="noopener">VEXcode IQ Blocks - 4. Displaying Information on the Screen</a> — VEX Robotics UK</li>
+                  <li><a href="#video-TkxUQsWnBEw">VEX 1961Z VexCode Lesson 4: Debugging and Autonomous Left and Right Functions</a> — Eagles 1961Z</li>
+                  <li><a href="#video-9xSPQnfn390">VEXcode IQ Blocks - Displaying Information on the Screen</a> — VEX Robotics UK</li>
                   <li><a href="#video-voZIL4Gf7Zk">Device Setup Sensors</a> — VEX Robotics</li>
                   <li><a href="#video-2ZhxhHAEDB0">Master Procedures</a> — STEAM Labs</li>
                 </ol>
@@ -2594,7 +2649,6 @@
               <span class="day-meta">60 min</span>
             </button>
             <div class="day-panel" id="day-29-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>A robot can score well at home and still lose tournament time because it fails inspection, the battery is uncharged, the notebook is messy, or the team cannot explain its design. What must be ready before the first match?</p>
@@ -2627,10 +2681,10 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=VK6lzPPhuXA" target="_blank" rel="noopener">Attending a VEX IQ Robotics Competition</a> — RoboticsTine</li>
+                  <li><a href="#video-VK6lzPPhuXA">Attending a VEX IQ Robotics Competition</a> — RoboticsTine</li>
                   <li><a href="#video-afrdGr4ue9Y">Full Inspection Guide</a> — Caution Tape Robotics</li>
-                  <li><a href="https://www.youtube.com/watch?v=5q_y2vifuXo" target="_blank" rel="noopener">Engineering Notebook Tips Every VEX Team Should Know</a> — The VEX IQ Guide</li>
-                  <li><a href="https://www.youtube.com/watch?v=zekAzwe8j0c" target="_blank" rel="noopener">How to Master the Judges Interview</a> — The VEX Analyst</li>
+                  <li><a href="#video-5q_y2vifuXo">Engineering Notebook Tips Every VEX Team Should Know</a> — The VEX IQ Guide</li>
+                  <li><a href="#video-zekAzwe8j0c">How to Master the Judges Interview</a> — The VEX Analyst</li>
                   <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
                 </ol>
               </div>
@@ -2654,6 +2708,7 @@
                   <li>Which notebook page best proves that Team 295U tested and improved the robot?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
           <article class="day-card" id="day-30" data-day="30" data-phase="phase-f" data-keywords="compete reflect mock tournament debrief">
@@ -2663,7 +2718,6 @@
               <span class="day-meta">60-90 min</span>
             </button>
             <div class="day-panel" id="day-30-panel" hidden>
-              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
               <div class="day-block day-hook">
                 <h3>Hook</h3>
                 <p>After a mock tournament, the scoreboard tells only part of the story. What evidence would tell you whether the robot, driver, code, strategy, or teamwork should improve next?</p>
@@ -2693,8 +2747,8 @@
               <div class="day-block day-learn">
                 <h3>Learn</h3>
                 <ol>
-                  <li><a href="https://www.youtube.com/watch?v=SW4-CeAHvo8" target="_blank" rel="noopener">2023 VIQC Worlds Matches &amp; Amaze Award</a> — Savage Bots</li>
-                  <li><a href="https://www.youtube.com/watch?v=ARKJ8SLiaBw" target="_blank" rel="noopener">Vex IQ Rise Above but we Pre-Record Skills | 351 points</a> — Rogue108</li>
+                  <li><a href="#video-SW4-CeAHvo8">2023 VIQC Worlds Matches &amp; Amaze Award</a> — Savage Bots <em>(past season inspiration — field and scoring differ from Level Up)</em></li>
+                  <li><a href="https://www.youtube.com/watch?v=ARKJ8SLiaBw" target="_blank" rel="noopener">Vex IQ Rise Above but we Pre-Record Skills | 351 points</a> — Rogue108 <em>(past season inspiration — field and scoring differ from Level Up)</em></li>
                   <li><a href="#video-tepeFAA7Gbo">5 Tips to Improve Driving</a> — The VEX IQ Guide</li>
                   <li><a href="#video-O0El_fts9ns">Award Winning Notebook</a> — 8931B V-Bots Trifecta</li>
                   <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
@@ -2720,6 +2774,7 @@
                   <li>If you could improve only one thing before the next tournament, what would it be and how would you test it?</li>
                 </ul>
               </div>
+              <div class="day-note"><strong>Coach note:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
             </div>
           </article>
         </div>

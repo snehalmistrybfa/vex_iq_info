@@ -1,0 +1,429 @@
+================================================================================
+VEX IQ RESOURCE HUB — REVIEW AND TOP 15 IMPROVEMENTS
+================================================================================
+Reviewed: September 7, 2026
+Files reviewed (read completely):
+  - index.html (2850 lines)
+  - concepts/what-is-torque.html (110 lines)
+  - concepts/friction.html (93 lines)
+  - concepts/levers.html (85 lines)
+  - concepts/center-of-gravity.html (86 lines)
+  - concepts/omni-wheels.html (83 lines)
+  - concepts/linkages.html (84 lines)
+  - curriculum-strategy.txt (skimmed day titles + hooks)
+
+Automated checks performed:
+  - Video card count: 76 (matches requirement)
+  - Duplicate video IDs: none
+  - Broken #video- anchors in curriculum: none
+  - Concept page files: all 6 present, all linked from index.html
+
+OVERALL ASSESSMENT
+================================================================================
+The site is strong. The 30-day curriculum is complete, every day has a
+Socratic hook, Think First, Concepts, Learn, Connect, Try It, a 1-2-3
+rubric, and Reflect — matching the strategy spec exactly. All 76 video
+cards exist and all internal #video- anchors resolve. The 6 concept pages
+all have CSS diagrams and interactive Try It elements. The rubrics measure
+evidence and reasoning, not just completion.
+
+The 15 improvements below are ranked by priority. The top items are real
+correctness/consistency gaps; the rest are polish and engagement.
+
+================================================================================
+#1  CRITICAL — Concept pages numbered out of order and inconsistently
+================================================================================
+Issue:
+  The "Concept N of 6" progress pills on the 6 concept pages are numbered
+  in a non-logical order that does not match curriculum day order or any
+  visible navigation sequence. A child navigating them in order will see
+  1, 3, 2, 4, 5, 6.
+
+Current numbering (by pill text):
+  what-is-torque.html       line 56  → "Concept 1 of 6"  (Day 3)
+  friction.html             line 49  → "Concept 3 of 6"  (Day 2)
+  center-of-gravity.html    line 48  → "Concept 2 of 6"  (Day 5)
+  levers.html               line 47  → "Concept 4 of 6"  (Day 4)
+  omni-wheels.html          line 48  → "Concept 5 of 6"  (Day 6)
+  linkages.html             line 46  → "Concept 6 of 6"  (Day 9)
+
+Fix:
+  Renumber to match curriculum day order (the order a child encounters them):
+    friction.html             → Concept 1 of 6  (Day 2)
+    what-is-torque.html       → Concept 2 of 6  (Day 3)
+    levers.html               → Concept 3 of 6  (Day 4)
+    center-of-gravity.html    → Concept 4 of 6  (Day 5)
+    omni-wheels.html          → Concept 5 of 6  (Day 6)
+    linkages.html             → Concept 6 of 6  (Day 9)
+  Also add prev/next links between concept pages so the sequence is
+  navigable as a chain, not only via the curriculum.
+
+================================================================================
+#2  CRITICAL — Mechanics Concepts tab lists only 3 of 6 concept pages
+================================================================================
+Issue:
+  The "Mechanics Concepts" tab (Kit & Parts section) links only 3 of the 6
+  concept pages. Omni Wheels, Center of Gravity, and Linkages are missing
+  from this discovery entry point. They appear only in the Drivetrains tab
+  (lines 479-481). A user browsing Kit & Parts → Mechanics Concepts will
+  not discover half the concept pages.
+
+File and lines:
+  index.html lines 292-298
+
+Fix:
+  Add the 3 missing resource-pills (or build-links) so all 6 concept pages
+  are discoverable from the Mechanics Concepts tab:
+    concepts/omni-wheels.html       (Use with Day 6)
+    concepts/center-of-gravity.html (Use with Day 5)
+    concepts/linkages.html          (Use with Day 9)
+
+================================================================================
+#3  CRITICAL — Concept page nav links point to wrong sections for some days
+================================================================================
+Issue:
+  Each concept page has two nav links: "Back to Curriculum" and a
+  "Use with Day N" link. The "Use with Day N" links point to top-level
+  sections (#kit or #builds) instead of the specific day card
+  (#day-2, #day-3, etc.). The section target is also inconsistent:
+  some point to #kit, others to #builds, for no clear reason.
+
+  Examples:
+    friction.html line 49  → "Use with Day 2" links to #kit
+    center-of-gravity.html line 48 → "Use with Day 5" links to #builds
+    omni-wheels.html line 48 → "Use with Day 6" links to #builds
+
+Fix:
+  Change all "Use with Day N" links to point to the specific day anchor,
+  e.g. href="../index.html#day-2". This lands the child on the exact
+  curriculum day, not a broad section they must search. Also ensure the
+  day card scrolls into view (scroll-margin-top is already set on
+  section, but day-card articles need scroll-margin-top too — see #10).
+
+================================================================================
+#4  CRITICAL — Day 2 and Day 5 Learn lists mix external YouTube links with
+     anchored site videos inconsistently (research-brief videos not yet
+     promoted to cards)
+================================================================================
+Issue:
+  Day 2 (line 879-880) links to two external YouTube videos
+  ("VEX IQ Free spin test - bad spacing" and "...good spacing" by
+  Caution Tape Robotics) that are NOT in the 76-card video library.
+  Day 5 (lines 1065-1067) links to three external YouTube videos not in
+  the library. Several other days (4, 6, 7, 8, 13, 14, 15, 16, 17, 18,
+  19, 20, 23, 28, 29, 30) also link to external YouTube videos that have
+  no corresponding video-card in the library.
+
+  This is not a broken link, but it means the topic-index count
+  ("76 video cards") and the actual video inventory diverge. A child
+  searching the in-site video search will not find these curriculum-only
+  videos. The strategy doc (Part 3) explicitly calls these "NEW" videos
+  from research briefs.
+
+Fix:
+  Either (a) add these research-found videos as video-cards in the
+  appropriate topical section so the library count and search cover them,
+  or (b) label them clearly in the Learn list as "external supplement" so
+  it is clear why they are not searchable cards. Option (a) is preferred
+  for consistency. At minimum, the topic-index "76 video cards" claim
+  (line 731) should note that curriculum days also link to supplemental
+  videos beyond the 76 cards.
+
+================================================================================
+#5  HIGH — Day 30 Learn list includes off-season/non-Level-Up videos
+================================================================================
+Issue:
+  Day 30 (lines 2696-2697) links to:
+    "2023 VIQC Worlds Matches & Amaze Award" — Savage Bots
+    "Vex IQ Rise Above but we Pre-Record Skills | 351 points" — Rogue108
+  Both are from PRIOR seasons (2023, Rise Above), not Level Up. The
+  strategy doc (line 979) says to avoid videos that depend on outdated
+  season/rule references. For the capstone day of a Level Up curriculum,
+  showing a different game's field and scoring objects is confusing for
+  a 9-year-old.
+
+File and lines:
+  index.html lines 2696-2697
+
+Fix:
+  Replace with Level Up-specific skills/match footage, or relabel these
+  as "general inspiration from past seasons — scoring objects and rules
+  differ" so the child knows the field they see is not Level Up.
+
+================================================================================
+#6  HIGH — "What's in the Box" video credited to "Unknown Creator"
+================================================================================
+Issue:
+  The video card for "What's in the Box" (line 417) and the Day 11 Learn
+  list (line 1457) both credit "Unknown Creator." This is a real YouTube
+  video (ID w7yXXJmg1Do); the channel name should be identifiable. Leaving
+  "Unknown Creator" looks unfinished and does not help a child or parent
+  evaluate the source.
+
+File and lines:
+  index.html line 417 (video card), line 1457 (Day 11 Learn list)
+
+Fix:
+  Look up the actual YouTube channel for video ID w7yXXJmg1Do and replace
+  "Unknown Creator" / "By Unknown Creator" with the real channel name and
+  a creator link. Same applies to "Drive and Code a VEX IQ Robot"
+  (line 663, also "Unknown Creator").
+
+================================================================================
+#7  HIGH — Curriculum intro says "Learn (watch videos)" but omits "Concepts"
+     from the rhythm summary
+================================================================================
+Issue:
+  The "How This Works" intro box (line 760) describes the daily rhythm as:
+    Hook → Think First → Learn → Connect → Try It → Reflect
+  But every day actually has a "Concepts" section between Think First and
+  Learn. The intro omits it, so a child reading the intro will not expect
+  the Concepts block. The strategy doc (line 35) also omits it from the
+  "Default session rhythm" but it appears in every day's spec.
+
+File and lines:
+  index.html line 760
+
+Fix:
+  Add "Concepts" to the rhythm summary:
+    Hook → Think First → Concepts → Learn → Connect → Try It → Reflect
+  Or rewrite: "Hook (a puzzle) → Think First (your guess) → Concepts (the
+  vocabulary) → Learn (watch videos) → Connect (the aha) → Try It → Reflect."
+
+================================================================================
+#8  HIGH — Day 1 has a "Manual check" note but Days 18-20 and 29-30 notes
+     are inconsistent in placement
+================================================================================
+Issue:
+  The strategy doc (line 9) says: "Before teaching Days 1, 15, 18-20, and
+  29-30, check the latest official manual." The site places day-note
+  warnings on Day 1 (line 787), Day 15 (line 1683), Day 18 (line 1880),
+  Day 19 (line 1944), Day 20 (line 2009), Day 29 (line 2597), and
+  Day 30 (line 2666). This is correct and complete. However, the note
+  text is identical everywhere and could be a reusable callout. More
+  importantly, the note appears BEFORE the Hook on Day 1 but AFTER the
+  day-toggle expansion — so it is the first thing a child sees when
+  opening Day 1, before the curiosity puzzle. The strategy doc says the
+  adult should read only the Hook first and hide Learn/Connect.
+
+File and lines:
+  index.html line 787 (Day 1 note placement)
+
+Fix:
+  Move the manual-check note to the END of each day panel (after Reflect)
+  or style it as a small coach-only footer, so the Hook is always the
+  first thing in the panel. The note is for the adult, not the child.
+
+================================================================================
+#9  HIGH — Mobile: day-toggle grid breaks day-meta onto wrong row at ≤600px
+================================================================================
+Issue:
+  At ≤600px (line 103-104), the day-toggle grid becomes
+  `grid-template-columns: 42px 1fr` and `.day-meta` is forced to
+  `grid-column: 2; white-space: normal`. This puts the time label ("45-60
+  min") on a second visual line inside the toggle, which can look like a
+  subtitle rather than metadata. It works, but the day-number circle (42px)
+  plus the title can crowd on narrow phones (≤360px), and the meta wraps
+  awkwardly for long titles like "Build Flop Without Rushing Past the
+  Evidence."
+
+File and lines:
+  index.html lines 101-107 (the @media block)
+
+Fix:
+  Test on a 360px viewport. Consider hiding day-meta entirely at ≤480px
+  (it is non-essential) or moving it to the panel header instead of the
+  toggle. The current layout is acceptable but tight.
+
+================================================================================
+#10 HIGH — Day-card articles have no scroll-margin-top; deep links land
+      under the fixed navbar
+================================================================================
+Issue:
+  The CSS sets `section { scroll-margin-top: 82px; }` (line 25) so that
+  section anchors (#kit, #builds, etc.) clear the fixed navbar. But
+  day-card articles (id="day-1" ... "id="day-30") do NOT have
+  scroll-margin-top. When a concept page links to #day-2 or a user clicks
+  a deep link, the day card's title will be hidden under the navbar.
+
+File and lines:
+  index.html line 25 (only `section` gets scroll-margin-top)
+
+Fix:
+  Add to the inline CSS:
+    .day-card { scroll-margin-top: 82px; }
+  This ensures #day-N anchors land cleanly below the navbar. This becomes
+  especially important if fix #3 (pointing concept-page links to #day-N)
+  is applied.
+
+================================================================================
+#11 MEDIUM — Concept pages lack a "Reflect" or rubric section, unlike the
+      curriculum days
+================================================================================
+Issue:
+  The 6 concept pages each have: Hook, 3 concept cards, Think, Try It,
+  Connect to Flop. They do NOT have a Reflect section or a 1-2-3 rubric.
+  The curriculum spec (requirement #4) asks concept pages to use the
+  Socratic method, and the site's own intro (line 760) promises
+  "Reflect" as part of the rhythm. The concept pages are shorter than
+  curriculum days, but a one-line reflection prompt would make them
+  pedagogically complete and consistent.
+
+Files and lines:
+  what-is-torque.html    (ends at line 86, no Reflect)
+  friction.html          (ends at line 70, no Reflect)
+  levers.html            (ends at line 66, no Reflect)
+  center-of-gravity.html (ends at line 66, no Reflect)
+  omni-wheels.html       (ends at line 67, no Reflect)
+  linkages.html          (ends at line 64, no Reflect)
+
+Fix:
+  Add a short "Reflect" section (purple-bordered, like .day-reflect) with
+  one or two open questions per page, e.g. for torque: "If you could have
+  both fast AND strong, why wouldn't you? What stops a real motor from
+  doing both?" Keep it to 2 questions max for the short page format.
+
+================================================================================
+#12 MEDIUM — Friction page "Good/Bad" sort allows wrong moves to count
+      and never resets
+================================================================================
+Issue:
+  The friction.html Try It (lines 60-90) is a sort-to-bin game. When a
+  child sorts a chip into the wrong bin, the code (line 84) prefixes
+  "Try again: " but still moves the chip into the bin and disables it
+  (line 87). The chip is now stuck in the wrong bin with no way to retry
+  or reset. The score (line 89) only counts correct sorts, so a wrong
+  sort is permanent and the child cannot learn from the correction.
+
+File and lines:
+  friction.html lines 80-90 (the bin click handler)
+
+Fix:
+  On wrong sort, do NOT move the chip into the bin. Instead, keep the chip
+  in the examples area, show "Try again!" feedback, and let the child pick
+  the other bin. Add a "Reset" button that re-enables all chips and zeroes
+  the score. This makes the activity a real learning loop instead of a
+  one-shot with permanent errors.
+
+================================================================================
+#13 MEDIUM — Linkages page Try It slider only moves the tray vertically;
+      the links rotate but do not show the parallelogram constraint clearly
+================================================================================
+Issue:
+  The linkages.html Try It (lines 57-82) has a slider that rotates both
+  links by the same angle and moves the tray up. This is a reasonable
+  simplification, but the "level tray" claim (that the tray stays level)
+  is not visually reinforced — the tray just translates up; it does not
+  contrast with a swing arm that WOULD tilt. The concept's key insight
+  (parallel bars keep the end level) is told in text but not shown
+  comparatively.
+
+File and lines:
+  linkages.html lines 57-82
+
+Fix:
+  Add a small visual contrast: show a second "swing arm" tray (dashed
+  outline, tilted) next to the 4-bar tray, so the child can see that the
+  4-bar stays level while the swing arm tilts. Alternatively, add a
+  toggle button "Show swing arm for comparison" that overlays a tilting
+  tray. This makes the "why linkages" lesson visible, not just stated.
+
+================================================================================
+#14 MEDIUM — Concept pages have no "next concept" navigation; a child must
+      return to the curriculum each time
+================================================================================
+Issue:
+  Each concept page has a "Back to Curriculum" link but no link to the
+  next or previous concept page. Since the pages are numbered 1-6, a
+  child doing them in sequence must bounce back to the curriculum hub
+  between each one. This breaks the flow.
+
+Files and lines:
+  All 6 concept pages — the bottom nav (e.g. what-is-torque.html line 86)
+
+Fix:
+  Add prev/next links to each concept page:
+    Concept 1: [no prev] → Next: Concept 2
+    Concept 2: ← Prev: Concept 1 → Next: Concept 3
+    ... etc.
+  This requires establishing the canonical order (see fix #1) first.
+
+================================================================================
+#15 MEDIUM — Topic index "Total Library: 76 video cards" is accurate but
+      the per-section counts (11/35/7/23) sum to 76 only if counted
+      carefully; the child cannot verify and some sections share cards
+================================================================================
+Issue:
+  The topic index (lines 727-731) states:
+    Kit Videos: 11
+    Robot Build Videos: 35
+    Game & Strategy Videos: 7
+    Programming Videos: 23
+    Total Library: 76
+  11+35+7+23 = 76, so the math is correct. However, some videos appear in
+  multiple sections conceptually (e.g. "Opening the Claw" is in Mechanism
+  Code but also relevant to builds). The count is by placement, not by
+  relevance, which is fine — but a child searching for "Opening the Claw"
+  in the Programming tab will find it, while searching in Builds will not.
+  This is a minor discoverability gap, not an error.
+
+File and lines:
+  index.html lines 726-732
+
+Fix:
+  Optional: add a one-line note under the topic index: "Some videos
+  appear in the section where they're most useful — search by title to
+  find any video anywhere." This sets expectations and points to the
+  search box (line 724).
+
+================================================================================
+SUMMARY TABLE
+================================================================================
+ #  Priority   Issue
+ 1  CRITICAL   Concept pages numbered out of order (1,3,2,4,5,6)
+ 2  CRITICAL   Mechanics Concepts tab lists only 3 of 6 concept pages
+ 3  CRITICAL   Concept page "Use with Day N" links point to sections,
+              not specific day anchors
+ 4  CRITICAL   Many curriculum days link to external YouTube videos not
+              in the 76-card library (count/search mismatch)
+ 5  HIGH       Day 30 Learn list uses off-season (non-Level-Up) videos
+ 6  HIGH       "Unknown Creator" credits on 2 video cards
+ 7  HIGH       Curriculum intro omits "Concepts" from the daily rhythm
+ 8  HIGH       Manual-check note appears before the Hook on Day 1
+              (breaks "hook first" rule)
+ 9  HIGH       Mobile day-toggle crowds at ≤360px (day-meta wraps oddly)
+ 10 HIGH       Day-card articles lack scroll-margin-top (deep links hide
+              under navbar)
+ 11 MEDIUM     Concept pages have no Reflect section or rubric
+ 12 MEDIUM     Friction sort game: wrong answers are permanent, no reset
+ 13 MEDIUM     Linkages Try It doesn't visually contrast 4-bar vs swing arm
+ 14 MEDIUM     Concept pages have no prev/next navigation
+ 15 MEDIUM     Topic index counts are correct but discoverability note
+              would help
+
+================================================================================
+WHAT IS ALREADY GOOD (no action needed)
+================================================================================
+- All 30 days have Socratic hooks (questions/puzzles, not "today we learn
+  X"). Verified each hook: every one opens with a paradox, prediction, or
+  constraint problem.
+- All 30 days have 1-2-3 rubrics that measure evidence and reasoning
+  (e.g. "cites rule sections," "repeats trials," "explains the tradeoff"),
+  not just completion.
+- All 30 days have all 7 sections: Hook, Think First, Concepts, Learn,
+  Connect, Try It, Reflect (plus rubric). No thin days.
+- 76 video cards, no duplicate IDs, no broken #video- anchors.
+- All 6 concept pages have CSS diagrams (gears, shaft/wheel, lever beam,
+  robot/base/balance-dot, omni wheel with rollers, 4-bar linkage) and
+  interactive Try It elements (sliders, buttons, sort bins).
+- Concept pages use simple English appropriate for a 9-year-old.
+- Mobile/iPad responsive CSS is present (breakpoints at 900, 600, 480px)
+  with 44px min touch targets.
+- Accordion JS for phases and days is implemented and functional
+  (lines 2815-2838).
+- Phase filter chips and curriculum search work (lines 2789-2846).
+- Print CSS expands all day panels (lines 108-112).
+
+================================================================================
+END OF REVIEW
+================================================================================

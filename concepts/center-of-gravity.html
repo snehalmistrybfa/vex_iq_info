@@ -35,6 +35,10 @@
     .think { border:4px solid #ffd166; margin-top:22px; }
     .try { border:4px solid #b48cff; margin-top:22px; }
     .robot { border:4px solid #7be495; margin-top:22px; }
+    .reflect { background:var(--white); border:4px solid #8b6ed8; border-radius:22px; box-shadow:var(--shadow-md); font-style:italic; margin-top:22px; padding:22px; }
+    .reflect h2 { font-size:1.55rem; margin-bottom:10px; }
+    .reflect ul { padding-left:22px; }
+    .reflect li { margin-bottom:8px; }
     .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
     button { background:var(--primary); border:0; border-radius:16px; color:white; cursor:pointer; font:800 1rem var(--font-heading); min-height:48px; padding:12px 16px; transition:.2s; }
     button:hover,button:focus { background:var(--primary-dark); transform:translateY(-1px); }
@@ -45,7 +49,7 @@
 </head>
 <body>
   <main class="wrap">
-    <div class="top"><span class="pill progress">📏 Concept 2 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 5</a></nav></div>
+    <div class="top"><span class="pill progress">📏 Concept 4 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#day-5">Use with Day 5</a></nav></div>
     <section class="hero">
       <div><h1>Why Does My Robot Tip Over? Center of Gravity Explained</h1><p class="hook"><span class="big-question">Think first!</span>Why does a robot feel brave when its arm is down, then suddenly wobble when the arm rises?</p></div>
       <div class="diagram" role="img" aria-label="CSS diagram of a robot base with a support polygon and a red balance dot."><div class="bag" id="bag">🟪</div><div class="arm" id="arm"></div><div class="bot"></div><div class="support"></div><div class="floor"></div><div class="dot" id="dot"></div><div class="label">balance dot</div></div>
@@ -63,7 +67,8 @@
       <p class="status" id="status">Low is safest. The balance dot is deep inside the wheels.</p>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>Flop must drive, turn, collect, and score while its arm changes balance. Smooth driving and a low, wide base help it stay brave.</p></section>
-    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 5</a></nav>
+    <section class="reflect"><h2>🔍 Reflect</h2><ul><li>If you could add weight anywhere on Flop, where would you put it to prevent tipping? Why?</li><li>What happens to the balance point when Flop's arm is fully extended forward?</li></ul></section>
+    <nav class="nav" aria-label="Bottom links"><a href="levers.html">← Prev: Levers</a><a href="../index.html#curriculum">Back to Curriculum</a><a href="omni-wheels.html">Next: Omni Wheels →</a></nav>
   </main>
   <script>
     const states = {

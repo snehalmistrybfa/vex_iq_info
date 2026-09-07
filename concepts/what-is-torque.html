@@ -35,6 +35,10 @@
     .think { border:4px solid #ffd166; }
     .try { border:4px solid #b48cff; margin-top:22px; }
     .robot { border:4px solid #7be495; margin-top:22px; }
+    .reflect { background:var(--white); border:4px solid #8b6ed8; border-radius:22px; box-shadow:var(--shadow-md); font-style:italic; margin-top:22px; padding:22px; }
+    .reflect h2 { font-size:1.6rem; margin-bottom:10px; }
+    .reflect ul { padding-left:22px; }
+    .reflect li { margin-bottom:8px; }
     .control { display:grid; gap:8px; margin:14px 0; }
     label { font-weight:800; }
     input[type=range] { accent-color:var(--primary); min-height:44px; width:100%; }
@@ -53,8 +57,8 @@
 <body>
   <main class="wrap">
     <div class="top">
-      <span class="pill progress">⚙️ Concept 1 of 6</span>
-      <nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 3</a></nav>
+      <span class="pill progress">⚙️ Concept 2 of 6</span>
+      <nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#day-3">Use with Day 3</a></nav>
     </div>
     <section class="hero">
       <div>
@@ -83,7 +87,8 @@
       <p class="answer" id="answer"></p>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>Flop's arm must lift Bean Bags again and again. Slow gearing can make the lift stronger and easier to control, but if it is too slow, match time disappears.</p></section>
-    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 3</a></nav>
+    <section class="reflect"><h2>🔍 Reflect</h2><ul><li>If you could have both fast AND strong, why wouldn't you? What stops a real motor from doing both?</li><li>Where on Flop do you think torque matters most — the arm, the intake, or the wheels? Why?</li></ul></section>
+    <nav class="nav" aria-label="Bottom links"><a href="friction.html">← Prev: Friction</a><a href="../index.html#curriculum">Back to Curriculum</a><a href="levers.html">Next: Levers →</a></nav>
   </main>
   <script>
     const arm = document.querySelector('#arm');

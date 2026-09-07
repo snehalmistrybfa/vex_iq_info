@@ -32,6 +32,10 @@
     .think { border:4px solid #ffd166; margin-top:22px; }
     .try { border:4px solid #b48cff; margin-top:22px; }
     .robot { border:4px solid #7be495; margin-top:22px; }
+    .reflect { background:var(--white); border:4px solid #8b6ed8; border-radius:22px; box-shadow:var(--shadow-md); font-style:italic; margin-top:22px; padding:22px; }
+    .reflect h2 { font-size:1.55rem; margin-bottom:10px; }
+    .reflect ul { padding-left:22px; }
+    .reflect li { margin-bottom:8px; }
     label { font-weight:800; }
     input[type=range] { accent-color:#8e44ad; min-height:44px; width:100%; }
     .meters { display:grid; gap:12px; grid-template-columns:1fr 1fr; margin-top:14px; }
@@ -44,7 +48,7 @@
 </head>
 <body>
   <main class="wrap">
-    <div class="top"><span class="pill progress">📏 Concept 4 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 4</a></nav></div>
+    <div class="top"><span class="pill progress">📏 Concept 3 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#day-4">Use with Day 4</a></nav></div>
     <section class="hero">
       <div><h1>Levers: How a Small Force Lifts a Big Load</h1><p class="hook"><span class="big-question">Think first!</span>Where should you push on a beam if you want one finger to lift something heavy?</p></div>
       <div class="diagram" role="img" aria-label="CSS diagram of a lever beam with effort, fulcrum, and load labels."><div class="push">effort ↓</div><div class="load">load</div><div class="beam" id="beam"></div><div class="fulcrum" id="fulcrum"></div></div>
@@ -63,7 +67,8 @@
       <p class="result" id="leverResult">Balanced tradeoff: medium force and medium movement.</p>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>When Flop lifts a Bean Bag, the arm is a turning beam. The farther the bag is from the pivot, the more torque the motor needs.</p></section>
-    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 4</a></nav>
+    <section class="reflect"><h2>🔍 Reflect</h2><ul><li>If you move the fulcrum closer to the load, what do you gain and what do you lose?</li><li>Is Flop's arm a 1st, 2nd, or 3rd class lever? How could you tell?</li></ul></section>
+    <nav class="nav" aria-label="Bottom links"><a href="what-is-torque.html">← Prev: Torque</a><a href="../index.html#curriculum">Back to Curriculum</a><a href="center-of-gravity.html">Next: Center of Gravity →</a></nav>
   </main>
   <script>
     const pivot = document.querySelector('#pivot');

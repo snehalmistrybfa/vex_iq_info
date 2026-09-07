@@ -34,19 +34,29 @@
     .think { border:4px solid #ffd166; margin-top:22px; }
     .try { border:4px solid #b48cff; margin-top:22px; }
     .robot { border:4px solid #7be495; margin-top:22px; }
+    .reflect { background:var(--white); border:4px solid #8b6ed8; border-radius:22px; box-shadow:var(--shadow-md); font-style:italic; margin-top:22px; padding:22px; }
+    .reflect h2 { font-size:1.55rem; margin-bottom:10px; }
+    .reflect ul { padding-left:22px; }
+    .reflect li { margin-bottom:8px; }
     label { font-weight:800; }
     input[type=range] { accent-color:var(--primary); min-height:44px; width:100%; }
     .result { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
+    .compare-toggle { background:var(--medium-gray); margin-top:12px; }
+    .compare-toggle:hover,.compare-toggle:focus { background:var(--dark-gray); }
+    .swing-tray { align-items:center; background:transparent; border:3px dashed var(--medium-gray); border-radius:16px; color:var(--medium-gray); display:none; font-family:var(--font-heading); font-weight:800; height:58px; justify-content:center; left:63%; position:absolute; top:160px; transform-origin:left center; transition:.2s; width:118px; }
+    .swing-tray.show { display:flex; }
+    .swing-label { color:var(--medium-gray); display:none; font-family:var(--font-heading); font-size:.9rem; font-weight:700; left:63%; position:absolute; top:225px; }
+    .swing-label.show { display:block; }
     @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:300px; } .link { width:145px; } }
     @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <div class="top"><span class="pill progress">🤖 Concept 6 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 9</a></nav></div>
+    <div class="top"><span class="pill progress">🤖 Concept 6 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#day-9">Use with Day 9</a></nav></div>
     <section class="hero">
       <div><h1>Linkages: How Bars Stay Level While Moving Up</h1><p class="hook"><span class="big-question">Think first!</span>Why does one robot hand dump its load as it rises, while another hand stays almost level?</p></div>
-      <div class="diagram" role="img" aria-label="CSS diagram of a four bar linkage lifting a level tray."><div class="base"></div><div class="link" id="linkTop"></div><div class="link two" id="linkBottom"></div><div class="tray" id="tray">level tray</div><div class="joint j1" id="j1"></div><div class="joint j2" id="j2"></div><div class="joint j3" id="j3"></div><div class="joint j4" id="j4"></div></div>
+      <div class="diagram" role="img" aria-label="CSS diagram of a four bar linkage lifting a level tray, with an optional dashed swing arm comparison."><div class="base"></div><div class="link" id="linkTop"></div><div class="link two" id="linkBottom"></div><div class="tray" id="tray">level tray</div><div class="swing-tray" id="swingTray">tilted tray</div><div class="swing-label" id="swingLabel">swing arm tilts!</div><div class="joint j1" id="j1"></div><div class="joint j2" id="j2"></div><div class="joint j3" id="j3"></div><div class="joint j4" id="j4"></div></div>
     </section>
     <section class="grid">
       <article class="card"><h2>🔗 Linkage</h2><p>A linkage is connected bars. The bars guide where the moving part is allowed to go.</p></article>
@@ -56,12 +66,14 @@
     <section class="think"><h2>❓ Think About This!</h2><p>If your tray dumps the Bean Bag at the top, is the problem the driver, the tray angle, or the linkage shape?</p></section>
     <section class="try">
       <h2>⭐ Try It! Lift the 4-Bar</h2>
-      <p>Move the slider. The bars rotate, but the tray tries to stay level.</p>
+      <p>Move the slider. The bars rotate, but the tray tries to stay level. Toggle the swing arm to see how it would tilt instead.</p>
       <label for="lift">Lift height</label><input id="lift" type="range" min="0" max="80" value="20">
       <p class="result" id="result">Low lift: easier on torque and balance.</p>
+      <div style="margin-top:12px;"><button type="button" class="compare-toggle" id="compareBtn">Show swing arm for comparison</button></div>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>A stable scoring mechanism must lift a Bean Bag without dumping it, twisting, or tipping the robot. Linkages help only when they are square and low-friction.</p></section>
-    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 9</a></nav>
+    <section class="reflect"><h2>🔍 Reflect</h2><ul><li>What would happen if one bar of a 4-bar linkage was slightly shorter than the others?</li><li>When might a simple swing arm be BETTER than a 4-bar linkage?</li></ul></section>
+    <nav class="nav" aria-label="Bottom links"><a href="omni-wheels.html">← Prev: Omni Wheels</a><a href="../index.html#curriculum">Back to Curriculum</a></nav>
   </main>
   <script>
     const lift = document.querySelector('#lift');
@@ -78,6 +90,26 @@
       document.querySelector('#result').textContent = v > 58 ? 'High lift: more reach, but more torque and tipping risk.' : v > 28 ? 'Middle lift: useful scoring height with careful driving.' : 'Low lift: easier on torque and balance.';
     }
     lift.addEventListener('input', updateLift);
+    const compareBtn = document.querySelector('#compareBtn');
+    const swingTray = document.querySelector('#swingTray');
+    const swingLabel = document.querySelector('#swingLabel');
+    let swingVisible = false;
+    compareBtn.addEventListener('click', () => {
+      swingVisible = !swingVisible;
+      swingTray.classList.toggle('show', swingVisible);
+      swingLabel.classList.toggle('show', swingVisible);
+      compareBtn.textContent = swingVisible ? 'Hide swing arm comparison' : 'Show swing arm for comparison';
+      updateLift();
+    });
+    function updateSwing() {
+      if (!swingVisible) return;
+      const v = Number(lift.value);
+      const tilt = v * 0.45;
+      const swingTop = 180 - v * 1.25;
+      swingTray.style.top = swingTop + 'px';
+      swingTray.style.transform = 'rotate(' + tilt + 'deg)';
+    }
+    lift.addEventListener('input', updateSwing);
     updateLift();
   </script>
 </body>
