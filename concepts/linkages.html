@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkages: How Bars Stay Level While Moving Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#E87722; --primary-dark:#c95d12; --secondary:#2D2D2D; --accent:#00A3E0; --accent-dark:#0082b3; --success:#2ECC71; --warning:#F39C12; --danger:#E74C3C; --light:#F8F9FA; --light-gray:#E9ECEF; --medium-gray:#6C757D; --dark-gray:#343A40; --white:#FFFFFF; --shadow-sm:0 1px 3px rgba(0,0,0,0.08); --shadow-md:0 4px 12px rgba(0,0,0,0.10); --shadow-lg:0 8px 28px rgba(0,0,0,0.12); --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --font-heading:'Poppins',system-ui,-apple-system,sans-serif; --font-body:'Inter',system-ui,-apple-system,sans-serif; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:linear-gradient(180deg,#f3efff,#e8f8ff,#fff8ec); color:var(--secondary); font-family:var(--font-body); font-size:18px; line-height:1.65; min-width:320px; }
+    h1,h2,h3 { font-family:var(--font-heading); line-height:1.15; }
+    a { color:var(--accent-dark); font-weight:700; }
+    .wrap { margin:0 auto; max-width:1050px; padding:18px; }
+    .top,.nav { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; margin-bottom:18px; }
+    .pill,.nav a { align-items:center; background:var(--white); border:2px solid rgba(0,0,0,.06); border-radius:999px; box-shadow:var(--shadow-sm); display:inline-flex; min-height:46px; padding:10px 16px; text-decoration:none; }
+    .progress { background:#ede6ff; border-color:#c9b6ff; color:#4b2e83; }
+    .hero { background:var(--white); border:4px solid #ffad60; border-radius:24px; box-shadow:var(--shadow-lg); display:grid; gap:22px; grid-template-columns:1.05fr .95fr; padding:28px; }
+    h1 { font-size:clamp(2rem,6vw,3.8rem); margin-bottom:14px; }
+    .hook { background:#fff1d8; border-left:8px solid var(--primary); border-radius:var(--radius-lg); font-size:clamp(1.3rem,3vw,2rem); font-weight:800; padding:18px; }
+    .big-question { color:var(--primary-dark); display:block; font-family:var(--font-heading); margin-bottom:6px; }
+    .diagram { background:linear-gradient(145deg,#ffffff,#edfaff); border-radius:22px; min-height:330px; padding:22px; position:relative; }
+    .base { background:#2d2d2d; border-radius:12px; bottom:46px; height:22px; left:12%; position:absolute; width:34%; }
+    .link { background:var(--accent); border-radius:999px; height:18px; left:28%; position:absolute; top:180px; transform-origin:left center; transition:.2s; width:175px; }
+    .link.two { top:242px; }
+    .tray { align-items:center; background:#2ecc71; border-radius:16px; color:white; display:flex; font-family:var(--font-heading); font-weight:800; height:58px; justify-content:center; left:63%; position:absolute; top:160px; transition:.2s; width:118px; }
+    .joint { background:var(--primary); border:5px solid white; border-radius:50%; box-shadow:var(--shadow-sm); height:30px; position:absolute; width:30px; }
+    .j1 { left:26%; top:174px; } .j2 { left:26%; top:236px; } .j3 { left:61%; top:158px; } .j4 { left:61%; top:220px; }
+    .grid { display:grid; gap:18px; grid-template-columns:repeat(3,1fr); margin-top:22px; }
+    .card,.try,.robot,.think { background:var(--white); border-radius:22px; box-shadow:var(--shadow-md); padding:22px; }
+    .card h2,.try h2,.robot h2,.think h2 { font-size:1.55rem; margin-bottom:10px; }
+    .think { border:4px solid #ffd166; margin-top:22px; }
+    .try { border:4px solid #b48cff; margin-top:22px; }
+    .robot { border:4px solid #7be495; margin-top:22px; }
+    label { font-weight:800; }
+    input[type=range] { accent-color:var(--primary); min-height:44px; width:100%; }
+    .result { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
+    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:300px; } .link { width:145px; } }
+    @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><span class="pill progress">🤖 Concept 6 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 9</a></nav></div>
+    <section class="hero">
+      <div><h1>Linkages: How Bars Stay Level While Moving Up</h1><p class="hook"><span class="big-question">Think first!</span>Why does one robot hand dump its load as it rises, while another hand stays almost level?</p></div>
+      <div class="diagram" role="img" aria-label="CSS diagram of a four bar linkage lifting a level tray."><div class="base"></div><div class="link" id="linkTop"></div><div class="link two" id="linkBottom"></div><div class="tray" id="tray">level tray</div><div class="joint j1" id="j1"></div><div class="joint j2" id="j2"></div><div class="joint j3" id="j3"></div><div class="joint j4" id="j4"></div></div>
+    </section>
+    <section class="grid">
+      <article class="card"><h2>🔗 Linkage</h2><p>A linkage is connected bars. The bars guide where the moving part is allowed to go.</p></article>
+      <article class="card"><h2>▱ 4-bar</h2><p>A parallelogram 4-bar can keep the end piece almost level while it rises.</p></article>
+      <article class="card"><h2>⚠️ Tradeoffs</h2><p>More links can reach higher, but they can add friction, flex, torque needs, and tipping risk.</p></article>
+    </section>
+    <section class="think"><h2>❓ Think About This!</h2><p>If your tray dumps the Bean Bag at the top, is the problem the driver, the tray angle, or the linkage shape?</p></section>
+    <section class="try">
+      <h2>⭐ Try It! Lift the 4-Bar</h2>
+      <p>Move the slider. The bars rotate, but the tray tries to stay level.</p>
+      <label for="lift">Lift height</label><input id="lift" type="range" min="0" max="80" value="20">
+      <p class="result" id="result">Low lift: easier on torque and balance.</p>
+    </section>
+    <section class="robot"><h2>🤖 Connect to Flop</h2><p>A stable scoring mechanism must lift a Bean Bag without dumping it, twisting, or tipping the robot. Linkages help only when they are square and low-friction.</p></section>
+    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 9</a></nav>
+  </main>
+  <script>
+    const lift = document.querySelector('#lift');
+    function updateLift() {
+      const v = Number(lift.value);
+      const angle = -8 - v * .55;
+      const trayTop = 180 - v * 1.25;
+      const jointTop = trayTop - 2;
+      document.querySelector('#linkTop').style.transform = 'rotate(' + angle + 'deg)';
+      document.querySelector('#linkBottom').style.transform = 'rotate(' + angle + 'deg)';
+      document.querySelector('#tray').style.top = trayTop + 'px';
+      document.querySelector('#j3').style.top = jointTop + 'px';
+      document.querySelector('#j4').style.top = (jointTop + 62) + 'px';
+      document.querySelector('#result').textContent = v > 58 ? 'High lift: more reach, but more torque and tipping risk.' : v > 28 ? 'Middle lift: useful scoring height with careful driving.' : 'Low lift: easier on torque and balance.';
+    }
+    lift.addEventListener('input', updateLift);
+    updateLift();
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Torque? The Secret Superpower of Slow Gears</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#E87722; --primary-dark:#c95d12; --secondary:#2D2D2D; --accent:#00A3E0; --accent-dark:#0082b3; --success:#2ECC71; --warning:#F39C12; --danger:#E74C3C; --light:#F8F9FA; --light-gray:#E9ECEF; --medium-gray:#6C757D; --dark-gray:#343A40; --white:#FFFFFF; --shadow-sm:0 1px 3px rgba(0,0,0,0.08); --shadow-md:0 4px 12px rgba(0,0,0,0.10); --shadow-lg:0 8px 28px rgba(0,0,0,0.12); --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --font-heading:'Poppins',system-ui,-apple-system,sans-serif; --font-body:'Inter',system-ui,-apple-system,sans-serif; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:linear-gradient(180deg,#e8f8ff 0%,#fff8ed 52%,#f3efff 100%); color:var(--secondary); font-family:var(--font-body); font-size:18px; line-height:1.65; min-width:320px; }
+    h1,h2,h3 { font-family:var(--font-heading); line-height:1.15; }
+    a { color:var(--accent-dark); font-weight:700; }
+    .wrap { margin:0 auto; max-width:1050px; padding:18px; }
+    .top { align-items:center; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; margin-bottom:18px; }
+    .pill,.nav a { align-items:center; background:var(--white); border:2px solid rgba(0,0,0,.06); border-radius:999px; box-shadow:var(--shadow-sm); display:inline-flex; min-height:46px; padding:10px 16px; text-decoration:none; }
+    .progress { background:#dff5ff; border-color:#87dcff; color:#075875; }
+    .hero { background:var(--white); border:4px solid #8bdcff; border-radius:24px; box-shadow:var(--shadow-lg); display:grid; gap:22px; grid-template-columns:1.1fr .9fr; overflow:hidden; padding:28px; }
+    h1 { font-size:clamp(2rem,6vw,4rem); margin-bottom:14px; }
+    .hook { background:#fff1d8; border-left:8px solid var(--primary); border-radius:var(--radius-lg); font-size:clamp(1.3rem,3vw,2rem); font-weight:800; padding:18px; }
+    .big-question { color:var(--primary-dark); display:block; font-family:var(--font-heading); margin-bottom:6px; }
+    .diagram { background:linear-gradient(145deg,#ffffff,#e8f8ff); border-radius:22px; min-height:310px; padding:22px; position:relative; }
+    .gear-row { align-items:center; display:flex; gap:16px; justify-content:center; margin:26px 0; }
+    .gear { align-items:center; background:repeating-conic-gradient(#6ecbff 0 12deg,#009ad6 12deg 24deg); border:8px solid #146b8d; border-radius:50%; color:white; display:flex; font-family:var(--font-heading); font-size:1.4rem; font-weight:800; justify-content:center; }
+    .small { height:86px; width:86px; animation:spin 2s linear infinite; }
+    .large { height:150px; width:150px; animation:spin 5s linear infinite reverse; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .arrow { color:var(--primary); font-family:var(--font-heading); font-size:2.8rem; font-weight:800; }
+    .caption { background:#f6fff9; border:2px dashed var(--success); border-radius:var(--radius-md); font-weight:700; padding:12px; text-align:center; }
+    .grid { display:grid; gap:18px; grid-template-columns:repeat(3,1fr); margin-top:22px; }
+    .card,.try,.robot,.think { background:var(--white); border-radius:22px; box-shadow:var(--shadow-md); padding:22px; }
+    .card h2,.try h2,.robot h2,.think h2 { font-size:1.6rem; margin-bottom:10px; }
+    .think { border:4px solid #ffd166; }
+    .try { border:4px solid #b48cff; margin-top:22px; }
+    .robot { border:4px solid #7be495; margin-top:22px; }
+    .control { display:grid; gap:8px; margin:14px 0; }
+    label { font-weight:800; }
+    input[type=range] { accent-color:var(--primary); min-height:44px; width:100%; }
+    .meter { background:#edf1f5; border-radius:999px; height:38px; overflow:hidden; }
+    .meter-fill { background:linear-gradient(90deg,var(--success),var(--warning),var(--danger)); border-radius:999px; height:100%; transition:width .25s ease; width:20%; }
+    .result { font-family:var(--font-heading); font-size:1.35rem; margin-top:12px; }
+    .choice-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+    button { background:var(--accent); border:0; border-radius:16px; color:white; cursor:pointer; font:800 1rem var(--font-heading); min-height:48px; padding:12px 16px; transition:.2s; }
+    button:hover,button:focus { background:var(--accent-dark); transform:translateY(-1px); }
+    .answer { color:var(--primary-dark); font-weight:800; margin-top:10px; min-height:30px; }
+    .nav { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
+    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:260px; } .large { height:128px; width:128px; } }
+    @media print { body { background:white; } .top,.nav,.card,.robot,.think,.hero { box-shadow:none; } .try { break-inside:avoid; } button { display:none; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <span class="pill progress">⚙️ Concept 1 of 6</span>
+      <nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 3</a></nav>
+    </div>
+    <section class="hero">
+      <div>
+        <h1>What is Torque? The Secret Superpower of Slow Gears</h1>
+        <p class="hook"><span class="big-question">Think first!</span>Why can the same motor spin fast but fail to lift a Bean Bag unless we slow it down?</p>
+      </div>
+      <div class="diagram" role="img" aria-label="CSS diagram of a small fast gear turning a larger slow strong gear.">
+        <div class="gear-row"><div class="gear small">12T</div><div class="arrow">→</div><div class="gear large">36T</div></div>
+        <p class="caption">Fast little gear + big gear = slower output, stronger turning force.</p>
+      </div>
+    </section>
+    <section class="grid">
+      <article class="card"><h2>🔬 What is it?</h2><p>Torque means <strong>turning force</strong>. It is the twist that helps a shaft, wheel, gear, or arm move.</p></article>
+      <article class="card"><h2>📏 Why arms matter</h2><p>A Bean Bag far from the pivot is harder to lift. Long arm means more torque needed.</p></article>
+      <article class="card"><h2>⚡ Gear trade</h2><p>Gear reduction trades speed for torque. The robot arm moves slower, but it can push harder.</p></article>
+    </section>
+    <section class="think"><h2>❓ Think About This!</h2><p>If a lift works with no Bean Bag but stops with one Bean Bag, should you first blame the code, the battery, or the gearing?</p></section>
+    <section class="try">
+      <h2>⭐ Try It! Torque Meter</h2>
+      <p>Move the sliders. Longer arm plus heavier bag means the motor needs more turning force.</p>
+      <div class="control"><label for="arm">Arm length: <span id="armValue">3</span> holes</label><input id="arm" type="range" min="1" max="10" value="3"></div>
+      <div class="control"><label for="weight">Bag weight: <span id="weightValue">2</span> scoops</label><input id="weight" type="range" min="1" max="8" value="2"></div>
+      <div class="meter" aria-label="Torque needed meter"><div class="meter-fill" id="meterFill"></div></div>
+      <p class="result" id="result">Torque needed: 6 twist points</p>
+      <div class="choice-row"><button type="button" data-answer="strong">12T drives 36T</button><button type="button" data-answer="fast">36T drives 12T</button></div>
+      <p class="answer" id="answer"></p>
+    </section>
+    <section class="robot"><h2>🤖 Connect to Flop</h2><p>Flop's arm must lift Bean Bags again and again. Slow gearing can make the lift stronger and easier to control, but if it is too slow, match time disappears.</p></section>
+    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 3</a></nav>
+  </main>
+  <script>
+    const arm = document.querySelector('#arm');
+    const weight = document.querySelector('#weight');
+    const armValue = document.querySelector('#armValue');
+    const weightValue = document.querySelector('#weightValue');
+    const meterFill = document.querySelector('#meterFill');
+    const result = document.querySelector('#result');
+    function updateTorque() {
+      const torque = Number(arm.value) * Number(weight.value);
+      armValue.textContent = arm.value;
+      weightValue.textContent = weight.value;
+      meterFill.style.width = Math.min(100, torque * 1.3) + '%';
+      result.textContent = 'Torque needed: ' + torque + ' twist points';
+    }
+    arm.addEventListener('input', updateTorque);
+    weight.addEventListener('input', updateTorque);
+    document.querySelectorAll('button[data-answer]').forEach(button => button.addEventListener('click', () => {
+      document.querySelector('#answer').textContent = button.dataset.answer === 'strong' ? 'Yes! Small gear to big gear is slower but stronger.' : 'That one is faster, but it gives less lifting torque.';
+    }));
+    updateTorque();
+  </script>
+</body>
+</html>

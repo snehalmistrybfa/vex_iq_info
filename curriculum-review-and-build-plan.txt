@@ -1,0 +1,755 @@
+VEX IQ CURRICULUM VIDEO REVIEW AND BUILD PLAN
+For Arian Mistry, Team 295U
+Prepared from local research files on September 7, 2026
+
+Source files reviewed:
+- curriculum-strategy.txt
+- research-days-2-6.txt
+- research-days-7-14.txt
+- research-days-15-20.txt
+- research-days-23-30.txt
+- index.html
+
+Important build note:
+The existing site has strong cards for kit orientation, builds, Level Up overview, driving, VEXcode, sensors, and competition prep. It does not yet have enough student-facing physics/mechanics concept support. The curriculum section should link to existing videos where they are already good, add researched videos where the site is thin, and use custom concept pages where YouTube is missing a clear fifth-grade explanation.
+
+
+PART 1 - FINAL RANKED VIDEO LIST BY DAY
+=======================================
+
+Legend:
+- Existing = already present in index.html.
+- Add = researched video that should be added to the site.
+- Custom = use a concept page because video coverage is missing or weak.
+- Flag = concern for age, relevance, rules currency, access, or quality.
+
+DAY 1 - THE LEVEL UP SCORE DETECTIVE
+Final viewing order:
+1. Existing: Level Up Game Reveal - VEX Robotics - KP0FYPW604E
+2. Existing: Game Manual Breakdown - RoboSTEM - AMZ8p5u8UHY
+3. Existing: Level Up Worlds Reveal - VEX Robotics - wJpjTm775Q0
+Existing reused: all three above.
+Flags: Game Manual Breakdown must be checked against the latest official Level Up manual before teaching. Do not let a video override the current manual.
+Gap decision: no custom video page required, but add a prominent current-manual link and "verify date" note in the day card.
+
+DAY 2 - WHY DOES ONE AXLE SPIN AND ANOTHER BIND?
+Final viewing order:
+1. Add: VEX IQ Free spin test - bad spacing - Caution Tape Robotics - kQNM7glk2qg
+2. Add: VEX IQ Free spin test - good spacing - Caution Tape Robotics - J5P3tjDWoL8
+3. Add: Introduction to VEX: Drive Shaft and Shaft Collars - STEM with Steph - g2nOzbhcjv4
+4. Add: VEX IQ Tip - Mounting Small Hardware on Shafts - VEX Robotics - uh_CwnbeH9I
+Existing reused: VEX IQ 2nd Gen Kit Walkthrough - KbBNJlZNqeI; Getting Started with VEX IQ Gen 2 - JvohEXX-FiY, as part-recognition support.
+Supplemental: VEX IQ Building tips - Plastic Axles - Robolink - 4sbWrEzm0lA; Using Shafts (VEX) - Oxst99 - 0m8dKUeG-gg.
+Flags: Oxst99 uses V5/metal vocabulary, so treat it as teacher/stretcher support only. YouTube coverage of friction from shaft binding is thin, so the bad/good spacing pair should be shown together.
+Gap decision: Custom friction page strongly recommended.
+
+DAY 3 - THE GEARBOX THAT LIES ABOUT "POWER"
+Final viewing order:
+1. Add: VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage - VEX Robotics - eUeGNe4eDAw
+2. Add: NEVER be confused by GEAR RATIOS again - driving 4 answers - txQs3x-UN34
+3. Add: VEX IQ Mechanisms - Gear Ratio - VEX Robotics - wau5W8Mt7Hw
+4. Add: Understanding Gear Ratios in VEX IQ: Speed vs Torque - The VEX IQ Guide - tr_F2PjhAnQ
+Existing reused: none directly; existing Gear part card is only a parts reference.
+Flags: LEGO video is excellent visually but not VEX IQ; pair it with VEX videos. Avoid any video implying gears create free power.
+Gap decision: Custom torque page required because the site currently has zero torque/mechanical-advantage concept pages and only a generic Gear card.
+
+DAY 4 - MOVE A LOAD WITH ONE FINGER
+Final viewing order:
+1. Add: VEX IQ Building Basics: Levers - VEX Robotics - OQTAL8RsZaA
+2. Add: Simple Machines: Levers - MooMooMath and Science - fzljPiPy9nw
+3. Add: Vex 4 Bar Linkage - Mr. Mac's Technical Ed - 33-IjzAr3T8
+4. Add: Sprockets, Chains and Treads - Jenica Wilcox - VsztyaNpf3o
+Existing reused: Ratchet + Catapult - rSOqphR0N2s only as optional later stored-energy preview.
+Supplemental: Simple Machines - Levers - Next Generation Science - _Lz383VMfkg.
+Flags: Rubber-band counterbalance has no strong dedicated video. Reject long adult lecture/assignment videos for the student list.
+Gap decision: Custom lever page required. Custom linkage page also useful because the one 4-bar video is too brief to carry the concept alone.
+
+DAY 5 - THE TALL ROBOT THAT FALLS
+Final viewing order:
+1. Add: Center of Gravity: The Key to a Stable Robot - Chris Briere - D6cY3riTe-o
+2. Add: VEX Camp | IQ Session 1: Building with IQ - VEX Robotics - 0UkQkdVcxWo, show chapters 12:55-31:50 only
+3. Add: Center of Gravity and Wiggly Driving Test - Robot Rampage - XhwBI1EbspE
+4. Add: Agilibot - Brian Meierdiercks - e1hRWg0WG9I
+Existing reused: How to Design and Build - azJmUY9SMWo; Exploring Robot Design - mEfmoMzmXxc as broad context only.
+Flags: VEX Camp is long, so use exact chapters. Bracing/triangulation as a standalone IQ topic has almost no good YouTube coverage.
+Gap decision: Custom center-of-gravity page required. Add a mini bracing/triangulation explainer inside that page or as a companion page.
+
+DAY 6 - FIVE WAYS TO REACH THE SAME SPOT
+Final viewing order:
+1. Add: Common Steering Methods - ServoCity - F3G0sUz3_Jw
+2. Add: vex wheel selection: solid versus omni - turbodog99 - xQorNQ13Cyk
+3. Add: The Ultimate Guide To Omniwheels - Kepler Electronics - VfuA2EqaIso
+4. Add: Vex Robotics Drivebase Types Explained - 9MotorGang - 2Pnj9Jq9JiU, use tank/H/mecanum/X chapters
+Existing reused: First Robot Build Standard Drive Base - LAJvwdfGPM0; Code 2- and 4-Motor Drivetrain - ap39M61F1l0 as a coding preview only.
+Supplemental: The Ultimate Guide to Holonomic Drivetrains - Brogan M. Pratt - 5TCj6p7VnbU, chaptered only.
+Flags: 9MotorGang and Brogan are V5/general, not IQ-specific; use only selected chapters. No single IQ video explains tank, H-drive, X-drive, omni forces, and motor tradeoffs clearly.
+Gap decision: Custom omni/holonomic page required.
+
+DAY 7 - TWO MOTORS OR FOUR?
+Final viewing order:
+1. Add: Tutorial: Fast & Efficient VEX IQ Drivetrain (2:1 Speed, 2 Motors) - The VEX IQ Guide - -vm_UsnZt-k
+2. Add: 5 Tips Every VEX Team Should Know about Drivetrains - Joseph973 - sek_rTkf2-o
+3. Add: VEX IQ Wheel Guide for Beginners | Drive Smarter - The VEX IQ Guide - leIM-EVbhGY
+4. Add: vex wheel selection: solid versus omni - turbodog99 - xQorNQ13Cyk
+Existing reused: First Robot Build Standard Drive Base - LAJvwdfGPM0; BaseBot Assembly - FjkT8jdOeyA; Gen2 BaseBot Build - ahhcMxlHwbI; Code 2- and 4-Motor Drivetrain - ap39M61F1l0 as code preview only.
+Flags: Existing "Code 2- and 4-Motor Drivetrain" is about coding, not mechanical motor allocation, so do not rank it as the concept anchor.
+Gap decision: custom page not required if Day 6 omni page and Day 3 torque page exist.
+
+DAY 8 - GRAB, SCOOP, OR SWALLOW?
+Final viewing order:
+1. Add: Vex IQ Claw Ideas - How to Design Yours - Mechanical Max - X4JHUDGzyv0
+2. Add: Cracked 87 Points in VEX IQ Level Up Today! - Lemon Vex Robotics - hRSUs7ChPW0
+3. Add: Vex IQ Claw Design Video - Tiffany Mounts - 2DNQQKckmLk
+4. Existing: Opening the Claw - VEX Robotics - d8gI02Ecig0, only as a control-code comparison
+Existing reused: Hero Bot Breakdown - ZI7Kc7Y2X0k; Opening the Claw - d8gI02Ecig0; Clawbot Assembly - S_Ajr4CC6c8 optional.
+Conditional add: intake design - VEX IQ Robots - Tiffany Mounts - GkgDdidYrxM, only if browser testing confirms it is available.
+Flags: GkgDdidYrxM may be unavailable or restricted. No video explicitly teaches off-center approach tolerance, possession limit, or funneling with Level Up Bean Bags.
+Gap decision: custom HTML supplement recommended, especially a "capture funnel and compression" try-it panel.
+
+DAY 9 - HOW CAN THE HAND STAY LEVEL WHILE THE ARM RISES?
+Final viewing order:
+1. Add: Basic Mechanisms: 4 Bar Linkage - Mr. Dillman's Tech Channel - 1Ty_1LF3Qv0
+2. Add: Vex Robotics Lift Types Explained - 9MotorGang - 9iSmW7dMuB8, use chapters 2-bar/4-bar/6-bar/chain-bar/DR4B
+3. Add: Vex Robotics Chain Bar Guide/Tutorial - 9MotorGang - 80ZmWH89pjE
+4. Add: Kepler's Guide to Chain-Bar Lifts - Kepler Electronics - LUvIH5k8HWY
+Existing reused: Clawbot Assembly - S_Ajr4CC6c8; Clawbot Tutorial - aZ4qt_ASagk; Hero Bot Breakdown - ZI7Kc7Y2X0k.
+Flags: Best lift overview is V5/VRC-scale. No good VEX IQ-specific 4-bar/6-bar/chain-bar/scissor comparison was found. Scissor lift coverage is especially poor.
+Gap decision: Custom linkage page required.
+
+DAY 10 - RELEASE ENERGY AT EXACTLY THE RIGHT MOMENT
+Final viewing order:
+1. Existing: Ratchet + Catapult - Hackers IQ - rSOqphR0N2s
+2. Existing: Catapult Launcher - Ben Lipper - 7_E9J5yBB4o
+3. Existing: Shooting Robot Step-by-Step Starter - Ben Lipper - nCA_dIps6qQ
+4. Existing: Shooting Robot Step-by-Step - Ben Lipper - GR4DzbxyPp8
+Existing reused: all four above.
+Flags: Catapult videos are mechanism examples, not a recommendation that Team 295U must build a catapult for Level Up. Keep safety and legality visible.
+Gap decision: no new research required; optional elastic energy mini-panel can live in the ratchet/catapult lesson.
+
+DAY 11 - UNBOX FLOP LIKE A SYSTEMS ENGINEER
+Final viewing order:
+1. Existing: VEX IQ 2nd Gen Kit Walkthrough - KbBNJlZNqeI
+2. Existing: What's in the Box - w7yXXJmg1Do
+3. Existing: Getting Started with VEX IQ Gen 2 - JvohEXX-FiY
+4. Existing: Flop Part 1 - jPaarRbLjaE
+Existing reused: all four above.
+Flags: "What's in the Box" has unknown creator metadata; use as quick inventory only.
+Gap decision: no custom page required.
+
+DAY 12 - BUILD FLOP WITHOUT RUSHING PAST THE EVIDENCE
+Final viewing order:
+1. Existing: Flop Part 1 - VEX Robotics - jPaarRbLjaE
+2. Existing: Flop Part 2 - VEX Robotics - n_fWxHqSMPs
+3. Existing: Build Phase: Building Flop - TechPoint Youth - pghmsMOFOc4
+4. Existing: HEROBOT FLOP from Instructions - Ben Lipper - 2gTnF5b_krE
+Existing reused: all four above.
+Flags: Official 3D instructions remain the source of truth if a community build video differs.
+Gap decision: no custom page required.
+
+DAY 13 - WHAT DOES FLOP'S DRIVETRAIN REVEAL?
+Final viewing order:
+1. Existing: Flop Part 1 - VEX Robotics - jPaarRbLjaE
+2. Existing: Flop Part 2 - VEX Robotics - n_fWxHqSMPs
+3. Existing: Hero Bot Breakdown - CosmosTech - ZI7Kc7Y2X0k
+4. Add: Introducing the 180 Mod Flop! First Practice Runs - Lemon Vex Robotics - KvWHQ6d3_hM
+Existing reused: Hero Bot Breakdown; First Robot Build Standard Drive Base - LAJvwdfGPM0; Code 2- and 4-Motor Drivetrain - ap39M61F1l0 as code preview.
+Flags: No true standalone Flop drivetrain analysis video exists yet. The 180 Mod video is long and should be watched in selected segments.
+Gap decision: custom page not mandatory, but the Day 13 card should include a teacher-built drivetrain test checklist.
+
+DAY 14 - WHAT DOES FLOP'S ARM AND INTAKE REVEAL?
+Final viewing order:
+1. Existing: Flop Part 2 - VEX Robotics - n_fWxHqSMPs
+2. Existing: Hero Bot Breakdown - CosmosTech - ZI7Kc7Y2X0k
+3. Add: Cracked 87 Points in VEX IQ Level Up Today! - Lemon Vex Robotics - hRSUs7ChPW0
+4. Add: Introducing the 180 Mod Flop! First Practice Runs - Lemon Vex Robotics - KvWHQ6d3_hM
+Existing reused: Opening the Claw - d8gI02Ecig0; Clawbot Assembly - S_Ajr4CC6c8 optional comparison.
+Flags: No video clearly labels Flop arm motor vs intake motor, gearing, torque load, and release behavior as separate subsystems. Teacher narration is needed.
+Gap decision: custom supplement recommended, or fold into Linkages/Torque/Friction concept pages.
+
+DAY 15 - IMPROVE ONE THING ON FLOP
+Final viewing order:
+1. Existing: How to Design and Build - Ben Lipper - azJmUY9SMWo
+2. Add: 99808A presents: How to use the Engineering Design Process - Team 99808 - sl7DbBqcYbA
+3. Add: Introducing the 180 Mod Flop! First Practice Runs - Lemon Vex Robotics - KvWHQ6d3_hM
+4. Add: Cracked 87 Points in VEX IQ Level Up Today! - Lemon Vex Robotics - hRSUs7ChPW0
+Existing reused: Exploring Robot Design - mEfmoMzmXxc; Simple Robot 100 Points - Gzlb2LeHteE; Kickoff First Designs - llx-4XKeo6E; Flop Part 2 - n_fWxHqSMPs as baseline.
+Flags: Avoid "for sale" or complete-meta-robot videos because they encourage copying rather than controlled iteration.
+Gap decision: no physics page required, but add a one-variable test worksheet in the Day 15 card.
+
+DAY 16 - DRIVE STRAIGHT, TURN SQUARE
+Final viewing order:
+1. Existing: 5 Tips to Instantly Improve Your VEX Robot Driving - The VEX IQ Guide - tepeFAA7Gbo
+2. Add: VEX IQ Wireless Driver Control - Vex ICutie - sFrmMckQfqY
+3. Add: VEX IQ - Driving and Turning - Kai Nakamura - 0i0oArJgu90
+4. Existing: Drive and Code a VEX IQ Robot - PwLPVbLclqk
+Existing reused: 5 Tips to Improve Driving; Code 2- and 4-Motor Drivetrain - ap39M61F1l0 as drift/control mapping reference.
+Flags: True measured straight-line/90-degree driver-drill videos are scarce; teacher provides the drill table.
+Gap decision: custom page not required, but add printable drill table inside the curriculum card.
+
+DAY 17 - LINE UP AND ALIGN
+Final viewing order:
+1. Add: How to Build Passive Aligners - Lemon Vex Robotics - eQTbkWwIJ-Q
+2. Add: VEX Build Masterclass #3 - Squaring - Ryan Liao - yC_6j7vawfk
+3. Add: VEX IQ: Wheel Alignment Tips - WIS Robotics - ftq1_O9gfMQ
+4. Existing: Level Up Game Reveal - KP0FYPW604E, for field landmarks only
+Existing reused: 5 Tips to Improve Driving - tepeFAA7Gbo; Hero Bot Breakdown - ZI7Kc7Y2X0k.
+Flags: Ryan Liao is V5/VRC, but wall-squaring transfers. No strong Level Up-specific driver alignment tutorial exists.
+Gap decision: custom alignment routine page or card panel recommended.
+
+DAY 18 - DESIGN A 60-SECOND SKILLS RUN
+Final viewing order:
+1. Existing: Level Up Game Reveal - VEX Robotics - KP0FYPW604E
+2. Existing: Game Manual Breakdown - RoboSTEM - AMZ8p5u8UHY
+3. Add: Vex Iq Level Up | Solo TW PR | 102 Points! - Auburn Community Robotics - yBdO3xBeAp4
+4. Add: Hero Bot Scores 92 Points?! Breaking Down This INSANE Match - VEX Talk - EMYxGGUh_ls
+Existing reused: 5 Tips to Improve Driving - tepeFAA7Gbo.
+Flags: EMYxGGUh_ls is a teamwork match despite the strategy transfer. Reject elite/paid route-plan videos for the student list.
+Gap decision: custom route-planner panel recommended, not a full concept page.
+
+DAY 19 - WIN THE MATCH WITH AN ALLIANCE PLAN
+Final viewing order:
+1. Add: Boost Your VEX IQ Teamwork Skills with These Strategies - RoboSTEM - M_u3zQwBzyI
+2. Add: VEX IQ Level Up Explained - What Teams Need to Know First - Vector Motion - ptJ-CkMJpNY
+3. Add: 358 POINTS #1 Finals: 81777A & 95014X | VEX IQ Mix & Match - Chewbotca - -Z5vRmfvT-o
+4. Existing: Level Up Game Reveal - KP0FYPW604E, only if field context is needed again
+Existing reused: Game Manual Breakdown - AMZ8p5u8UHY; Exploring Robot Design - mEfmoMzmXxc.
+Flags: No video models a pre-match alliance conversation for young drivers. The Mix & Match clip is prior-season and has no narration.
+Gap decision: custom alliance-meeting script page/panel needed.
+
+DAY 20 - DRIVER PRACTICE DRILLS AND LOGBOOK
+Final viewing order:
+1. Existing: 5 Tips to Improve Driving - The VEX IQ Guide - tepeFAA7Gbo
+2. Add: The VEX Notebook Rubric, Explained - BennyBuildsRobots - GERezk11oUY
+3. Add: How to Manage Your Engineering Design Notebook - Last Minute Fix OCS Robotics - D8JT7D8gq5g
+4. Existing: Award Winning Notebook - 8931B V-Bots Trifecta - O0El_fts9ns
+Existing reused: Full Inspection Guide - afrdGr4ue9Y as readiness context only.
+Flags: GERezk11oUY and D8JT7D8gq5g are longer; use chapters or selected segments. No video directly combines driver drills with logbook data.
+Gap decision: custom practice-log page/panel needed.
+
+DAY 21 - VEXCODE IQ SETUP AND FIRST PROGRAM
+Final viewing order:
+1. Existing: VEXcode IQ Getting Started - VEX Robotics - nzM0JE7vFaQ
+2. Existing: Downloading and Running - VEX Robotics - MSX9LLQLvmk
+3. Existing: Example Projects - VEX Robotics - yJvA-QpKvKI
+4. Existing: VEXcode IQ Blocks Tutorial Beginner - TechPoint Youth - IGbHbtC5wKU
+Existing reused: all four above.
+Flags: Verify current VEXcode UI/version before teaching.
+Gap decision: no custom page required.
+
+DAY 22 - CODE THE DRIVETRAIN
+Final viewing order:
+1. Existing: Code 2- and 4-Motor Drivetrain - VEX Talk - ap39M61F1l0
+2. Existing: Drive and Code a VEX IQ Robot - PwLPVbLclqk
+3. Existing: Basic BaseBot Blocks Programming - Coding with Culp - q-X4Q_mXOfY
+4. Existing: VEXcode IQ Blocks Tutorial Beginner - TechPoint Youth - IGbHbtC5wKU
+Existing reused: all four above.
+Flags: Keep tank/arcade language clear: they are control mappings, not necessarily different mechanical drivetrains.
+Gap decision: no custom page required.
+
+DAY 23 - CODE THE MECHANISMS
+Final viewing order:
+1. Add: VEX IQ - Controlling Motors - Kai Nakamura - cKZAaWWCTpU
+2. Add: VEXcode IQ Blocks - Device Setup - Motors Tutorial - VEX Robotics - TbaOMMKLGG4
+3. Add: VEXcode IQ Blocks - Device Setup - Controller Tutorial - VEX Robotics - PxSzAq0-upE
+4. Add: VEXcode IQ Blocks - Moving the Arm Tutorial - VEX Robotics - H0W3Lf-VHcI
+Existing reused: Opening the Claw - d8gI02Ecig0; Coding Huey Pinhead Clawbot - NoxCacvxoiI; Clawbot Build + Code - KdyAAXKcHec.
+Flags: No clean intake-specific tutorial was found; teach intake as a mechanism motor with spin/stop/button logic.
+Gap decision: no custom page required, but day card needs a controller button map.
+
+DAY 24 - INTRO TO SENSORS: WHAT DOES THE ROBOT KNOW?
+Final viewing order:
+1. Existing: Device Setup Sensors - VEX Robotics - voZIL4Gf7Zk
+2. Existing: Programming Sensors - Mitch Norris - 13Rsxcc9T-w
+3. Existing: Sensing Distance - Kai Nakamura - nF0kPc77mxo
+4. Existing: Code the Optical Sensor - Chewbotca - PMvg_vx1MQY, or Accurately Turn with Gyro - uv_YP8dgVMY depending on mounted hardware
+Existing reused: all above.
+Flags: Only show sensor videos for hardware actually mounted or being tested.
+Gap decision: no custom page required.
+
+DAY 25 - SENSOR-INFORMED DRIVING
+Final viewing order:
+1. Existing: Programming Sensors - Mitch Norris - 13Rsxcc9T-w
+2. Existing: Accurately Turn with Gyro - AllDayStem - uv_YP8dgVMY
+3. Existing: Sensing Distance - Kai Nakamura - nF0kPc77mxo
+4. Existing: If-Then-Else - VEX Robotics - uKL38GKP0zE
+Existing reused: Code the Optical Sensor - PMvg_vx1MQY as targeted follow-up.
+Flags: Avoid overautomation; the lesson is driver assist, not replacing the driver.
+Gap decision: no custom page required.
+
+DAY 26 - AUTONOMOUS PROGRAMMING WITH TIME
+Final viewing order:
+1. Existing: Autonomous Programming Step-by-Step - The VEX IQ Guide - ucOT-ENP21M
+2. Existing: Autonomous Coding with BaseBot - TechyRobot Teacher - w6g0GOcKUYg
+3. Existing: Autonomous Programming - TUSD Robotics - 3q-AZdmNImY
+4. Existing: Master Procedures - STEAM Labs - 2ZhxhHAEDB0
+Existing reused: all four above.
+Flags: Time-based autonomous is intentionally limited; do not oversell repeatability.
+Gap decision: no custom page required.
+
+DAY 27 - SENSOR-BASED AUTONOMOUS
+Final viewing order:
+1. Existing: Sensor-Based Autonomous - Travis Burroughs - _QuhyOZFfLU
+2. Existing: Accurately Turn with Gyro - AllDayStem - uv_YP8dgVMY
+3. Existing: Sensing Distance - Kai Nakamura - nF0kPc77mxo
+4. Existing: Code the Optical Sensor - Chewbotca - PMvg_vx1MQY
+Existing reused: Programming Sensors - 13Rsxcc9T-w as backup.
+Flags: Every sensor routine needs a timeout or fallback so the robot does not wait forever.
+Gap decision: no custom page required.
+
+DAY 28 - DEBUGGING AND ITERATION
+Final viewing order:
+1. Add: VEX 1961Z VexCode Lesson 4: Debugging and Autonomous Left and Right Functions - Eagles 1961Z - TkxUQsWnBEw
+2. Add: VEXcode IQ Blocks - 4. Displaying Information on the Screen - VEX Robotics UK - 9xSPQnfn390
+3. Existing: Device Setup Sensors - VEX Robotics - voZIL4Gf7Zk
+4. Existing: Master Procedures - STEAM Labs - 2ZhxhHAEDB0
+Existing reused: If-Then-Else - uKL38GKP0zE; Programming Sensors - 13Rsxcc9T-w.
+Flags: Videos 1 and 2 are long; use segments. No good IQ Blocks video demonstrates common beginner bugs like wrong port/reversed motor/bad threshold from start to finish.
+Gap decision: custom debugging checklist/page or planted-bug mini lab needed.
+
+DAY 29 - TOURNAMENT PREPARATION
+Final viewing order:
+1. Add: Attending a VEX IQ Robotics Competition - RoboticsTine - VK6lzPPhuXA
+2. Existing: Full Inspection Guide - Caution Tape Robotics - afrdGr4ue9Y
+3. Add: Engineering Notebook Tips Every VEX Team Should Know - The VEX IQ Guide - 5q_y2vifuXo
+4. Add: How to Master the Judges Interview - The VEX Analyst - zekAzwe8j0c
+Existing reused: Award Winning Notebook - O0El_fts9ns; Game Manual Breakdown - AMZ8p5u8UHY.
+Supplemental/teacher prep: VEX Robotics Competition Inspection Walkthrough - Xing - oy-iYBfZoXo, VRC-oriented.
+Flags: Inspection details must match current VIQRC Level Up manual and official inspection checklist. VEX Analyst judging video may be VRC-framed, so adapt for elementary IQ.
+Gap decision: custom checklist panel recommended, but not a full physics concept page.
+
+DAY 30 - COMPETE, MEASURE, AND REFLECT
+Final viewing order:
+1. Add: 2023 VIQC Worlds Matches & Amaze Award - Savage Bots - SW4-CeAHvo8
+2. Add: Vex IQ Rise Above but we Pre-Record Skills | 351 points - Rogue108 - ARKJ8SLiaBw
+3. Existing: 5 Tips to Improve Driving - The VEX IQ Guide - tepeFAA7Gbo
+4. Existing: Award Winning Notebook - 8931B V-Bots Trifecta - O0El_fts9ns
+Existing reused: Level Up Game Reveal - KP0FYPW604E; Game Manual Breakdown - AMZ8p5u8UHY as current game reminders.
+Supplemental: Becoming A Great (VEX Robotics) Team Member - 4004Y YNot! - YvAme6r5c9M.
+Flags: There is very little VEX IQ content explicitly framed as mock-tournament reflection. Savage Bots is prior-season but excellent for calm evidence-based reflection.
+Gap decision: custom mock-tournament debrief template needed.
+
+
+PART 2 - ALL GAPS IDENTIFIED
+============================
+
+Days/subtopics where YouTube has no good video and custom HTML is needed:
+- Day 4: Rubber-band counterbalance and "when assistance becomes unpredictable." No strong direct video.
+- Day 6: IQ-specific omni-wheel force vectors and holonomic tradeoffs. Existing videos are either general, V5, or not child-focused.
+- Day 8: Off-center approach tolerance, compression gap, funneling, and one-Bean-Bag possession. Videos show mechanisms but not the controlled concept.
+- Day 9: IQ-specific 4-bar/6-bar/chain-bar comparison for fifth graders. Best material is V5/general.
+- Day 19: Pre-match alliance conversation and role script. No good student-facing video found.
+- Day 20: Driver practice plus logbook evidence in one workflow. No good video found.
+- Day 28: Common IQ Blocks debugging failures start-to-finish. Existing videos cover parts of the process, not a complete beginner bug lab.
+- Day 30: Mock tournament debrief structure. Good examples exist, but no direct Level Up/elementary mock-tournament debrief video.
+
+Days where YouTube coverage is thin and custom HTML would strengthen the lesson:
+- Day 2: Friction from bad spacing/binding is covered only by two short free-spin clips.
+- Day 3: Torque/mechanical advantage is covered in videos, but the current site has no concept page and a 9-year-old needs a slower visual bridge.
+- Day 4: Levers have decent videos; linkages, chain, and rubber-band assistance need teacher-built explanation.
+- Day 5: Center of gravity has good video; bracing/triangulation is thin and buried in a long VEX Camp video.
+- Day 7: 2-motor vs 4-motor motor allocation is implied, not explicitly taught with Level Up constraints.
+- Day 13: No real Flop drivetrain analysis video yet.
+- Day 14: No clean Flop arm/intake subsystem analysis video yet.
+- Day 16: Driving tips exist; measured straight/square drill structure does not.
+- Day 17: Alignment content exists but is split between mechanical aligners, tire alignment, and V5 squaring.
+- Day 18: Skills examples exist; beginner expected-value route planning needs a teacher-built planner.
+- Day 23: Good mechanism-motor videos exist; no intake-specific driver-control tutorial.
+- Day 29: Tournament readiness exists, but current-season inspection details need official rule verification.
+
+Physics/mechanics concepts with zero or inadequate current-site video coverage:
+- Levers: add VEX IQ Building Basics: Levers, Simple Machines: Levers, and custom lever page.
+- Torque: add Speed/Torque/Mechanical Advantage and custom torque page.
+- Friction: add free-spin bad/good spacing pair and custom friction page.
+- Center of mass/stability: add Center of Gravity: The Key to a Stable Robot and custom center-of-gravity page.
+- Steering methods: add Common Steering Methods and drivebase-type videos.
+- Omni wheels: add solid vs omni wheel video and omniwheel guide.
+- Holonomic drive: add omniwheel/holonomic chapters plus custom page.
+- Linkages: add 4-bar/lift/chain-bar videos plus custom linkage page.
+- Mechanical advantage: add VEX IQ Key Concepts and lever/gears pages.
+- Force: cover inside torque, levers, friction, and center-of-gravity pages.
+- Gear ratios: add VEX gear-ratio videos and link from the existing Gear card.
+
+
+PART 3 - CUSTOM HTML CONCEPT PAGE PLAN
+=====================================
+
+Shared requirements for all concept pages:
+- Location: /concepts/*.html
+- Audience: 9-year-old / 5th grade.
+- Tone: simple, exciting, question-first, concrete, visual, and fun.
+- Method: Socratic hook first, then a tiny explanation, then an interactive "Try It" box.
+- Visuals: use VEX official images for VEX IQ/Level Up context; use Unsplash/Pexels for everyday analogy photos; use simple CSS diagrams where a diagram is clearer than a photo.
+- Navigation: each page should include "Back to Curriculum" and "Use this with Day X" links.
+- Accessibility: big text, high contrast, alt text, no tiny dense tables, keyboard-focusable controls, print-friendly try-it box.
+
+1. what-is-torque.html
+Title: What is Torque? The Secret Superpower of Slow Gears
+Socratic hook: "Why can the same motor spin fast but fail to lift a Bean Bag unless we slow it down?"
+Key concepts:
+- Torque means turning force.
+- Long arms need more torque because the load is farther from the pivot.
+- Gear reduction trades speed for torque.
+- Mechanical advantage helps, but friction and flex steal some of the gain.
+- In Flop/Level Up, torque matters when the arm lifts a Bean Bag or a mechanism resists gravity.
+Images to find:
+- VEX official: Flop Hero Bot arm/intake image, Level Up field/Bean Bag image.
+- Unsplash/Pexels: "child opening jar", "wrench bolt close up", "bicycle gears close up", "robotics gears plastic".
+- Optional CSS diagram: small gear driving big gear, with arrows labeled "fast but weak" and "slow but strong."
+Try It:
+- Interactive slider: "Arm length" and "Bag weight." Show "torque needed" as a growing bar.
+- Question cards: "Which gear pair should lift more: 12T to 36T or 36T to 12T?"
+Connection to Flop/Level Up:
+- Explain that Flop's arm must lift a Bean Bag reliably, not just once. Slow gearing can make a lift stronger and easier to control, but too slow can waste match time.
+
+2. center-of-gravity.html
+Title: Why Does My Robot Tip Over? Center of Gravity Explained
+Socratic hook: "Why does a robot feel brave when its arm is down, then suddenly wobble when the arm rises?"
+Key concepts:
+- Center of gravity is the robot's balance point.
+- Support polygon is the floor shape made by the wheels/contact points.
+- A robot tips when its balance point moves outside its support area.
+- Tall arms, quick turns, sudden stops, and high batteries can make tipping worse.
+- Wider bases, lower mass, bracing, and smoother driving can help.
+Images to find:
+- VEX official: Level Up robot/Flop side view; VEX IQ parts/tower build image if available.
+- Unsplash/Pexels: "stacking blocks tower", "leaning tower toy", "skateboard balance", "kid building tower".
+- Optional CSS diagram: rectangle wheelbase with a dot moving inside/outside the support polygon.
+Try It:
+- Clickable "Move the Bean Bag" demo: when the bag is high/front, the balance dot moves toward the tipping edge.
+- Physical try-it box: build a tower, test tipping angle, lower one heavy part, retest.
+Connection to Flop/Level Up:
+- Flop must drive, turn, collect, and score while the arm changes the robot's balance. A safe route may beat a tall risky score if the robot tips or needs slow turns.
+
+3. friction.html
+Title: The Invisible Thief Called Friction
+Socratic hook: "Where did the motor's power go if the wheel barely spins but nothing looks broken?"
+Key concepts:
+- Friction is a rubbing force that resists motion.
+- Some friction is useful: wheels need grip, intakes need grip, claws need grip.
+- Bad friction wastes motor effort: crooked shafts, squeezed spacers, rubbing gears, bent frames, and tight collars.
+- A free-spin test reveals hidden friction.
+- Reducing unwanted friction can make the same motor feel stronger.
+Images to find:
+- VEX official: VEX IQ shafts, collars, spacers, gears, wheels, chain/sprocket reference images.
+- Unsplash/Pexels: "car tire on road close up", "ice skating", "sandpaper close up", "bicycle chain close up".
+- Optional paired images: "grippy tire" vs "smooth ice."
+Try It:
+- Two-card comparison: "Good friction" and "Bad friction." Student sorts examples by tapping/clicking.
+- Physical try-it box: spin a shaft with bad spacing, then add correct spacers/collars and count coast time.
+Connection to Flop/Level Up:
+- If Flop's arm or intake binds, it may miss scores even with correct code. If wheels have the wrong friction, it may drift, scrub, or fail to align.
+
+4. levers.html
+Title: Levers: How a Small Force Lifts a Big Load
+Socratic hook: "Where should you push on a beam if you want one finger to lift something heavy?"
+Key concepts:
+- Lever parts: effort, load, fulcrum.
+- Three lever classes, explained with everyday examples.
+- Moving the fulcrum changes force and distance.
+- Robot arms often trade force, travel, and control.
+- Levers connect directly to torque and mechanical advantage.
+Images to find:
+- VEX official: VEX IQ beam/pivot/arm images, Clawbot arm or Flop arm if available.
+- Unsplash/Pexels: "seesaw playground", "wheelbarrow", "fishing rod", "scissors close up".
+- Optional CSS diagram: three lever classes with colored dots.
+Try It:
+- Drag-and-drop fulcrum demo: move the pivot and watch "easy lift" vs "far movement" change.
+- Physical try-it box: use a VEX beam and pin as a lever; test fulcrum close to load vs far from load.
+Connection to Flop/Level Up:
+- When Flop lifts a Bean Bag, the arm is a turning beam. The farther the bag is from the pivot, the more torque the motor needs.
+
+5. omni-wheels.html
+Title: Omni Wheels: The Wheels That Slide Sideways
+Socratic hook: "How can a wheel roll forward but also slide sideways without fighting the robot?"
+Key concepts:
+- Traction wheels grip strongly in many sideways directions.
+- Omni wheels have little rollers that reduce sideways resistance.
+- Tank/skid drive is simple and strong, but turning can scrub.
+- H-drive and X-drive use wheel directions to create sideways movement.
+- Holonomic drive means the robot can move in more directions without first turning.
+- Tradeoffs: motor use, traction, complexity, driver practice, and Level Up shortcut needs.
+Images to find:
+- VEX official: VEX IQ traction wheel and omni wheel product images; Level Up field/shortcut image.
+- Unsplash/Pexels: "shopping cart wheel close up", "robot wheel close up", "mecanum wheel", "forklift wheel".
+- Optional CSS animation: arrows from four angled wheels combining into sideways motion.
+Try It:
+- Interactive wheel-arrow selector: choose tank, H-drive, X-drive; show possible movement arrows.
+- Physical try-it box: push a traction wheel sideways, then push an omni wheel sideways and compare.
+Connection to Flop/Level Up:
+- Strafing can make alignment easier near goals, but using extra motors for drive may leave fewer motors for arm/intake mechanisms under the VIQRC motor limit.
+
+6. linkages.html
+Title: Linkages: How Bars Stay Level While Moving Up
+Socratic hook: "Why does one robot hand dump its load as it rises, while another hand stays almost level?"
+Key concepts:
+- A linkage is connected bars that constrain motion.
+- A 4-bar parallelogram can keep an end piece level.
+- 6-bars and chain-bars can reach higher or control orientation differently.
+- More links mean more reach, but also more friction, flex, torque demand, and tipping risk.
+- Rubber bands can assist lifts but can also make force change through the motion.
+Images to find:
+- VEX official: Clawbot arm, Flop arm/intake, VEX IQ beams/pins.
+- Unsplash/Pexels: "scissor lift", "desk lamp arm", "mechanical linkage", "robot arm toy".
+- Optional CSS/SVG-style diagram: four bars with opposite sides highlighted as parallel.
+Try It:
+- Simple animation with a vertical slider: move a 4-bar up/down and keep the "tray" level.
+- Physical try-it box: build a small 4-bar with VEX beams, attach a paper cup/tray, photograph three heights.
+Connection to Flop/Level Up:
+- A stable scoring mechanism must lift a Bean Bag without dumping it, twisting, or tipping the robot. Linkages can help with angle control, but only if built square and low-friction.
+
+Recommended additional non-physics helper pages or embedded panels:
+- alliance-script.html: "What Should I Say Before a Teamwork Match?" for Day 19.
+- practice-log.html: "Practice Is Only Real If You Measure It" for Day 20.
+- debugging-lab.html: "Find the First Wrong Thing" for Day 28.
+- mock-tournament-debrief.html: "Score Is Data, Not Your Identity" for Day 30.
+- route-planner.html: "Safe, Medium, Stretch" for Day 18.
+
+
+PART 4 - COMPLETE BUILD PLAN FOR GPT-5.5 CODEX
+==============================================
+
+Goal:
+Add an 8th "Curriculum" section to the existing static site, add concept pages under /concepts/, add researched video cards to existing sections, and link each curriculum day to existing videos, new videos, concept pages, Academy topics, and official resources.
+
+Step 1 - Preserve current architecture
+- Keep the site as plain HTML/CSS/JS.
+- Continue using existing classes where appropriate: section-header, card-grid, video-card, card-tag, tabs, info-box, resource-pill, build-link, topic-pill.
+- Add new CSS in assets/css/style.css if that is where most styling lives; the current index also contains inline responsive CSS, but new curriculum styling should be centralized unless existing project convention says otherwise.
+- Keep video card behavior compatible with the current data-video pattern and id="video-VIDEOID" anchors.
+
+Step 2 - Add nav and section numbering
+- Add nav item: `<li><a href="#curriculum">Curriculum</a></li>`.
+- Add footer link: `<li><a href="#curriculum">Curriculum</a></li>`.
+- Insert the new section after Academy and before Videos & Creators, or after Videos if preserving current seven sections as-is matters. Recommended: after Academy, before Videos, because curriculum uses all previous sections and Videos remains a library endpoint.
+- Renumber "Video Library & Creators" from section 7 to section 8 if Curriculum becomes section 7, or make Curriculum section 8 after Videos. The user asked for an 8th Curriculum section, so simplest build is: keep existing seven sections and append `<section id="curriculum">` after Videos as section number 8. Add cross-links from Start Here Step 6 and from Videos topic index.
+
+Step 3 - Curriculum section content model
+Create a JS data structure or inline HTML groups. For maintainability, prefer a data array in `assets/js/curriculum-data.js` if the site is allowed to add a script file; otherwise use static HTML accordions.
+
+Each day object should include:
+- dayNumber
+- title
+- phaseId and phaseTitle
+- targetTime
+- hook
+- thinkFirst
+- concepts array
+- learn array: ordered video/resource links with title, source, videoId/url, existingVideoId when applicable, type existing/add/custom
+- tryIt
+- rubric: level1, level2, level3
+- reflect questions
+- notebookArtifact
+- links: official manual, Academy topic, concept pages, existing site anchors
+- gapFlag: none/thin/custom-needed
+
+Step 4 - HTML structure for Curriculum
+Use accordion by phase, with expandable day cards:
+
+```
+<section id="curriculum">
+  <div class="section-header">
+    <div class="section-number">8</div>
+    <h2>30-Day Curriculum</h2>
+    <p>Six phases from game detective to tournament-ready driver, builder, coder, and engineer.</p>
+  </div>
+
+  <div class="curriculum-tools">
+    <input id="curriculum-search" class="curriculum-search" type="search" placeholder="Search days: torque, Flop, sensors..." aria-label="Search curriculum days">
+    <div class="phase-filter" role="tablist" aria-label="Curriculum phases">
+      <button class="phase-chip active" data-phase-filter="all">All</button>
+      <button class="phase-chip" data-phase-filter="phase-a">A</button>
+      <button class="phase-chip" data-phase-filter="phase-b">B</button>
+      <button class="phase-chip" data-phase-filter="phase-c">C</button>
+      <button class="phase-chip" data-phase-filter="phase-d">D</button>
+      <button class="phase-chip" data-phase-filter="phase-e">E</button>
+      <button class="phase-chip" data-phase-filter="phase-f">F</button>
+    </div>
+  </div>
+
+  <div class="curriculum-phase" id="phase-a">
+    <button class="phase-toggle" aria-expanded="true" aria-controls="phase-a-days">
+      <span>Phase A</span>
+      <strong>Days 1-5: Game detective and mechanical thinker</strong>
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+    <div class="phase-days" id="phase-a-days">
+      <article class="day-card" id="day-1" data-day="1" data-phase="phase-a">
+        <button class="day-toggle" aria-expanded="false" aria-controls="day-1-panel">
+          <span class="day-number">Day 1</span>
+          <span class="day-title">The Level Up Score Detective</span>
+          <span class="day-meta">45-60 min | 3 videos</span>
+        </button>
+        <div class="day-panel" id="day-1-panel" hidden>
+          <div class="day-block"><h3>Hook</h3><p>...</p></div>
+          <div class="day-block"><h3>Think First</h3><p>...</p></div>
+          <div class="day-block concepts"><h3>Concepts</h3><ul>...</ul></div>
+          <div class="day-block learn"><h3>Learn</h3><ol>...</ol></div>
+          <div class="day-block"><h3>Try It</h3><p>...</p></div>
+          <div class="rubric-grid">...</div>
+          <div class="day-links">...</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+```
+
+Step 5 - Phase mapping
+- Phase A: Days 1-5, Game detective and mechanical thinker.
+- Phase B: Days 6-10, Drivetrains and scoring mechanisms.
+- Phase C: Days 11-15, Build, analyze, test, and improve Flop.
+- Phase D: Days 16-20, Drive precisely and turn data into strategy.
+- Phase E: Days 21-25, Driver-control code and sensor thinking.
+- Phase F: Days 26-30, Autonomous routines and tournament readiness.
+
+Step 6 - Add concept pages
+Create folder:
+- /concepts/
+
+Create files:
+- /concepts/what-is-torque.html
+- /concepts/center-of-gravity.html
+- /concepts/friction.html
+- /concepts/levers.html
+- /concepts/omni-wheels.html
+- /concepts/linkages.html
+
+Optional helper pages:
+- /concepts/alliance-script.html
+- /concepts/practice-log.html
+- /concepts/debugging-lab.html
+- /concepts/mock-tournament-debrief.html
+- /concepts/route-planner.html
+
+Page implementation notes:
+- Use the same fonts and CSS variables as index.html.
+- Add a shared concept-page class set in style.css: concept-hero, concept-hook, concept-grid, try-box, think-card, robot-connection, concept-nav.
+- Do not make the first screen a marketing hero. Make the concept usable immediately: big question, visual, first interactive control.
+- For external images, use stable linked sources only if licensing/availability is acceptable. Prefer downloading-free-image URLs only if the project convention allows remote assets. Safer static plan: use VEX official images by link where terms allow, and use CSS diagrams for physics.
+- Every image must have useful alt text.
+
+Step 7 - Add new researched videos to existing sections
+Add cards using existing `.video-card` pattern.
+
+Kit & Parts / Parts Mechanics:
+- g2nOzbhcjv4 - Introduction to VEX: Drive Shaft and Shaft Collars
+- uh_CwnbeH9I - VEX IQ Tip - Mounting Small Hardware on Shafts
+- 4sbWrEzm0lA - VEX IQ Building tips - Plastic Axles
+- kQNM7glk2qg - VEX IQ Free spin test - bad spacing
+- J5P3tjDWoL8 - VEX IQ Free spin test - good spacing
+- eUeGNe4eDAw - VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage
+- wau5W8Mt7Hw - VEX IQ Mechanisms - Gear Ratio
+- txQs3x-UN34 - NEVER be confused by GEAR RATIOS again
+- tr_F2PjhAnQ - Understanding Gear Ratios in VEX IQ: Speed vs Torque
+- OQTAL8RsZaA - VEX IQ Building Basics: Levers
+- fzljPiPy9nw - Simple Machines: Levers
+- VsztyaNpf3o - Sprockets, Chains and Treads
+- D6cY3riTe-o - Center of Gravity: The Key to a Stable Robot
+- 0UkQkdVcxWo - VEX Camp | IQ Session 1: Building with IQ, with chapter note
+
+Robot Builds / Drivetrains and Mechanisms:
+- F3G0sUz3_Jw - Common Steering Methods
+- VfuA2EqaIso - The Ultimate Guide To Omniwheels
+- 5TCj6p7VnbU - The Ultimate Guide to Holonomic Drivetrains, stretch/chaptered
+- 2Pnj9Jq9JiU - Vex Robotics Drivebase Types Explained, V5/chaptered
+- xQorNQ13Cyk - vex wheel selection: solid versus omni
+- -vm_UsnZt-k - Fast & Efficient VEX IQ Drivetrain
+- sek_rTkf2-o - 5 Tips Every VEX Team Should Know about Drivetrains
+- leIM-EVbhGY - VEX IQ Wheel Guide for Beginners
+- X4JHUDGzyv0 - Vex IQ Claw Ideas
+- 2DNQQKckmLk - Vex IQ Claw Design Video
+- hRSUs7ChPW0 - Cracked 87 Points in VEX IQ Level Up Today!
+- 1Ty_1LF3Qv0 - Basic Mechanisms: 4 Bar Linkage
+- 9iSmW7dMuB8 - Vex Robotics Lift Types Explained, V5/chaptered
+- 80ZmWH89pjE - Vex Robotics Chain Bar Guide/Tutorial
+- LUvIH5k8HWY - Kepler's Guide to Chain-Bar Lifts
+- KvWHQ6d3_hM - Introducing the 180 Mod Flop! First Practice Runs
+- sl7DbBqcYbA - How to use the Engineering Design Process
+
+Game & Strategy:
+- eQTbkWwIJ-Q - How to Build Passive Aligners
+- ftq1_O9gfMQ - VEX IQ: Wheel Alignment Tips
+- yC_6j7vawfk - VEX Build Masterclass #3 - Squaring, V5/concept transfer
+- yBdO3xBeAp4 - Vex Iq Level Up | Solo TW PR | 102 Points!
+- EMYxGGUh_ls - Hero Bot Scores 92 Points?! Breaking Down This INSANE Match
+- M_u3zQwBzyI - Boost Your VEX IQ Teamwork Skills with These Strategies
+- ptJ-CkMJpNY - VEX IQ Level Up Explained
+- -Z5vRmfvT-o - 358 POINTS #1 Finals, prior-season teamwork example
+- GERezk11oUY - The VEX Notebook Rubric, Explained
+- D8JT7D8gq5g - How to Manage Your Engineering Design Notebook
+- VK6lzPPhuXA - Attending a VEX IQ Robotics Competition
+- 5q_y2vifuXo - Engineering Notebook Tips Every VEX Team Should Know
+- zekAzwe8j0c - How to Master the Judges Interview
+- SW4-CeAHvo8 - 2023 VIQC Worlds Matches & Amaze Award
+- ARKJ8SLiaBw - Vex IQ Rise Above but we Pre-Record Skills
+
+Programming:
+- cKZAaWWCTpU - VEX IQ - Controlling Motors
+- TbaOMMKLGG4 - Device Setup - Motors Tutorial
+- PxSzAq0-upE - Device Setup - Controller Tutorial
+- H0W3Lf-VHcI - Moving the Arm Tutorial
+- TkxUQsWnBEw - Debugging and Autonomous Left and Right Functions, long/chaptered
+- 9xSPQnfn390 - Displaying Information on the Screen, long/chaptered
+
+Do not add as primary student cards unless specifically needed:
+- GkgDdidYrxM until browser availability is verified.
+- 0m8dKUeG-gg because V5/metal terms may confuse beginners.
+- oy-iYBfZoXo as primary because it is VRC-oriented; use teacher prep or stretch.
+- YvAme6r5c9M as primary because it is V5/team-dynamics and older-student oriented.
+
+Step 8 - Link curriculum days to videos and pages
+Use existing video anchors where available:
+- `#video-KP0FYPW604E`, `#video-AMZ8p5u8UHY`, `#video-wJpjTm775Q0`
+- `#video-KbBNJlZNqeI`, `#video-w7yXXJmg1Do`, `#video-JvohEXX-FiY`
+- `#video-jPaarRbLjaE`, `#video-n_fWxHqSMPs`, `#video-ZI7Kc7Y2X0k`
+- `#video-tepeFAA7Gbo`, `#video-afrdGr4ue9Y`, `#video-O0El_fts9ns`
+- `#video-nzM0JE7vFaQ`, `#video-MSX9LLQLvmk`, `#video-yJvA-QpKvKI`
+- `#video-ap39M61F1l0`, `#video-PwLPVbLclqk`, `#video-q-X4Q_mXOfY`
+- `#video-d8gI02Ecig0`, `#video-voZIL4Gf7Zk`, `#video-2ZhxhHAEDB0`
+- `#video-ucOT-ENP21M`, `#video-_QuhyOZFfLU`, `#video-13Rsxcc9T-w`
+
+For newly added video cards, create anchors exactly as `id="video-VIDEOID"` so curriculum links are predictable.
+
+Concept page day links:
+- Day 2: /concepts/friction.html
+- Day 3: /concepts/what-is-torque.html
+- Day 4: /concepts/levers.html and /concepts/linkages.html
+- Day 5: /concepts/center-of-gravity.html and /concepts/friction.html
+- Day 6: /concepts/omni-wheels.html
+- Day 7: /concepts/omni-wheels.html and /concepts/what-is-torque.html
+- Day 8: /concepts/friction.html plus optional manipulator panel
+- Day 9: /concepts/linkages.html and /concepts/center-of-gravity.html
+- Day 13: /concepts/friction.html, /concepts/omni-wheels.html
+- Day 14: /concepts/what-is-torque.html, /concepts/friction.html, /concepts/linkages.html
+- Day 15: /concepts/practice-log.html or embedded one-variable test panel
+- Day 17: use an embedded alignment routine panel or create /concepts/alignment.html if desired
+- Day 18: /concepts/route-planner.html
+- Day 19: /concepts/alliance-script.html
+- Day 20: /concepts/practice-log.html
+- Day 28: /concepts/debugging-lab.html
+- Day 30: /concepts/mock-tournament-debrief.html
+
+Step 9 - Mobile and iPad considerations
+- Tap targets: every phase toggle, day toggle, video link, and concept link must be at least 44px tall.
+- Curriculum cards: collapsed by default on mobile; allow one open day per phase to reduce scroll overload.
+- Phase filters: horizontally scrollable row with sticky behavior under the nav on iPad.
+- Accordions: use `button` elements, `aria-expanded`, `aria-controls`, and `hidden` panels.
+- Text: avoid dense paragraphs inside cards. Use short blocks, ordered video lists, and stacked rubric rows.
+- Tables: avoid wide tables in curriculum cards. For rubrics, use 3 stacked boxes labeled 1, 2, 3.
+- Videos: do not embed 30 days of iframes. Continue opening YouTube via existing card click behavior or direct links to existing cards.
+- Search: add `#curriculum-search` to filter day cards by title/concept/video. Keep it separate from `#video-search`.
+- Performance: thumbnails load from YouTube; avoid adding heavy images to all accordions at once. Concept pages can carry richer visuals because they load individually.
+- iPad landscape: use a two-column layout for expanded day cards only if text remains readable; otherwise one column is safer.
+- Print: add print CSS for day cards so a parent can print the Try It/rubric/notebook artifact without nav, thumbnails, or accordions hiding content.
+
+Step 10 - Acceptance checks after build
+- The nav includes Curriculum and all links scroll correctly.
+- Every existing video link from curriculum resolves to an actual `#video-*` card or direct YouTube URL.
+- Every new video card opens using the existing video-card click handler.
+- All six required concept pages exist and are linked from the relevant days.
+- Day cards exist for all 30 days, grouped in six phases.
+- Mobile width 320px: no horizontal overflow, text does not overlap, accordion buttons remain readable.
+- iPad width 768px/1024px: phase filters and day cards remain tappable and readable.
+- Search/filter does not hide unrelated site video cards.
+- Current manual warning appears on Days 1, 15, 18-20, and 29-30.
+- The final page still has 60 original video cards plus the new researched cards, unless duplicate IDs intentionally reuse existing cards.

@@ -1,0 +1,1416 @@
+VEX IQ LEVEL UP CURRICULUM STRATEGY
+For Arian Mistry, Team 295U | Grade 5 | 2026-27 Level Up season | Hero Bot: Flop
+Prepared: September 7, 2026
+
+PURPOSE
+This is the curriculum and video-research specification for a child who is learning not merely to assemble a robot, but to think, test, explain, and compete like an engineer. It is written so that future researchers can find the final 2-4 videos for each day and future developers can turn each day into a website lesson without inventing the pedagogy again.
+
+IMPORTANT SEASON NOTE
+Level Up rules change during the season. As of this writing, VEX has released Game Manual version 2.0 (September 3, 2026), with an effective date of September 10, 2026. Before teaching Days 1, 15, 18-20, and 29-30, check the latest official English Game Manual and the official Q&A. Never let an older video overrule the current manual.
+
+Official research basis:
+- Current Level Up page and scoring: https://www.vexrobotics.com/iq/competition/viqc-current-game
+- Current Level Up manual: https://link.vex.com/docs/26-27/viqrc/game-manual
+- VEX Competition 101: Level Up (7 sessions): https://education.vex.com/stemlabs/iq/competition-101-vex-iq-level-up
+- VEX IQ STEM Labs index: https://education.vex.com/stemlabs/iq
+- VEX IQ Library: https://kb.vex.com/hc/en-us/categories/360002324792-IQ
+- Flop 3D build instructions: https://instructions.online/?id=4063-2026-2027_viqrc_herobot_flop
+- Placer Academy map already present in this site's Academy section.
+
+Verified season facts that shape the curriculum:
+- Teamwork matches are 60 seconds with two robots collaborating; Robot Skills includes Driving Skills and Autonomous Coding Skills.
+- Bean Bags are scored in Floor, L1, L2, L3, and L4 goals; higher levels are worth more. Use the current manual for exact scoring and scoring definitions.
+- A robot may possess only one Bean Bag at a time, most bags must travel far, and teams choose between long paths and narrow shortcuts.
+- Current starting size is 11 x 20 x 15 inches; horizontal expansion rules and other constraints must be checked in the current manual.
+- Up to six motors are legal under the current manual. This makes motor allocation a real drivetrain-versus-mechanism tradeoff.
+- Official VEX materials describe Flop as a beginner Hero Bot with a drivetrain, Arm Motor, and Intake Motor. It is a platform for testing and improvement, not an asserted championship design.
+
+
+PART 1: CURRICULUM OVERVIEW
+===========================
+
+Length and cadence
+- 30 learning days, ideally 5 days per week for 6 weeks.
+- 30-60 minutes per day. Build-heavy Days 11-12 may take 60-90 minutes or spill into another meeting; preserve the inquiry flow rather than rushing.
+- Default session rhythm: Hook 2-3 min; Think First 3-5 min; Learn 10-18 min; Connect the Dots 3-5 min; Try It 15-25 min; Reflect/notebook 5-8 min.
+- Every day creates a notebook artifact: prediction, sketch, data table, code screenshot, test result, decision, or reflection.
+
+Six phases
+- Week 1 / Phase A, Days 1-5: Become a game detective and mechanical thinker.
+- Week 2 / Phase B, Days 6-10: Choose drivetrains and understand scoring mechanisms.
+- Week 3 / Phase C, Days 11-15: Build, analyze, test, and improve Flop.
+- Week 4 / Phase D, Days 16-20: Drive precisely and turn data into strategy.
+- Week 5 / Phase E, Days 21-25: Build reliable driver-control code and sensor thinking.
+- Week 6 / Phase F, Days 26-30: Create autonomous routines and become tournament-ready.
+
+Pedagogical philosophy: curiosity before explanation, judgment after instruction
+Every day begins with a phenomenon Arian can see, a constrained problem he can attempt, or a prediction he can make. The adult does not name the principle or demonstrate the solution first. Arian writes a hypothesis, tries something when safe, and becomes aware of what he needs to learn. Only then do the videos and short explanation supply useful language and mental models. This is the Socratic pillar: create the need to know first.
+
+Every explanation is followed by performance. Arian must build, code, drive, measure, compare, or defend a decision. The rubric rewards evidence, controlled testing, explanation, and iteration—not copying the adult or getting a lucky result. The adult asks, "What did you observe?", "What evidence supports that?", and "What would you change next?" The adult may reveal safety rules and competition rules, but should not reveal the challenge answer. This is the evaluative pillar: guide judgment without spoon-feeding.
+
+Coach/facilitator rules
+1. Read only the Hook aloud first. Hide the Learn and Connect sections until Arian has written a prediction.
+2. Give at least 3 quiet minutes and, when safe, one physical attempt before offering a hint.
+3. Use a hint ladder: ask for an observation; ask what changed; ask for a comparison; point to a relevant video moment; only then explain a term.
+4. Do not repair the robot, move blocks, or choose the strategy for him. Ask him to narrate while he changes one variable.
+5. Protect productive failure. Stop only for safety, possible part damage, or an imminent rules violation.
+6. Ask for a 1-2-3 self-score before giving adult feedback. Adult feedback should cite one piece of evidence and ask one next-step question.
+7. End with a notebook entry labeled: Prediction / Test / Evidence / Next change.
+
+Universal 1-2-3 rubric language
+- 1 = Beginner: completed part of the task or made a guess, but evidence is missing or several variables changed at once.
+- 2 = Developing: completed a fair test, recorded at least one useful observation, and can name a plausible improvement.
+- 3 = Proficient: used repeatable evidence, explained why the result occurred with the day's concept, and made/tested one justified iteration.
+
+Video ordering rule
+Each day's final Learn list should contain 2-4 videos, ranked in viewing order by (1) conceptual clarity, (2) visual demonstration, (3) direct relevance to the day's challenge and Level Up, and (4) engagement for a fifth grader. A short non-VEX/LEGO physics visualization may rank above a VEX video when it teaches the mental model better; follow it with a VEX application video.
+
+
+PART 2: DAY-BY-DAY PLAN
+=======================
+
+DAY 1 — THE LEVEL UP SCORE DETECTIVE
+Phase: Week 1 / Game need and engineering questions
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): Two robots each move four Bean Bags. One earns far more points, while the other finishes sooner. How could both outcomes be sensible—and what would you need to know before designing either robot?
+
+Think First: Before watching, sketch the field from memory and write three facts you think determine a winning score. Circle every fact you are unsure about.
+
+Concepts: reading a game reveal critically; manual as source of truth; scoring breakdown; one-object possession; time, distance, accuracy, and goal-height tradeoffs; teamwork versus skills; turning game requirements into robot jobs.
+
+Learn / video targets, ranked:
+1. Reuse "Level Up Game Reveal" for energy, field overview, and visual context.
+2. Reuse "Game Manual Breakdown" for how rules alter strategy; verify it matches the current manual before showing.
+3. Reuse "Level Up Worlds Reveal" only as a second visual perspective or excitement clip.
+Video search types/queries: "VEX IQ Level Up 2026 2027 official game reveal"; "VIQRC Level Up version 2.0 rules scoring"; "Level Up game strategy bean bags goals beginner".
+
+Connect the Dots: A robot is not "good" in isolation; it is good at valuable game jobs under rules and time pressure. Higher goals promise more points but demand reach, stability, placement accuracy, and travel time, so the first design tool is a requirement-and-risk list, not a pile of parts.
+
+Try It (evaluative challenge): Make a one-page "Team 295U Game Detective" sheet with columns for Job, Points/benefit, Difficulty, Robot feature needed, and Rule to verify. Add at least five jobs, then choose one as the first reliable scoring goal. Do not optimize yet.
+Rubric: 1 = lists jobs without evidence; 2 = connects five jobs to scoring/manual facts and identifies uncertainties; 3 = compares value, time, and risk, cites rule sections, and defends a first-goal choice while naming what test could change the decision.
+
+Reflect:
+- What if a low goal can be scored twice as reliably as a high goal—what data would decide which is better?
+- Which sentence in the manual changed one of your original guesses?
+
+Existing site videos to reuse: Level Up Game Reveal; Game Manual Breakdown; Level Up Worlds Reveal.
+New videos needed: No. Use the current official manual as a non-video companion; replace or supplement the breakdown later only if research finds a clearer current-version video.
+
+
+DAY 2 — WHY DOES ONE AXLE SPIN AND ANOTHER BIND?
+Phase: Week 1 / Parts, connections, and friction
+Target time: 45 minutes
+
+Hook (Socratic puzzle): Build or hold two simple wheel-and-shaft assemblies: one supported cleanly and one crooked or rubbing. Why does the same motor seem stronger on one than the other?
+
+Think First: Draw where you think energy is being lost. Before watching, label each unfamiliar part you believe could fix or cause the problem.
+
+Concepts: beams, plates, pins, connector pins, corner connectors, standoffs, shafts, shaft collars, bushings/bearings, spacers, idler pins, shaft capture, two-point shaft support, alignment, friction, pin tool, proper versus forced connections.
+
+Learn / video targets, ranked:
+1. NEW: short VEX IQ visual on selecting/capturing/supporting shafts and reducing binding.
+2. Reuse "VEX IQ 2nd Gen Kit Walkthrough" for part recognition.
+3. Reuse "Getting Started with VEX IQ Gen 2" for safe setup and system context.
+4. NEW: engaging VEX IQ pins/connectors/bushings build-basics demonstration.
+Video search types/queries: "VEX IQ shafts bushings support friction"; "VEX IQ pins connectors standoffs beginner"; "VEX IQ building basics shaft collars spacers".
+
+Connect the Dots: Motors do not deliver all their effort to the task. Misaligned holes, rubbing gears, squeezed wheels, and one-point shaft support spend effort as friction or flex; correct connectors and spacing create a straight, captured, freely rotating motion path.
+
+Try It: Build two 10-minute axle test rigs that differ in exactly one support/spacing choice. Spin each by hand, then use the same motor speed and count coast time or rotations. Photograph both and annotate the force path and friction points.
+Rubric: 1 = assembles a rig but changes many things or records no comparison; 2 = makes a one-variable comparison and records a clear observation; 3 = repeats the test, explains the role of support/alignment/capture, and improves the weaker rig based on evidence.
+
+Reflect:
+- What if you tighten/capture a shaft so well that it cannot slide at all—could that ever create more friction?
+- Why do heavy arms need stronger shaft support than a light decoration?
+
+Existing site videos to reuse: VEX IQ 2nd Gen Kit Walkthrough; Getting Started with VEX IQ Gen 2; What's in the Box (optional recap only).
+New videos needed: Yes. Research brief D2 in Part 3.
+
+
+DAY 3 — THE GEARBOX THAT LIES ABOUT “POWER”
+Phase: Week 1 / Gears, speed, torque, and mechanical advantage
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): One gear train lifts a heavy load slowly; another spins fast but stalls. Both use the same motor, so where did the extra "strength" or speed come from?
+
+Think First: Predict which will be faster and which will lift more: a 12-tooth gear driving a 36-tooth gear, or a 36-tooth driving a 12-tooth. Explain without using a formula.
+
+Concepts: driver and driven gears; gear ratio; speed versus torque; mechanical advantage; direction reversal; idler gears; compound trains; efficiency; selecting ratios for drive, arm, and intake.
+
+Learn / video targets, ranked:
+1. Seed candidate: "NEVER be confused by GEAR RATIOS again (LEGO visual)" (video ID txQs3x-UN34), pending duration/age-fit verification.
+2. Seed candidate: "Understanding Gear Ratios in VEX IQ: Speed vs Torque" (video ID tr_F2PjhAnQ), pending verification.
+3. Seed candidate: "VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage" (user supplied; verify the title/ID because the supplied eUeGNe4eDAw mapping may be inconsistent).
+4. NEW/optional: VEX IQ M.A.D. Box gear experiment video.
+Video search types/queries: "VEX IQ gear ratio speed torque mechanical advantage"; "LEGO gear ratio visual for kids"; "VEX IQ M.A.D. Box gears".
+
+Connect the Dots: Gears trade rotational speed for turning force; they do not create free energy. The tooth-count relationship predicts the trade, while friction, flex, and motor limits explain why the physical result is never perfectly ideal.
+
+Try It: Build two gear pairs with opposite input/output sizes. Under identical motor settings, measure output rotations in 10 seconds and test which lifts the same small load. Write a claim supported by both measurements.
+Rubric: 1 = builds one ratio or reports only "fast/slow"; 2 = compares two ratios with rotation and load evidence; 3 = predicts the numerical relationship, repeats trials, explains torque/speed tradeoff and direction, then chooses a justified ratio for Flop's arm or intake.
+
+Reflect:
+- What if you add an idler gear of any size between the driver and driven gears—what changes and what might stay the same?
+- Why might the mathematically fastest drivetrain lose a real match?
+
+Existing site videos to reuse: none directly focused on gear ratios. The Kit & Parts gear guide is a useful non-video cross-link.
+New videos needed: Yes; validate the four user-supplied seed candidates and resolve duplicated/mismatched URLs. Research brief D3 in Part 3.
+
+
+DAY 4 — MOVE A LOAD WITH ONE FINGER
+Phase: Week 1 / Levers, linkages, chain, and elastic assistance
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): You must lift the same Bean Bag with one finger using a beam and pivot. Where would you place the pivot and push point so it feels easiest—and what do you lose in return?
+
+Think First: Sketch three arrangements of load, effort, and fulcrum. Predict which gives the most force and which gives the most movement at the end.
+
+Concepts: first-, second-, and third-class levers; effort/load/fulcrum; lever mechanical advantage; linkage motion; pivot friction; chain and sprockets for power transfer over distance; rubber bands as counterbalance/energy storage; tradeoffs between force, travel, and control.
+
+Learn / video targets, ranked:
+1. Seed candidate: "VEX IQ Building Basics: Levers" (video ID OQTAL8RsZaA), pending verification.
+2. NEW: playful general-physics/LEGO lever classes visual for children.
+3. NEW: VEX IQ chain and sprocket power-transfer demonstration.
+4. NEW/optional: VEX IQ rubber-band arm counterbalance demonstration.
+Video search types/queries: "VEX IQ levers mechanical advantage"; "three classes of levers LEGO for kids"; "VEX IQ chain sprocket arm"; "VEX IQ rubber band counterbalance arm".
+
+Connect the Dots: The location of effort, load, and pivot decides whether a mechanism multiplies force, multiplies motion, or changes direction. Chain moves rotation to a distant shaft; rubber bands can help a motor fight gravity, but their changing tension also changes behavior through the motion.
+
+Try It: Build a lever with movable fulcrum and effort points. Test two arrangements lifting the same bag, then add either a chain drive or rubber-band assist and compare effort, range, and controllability. Do not copy a finished lift.
+Rubric: 1 = mechanism moves but positions are not identified; 2 = compares two arrangements and labels effort/load/fulcrum; 3 = explains the mechanical-advantage tradeoff, documents one controlled counterbalance or chain test, and selects an arrangement for a stated game job.
+
+Reflect:
+- What if the load moves twice as far from the fulcrum—what must happen to required effort?
+- When could a rubber band make a lift less predictable even while helping the motor?
+
+Existing site videos to reuse: Ratchet + Catapult only as an optional later preview; no direct lever/chain video in the current 60-card library.
+New videos needed: Yes. Research brief D4 in Part 3.
+
+
+DAY 5 — THE TALL ROBOT THAT FALLS
+Phase: Week 1 / Structure, center of mass, and stability
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A tall robot and a short robot make the same sharp turn. Why might only one tip, and why might adding a heavy piece at the bottom change everything?
+
+Think First: Draw a tipping line at the wheel edge and mark where you believe the robot's balance point is. Predict what happens when the arm reaches forward.
+
+Concepts: center of mass versus support polygon; balance and tipping moment; momentum during turns/stops; wheelbase and track width; keeping mass low; square frames; bracing; triangulation; two-point connections; flex and structural integrity; useful and unwanted friction.
+
+Learn / video targets, ranked:
+1. NEW: clear hands-on center-of-mass/tipping demonstration for kids or LEGO robots.
+2. NEW: VEX IQ structural bracing, square frames, and triangulation.
+3. Reuse "How to Design and Build" for the engineering context.
+4. NEW/optional: VEX IQ Tug of War center-of-mass/mechanical-advantage clip.
+Video search types/queries: "VEX IQ center of mass tipping robot"; "LEGO robot center of gravity experiment"; "VEX IQ bracing triangulation strong frame".
+
+Connect the Dots: A robot tips when the combined effect of gravity and acceleration moves beyond its support area. A wide, square, braced base and low central mass resist tipping and flex; a long raised arm and abrupt momentum make both worse.
+
+Try It: Build a small tower on a rolling base. Find its repeatable tipping threshold on a gentle ramp or in a controlled turn, then change only one of mass height, base width, or bracing and retest three times. Use no human catching inside the measurement zone.
+Rubric: 1 = changes the build without a baseline; 2 = runs a controlled before/after test and records results; 3 = repeats trials, explains the center-of-mass/support relationship, and makes a second evidence-based improvement without simply adding random parts.
+
+Reflect:
+- What if a wider robot cannot fit the shortcut—how would you decide the best width?
+- Can a frame be very rigid but still be a poor competition design? Why?
+
+Existing site videos to reuse: How to Design and Build; Exploring Robot Design (optional).
+New videos needed: Yes. Research brief D5 in Part 3.
+
+
+DAY 6 — FIVE WAYS TO REACH THE SAME SPOT
+Phase: Week 2 / Steering architectures
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A robot must move from a start tile to a bag beside it without turning its front away from the goal. Which drivetrains can do it directly, and what mechanical price might they pay?
+
+Think First: Before watching, draw wheel arrows for tank/skid steering and for a robot that can slide sideways. What forces must cancel or combine?
+
+Concepts: differential/skid/tank drive; tank versus arcade as control mappings; standard/traction wheels; omni wheels; holonomic motion; X-drive; H-drive; strafing; maneuverability, traction, complexity, motor use, and driver-learning tradeoffs.
+
+Learn / video targets, ranked:
+1. Seed candidate: "Different Steering Methods" (video ID F3G0sUz3_Jw), pending verification.
+2. NEW: VEX IQ standard, H-drive, and X-drive side-by-side visual.
+3. NEW: LEGO/general animation explaining omni-wheel force vectors.
+4. NEW/optional: competition comparison of holonomic versus tank reliability.
+Video search types/queries: "VEX IQ drivetrain steering methods X drive H drive"; "VEX IQ holonomic omni drive"; "omni wheel forces animation for kids".
+
+Connect the Dots: Tank and arcade usually command the same left/right mechanical drivetrain in different ways. Holonomic designs angle or add omni wheels so force components create sideways motion, gaining alignment options while spending motors, traction, build simplicity, and practice time.
+
+Try It: On paper or with loose wheels, create force-arrow diagrams for standard, X-, and H-drive. Then drive or simulate the same three-waypoint path with two available control/drive configurations and record time, corrections, and missed alignments.
+Rubric: 1 = names drivetrains but cannot connect wheel forces to motion; 2 = predicts and tests motion with a usable data table; 3 = explains force combinations and chooses a Level Up architecture using shortcut width, motor budget, traction, and driver evidence.
+
+Reflect:
+- What if strafing saves one alignment but the extra motor removes a motor from the lift—when is it worthwhile?
+- Why can tank and arcade feel different even when the robot underneath is identical?
+
+Existing site videos to reuse: First Robot Build Standard Drive Base (application); Code 2- and 4-Motor Drivetrain (save full viewing for Day 22).
+New videos needed: Yes. Research brief D6 in Part 3.
+
+
+DAY 7 — TWO MOTORS OR FOUR?
+Phase: Week 2 / Competition drivetrain design
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): Four drive motors sound twice as good as two. Why might a winning team deliberately choose only two—and why might another team regret that choice?
+
+Think First: Allocate a maximum of six motors among drive, intake, lift, and any other job. Write what you gain and risk with each allocation.
+
+Concepts: 2-motor versus 4-motor drives; motor groups; traction versus speed; wheel diameter and tread; omni versus traction wheels; gear ratio; turning scrub; rigidity and alignment; center of gravity; footprint/shortcut requirements; battery and reliability; motor-budget tradeoffs.
+
+Learn / video targets, ranked:
+1. NEW: VEX IQ competition drivetrain comparison with 2- and 4-motor examples.
+2. Reuse "First Robot Build Standard Drive Base" for concrete layout.
+3. Reuse "BaseBot Assembly" or "Gen2 BaseBot Build" for correct construction.
+4. NEW: VEX IQ wheel choice/traction/omni explanation.
+Video search types/queries: "VEX IQ 2 motor vs 4 motor drivetrain"; "VEX IQ competition drivetrain wheel choice"; "VEX IQ traction wheel omni wheel comparison".
+
+Connect the Dots: More drive motors can increase available torque and robustness, but the rule-limited motor budget means fewer powered mechanisms. Wheel size, gearing, mass, friction, and frame alignment can matter as much as motor count, so the answer must come from the Level Up job list and tests.
+
+Try It: Create two drivetrain proposals for Team 295U. Include top view, dimensions, wheel type/size, gearing, motor allocation, predicted shortcut fit, and three tests. If hardware permits, perform one timed straight/push/turn comparison.
+Rubric: 1 = chooses by preference alone; 2 = compares two designs against at least three requirements; 3 = makes a weighted decision with test evidence, identifies a failure risk, and explains what new result would reverse the choice.
+
+Reflect:
+- What if the 4-motor drive is faster unloaded but slower with the arm raised—what could explain it?
+- Which is more valuable for Level Up: top speed or time-to-align-and-score?
+
+Existing site videos to reuse: First Robot Build Standard Drive Base; BaseBot Assembly; Gen2 BaseBot Build; Code 2- and 4-Motor Drivetrain (preview only).
+New videos needed: Yes. Research brief D7 in Part 3.
+
+
+DAY 8 — GRAB, SCOOP, OR SWALLOW?
+Phase: Week 2 / Claws and intakes
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A claw holds a Bean Bag securely but needs perfect alignment; a scoop is forgiving but may lose it during a turn. What third approach could collect quickly, and what new problems would it introduce?
+
+Think First: Without building, sketch a passive scoop, an active claw, and a powered intake. Predict how each behaves when the bag enters off-center.
+
+Concepts: passive versus active manipulators; claw, scoop, fork, roller/flex-wheel intake; compression; compliance; funneling; grip/friction; intake/eject direction; object centering; possession limit; release reliability; motor and space cost.
+
+Learn / video targets, ranked:
+1. NEW: VEX IQ intake compression and funneling visual using a soft game object.
+2. NEW: VEX IQ claw versus intake versus scoop mechanism comparison.
+3. Reuse "Opening the Claw" only to connect a physical claw to controllable behavior.
+4. Reuse "Hero Bot Breakdown" to identify Flop's intake goal, without presenting it as the answer.
+Video search types/queries: "VEX IQ intake mechanism compression"; "VEX IQ claw scoop intake comparison"; "VEX IQ flex wheel intake bean bag".
+
+Connect the Dots: A manipulator succeeds when its geometry and friction tolerate imperfect approaches, control the object, and release it on demand. Compression creates holding force and compliance; funnels reduce the accuracy burden on the driver; passive systems save motors but surrender some control.
+
+Try It: Prototype two non-motorized front-end shapes from loose VEX parts. Using the same five approach angles, record capture and clean-release success; then change one dimension such as funnel width or compression gap.
+Rubric: 1 = demonstrates one successful pickup; 2 = compares two designs across five repeatable approaches; 3 = calculates success rates, explains friction/compression/funneling, and produces a justified revision that respects one-bag possession.
+
+Reflect:
+- What if more compression improves holding but jams release—where would you search for the useful middle?
+- Which driver mistakes should the mechanism forgive automatically?
+
+Existing site videos to reuse: Opening the Claw; Hero Bot Breakdown; Clawbot Assembly (optional mechanism reference).
+New videos needed: Yes. Research brief D8 in Part 3.
+
+
+DAY 9 — HOW CAN THE HAND STAY LEVEL WHILE THE ARM RISES?
+Phase: Week 2 / Lifts and linkages
+Target time: 60 minutes
+
+Hook (Socratic puzzle): A simple arm swings in an arc and tilts its hand. How could connected bars make the hand stay almost level—and why might reaching higher make the whole robot easier to tip?
+
+Think First: Draw a four-sided linkage and predict which lines remain parallel as it moves. Then rank a swing arm, 4-bar, 6-bar, chain-bar, and scissor lift by expected reach and complexity.
+
+Concepts: swing arms; 4-bar and 6-bar parallelogram linkages; chain-bar; scissor linkage; double-reverse 4-bar as extension; range/path; maintaining end-effector orientation; gearing and chain transfer; bracing; center of mass; torque and rubber-band assistance.
+
+Learn / video targets, ranked:
+1. NEW: clear VEX IQ 4-bar/6-bar/chain-bar comparison animation or build demonstration.
+2. NEW: VEX IQ Grabber/scissor-linkage motion lesson.
+3. NEW: general four-bar linkage visual that makes parallel motion obvious.
+4. Reuse "Clawbot Assembly" for an accessible 4-bar application.
+Video search types/queries: "VEX IQ 4 bar 6 bar chain bar lift"; "VEX IQ scissor lift Grabber"; "four bar linkage animation robot arm kids".
+
+Connect the Dots: Linkages constrain a path rather than merely rotating one beam. Parallel bars can preserve manipulator angle; adding stages increases reach but also mass, flex, collision zones, torque demand, and tipping risk. Chain-bar transmits orientation over distance; scissor motion converts direction and multiplies travel with its own stability costs.
+
+Try It: Build a small free-moving 4-bar model and a simple swing-arm model. Attach a paper "bag tray," move both through three heights, photograph tilt, and add one test weight; use the evidence to recommend a lift family for one Level Up goal.
+Rubric: 1 = builds/copies a linkage without measuring behavior; 2 = compares orientation and reach at three positions; 3 = explains the constraint, torque/stability tradeoffs, and recommends a design based on goal height, shortcut fit, and measured behavior.
+
+Reflect:
+- What if the 6-bar reaches L3 but needs twice the alignment time—how would you judge it?
+- Where would you add bracing without blocking the linkage?
+
+Existing site videos to reuse: Clawbot Assembly; Clawbot Tutorial; Hero Bot Breakdown (comparison only).
+New videos needed: Yes. Research brief D9 in Part 3.
+
+
+DAY 10 — RELEASE ENERGY AT EXACTLY THE RIGHT MOMENT
+Phase: Week 2 / Catapults, shooters, ratchets, and rubber bands
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A motor cannot flick a Bean Bag far enough directly, but a rubber-band catapult can. Where was the energy waiting, and how does the mechanism decide when to let it go?
+
+Think First: Sketch a cycle with four labels: load, store, hold, release. Predict what changes distance more: extra band stretch, launch angle, or release timing—and say how you would test only one.
+
+Concepts: elastic potential energy; rubber bands; catapult/shooter cycle; latch and ratchet; pawl; one-way motion; hard stops; release timing; launch consistency; trajectory; gear ratio during reset; safety and legal design; comparison with lifts/intakes for Level Up.
+
+Learn / video targets, ranked:
+1. Reuse "Ratchet + Catapult" for mechanism logic.
+2. Reuse "Catapult Launcher" for stored-energy application.
+3. Reuse "Shooting Robot Step-by-Step Starter" for approachable VEX IQ construction.
+4. Reuse "Shooting Robot Step-by-Step" only if time and age fit remain strong.
+Video search types/queries: no new research required; optional verification search "VEX IQ catapult ratchet rubber band explanation".
+
+Connect the Dots: A motor can load energy slowly into elastic bands, a ratchet can prevent backward unwinding, and a release can deliver energy quickly. Consistency depends on returning to the same loaded position, angle, object placement, and release event—not merely using more bands.
+
+Try It: Build a low-energy tabletop lever launcher or inspect an existing VEX catapult. Mark a safe launch zone; run three trials at each of two controlled settings and measure landing spread, not just maximum distance. Never aim at a person and use adult-approved band tension.
+Rubric: 1 = launches once without a controlled setting; 2 = identifies load/store/hold/release and records repeated trials; 3 = compares averages and consistency, explains the ratchet/release role, and argues with evidence whether a shooter belongs in Team 295U's Level Up concept.
+
+Reflect:
+- What if the farthest launch is also the least repeatable—is it the best competition setting?
+- How could a hard stop change both safety and release consistency?
+
+Existing site videos to reuse: Ratchet + Catapult; Catapult Launcher; Shooting Robot Step-by-Step Starter; Shooting Robot Step-by-Step.
+New videos needed: No.
+
+
+DAYS 11-30
+==========
+
+DAY 11 — UNBOX FLOP LIKE A SYSTEMS ENGINEER
+Phase: Week 3 / Phase C: Build, analyze, test, and improve Flop
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): The same pile of parts can become a robot that drives, lifts, intakes, scores, or fails quietly because one tiny spacer is missing. Before building, how can you tell which parts will become which robot jobs?
+
+Think First: Sort the parts you expect Flop to use into four guessed groups: drive, arm, intake, electronics, and structure. Circle the parts you cannot name yet and predict which group they probably support.
+
+Concepts: kit familiarity; official build instructions as a map; subsystem identification; drivetrain, arm, intake, Brain, Controller, battery, motors, sensors, shafts, collars, gears, wheels, beams, plates, pins, standoffs, spacers; build trays and part staging; checking inventory without losing momentum.
+
+Learn / video targets, ranked:
+1. Reuse "VEX IQ 2nd Gen Kit Walkthrough" for part recognition before touching the Flop instructions.
+2. Reuse "What's in the Box" as a fast visual inventory check.
+3. Reuse "Getting Started with VEX IQ Gen 2" for Brain, Controller, battery, and system setup context.
+4. Reuse "Flop Part 1" only as a short preview of how individual parts become robot subsystems.
+Video search types/queries: no new research required; use the official Flop 3D build instructions as the main non-video source.
+
+Connect the Dots: A build instruction is not just a recipe; it is a sequence of subsystem decisions. If Arian can name what each part is doing before it disappears into the robot, he will debug faster later because he knows whether a problem belongs to structure, motion, power, control, or game interaction.
+
+Try It: Create a "Flop subsystem map" before building. For each staged part group, write the likely subsystem, motion it supports, and one failure that part could prevent. Then open the official instructions and update the guesses in a second color as evidence appears.
+Rubric: 1 = sorts parts mostly by shape or color without explaining robot jobs; 2 = identifies the major Flop subsystems and labels at least ten parts by function; 3 = updates predictions from the instructions and explains how at least three small parts prevent friction, flex, slipping, or electrical trouble.
+
+Reflect:
+- Which small part seems least important at first but could stop a whole subsystem from working?
+- What evidence tells you whether a part belongs to the drivetrain, arm, intake, electronics, or structure?
+
+Existing site videos to reuse: VEX IQ 2nd Gen Kit Walkthrough; What's in the Box; Getting Started with VEX IQ Gen 2; Flop Part 1.
+New videos needed: No.
+
+
+DAY 12 — BUILD FLOP WITHOUT RUSHING PAST THE EVIDENCE
+Phase: Week 3 / Phase C: Build, analyze, test, and improve Flop
+Target time: 60-90 minutes
+
+Hook (Socratic puzzle): Two students follow the same official instructions. One robot drives smoothly; the other binds, leans, and drops parts. If the instructions were identical, where did the difference enter the build?
+
+Think First: Before building, write three checkpoints where you predict mistakes are most likely: shaft capture, motor orientation, wire routing, gear alignment, spacing, frame squareness, or something else. Explain why each checkpoint matters.
+
+Concepts: following official instructions; patience and order; step verification; orientation; symmetry; shaft collars and spacers; gear mesh; motor ports and labels; cable routing; build checkpoints; peer/adult inspection without adult takeover; documenting corrections.
+
+Learn / video targets, ranked:
+1. Reuse "Flop Part 1" for the first build sequence and orientation cues.
+2. Reuse "Flop Part 2" for completing the robot and checking final subsystem placement.
+3. Reuse "Build Phase: Building Flop" as an alternate build perspective if a step is unclear.
+4. Reuse "HEROBOT FLOP from Instructions" for a fast reality check against the official 3D instructions.
+Video search types/queries: no new research required; use the official Flop 3D build instructions as the source of truth.
+
+Connect the Dots: Building is the first engineering test. A correct-looking robot can still hide friction, reversed motors, unsupported shafts, or pin stress; a good builder pauses after each subsystem, spins moving parts by hand, checks symmetry, labels ports, and records corrections instead of treating mistakes as embarrassment.
+
+Try It: Build Flop from the official instructions with a checkpoint sheet. At the end of every major subsystem, perform a "look, wiggle, spin, compare" check: look at orientation, wiggle for unwanted looseness, spin moving shafts by hand, and compare left/right symmetry or the 3D model. Record every correction.
+Rubric: 1 = completes some build steps but skips checks or relies on an adult to find errors; 2 = follows instructions in order and records at least three useful checkpoints/corrections; 3 = completes or meaningfully advances the build with documented self-checks, explains one caught mistake, and leaves the robot ready for subsystem analysis.
+
+Reflect:
+- When did going slowly save time later?
+- Which type of mistake is hardest to notice from the picture alone?
+
+Existing site videos to reuse: Flop Part 1; Flop Part 2; Build Phase: Building Flop; HEROBOT FLOP from Instructions.
+New videos needed: No.
+
+
+DAY 13 — WHAT DOES FLOP'S DRIVETRAIN REVEAL?
+Phase: Week 3 / Phase C: Build, analyze, test, and improve Flop
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): Flop can move across the field, but what hidden choices are inside that movement? If you only watched it drive for 20 seconds, could you infer its wheel type, motor allocation, turning behavior, and likely weaknesses?
+
+Think First: Before watching any explanation, lift Flop safely, turn each wheel by hand, and sketch the drivetrain from above. Predict whether it will prefer straight paths, tight turns, pushing, or careful alignment.
+
+Concepts: drivetrain subsystem analysis; wheelbase and track width; wheel type and diameter; motor count; gear train observation; tank/skid behavior; turning scrub; center of mass during driving; motor ports and controller mapping; inspection by evidence rather than assumptions.
+
+Learn / video targets, ranked:
+1. Reuse "Hero Bot Breakdown" to identify Flop's major subsystems and compare observed drivetrain claims against the real robot.
+2. Reuse "First Robot Build Standard Drive Base" for standard drive-base structure and why alignment matters.
+3. Reuse "Code 2- and 4-Motor Drivetrain" only as a preview of how mechanical motor allocation later affects code.
+4. NEW: short VEX IQ or Level Up clip that specifically comments on Flop's drivetrain strengths, limits, or early-season modifications.
+Video search types/queries: "VEX IQ Flop drivetrain analysis"; "VIQRC Level Up Flop Hero Bot drive base"; "VEX IQ Flop modifications drivetrain"; "VEX IQ Level Up Hero Bot Flop review".
+
+Connect the Dots: A drivetrain is a bundle of choices, not merely four wheels. Flop's drive behavior will reveal how much traction, turning scrub, rigidity, and motor power it has; those observations decide whether the driver should favor long straight paths, careful pivots, short corrections, or future mechanical changes.
+
+Try It: Run three drivetrain tests with Flop: straight-line drift over a fixed distance, square-turn accuracy, and a controlled push or ramp/resistance test if safe. Record the setup, battery level, controller behavior, and result. Change nothing between trials except the test itself.
+Rubric: 1 = drives Flop and gives a general opinion; 2 = completes three repeatable tests and records observations; 3 = explains the results using drivetrain geometry, friction, motor allocation, and build quality, then names one drivetrain improvement or driver habit to test later.
+
+Reflect:
+- What evidence would convince you that a driving problem is mechanical instead of driver-control code?
+- Which Level Up path would you avoid until Flop proves it can drive that path repeatably?
+
+Existing site videos to reuse: Hero Bot Breakdown; First Robot Build Standard Drive Base; Code 2- and 4-Motor Drivetrain.
+New videos needed: Yes. Research brief D13 in Part 3.
+
+
+DAY 14 — WHAT DOES FLOP'S ARM AND INTAKE REVEAL?
+Phase: Week 3 / Phase C: Build, analyze, test, and improve Flop
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A mechanism can pick up a Bean Bag once and still be a poor scorer. What must Flop's arm and intake do repeatedly, and what clues show whether each mechanism is forgiving or fragile?
+
+Think First: Without powering the robot first, move Flop's arm and intake by hand if safe. Predict where friction, flex, gear load, bag alignment, or release trouble will appear.
+
+Concepts: mechanism inspection; arm path; intake direction; powered versus passive control; compression and funneling; torque load; gear ratio clues; motor ports; hard stops; one-bag possession; release reliability; interaction between arm height, robot stability, and driver accuracy.
+
+Learn / video targets, ranked:
+1. Reuse "Hero Bot Breakdown" for the intended job of Flop's arm and intake.
+2. Reuse "Flop Part 2" to revisit the arm/intake build sequence and check for assembly-dependent problems.
+3. Reuse "Opening the Claw" only to compare mechanism control ideas, not because Flop uses the same mechanism.
+4. NEW: VEX IQ Level Up or Flop-specific arm/intake analysis showing pickup, carry, lift, and release behavior on real Bean Bags.
+Video search types/queries: "VEX IQ Flop arm intake analysis"; "VIQRC Level Up Flop intake Bean Bag"; "VEX IQ Level Up Hero Bot Flop scoring"; "VEX IQ Flop arm motor intake motor".
+
+Connect the Dots: An intake reduces the driver's alignment burden only if it guides and controls the bag consistently. An arm only scores reliably if its path, torque, stopping position, and robot balance match the target goal; watching the mechanism fail is useful because each failure points to geometry, friction, speed, or driver-positioning evidence.
+
+Try It: Run a four-step mechanism test: approach a Bean Bag, collect it, carry it through a short turn, and release/score it at a chosen target. Repeat five times from the same starting mark. Record where each failure occurs and whether it is intake, arm, drive alignment, or release.
+Rubric: 1 = demonstrates one pickup or score without repeat data; 2 = runs five trials and identifies the failure step; 3 = calculates success rate, explains the likely mechanical cause, and proposes one geometry, speed, or driver-positioning change to test.
+
+Reflect:
+- Does Flop's mechanism forgive bad alignment, or does the driver have to be very precise?
+- Which is more important first: a higher score target or a more repeatable pickup-and-release cycle?
+
+Existing site videos to reuse: Hero Bot Breakdown; Flop Part 2; Opening the Claw; Clawbot Assembly (optional comparison).
+New videos needed: Yes. Research brief D14 in Part 3.
+
+
+DAY 15 — IMPROVE ONE THING ON FLOP
+Phase: Week 3 / Phase C: Build, analyze, test, and improve Flop
+Target time: 60 minutes
+
+Hook (Socratic puzzle): If Flop misses a score, should you rebuild the intake, change the arm, practice driving, alter code, or do nothing until more data exists? How can one improvement beat five guesses?
+
+Think First: Choose one problem from Days 13-14 and write a claim: "I think this happens because..." Then write the smallest change that could test that claim without changing the rest of the robot.
+
+Concepts: iterative design; one-variable testing; baseline data; modification choice; failure mode; mechanism geometry; friction reduction; bracing; driver-positioning change; speed limiting; legal and size checks; documenting before/after evidence; knowing when not to modify.
+
+Learn / video targets, ranked:
+1. Reuse "How to Design and Build" for the design-process mindset.
+2. Reuse "Exploring Robot Design" for comparing ideas before committing parts.
+3. Reuse "Simple Robot 100 Points" or "Kickoff First Designs" only to show that simple, tested ideas can outperform complicated guesses.
+4. NEW: VEX IQ engineering design process or Hero Bot modification video focused on controlled testing rather than showing a finished answer.
+Video search types/queries: "VEX IQ engineering design process iteration"; "VEX IQ Hero Bot modification controlled test"; "VEX IQ Level Up Flop improvements"; "VEX IQ robot one variable testing".
+
+Connect the Dots: Iteration is not random upgrading. A useful change starts with a measured baseline, changes one variable, repeats the same test, and compares evidence; if the improvement helps one metric but hurts another, the notebook must capture the tradeoff instead of hiding it.
+
+Try It: Improve one thing on Flop: friction, bracing, intake guide, arm stop, driver-control speed, wire routing, or scoring alignment. Run the exact same before/after test with at least five trials each. Keep the old result visible and write whether the change should stay.
+Rubric: 1 = changes the robot based on preference and declares it better; 2 = uses a baseline and after-test to compare one variable; 3 = repeats trials, records success rate or time, explains the tradeoff, checks legality/size, and decides whether to keep, revise, or revert the change.
+
+Reflect:
+- What result would prove your favorite improvement did not actually help?
+- Why might a slower robot or mechanism score more points in a real match?
+
+Existing site videos to reuse: How to Design and Build; Exploring Robot Design; Simple Robot 100 Points; Kickoff First Designs.
+New videos needed: Yes. Research brief D15 in Part 3.
+
+
+DAY 16 — DRIVE STRAIGHT, TURN SQUARE
+Phase: Week 4 / Phase D: Drive precisely and turn data into strategy
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A robot that is fast but crooked may lose to a slower robot that stops exactly where planned. What makes "drive forward" and "turn 90 degrees" harder than they sound?
+
+Think First: Place two tape lines on the floor or field. Predict which will cause more error: starting angle, joystick smoothness, wheel friction, battery level, or robot weight distribution. Rank them before driving.
+
+Concepts: precision driving; straight-line drift; square turns; acceleration and deceleration; joystick control; tank versus arcade feel; field reference marks; battery consistency; drivetrain trim by practice or code; measurement tables; repeatability over best single attempt.
+
+Learn / video targets, ranked:
+1. Reuse "5 Tips to Improve Driving" for driver-control habits and practice mindset.
+2. Reuse "Drive and Code a VEX IQ Robot" for connecting human control to robot response.
+3. Reuse "Code 2- and 4-Motor Drivetrain" as a short look at control mappings if drift seems code-related.
+4. NEW: VEX IQ driving drill video specifically demonstrating straight-line and 90-degree turn practice with measured improvement.
+Video search types/queries: "VEX IQ driving drills straight turn"; "VEX IQ driver practice 90 degree turns"; "VEX IQ precision driving tips"; "VEX IQ tank drive arcade drive practice".
+
+Connect the Dots: Precision is a skill and a measurement problem. The driver learns by turning vague mistakes into repeatable numbers: distance from line, turn angle error, time, corrections, and consistency across trials.
+
+Try It: Create a straight-and-square drill: drive forward to a line, stop with the front axle on the mark, turn 90 degrees, drive to a second mark, and stop. Run ten trials and record stop error, turn error, and number of corrections.
+Rubric: 1 = completes the path but records only a best run; 2 = records ten trials and identifies the most common error; 3 = uses the data to change one driving habit or controller setting, reruns the drill, and explains whether consistency improved.
+
+Reflect:
+- Why is the average run often more useful than the best run?
+- What driver habit creates the same kind of error again and again?
+
+Existing site videos to reuse: 5 Tips to Improve Driving; Drive and Code a VEX IQ Robot; Code 2- and 4-Motor Drivetrain.
+New videos needed: Yes. Research brief D16 in Part 3.
+
+
+DAY 17 — LINE UP AND ALIGN
+Phase: Week 4 / Phase D: Drive precisely and turn data into strategy
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A robot can arrive near the goal and still fail because it approaches from the wrong angle. What field clues could help the driver line up the same way every time?
+
+Think First: Pick one Level Up target and draw three possible approach paths. Mark where the driver should look: robot corner, wheel, intake edge, field line, wall, goal post, or bag position.
+
+Concepts: repeatable positioning; alignment references; approach angle; bumper/wall contact as a reference; intake centering; sight lines; staging marks; path correction; driver station perspective; using field geometry without relying on luck.
+
+Learn / video targets, ranked:
+1. Reuse "5 Tips to Improve Driving" for practice habits and driver focus.
+2. Reuse "Level Up Game Reveal" only for field visual context and target locations.
+3. Reuse "Hero Bot Breakdown" to connect alignment demands to Flop's intake and arm geometry.
+4. NEW: VEX IQ field navigation or alignment drill video showing repeatable approach marks and driver sight lines.
+Video search types/queries: "VEX IQ driver alignment drills"; "VEX IQ field navigation practice"; "VEX IQ line up scoring robot driver tips"; "VIQRC Level Up driving alignment".
+
+Connect the Dots: Good drivers do not merely aim at a goal; they build a repeatable setup. If the same robot corner, wheel, or intake edge reaches the same field reference at the same angle, the mechanism has a much easier problem to solve.
+
+Try It: Design one alignment routine for Flop: start from a fixed mark, drive to a chosen field reference, square up, collect or place one Bean Bag, and retreat. Run eight trials, recording whether the miss came from path, angle, distance, or mechanism timing.
+Rubric: 1 = tries to score from different starts without knowing why results change; 2 = uses a fixed start and records alignment failure types; 3 = chooses a field reference, improves one approach cue, and shows better repeatability across a second set of trials.
+
+Reflect:
+- Which is more repeatable for you: lining up by the robot's front, a wheel, an intake edge, or a field object?
+- When should a driver intentionally touch a wall or field element for alignment, and when could that waste time?
+
+Existing site videos to reuse: 5 Tips to Improve Driving; Level Up Game Reveal; Hero Bot Breakdown.
+New videos needed: Yes. Research brief D17 in Part 3.
+
+
+DAY 18 — DESIGN A 60-SECOND SKILLS RUN
+Phase: Week 4 / Phase D: Drive precisely and turn data into strategy
+Target time: 60 minutes
+
+Hook (Socratic puzzle): In Driver Skills, a risky high-value path might score 20 points once, while a safe path scores fewer points three times. Which one wins after 60 seconds?
+
+Think First: Before driving, list every scoring action Flop can do today, not someday. Estimate time, success rate, and point value for each. Circle the action that is most reliable, not most exciting.
+
+Concepts: 60-second skills planning; cycle time; success rate; expected value; route ordering; reset/recovery plan; one-bag possession; field traffic absent in skills; balancing high-value goals with reliable low-risk points; using current manual scoring; practice data as strategy evidence.
+
+Learn / video targets, ranked:
+1. Reuse "Game Manual Breakdown" only after verifying the current manual version and exact scoring.
+2. Reuse "Level Up Game Reveal" for field and scoring-object context.
+3. Reuse "5 Tips to Improve Driving" for driver consistency under time pressure.
+4. NEW: current VIQRC Level Up skills strategy video focused on beginner/reliable routes, not elite-only designs.
+Video search types/queries: "VIQRC Level Up skills strategy beginner"; "VEX IQ Level Up driving skills route"; "VEX IQ Level Up robot skills strategy"; "VIQRC Level Up 60 second skills".
+
+Connect the Dots: Strategy is not the biggest possible score on paper; it is the best expected score for the robot and driver today. A 60-second plan must include travel time, setup time, failure recovery, and the current scoring rules.
+
+Try It: Build a one-minute skills plan with three route options: safe, medium, and stretch. For each, estimate score, time, and failure risk. Then run the safe route twice with a timer and update the plan using real data.
+Rubric: 1 = writes a route with no time or reliability estimate; 2 = compares three routes and tests one with a timer; 3 = updates expected score from evidence, includes a recovery rule, and chooses a competition-ready first route with manual-based scoring.
+
+Reflect:
+- Which action should be repeated because it is reliable, even if it is not the highest-value action?
+- What should the driver do after a miss: retry immediately, abandon, or switch route?
+
+Existing site videos to reuse: Game Manual Breakdown; Level Up Game Reveal; 5 Tips to Improve Driving.
+New videos needed: Yes. Research brief D18 in Part 3.
+
+
+DAY 19 — WIN THE MATCH WITH AN ALLIANCE PLAN
+Phase: Week 4 / Phase D: Drive precisely and turn data into strategy
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): Two good robots can get in each other's way and score less than one organized pair. What must alliance partners decide before the match starts?
+
+Think First: Imagine Flop is paired with a faster robot that scores differently. Write three roles Flop could play: collector, low-goal scorer, high-goal assister, traffic controller, endgame cleaner, or backup plan. Which role avoids collisions?
+
+Concepts: Teamwork Challenge strategy; alliance communication; role assignment; field zones; first 10 seconds; traffic lanes; complementary mechanisms; verbal match plan; contingency if partner fails; current manual constraints; respectful collaboration; scouting observations.
+
+Learn / video targets, ranked:
+1. Reuse "Game Manual Breakdown" after current-manual verification for match rules and scoring constraints.
+2. Reuse "Level Up Game Reveal" for field zones and scoring targets.
+3. Reuse "Exploring Robot Design" to recognize how different robots suggest different alliance roles.
+4. NEW: VIQRC Level Up teamwork strategy or match-analysis video showing alliance roles, traffic, and communication.
+Video search types/queries: "VIQRC Level Up teamwork strategy"; "VEX IQ Level Up teamwork match strategy"; "VEX IQ alliance roles driver meeting"; "VIQRC teamwork challenge strategy beginner".
+
+Connect the Dots: Teamwork strategy rewards complementary jobs. A reliable robot with a clear role can help an alliance more than a robot trying to do every task; pre-match communication turns two separate drivers into one 60-second system.
+
+Try It: Create two alliance scripts for Flop: one with a fast low-goal partner and one with a high-reach partner. Each script must include starting location, first route, field zone, callouts, collision-avoidance rule, and backup plan. Practice one script with cones or taped "partner path" markers.
+Rubric: 1 = lists what Flop will do without considering a partner; 2 = assigns roles and routes for two partner types; 3 = tests a traffic plan, identifies a collision risk, and revises the script using time or scoring evidence.
+
+Reflect:
+- What information should you ask an alliance partner before choosing a route?
+- When is it smarter to let the partner score while Flop clears space or collects?
+
+Existing site videos to reuse: Game Manual Breakdown; Level Up Game Reveal; Exploring Robot Design.
+New videos needed: Yes. Research brief D19 in Part 3.
+
+
+DAY 20 — DRIVER PRACTICE DRILLS AND LOGBOOK
+Phase: Week 4 / Phase D: Drive precisely and turn data into strategy
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): If a driver says, "I practiced for an hour," does that prove improvement? What data would show the practice actually made the robot score better?
+
+Think First: Choose one measurable weakness from Days 16-19. Write how to measure it today and how many trials would be enough to trust the result.
+
+Concepts: deliberate practice; drill design; baseline, repetition, feedback, revision; time trials; success rate; score per minute; driver fatigue; battery tracking; engineering notebook/logbook; graphs; evidence-based goals; separating driver errors from robot errors.
+
+Learn / video targets, ranked:
+1. Reuse "5 Tips to Improve Driving" for practice structure.
+2. Reuse "Award Winning Notebook" for documenting improvement with evidence.
+3. Reuse "Full Inspection Guide" only as a reminder that competition readiness includes reliable hardware.
+4. NEW: VEX IQ driver-practice or engineering-notebook video that demonstrates logging timed drills and improvement data.
+Video search types/queries: "VEX IQ driver practice drills logbook"; "VEX IQ engineering notebook driver practice data"; "VEX IQ robotics practice schedule drills"; "VEX IQ scoring drill record sheet".
+
+Connect the Dots: Practice becomes engineering when it creates evidence. A good logbook turns vague effort into a trend: what was tried, what changed, what improved, what stayed weak, and what the next practice should attack.
+
+Try It: Run a three-round practice cycle: baseline drill, focused practice, retest. Use the same drill and same scoring method each time. Add a notebook entry with a table, one graph or tally, a driver observation, and a next-practice goal.
+Rubric: 1 = practices without a baseline or written result; 2 = records before/after data for one drill; 3 = shows a measurable trend, explains the cause of improvement or plateau, and creates a next drill based on the weakest evidence.
+
+Reflect:
+- What number best describes today's improvement: time, success rate, score, corrections, or consistency?
+- How can you tell the difference between a robot that improved and a driver who simply learned to work around a flaw?
+
+Existing site videos to reuse: 5 Tips to Improve Driving; Award Winning Notebook; Full Inspection Guide.
+New videos needed: Yes. Research brief D20 in Part 3.
+
+
+DAY 21 — VEXCODE IQ SETUP AND FIRST PROGRAM
+Phase: Week 5 / Phase E: Driver-control code and sensor thinking
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A robot can be mechanically correct and still do nothing because the Brain is not paired, the wrong device is configured, or the program is not downloaded. Where can a first program fail before the robot ever moves?
+
+Think First: Draw a chain from laptop/tablet to VEXcode to Brain to motor to wheel. Mark every link where a setup mistake could break the chain.
+
+Concepts: VEXcode IQ interface; Blocks project; Brain connection; firmware/update awareness; device configuration; motor ports; Controller pairing; download and run; project naming; first sequence; safe test stand; documenting screenshots.
+
+Learn / video targets, ranked:
+1. Reuse "VEXcode IQ Getting Started" for the software environment.
+2. Reuse "Downloading and Running" for the core workflow.
+3. Reuse "Example Projects" to show that starter code can teach structure without replacing understanding.
+4. Reuse "VEXcode IQ Blocks Tutorial Beginner" for a second beginner-friendly coding view.
+Video search types/queries: no new research required; verify VEXcode version and device OS instructions when teaching.
+
+Connect the Dots: Programming begins with a reliable communication chain. If the Brain, Controller, motors, ports, and project configuration match the physical robot, code can become an experiment; if they do not, every debugging guess becomes noisy.
+
+Try It: Create a first VEXcode IQ Blocks project for Flop or BaseBot. Configure at least the drivetrain or one motor, download it, run a short safe movement, and capture a screenshot of the project plus a notebook note describing each setup step.
+Rubric: 1 = opens VEXcode but needs adult help to run the program; 2 = downloads and runs a simple program with correct device setup; 3 = explains the full software-to-robot chain and fixes or documents one setup issue using evidence.
+
+Reflect:
+- Which setup error would look like a code problem even though the code is fine?
+- Why should the first program be tiny instead of impressive?
+
+Existing site videos to reuse: VEXcode IQ Getting Started; Downloading and Running; Example Projects; VEXcode IQ Blocks Tutorial Beginner.
+New videos needed: No.
+
+
+DAY 22 — CODE THE DRIVETRAIN
+Phase: Week 5 / Phase E: Driver-control code and sensor thinking
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): The same two joysticks can make a robot feel smooth, twitchy, backward, or impossible. How can code change the driver's experience without changing the wheels?
+
+Think First: Predict how tank drive and arcade drive differ in the driver's brain. Which one would help you drive straight? Which one would help quick turns? Why?
+
+Concepts: drivetrain device setup; 2-motor and 4-motor groups; left/right motor direction; tank drive; arcade drive; controller axis mapping; deadband; speed scaling; motor velocity; brake/coast/hold; driver preference as testable evidence.
+
+Learn / video targets, ranked:
+1. Reuse "Code 2- and 4-Motor Drivetrain" for drivetrain configuration and driver-control examples.
+2. Reuse "Drive and Code a VEX IQ Robot" for connecting code to robot driving.
+3. Reuse "Basic BaseBot Blocks Programming" for beginner Blocks structure.
+4. Reuse "VEXcode IQ Blocks Tutorial Beginner" for backup if the first explanation moves too quickly.
+Video search types/queries: no new research required unless VEXcode UI changes substantially.
+
+Connect the Dots: Driver-control code is part of the robot design. Tank and arcade mappings turn human joystick input into left/right motor commands; speed limits, deadbands, and brake modes can make the same mechanical robot easier or harder to score with.
+
+Try It: Program and test two driver modes or settings: tank versus arcade, or full speed versus reduced speed. Use the same alignment drill from Day 16 and record time, corrections, and success rate for each.
+Rubric: 1 = makes the robot drive but cannot explain the mapping; 2 = compares two control settings with drill data; 3 = explains how joystick axes become motor commands, chooses a setting based on evidence, and documents motor-port/direction fixes.
+
+Reflect:
+- Which control mode makes the robot easier to place accurately, not merely faster?
+- What code setting could hide a mechanical drivetrain problem, and why would that matter?
+
+Existing site videos to reuse: Code 2- and 4-Motor Drivetrain; Drive and Code a VEX IQ Robot; Basic BaseBot Blocks Programming; VEXcode IQ Blocks Tutorial Beginner.
+New videos needed: No.
+
+
+DAY 23 — CODE THE MECHANISMS
+Phase: Week 5 / Phase E: Driver-control code and sensor thinking
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): If the driver must think about driving, intaking, lifting, and releasing at the same time, which buttons should do what? How can code make a mechanism easier to control under pressure?
+
+Think First: Draw the Controller and assign buttons for intake in/out, arm up/down, and emergency stop or hold. Predict which controls will be easy to remember during a match.
+
+Concepts: mechanism motor configuration; button events; while-button control; motor spin direction; velocity limits; hold/brake/coast behavior; intake in/out; arm up/down; motor stopping; preventing overdriving; Controller ergonomics; matching code names to physical labels.
+
+Learn / video targets, ranked:
+1. Reuse "Opening the Claw" for button-controlled mechanism behavior.
+2. Reuse "Coding Huey Pinhead Clawbot" for a Clawbot-style mechanism coding walkthrough.
+3. Reuse "Clawbot Build + Code" as a physical-to-code comparison.
+4. NEW: VEX IQ Blocks video focused on arm and intake motor controls for driver operation, preferably using a Hero Bot or intake robot.
+Video search types/queries: "VEX IQ Blocks arm motor controller buttons"; "VEX IQ intake motor driver control code"; "VEXcode IQ control arm intake buttons"; "VEX IQ Hero Bot mechanism code".
+
+Connect the Dots: Mechanism code should reduce driver thinking. Clear button mapping, correct motor direction, appropriate speed, and reliable stop behavior let the driver focus on the field instead of remembering which way each motor spins.
+
+Try It: Program Flop's arm and intake controls. Test each button with the robot lifted safely first, then run five pickup-lift-release cycles on the field. Change only one control setting if a problem appears, such as speed, direction, or stop mode.
+Rubric: 1 = gets one mechanism moving but controls are confusing or undocumented; 2 = maps all required buttons and completes repeated cycles; 3 = uses cycle evidence to tune speed/stop behavior, labels ports/buttons in the notebook, and explains why the final mapping is match-friendly.
+
+Reflect:
+- Which button choice reduces driver mistakes the most?
+- When should a mechanism motor coast, brake, or hold?
+
+Existing site videos to reuse: Opening the Claw; Coding Huey Pinhead Clawbot; Clawbot Build + Code.
+New videos needed: Yes. Research brief D23 in Part 3.
+
+
+DAY 24 — INTRO TO SENSORS: WHAT DOES THE ROBOT KNOW?
+Phase: Week 5 / Phase E: Driver-control code and sensor thinking
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A driver sees the field, but the robot only gets numbers from devices. What can a Distance Sensor, Optical Sensor, and gyro tell the robot that a timer cannot?
+
+Think First: For each sensor, write one question the robot could answer: "How far?", "What color?", "How turned?", "Did I hit?", or "Is something present?" Then write one thing that sensor still cannot know.
+
+Concepts: sensors as evidence; Distance Sensor; Optical Sensor; inertial/gyro heading; Bumper Switch and Touch LED as optional inputs/outputs; device setup; sensor units; threshold; noise; calibration; sensor placement; data display; using sensors for decisions rather than magic.
+
+Learn / video targets, ranked:
+1. Reuse "Device Setup Sensors" for adding sensors/devices in VEXcode IQ.
+2. Reuse "Programming Sensors" for reading and using sensor values.
+3. Reuse "Sensing Distance" for distance-specific behavior.
+4. Reuse "Code the Optical Sensor" and "Accurately Turn with Gyro" as targeted follow-ups depending on available hardware.
+Video search types/queries: no new research required; select only the sensor videos matching the hardware actually mounted.
+
+Connect the Dots: A sensor does not understand the game; it reports evidence. The programmer decides what number matters, where to place the sensor, when to trust it, and what the robot should do when the reading changes.
+
+Try It: Connect or inspect one available sensor. Display its value on the Brain or in VEXcode, then collect readings for three real situations: near/far object, light/dark/color object, or different headings. Write a threshold rule the robot could use.
+Rubric: 1 = names sensors but records no actual readings; 2 = records readings in three situations and proposes a threshold; 3 = explains what the sensor can and cannot know, identifies noise/placement issues, and writes a useful if/then rule.
+
+Reflect:
+- What sensor reading would be reliable enough to make the robot stop automatically?
+- How could a sensor be correct but placed in the wrong location for the job?
+
+Existing site videos to reuse: Device Setup Sensors; Programming Sensors; Sensing Distance; Code the Optical Sensor; Accurately Turn with Gyro.
+New videos needed: No.
+
+
+DAY 25 — SENSOR-INFORMED DRIVING
+Phase: Week 5 / Phase E: Driver-control code and sensor thinking
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A human driver can overcorrect after the robot drifts. Could the robot quietly help by limiting speed, warning about distance, or keeping turns more consistent?
+
+Think First: Choose one driver problem from Week 4. Write whether a Distance Sensor, Optical Sensor, gyro, or no sensor is most likely to help. Explain what reading would trigger the help.
+
+Concepts: driver assist; sensor-informed control; feedback; thresholds; if/then logic; alerts; speed limiting; heading correction; distance stop; optical alignment; human override; avoiding overautomation; testing assistance against baseline driving.
+
+Learn / video targets, ranked:
+1. Reuse "Programming Sensors" for using sensor values in decisions.
+2. Reuse "Accurately Turn with Gyro" for heading-based repeatability.
+3. Reuse "Sensing Distance" for stopping or slowing near an object/wall.
+4. Reuse "If-Then-Else" for decision logic structure.
+Video search types/queries: no new research required; use current sensor hardware and keep the assist simple.
+
+Connect the Dots: Driver-assist code should solve a specific measured problem. A sensor threshold can help with stopping distance, turn consistency, or warnings, but extra automation can distract the driver unless the assist is predictable and easy to override.
+
+Try It: Build one driver assist: distance-based slow/stop, gyro-based turn cue, optical color cue, or Controller/Touch LED warning. Test the original driver drill with and without the assist and compare success rate or time.
+Rubric: 1 = adds sensor code but does not compare it to baseline; 2 = creates one assist and tests before/after performance; 3 = explains the threshold choice, documents false positives/negatives, and decides whether the assist helps the driver under match pressure.
+
+Reflect:
+- When should the robot make the decision, and when should it only warn the driver?
+- What failure would make a sensor assist less reliable than simple driver practice?
+
+Existing site videos to reuse: Programming Sensors; Accurately Turn with Gyro; Sensing Distance; If-Then-Else; Code the Optical Sensor.
+New videos needed: No.
+
+
+DAY 26 — AUTONOMOUS PROGRAMMING WITH TIME
+Phase: Week 6 / Phase F: Autonomous routines and tournament readiness
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): If you tell the robot to drive for two seconds, will it stop at the same place every time? What invisible conditions might change the distance?
+
+Think First: Predict how battery level, floor friction, robot load, starting angle, and motor speed will affect a time-based autonomous path. Rank the two biggest risks.
+
+Concepts: autonomous sequence; time-based movement; motor velocity; waits; stop commands; repeatability limits; starting position; battery and friction; simple scoring route; debugging one command at a time; comments/procedure naming; safe testing.
+
+Learn / video targets, ranked:
+1. Reuse "Autonomous Programming Step-by-Step" for sequencing movement.
+2. Reuse "Autonomous Coding with BaseBot" for a beginner robot example.
+3. Reuse "Autonomous Programming" as an alternate explanation of action order.
+4. Reuse "Master Procedures" if the routine begins repeating the same drive/turn actions.
+Video search types/queries: no new research required; keep the first autonomous route intentionally small.
+
+Connect the Dots: Time-based autonomous is easy to start and easy to fool. It teaches sequencing, starting position, and command order, but its accuracy depends on conditions that are not measured by the program.
+
+Try It: Program a three-step time-based autonomous route: drive, turn, drive or operate one mechanism. Run five trials from the same start, mark the final location each time, and adjust only one duration or speed before retesting.
+Rubric: 1 = writes a sequence that works once; 2 = repeats five trials and tunes one timing value; 3 = explains variation sources, keeps a versioned record of changes, and produces a route that is reliable enough for a simple autonomous score or setup.
+
+Reflect:
+- Which command caused the largest final error, and how do you know?
+- Why should an autonomous program begin from the exact same physical starting position every time?
+
+Existing site videos to reuse: Autonomous Programming Step-by-Step; Autonomous Coding with BaseBot; Autonomous Programming; Master Procedures.
+New videos needed: No.
+
+
+DAY 27 — SENSOR-BASED AUTONOMOUS
+Phase: Week 6 / Phase F: Autonomous routines and tournament readiness
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A timer says "drive for 1.4 seconds," but a sensor can say "drive until you reach the line, wall, angle, or object." Which instruction is more trustworthy, and when?
+
+Think First: Choose one step from Day 26 that varied too much. Write what sensor evidence could replace time: heading, distance, color, or contact. Predict one new failure the sensor might introduce.
+
+Concepts: sensor feedback; wait until; repeat until; conditional decisions; gyro heading turns; distance-based stop; optical line/color detection; thresholds; calibration; sensor noise; fail-safe timeout; comparing time-based and sensor-based routines.
+
+Learn / video targets, ranked:
+1. Reuse "Sensor-Based Autonomous" for the main concept of feedback-based movement.
+2. Reuse "Accurately Turn with Gyro" for heading-controlled turns.
+3. Reuse "Sensing Distance" for object/wall approaches.
+4. Reuse "Code the Optical Sensor" or "Programming Sensors" depending on selected hardware.
+Video search types/queries: no new research required unless the chosen sensor is not covered by the current library.
+
+Connect the Dots: Sensor-based autonomous can reduce one kind of uncertainty by measuring the world, but it adds a new responsibility: choosing trustworthy thresholds, handling bad readings, and keeping a timeout so the robot does not wait forever.
+
+Try It: Replace one time-based step from Day 26 with a sensor-based condition. Add a timeout or backup stop. Run five trials and compare final position, success rate, and failure type against the time-based version.
+Rubric: 1 = adds a sensor block without proving it changes reliability; 2 = compares sensor-based and time-based versions with repeated trials; 3 = explains threshold, calibration, noise, timeout, and selects the better version for a specific autonomous job.
+
+Reflect:
+- What did the sensor make more repeatable, and what did it make more complicated?
+- How would the autonomous fail if the sensor were unplugged, blocked, or aimed poorly?
+
+Existing site videos to reuse: Sensor-Based Autonomous; Accurately Turn with Gyro; Sensing Distance; Code the Optical Sensor; Programming Sensors.
+New videos needed: No.
+
+
+DAY 28 — DEBUGGING AND ITERATION
+Phase: Week 6 / Phase F: Autonomous routines and tournament readiness
+Target time: 45-60 minutes
+
+Hook (Socratic puzzle): A program fails on the third move. Should you change the third block, the second block, the start position, the motor direction, the sensor threshold, or the robot itself?
+
+Think First: Before editing code, write the exact expected behavior and exact observed behavior for the failed step. Underline the first moment where they differ.
+
+Concepts: debugging method; reproduce the bug; isolate one step; print/display values; Brain screen feedback; motor-port verification; sensor readings; comments; versioning; one-change-at-a-time; rollback; test logs; mechanical versus code failures.
+
+Learn / video targets, ranked:
+1. Reuse "Master Procedures" for organizing repeated actions and making code easier to inspect.
+2. Reuse "If-Then-Else" for debugging decision logic.
+3. Reuse "Device Setup Sensors" for checking configuration when sensor code fails.
+4. NEW: VEXcode IQ debugging video that demonstrates diagnosing wrong ports, wrong motor direction, bad thresholds, or sequence errors.
+Video search types/queries: "VEXcode IQ debugging wrong motor port"; "VEX IQ Blocks debugging sensors"; "VEXcode IQ troubleshooting autonomous"; "VEX IQ programming debug print Brain screen".
+
+Connect the Dots: Debugging is disciplined observation. The goal is not to try edits until the robot behaves; the goal is to find the first false assumption, change one thing, and prove whether that assumption was the cause.
+
+Try It: Choose one bug from driver or autonomous code. Create a debug log with Expected, Observed, First bad step, Hypothesis, One change, Result, and Next change. Use Brain screen output, small test programs, or unplugged-motor checks to isolate the cause.
+Rubric: 1 = changes several blocks and stops when it seems better; 2 = isolates one bug with a written hypothesis and one controlled change; 3 = identifies the root cause with evidence, keeps a rollback path, and explains whether the issue was code, configuration, sensor, build, or driver setup.
+
+Reflect:
+- What was the first moment the robot stopped matching your plan?
+- How can a very small test program be more powerful than staring at the full program?
+
+Existing site videos to reuse: Master Procedures; If-Then-Else; Device Setup Sensors; Programming Sensors.
+New videos needed: Yes. Research brief D28 in Part 3.
+
+
+DAY 29 — TOURNAMENT PREPARATION
+Phase: Week 6 / Phase F: Autonomous routines and tournament readiness
+Target time: 60 minutes
+
+Hook (Socratic puzzle): A robot can score well at home and still lose tournament time because it fails inspection, the battery is uncharged, the notebook is messy, or the team cannot explain its design. What must be ready before the first match?
+
+Think First: Make a tournament failure checklist from memory: robot size, parts legality, battery, tools, spare parts, code, Controller, notebook, schedule, alliance talk, pit behavior, and presentation. Which item would cost the most if forgotten?
+
+Concepts: inspection; current manual check; robot size and legal parts; motor and battery rules; firmware; spare parts and tools; match schedule; queuing; notebook organization; design explanation; judging/presentation; scouting; sportsmanship; pit checklist; driver meeting; pre-match routine.
+
+Learn / video targets, ranked:
+1. Reuse "Full Inspection Guide" for inspection expectations and readiness mindset.
+2. Reuse "Award Winning Notebook" for notebook evidence and judging preparation.
+3. Reuse "Game Manual Breakdown" only after checking it against the current manual.
+4. NEW: VEX IQ tournament-day preparation or judging/interview video appropriate for elementary teams.
+Video search types/queries: "VEX IQ tournament inspection checklist"; "VEX IQ judging interview elementary team"; "VEX IQ competition day tips"; "VEX IQ engineering notebook presentation tips"; "VIQRC Level Up inspection rules".
+
+Connect the Dots: Tournament readiness is an engineering system too. The robot, code, batteries, notebook, team explanation, and match routine all affect performance; the current manual and inspection process define the boundary conditions.
+
+Try It: Run a mock inspection and pit-prep checklist. Measure the robot against current size rules, verify motor count and battery readiness, open the correct program, pack a small repair kit, and practice a two-minute design explanation using notebook evidence.
+Rubric: 1 = checks the robot informally and packs tools from memory; 2 = completes a written inspection/pit checklist and practices a short explanation; 3 = cites current manual constraints, fixes one readiness issue, and gives a clear evidence-based design explanation with roles for team members.
+
+Reflect:
+- What tournament problem can be prevented before leaving home?
+- Which notebook page best proves that Team 295U tested and improved the robot?
+
+Existing site videos to reuse: Full Inspection Guide; Award Winning Notebook; Game Manual Breakdown.
+New videos needed: Yes. Research brief D29 in Part 3.
+
+
+DAY 30 — COMPETE, MEASURE, AND REFLECT
+Phase: Week 6 / Phase F: Autonomous routines and tournament readiness
+Target time: 60-90 minutes
+
+Hook (Socratic puzzle): After a mock tournament, the scoreboard tells only part of the story. What evidence would tell you whether the robot, driver, code, strategy, or teamwork should improve next?
+
+Think First: Before the mock matches, write three success measures besides score: clean pickups, missed alignments, autonomous success, partner collisions, cycle time, recovery decisions, or driver calm. Predict the weakest one.
+
+Concepts: mock tournament; match schedule; skills run; teamwork run; autonomous run; scouting notes; post-match debrief; score versus process evidence; root-cause reflection; celebration without stopping improvement; next design cycle; season goals; current manual verification.
+
+Learn / video targets, ranked:
+1. Reuse "5 Tips to Improve Driving" as a final driver-focus reminder.
+2. Reuse "Award Winning Notebook" to frame evidence-based reflection.
+3. Reuse "Level Up Game Reveal" only as a visual reset on the game jobs being measured.
+4. NEW: VEX IQ match debrief, tournament reflection, or beginner mock-tournament video that shows how teams review results constructively.
+Video search types/queries: "VEX IQ match debrief reflection"; "VEX IQ mock tournament practice"; "VEX IQ robotics team post match analysis"; "VEX IQ beginner tournament reflection"; "VIQRC teamwork skills practice match review".
+
+Connect the Dots: Competition is a concentrated test, not the end of learning. The useful question after each run is not "Did we win?" but "What evidence shows the highest-leverage next improvement?"
+
+Try It: Run a mini event: one Driver Skills run, one Autonomous Coding Skills run if available, and two Teamwork-style practice matches with a partner or taped partner path. After each run, record score, main failure, best success, and next change. End by choosing the first Week 7 improvement.
+Rubric: 1 = completes matches and remembers a few moments; 2 = records score and one useful debrief note after each run; 3 = separates robot, driver, code, and strategy evidence, identifies the highest-leverage improvement, and writes a specific next-cycle test plan.
+
+Reflect:
+- Which result surprised you most, and what evidence explains it?
+- If you could improve only one thing before the next tournament, what would it be and how would you test it?
+
+Existing site videos to reuse: 5 Tips to Improve Driving; Award Winning Notebook; Level Up Game Reveal; Game Manual Breakdown (current-version check only).
+New videos needed: Yes. Research brief D30 in Part 3.
+
+
+PART 3: RESEARCH INSTRUCTIONS FOR SUBAGENTS
+===========================================
+
+General research rule
+- Research only days marked "New videos needed: Yes." Keep the final Learn list to 2-4 videos per day. Prefer current VEX IQ, VIQRC, VEXcode IQ, and Level Up videos when they are clear and age-appropriate. A general physics/LEGO video is acceptable only when it explains the mental model better than available VEX videos, and it should be paired with a VEX application video.
+- Avoid videos that contradict the current Game Manual, depend on VRC/VEX V5 parts without clear transfer to IQ, are mostly match hype with no teachable explanation, require expensive non-kit modifications, or move too fast for a fifth-grade beginner.
+- Capture metadata for every candidate: title, channel, video ID/URL, duration, publish date if visible, description excerpt, day fit, exact concept covered, timestamp notes if useful, and any concern such as outdated season/rule references.
+
+Research brief D2 — Parts, shafts, support, and friction
+Exact YouTube search queries:
+- "VEX IQ shafts bushings support friction"
+- "VEX IQ pins connectors standoffs beginner"
+- "VEX IQ building basics shaft collars spacers"
+- "VEX IQ reducing friction axle support"
+- "VEX IQ build tips binding shafts"
+
+What to look for: VEX IQ specific videos showing shafts, collars, bushings, spacers, beams, pins, and two-point support. A general LEGO Technic friction clip is acceptable if it visually shows axle binding and support clearly.
+
+What makes a good video for this day: close-up camera work, beginner vocabulary, before/after examples of free-spinning versus binding assemblies, and practical part names that match the IQ kit.
+
+What to avoid: high-speed build timelapses; VEX V5-only hardware examples; videos that force parts or normalize crooked shafts.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, parts demonstrated, specific friction/support lesson, and why it fits Day 2's axle test rigs.
+
+
+Research brief D3 — Gear ratios, speed, torque, and mechanical advantage
+Exact YouTube search queries:
+- "VEX IQ gear ratio speed torque mechanical advantage"
+- "LEGO gear ratio visual for kids"
+- "VEX IQ M.A.D. Box gears"
+- "VEX IQ speed torque gear ratios"
+- "VEX IQ Key Concepts speed torque mechanical advantage"
+
+What to look for: first validate the seed candidates in Day 3, including title, video ID, age fit, and whether any supplied title/ID mapping is wrong. Then find a visually clear VEX IQ or LEGO explanation of gear ratio tradeoffs.
+
+What makes a good video for this day: shows driver and driven gears, counts teeth, predicts speed/torque direction correctly, and demonstrates load or lift performance rather than only formulas.
+
+What to avoid: videos with incorrect ratio language; advanced drivetrain design without beginner explanation; videos that imply gears create free power.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, seed-candidate validation status, ratio examples shown, and why it fits Day 3's opposite gear-pair experiment.
+
+
+Research brief D4 — Levers, linkages, chain, and rubber-band assistance
+Exact YouTube search queries:
+- "VEX IQ levers mechanical advantage"
+- "three classes of levers LEGO for kids"
+- "VEX IQ chain sprocket arm"
+- "VEX IQ rubber band counterbalance arm"
+- "VEX IQ linkage lever lesson"
+
+What to look for: a verified VEX IQ lever video, a playful lever-class visualization for kids, and VEX IQ examples of chain/sprocket transfer or rubber-band counterbalance. Use non-VEX content only for the basic physics mental model.
+
+What makes a good video for this day: makes effort/load/fulcrum obvious, shows the force-versus-distance tradeoff, and connects the concept to robot arms or scoring mechanisms.
+
+What to avoid: adult lecture-only videos with no visual demo; unsafe rubber-band examples; chain videos focused on unrelated V5 systems.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, lever/linkage/chain/band concept shown, safety concerns, and why it fits Day 4's movable-fulcrum challenge.
+
+
+Research brief D5 — Center of mass, tipping, and bracing
+Exact YouTube search queries:
+- "VEX IQ center of mass tipping robot"
+- "LEGO robot center of gravity experiment"
+- "VEX IQ bracing triangulation strong frame"
+- "VEX IQ robot stability center of gravity"
+- "VEX IQ structure bracing square frame"
+
+What to look for: videos showing a robot or LEGO model tipping because mass moves outside the support area, plus VEX IQ structural bracing examples. A general center-of-mass demo is acceptable if it is visual and child-friendly.
+
+What makes a good video for this day: shows tipping thresholds, support polygon or balance point visually, and explains bracing/triangulation with buildable examples.
+
+What to avoid: crash-only compilations; VRC-only robots without transfer to IQ; videos that recommend adding weight without discussing size, speed, or motor load tradeoffs.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, stability concept shown, bracing method shown, and why it fits Day 5's tower-on-base test.
+
+
+Research brief D6 — Drivetrain steering methods
+Exact YouTube search queries:
+- "VEX IQ drivetrain steering methods X drive H drive"
+- "VEX IQ holonomic omni drive"
+- "omni wheel forces animation for kids"
+- "VEX IQ X drive H drive tank drive"
+- "VEX IQ different steering methods"
+
+What to look for: first validate the seed candidate "Different Steering Methods" and video ID. Then find VEX IQ examples of standard/tank, H-drive, and X-drive, plus a clear omni-wheel force-vector visual if available.
+
+What makes a good video for this day: compares multiple drivetrain architectures side by side, shows wheel arrows or real motion, and explains the motor/traction/complexity tradeoff.
+
+What to avoid: mecanum-only VRC content; videos that call tank and arcade separate mechanical drivetrains; videos that ignore motor-budget consequences.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, drivetrains shown, seed validation status, and why it fits Day 6's force-arrow comparison.
+
+
+Research brief D7 — 2-motor versus 4-motor drivetrains and wheel choice
+Exact YouTube search queries:
+- "VEX IQ 2 motor vs 4 motor drivetrain"
+- "VEX IQ competition drivetrain wheel choice"
+- "VEX IQ traction wheel omni wheel comparison"
+- "VEX IQ motor allocation drivetrain mechanisms"
+- "VEX IQ competition drive base design"
+
+What to look for: VEX IQ competition videos comparing motor counts, wheel selection, traction, turning scrub, and motor allocation. Prefer IQ-specific because the six-motor constraint shapes the lesson.
+
+What makes a good video for this day: explains why a team might choose 2 or 4 drive motors, shows actual robots or diagrams, and connects motor choices to mechanisms, speed, torque, and reliability.
+
+What to avoid: VEX V5 drive-motor advice that assumes different rules; videos that treat "more motors" as automatically better; videos with no discussion of mechanisms.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, motor-count examples, wheel types discussed, and why it fits Day 7's motor-budget proposal.
+
+
+Research brief D8 — Claws, scoops, intakes, compression, and funneling
+Exact YouTube search queries:
+- "VEX IQ intake mechanism compression"
+- "VEX IQ claw scoop intake comparison"
+- "VEX IQ flex wheel intake bean bag"
+- "VEX IQ passive active manipulator"
+- "VEX IQ game object intake funnel"
+
+What to look for: VEX IQ videos showing soft-object or bag-like object intake, compression, funneling, claw/scoop comparisons, and release reliability. Level Up Bean Bag footage is ideal.
+
+What makes a good video for this day: demonstrates off-center approaches, grip/compression, clean release, and the tradeoff between passive simplicity and powered control.
+
+What to avoid: videos that only show a perfect single pickup; intakes for hard balls/cubes with no explanation of transfer to Bean Bags; mechanisms that violate possession constraints.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, manipulator types shown, object type, compression/funneling notes, and why it fits Day 8's five-angle capture test.
+
+
+Research brief D9 — Lifts, four-bars, six-bars, chain-bars, and scissor linkages
+Exact YouTube search queries:
+- "VEX IQ 4 bar 6 bar chain bar lift"
+- "VEX IQ scissor lift Grabber"
+- "four bar linkage animation robot arm kids"
+- "VEX IQ robot arm linkage mechanical advantage"
+- "VEX IQ chain bar lift explanation"
+
+What to look for: VEX IQ lift comparisons and a clear four-bar animation or physical demo. A non-VEX linkage animation is acceptable if it makes parallel motion obvious and is followed by a VEX application.
+
+What makes a good video for this day: shows motion through the full range, explains end-effector orientation, mentions torque/stability tradeoffs, and includes buildable examples or clear diagrams.
+
+What to avoid: advanced custom lift reveals with no explanation; VRC-only metal builds; videos that claim one lift type is always best without matching it to a game job.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, lift types shown, orientation/reach explanation, and why it fits Day 9's swing-arm versus four-bar comparison.
+
+
+Research brief D13 — Flop drivetrain analysis
+Exact YouTube search queries:
+- "VEX IQ Flop drivetrain analysis"
+- "VIQRC Level Up Flop Hero Bot drive base"
+- "VEX IQ Flop modifications drivetrain"
+- "VEX IQ Level Up Hero Bot Flop review"
+
+What to look for: VEX IQ specific, preferably Level Up/Flop footage where the creator points out wheel layout, motor allocation, gearing, turning, traction, or early drivetrain changes. A general drivetrain video can supplement only if it directly clarifies tank/skid behavior.
+
+What makes a good video for this day: shows the real Flop or a close IQ drivetrain, explains how the drivetrain is built and how it behaves, includes driving footage, and helps Arian connect observed drift/turning/pushing behavior to physical design.
+
+What to avoid: pure build timelapses with no drivetrain explanation; videos focused only on elite custom robots; videos that recommend major rebuilds before testing stock Flop.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, whether Flop is actually shown, drivetrain concepts covered, and why it fits Day 13's test-and-analysis challenge.
+
+
+Research brief D14 — Flop arm and intake analysis
+Exact YouTube search queries:
+- "VEX IQ Flop arm intake analysis"
+- "VIQRC Level Up Flop intake Bean Bag"
+- "VEX IQ Level Up Hero Bot Flop scoring"
+- "VEX IQ Flop arm motor intake motor"
+- "VEX IQ Level Up intake mechanism Bean Bag"
+
+What to look for: VEX IQ specific, with real Bean Bag pickup, lift, release, and scoring attempts. General LEGO/mechanism videos are useful only if they show intake compression, funneling, or arm torque in a very visual way.
+
+What makes a good video for this day: shows repeated mechanism cycles, mentions alignment tolerance, reveals where the bag jams or releases cleanly, and discusses the arm/intake as separate subsystems.
+
+What to avoid: videos that only show a final score montage; videos with unclear camera angles; videos that hide failures or present a single lucky pickup as proof.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, mechanism shown, whether failures are visible, and why it supports Day 14's five-trial mechanism test.
+
+
+Research brief D15 — Iterative Flop improvement
+Exact YouTube search queries:
+- "VEX IQ engineering design process iteration"
+- "VEX IQ Hero Bot modification controlled test"
+- "VEX IQ Level Up Flop improvements"
+- "VEX IQ robot one variable testing"
+- "VEX IQ design process test improve robot"
+
+What to look for: VEX IQ or youth robotics videos that model controlled iteration: baseline, hypothesis, one change, retest, evidence. Flop/Level Up is best, but a general IQ design-process video is acceptable if the testing method is explicit.
+
+What makes a good video for this day: the creator explains why a change was made, shows before/after behavior, admits tradeoffs, and keeps the modification small enough for a beginner team to understand.
+
+What to avoid: "top secret" reveal videos with no reasoning; videos that push copying a complete robot; videos that change many variables at once.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, improvement tested, baseline evidence shown, after-test evidence shown, and why it fits Day 15's one-variable rubric.
+
+
+Research brief D16 — Straight and square driving drills
+Exact YouTube search queries:
+- "VEX IQ driving drills straight turn"
+- "VEX IQ driver practice 90 degree turns"
+- "VEX IQ precision driving tips"
+- "VEX IQ tank drive arcade drive practice"
+- "VEX IQ driver skills practice drills"
+
+What to look for: VEX IQ specific driver-practice demonstrations, ideally with drills that can be repeated on a home field or taped floor. General robotics driving videos can supplement only if the drill structure is strong.
+
+What makes a good video for this day: teaches controlled starts/stops, straight-line correction, 90-degree turns, smooth joystick motion, and measurement of consistency rather than only speed.
+
+What to avoid: videos that are only match highlights; VRC-only content that assumes advanced drivetrains; advice that says "just practice" without a drill.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, drills shown, required field setup, and why it supports Day 16's ten-trial data table.
+
+
+Research brief D17 — Field alignment and navigation
+Exact YouTube search queries:
+- "VEX IQ driver alignment drills"
+- "VEX IQ field navigation practice"
+- "VEX IQ line up scoring robot driver tips"
+- "VIQRC Level Up driving alignment"
+- "VEX IQ scoring alignment practice"
+
+What to look for: videos showing drivers using field references, robot edges, walls, goals, or repeatable approach angles. Level Up examples are strongly preferred because scoring locations and shortcuts matter.
+
+What makes a good video for this day: gives visible examples of lineup marks, approach paths, driver sight lines, or wall-squaring, and explains why the same approach angle improves scoring.
+
+What to avoid: videos with no field view; videos focused only on autonomous alignment unless the ideas clearly transfer to driver control; videos showing illegal contact or outdated rule assumptions.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, alignment cue used, game/field shown, and why it fits Day 17's alignment routine.
+
+
+Research brief D18 — Level Up Skills strategy
+Exact YouTube search queries:
+- "VIQRC Level Up skills strategy beginner"
+- "VEX IQ Level Up driving skills route"
+- "VEX IQ Level Up robot skills strategy"
+- "VIQRC Level Up 60 second skills"
+- "VEX IQ Level Up skills run analysis"
+
+What to look for: current-season Level Up skills strategy, especially beginner or Hero Bot routes. Videos should respect the current manual and distinguish Driving Skills from Autonomous Coding Skills when relevant.
+
+What makes a good video for this day: compares route value, time, reliability, and recovery decisions; uses the current scoring model; shows or diagrams a 60-second path; explains why a safe route may beat a risky route.
+
+What to avoid: pre-release speculation; videos using obsolete scoring; elite-only routes requiring a custom robot far beyond Flop; videos with no route reasoning.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, manual version/date if mentioned, route type, expected score if claimed, and why it supports Day 18's safe/medium/stretch route planning.
+
+
+Research brief D19 — Level Up Teamwork strategy
+Exact YouTube search queries:
+- "VIQRC Level Up teamwork strategy"
+- "VEX IQ Level Up teamwork match strategy"
+- "VEX IQ alliance roles driver meeting"
+- "VIQRC teamwork challenge strategy beginner"
+- "VEX IQ teamwork match communication"
+
+What to look for: VIQRC Teamwork Challenge videos that explain alliance roles, field zones, partner communication, traffic patterns, and backup plans. Level Up-specific content is preferred; general IQ teamwork strategy is acceptable as a secondary video.
+
+What makes a good video for this day: shows two robots cooperating, explains who does which job and why, discusses collision avoidance, and teaches a pre-match conversation that a fifth grader can actually use.
+
+What to avoid: solo skills-only videos; loud match footage with no analysis; videos that encourage blocking partners or ignoring alliance communication.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, alliance roles shown, communication advice, season/game context, and why it fits Day 19's two-alliance-script challenge.
+
+
+Research brief D20 — Driver practice and logbook evidence
+Exact YouTube search queries:
+- "VEX IQ driver practice drills logbook"
+- "VEX IQ engineering notebook driver practice data"
+- "VEX IQ robotics practice schedule drills"
+- "VEX IQ scoring drill record sheet"
+- "VEX IQ driver skills improvement data"
+
+What to look for: VEX IQ or youth robotics videos that combine practice with measurement and notebook/logbook habits. General sports practice videos should not be used unless no robotics option exists and the measurement lesson is excellent.
+
+What makes a good video for this day: demonstrates timed drills, score tracking, success-rate tracking, practice plans, or engineering notebook entries connected to performance improvement.
+
+What to avoid: generic notebook award advice with no practice data; videos that make the notebook only decorative; videos that celebrate hours practiced without measuring results.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, type of data logged, notebook example if shown, and why it supports Day 20's baseline-practice-retest cycle.
+
+
+Research brief D23 — Coding arm and intake mechanisms
+Exact YouTube search queries:
+- "VEX IQ Blocks arm motor controller buttons"
+- "VEX IQ intake motor driver control code"
+- "VEXcode IQ control arm intake buttons"
+- "VEX IQ Hero Bot mechanism code"
+- "VEX IQ Blocks spin motor while button pressed"
+
+What to look for: VEXcode IQ Blocks tutorials for configuring mechanism motors, assigning Controller buttons, setting motor velocity, reversing direction, and choosing stop behavior. A Hero Bot or intake robot example is best.
+
+What makes a good video for this day: shows the Blocks code clearly, connects each button to a physical mechanism, tests motor direction safely, and discusses driver-friendly controls.
+
+What to avoid: VEX V5 tutorials unless concepts are directly transferable; Python-only videos if the site lesson is Blocks-first; videos that skip device setup and port naming.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, VEXcode version/language, mechanism controlled, Controller mapping shown, and why it fits Day 23's pickup-lift-release control challenge.
+
+
+Research brief D28 — VEXcode IQ debugging
+Exact YouTube search queries:
+- "VEXcode IQ debugging wrong motor port"
+- "VEX IQ Blocks debugging sensors"
+- "VEXcode IQ troubleshooting autonomous"
+- "VEX IQ programming debug print Brain screen"
+- "VEX IQ code troubleshooting motor direction"
+
+What to look for: VEXcode IQ debugging videos that model a process: reproduce, isolate, inspect configuration, read sensor/motor values, change one thing, retest. Blocks examples are preferred.
+
+What makes a good video for this day: demonstrates an actual bug and diagnosis, not just final code; includes common beginner failures such as wrong port, reversed motor, missing device setup, bad threshold, or sequence timing.
+
+What to avoid: abstract debugging talks without robot behavior; advanced text-language debugging only; videos that recommend random block changes.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, bug type, debugging method shown, language/Blocks version, and why it supports Day 28's Expected/Observed/Hypothesis log.
+
+
+Research brief D29 — Tournament inspection, judging, and readiness
+Exact YouTube search queries:
+- "VEX IQ tournament inspection checklist"
+- "VEX IQ judging interview elementary team"
+- "VEX IQ competition day tips"
+- "VEX IQ engineering notebook presentation tips"
+- "VIQRC Level Up inspection rules"
+
+What to look for: VEX IQ competition-day readiness videos covering inspection, pit setup, spare parts, batteries, queuing, judging, notebook, and team presentation. Use current Level Up manual/rules for rule-sensitive items.
+
+What makes a good video for this day: includes concrete checklists, elementary-friendly judging advice, robot inspection examples, and steps a family/team can complete before leaving for an event.
+
+What to avoid: old game-specific inspection claims unless still verified; VRC-only checklists with different hardware/rules; videos focused only on awards without robot readiness.
+
+How many videos per day: 2-4.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, readiness topics covered, rule version/date if mentioned, checklist items, and why it supports Day 29's mock inspection and two-minute explanation.
+
+
+Research brief D30 — Mock tournament and reflection
+Exact YouTube search queries:
+- "VEX IQ match debrief reflection"
+- "VEX IQ mock tournament practice"
+- "VEX IQ robotics team post match analysis"
+- "VEX IQ beginner tournament reflection"
+- "VIQRC teamwork skills practice match review"
+
+What to look for: VEX IQ or youth robotics content showing post-match analysis, practice tournaments, match review, scouting notes, or reflective improvement planning. A short coach/team debrief example may be better than a polished highlight reel.
+
+What makes a good video for this day: separates score from process, discusses what failed and why, models calm evidence-based reflection, and leads to a next test or practice goal.
+
+What to avoid: trophy/highlight videos with no analysis; discouraging or blame-focused debriefs; videos that treat reflection as a worksheet instead of a design decision.
+
+How many videos per day: 2-3.
+
+Metadata to capture: title, channel, video ID/URL, duration, description excerpt, debrief structure, metrics used, team age/context if visible, and why it supports Day 30's mini-event reflection.
+
+
+PART 4: HTML INTEGRATION PLAN
+=============================
+
+Recommendation: add "Curriculum" as a new 8th section, not merely inside "Start Here."
+
+Reasoning: "Start Here" is already a short orientation path. The 30-day curriculum is a full learning product with daily lesson cards, phase grouping, video links, rubrics, and notebook artifacts. It deserves a top-level nav item after "Videos & Creators" or before "Academy." Add a small cross-link from "Start Here" Step 1 or Step 6 reading "Open 30-Day Curriculum," but keep the full curriculum in its own section.
+
+Suggested HTML structure:
+- Add nav item: `<li><a href="#curriculum">Curriculum</a></li>`.
+- Add section after `#academy` and before `#videos`, or after `#videos` if preserving the current video-library endpoint matters more.
+- Use phase groups as the main scan structure:
+  - Phase A: Days 1-5, Game detective + mechanical thinker.
+  - Phase B: Days 6-10, Drivetrains + scoring mechanisms.
+  - Phase C: Days 11-15, Build, analyze, test, and improve Flop.
+  - Phase D: Days 16-20, Drive precisely + turn data into strategy.
+  - Phase E: Days 21-25, Driver-control code + sensor thinking.
+  - Phase F: Days 26-30, Autonomous routines + tournament readiness.
+- Represent each day as an expandable accordion card, not a long always-open page. The collapsed header should show day number, title, phase tag, target time, and "New videos needed: Yes/No" or final video count once research is complete.
+- Inside each expanded day card, use consistent subsections:
+  - Hook
+  - Think First
+  - Concepts
+  - Learn
+  - Connect the Dots
+  - Try It + Rubric
+  - Reflect
+  - Links
+- Keep Learn items as ordered lists with inline links to existing video cards or YouTube URLs once final research is complete.
+
+Cross-links to existing sections:
+- Kit: Days 2, 11, and 12 should link to `#kit`, the parts cards, and Kit Videos.
+- Builds: Days 6-15 should link to `#builds`, especially BaseBot, Clawbot, Flop, Hero Bot Breakdown, How to Design and Build, and related mechanism videos.
+- Game: Days 1, 15, 18-20, 29-30 should link to `#game`, the official manual, Level Up reveal, scoring resources, inspection, and strategy videos.
+- Code: Days 21-28 should link to `#code`, VEXcode setup, drivetrain, mechanism, autonomous, and sensor videos.
+- Academy: Every phase should include a compact "Use with Academy Topic" link:
+  - Phase A/B: Topics 1-4 where available.
+  - Phase C: Hero Bot and Ownership plus Robot Design and Engineering Process.
+  - Phase D: Strategy, Skills, and Driver Practice.
+  - Phase E/F: Programming and Sensors plus Strategy/Competition prep.
+- Videos: Each day should include `data-video-ids` or direct anchors to existing video cards where possible, such as `#video-ap39M61F1l0` for "Code 2- and 4-Motor Drivetrain" if stable IDs are retained.
+
+Mobile/iPad considerations:
+- Default to all phase groups collapsed except the current/selected phase. On iPad, show a sticky phase filter row with six compact phase buttons.
+- Day cards should expand one at a time within a phase on small screens to prevent endless scrolling. On desktop, multiple open cards are acceptable if the JS supports it.
+- Keep day headers tap targets at least 44px tall and make the whole header clickable, with a visible chevron and `aria-expanded`.
+- Avoid dense tables inside day cards on mobile. Use stacked labels for Target time, Videos, Challenge, and Rubric.
+- Keep rubrics readable as short 1/2/3 rows or stacked chips; do not make the user horizontally scroll.
+- Include "Previous day" and "Next day" controls inside expanded cards so Arian can move through the sequence without returning to the top.
+- Add a "Notebook artifact" line per day when converting to HTML, derived from the Try It challenge, so the parent can see the deliverable quickly.
+
+Reuse of existing JavaScript:
+- The existing `main.js` already supports tabs, video-card opening, smooth scrolling, mobile nav, back-to-top, and video search. It can be reused for navigation and video-card behavior.
+- New JS is needed for curriculum accordions unless the current tab behavior is intentionally generalized. Implement a small accessible accordion helper using `button.curriculum-toggle`, `aria-controls`, `aria-expanded`, and hidden panels.
+- The same video-card click handler can be reused if Learn links point directly to YouTube or to existing `#video-*` anchors. If day cards include embedded mini video cards, reuse the `.video-card` data-video pattern rather than adding a separate modal system.
+- The existing search can be extended or mirrored with a curriculum search/filter input. Keep it separate from `#video-search` to avoid hiding video cards while filtering lesson cards.
+- No framework is needed. Plain HTML/CSS/JS matches the current site architecture and is easier to maintain.

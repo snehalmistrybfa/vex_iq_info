@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Does My Robot Tip Over? Center of Gravity Explained</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#E87722; --primary-dark:#c95d12; --secondary:#2D2D2D; --accent:#00A3E0; --accent-dark:#0082b3; --success:#2ECC71; --warning:#F39C12; --danger:#E74C3C; --light:#F8F9FA; --light-gray:#E9ECEF; --medium-gray:#6C757D; --dark-gray:#343A40; --white:#FFFFFF; --shadow-sm:0 1px 3px rgba(0,0,0,0.08); --shadow-md:0 4px 12px rgba(0,0,0,0.10); --shadow-lg:0 8px 28px rgba(0,0,0,0.12); --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --font-heading:'Poppins',system-ui,-apple-system,sans-serif; --font-body:'Inter',system-ui,-apple-system,sans-serif; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:linear-gradient(180deg,#edfaff,#fff7e9,#f1fff5); color:var(--secondary); font-family:var(--font-body); font-size:18px; line-height:1.65; min-width:320px; }
+    h1,h2,h3 { font-family:var(--font-heading); line-height:1.15; }
+    a { color:var(--accent-dark); font-weight:700; }
+    .wrap { margin:0 auto; max-width:1050px; padding:18px; }
+    .top,.nav { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; margin-bottom:18px; }
+    .pill,.nav a { align-items:center; background:var(--white); border:2px solid rgba(0,0,0,.06); border-radius:999px; box-shadow:var(--shadow-sm); display:inline-flex; min-height:46px; padding:10px 16px; text-decoration:none; }
+    .progress { background:#ede6ff; border-color:#c9b6ff; color:#4b2e83; }
+    .hero { background:var(--white); border:4px solid #8fdf9f; border-radius:24px; box-shadow:var(--shadow-lg); display:grid; gap:22px; grid-template-columns:1.05fr .95fr; padding:28px; }
+    h1 { font-size:clamp(2rem,6vw,3.8rem); margin-bottom:14px; }
+    .hook { background:#e8f8ff; border-left:8px solid var(--accent); border-radius:var(--radius-lg); font-size:clamp(1.3rem,3vw,2rem); font-weight:800; padding:18px; }
+    .big-question { color:var(--accent-dark); display:block; font-family:var(--font-heading); margin-bottom:6px; }
+    .diagram { background:linear-gradient(145deg,#ffffff,#fff6df); border-radius:22px; min-height:340px; padding:20px; position:relative; }
+    .floor { background:#2d2d2d; border-radius:12px; bottom:30px; height:18px; left:12%; position:absolute; right:12%; }
+    .support { border:4px dashed var(--success); border-radius:18px; bottom:48px; height:72px; left:22%; position:absolute; right:22%; }
+    .bot { background:#74d7ff; border:5px solid #127ea5; border-radius:16px; bottom:82px; height:86px; left:31%; position:absolute; width:38%; }
+    .arm { background:var(--primary); border-radius:999px; height:18px; left:50%; position:absolute; top:120px; transform-origin:left center; transform:rotate(-55deg); width:120px; }
+    .bag { align-items:center; background:#9b59b6; border-radius:18px; color:white; display:flex; font-size:2rem; height:58px; justify-content:center; left:62%; position:absolute; top:62px; transition:.25s; width:72px; }
+    .dot { background:var(--danger); border:5px solid white; border-radius:50%; box-shadow:var(--shadow-md); height:34px; left:50%; position:absolute; top:205px; transform:translate(-50%,-50%); transition:.25s; width:34px; }
+    .label { background:white; border-radius:999px; bottom:128px; font-weight:800; left:50%; padding:6px 10px; position:absolute; transform:translateX(-50%); }
+    .grid { display:grid; gap:18px; grid-template-columns:repeat(3,1fr); margin-top:22px; }
+    .card,.try,.robot,.think { background:var(--white); border-radius:22px; box-shadow:var(--shadow-md); padding:22px; }
+    .card h2,.try h2,.robot h2,.think h2 { font-size:1.55rem; margin-bottom:10px; }
+    .think { border:4px solid #ffd166; margin-top:22px; }
+    .try { border:4px solid #b48cff; margin-top:22px; }
+    .robot { border:4px solid #7be495; margin-top:22px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
+    button { background:var(--primary); border:0; border-radius:16px; color:white; cursor:pointer; font:800 1rem var(--font-heading); min-height:48px; padding:12px 16px; transition:.2s; }
+    button:hover,button:focus { background:var(--primary-dark); transform:translateY(-1px); }
+    .status { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
+    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:310px; } }
+    @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } button { display:none; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><span class="pill progress">📏 Concept 2 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 5</a></nav></div>
+    <section class="hero">
+      <div><h1>Why Does My Robot Tip Over? Center of Gravity Explained</h1><p class="hook"><span class="big-question">Think first!</span>Why does a robot feel brave when its arm is down, then suddenly wobble when the arm rises?</p></div>
+      <div class="diagram" role="img" aria-label="CSS diagram of a robot base with a support polygon and a red balance dot."><div class="bag" id="bag">🟪</div><div class="arm" id="arm"></div><div class="bot"></div><div class="support"></div><div class="floor"></div><div class="dot" id="dot"></div><div class="label">balance dot</div></div>
+    </section>
+    <section class="grid">
+      <article class="card"><h2>🎯 Balance point</h2><p>Center of gravity is the spot where the robot's weight feels balanced.</p></article>
+      <article class="card"><h2>🔲 Support polygon</h2><p>The wheels make a floor shape. If the balance dot stays inside, the robot stays up.</p></article>
+      <article class="card"><h2>⚡ Tipping edge</h2><p>If the balance dot moves outside the wheel shape, gravity can pull the robot over.</p></article>
+    </section>
+    <section class="think"><h2>❓ Think About This!</h2><p>Would a wide, low robot or a skinny, tall robot feel safer when it turns quickly?</p></section>
+    <section class="try">
+      <h2>⭐ Try It! Move the Bean Bag</h2>
+      <p>Tap a button. Watch the bag and balance dot move toward or away from the tipping edge.</p>
+      <div class="buttons"><button type="button" data-pos="low">Bag low</button><button type="button" data-pos="middle">Bag middle</button><button type="button" data-pos="high">Bag high</button><button type="button" data-pos="front">Bag high + front</button></div>
+      <p class="status" id="status">Low is safest. The balance dot is deep inside the wheels.</p>
+    </section>
+    <section class="robot"><h2>🤖 Connect to Flop</h2><p>Flop must drive, turn, collect, and score while its arm changes balance. Smooth driving and a low, wide base help it stay brave.</p></section>
+    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#builds">Use with Day 5</a></nav>
+  </main>
+  <script>
+    const states = {
+      low: { bag:['50%','190px'], dot:['50%','218px'], arm:'20deg', text:'Low is safest. The balance dot is deep inside the wheels.' },
+      middle: { bag:['57%','124px'], dot:['56%','205px'], arm:'-25deg', text:'Middle is okay, but the dot starts walking toward the edge.' },
+      high: { bag:['62%','62px'], dot:['61%','198px'], arm:'-55deg', text:'High is wobblier. Slow turns help.' },
+      front: { bag:['72%','58px'], dot:['72%','198px'], arm:'-48deg', text:'Danger zone! The dot is near the edge, so tipping is much easier.' }
+    };
+    document.querySelectorAll('button[data-pos]').forEach(button => button.addEventListener('click', () => {
+      const s = states[button.dataset.pos];
+      document.querySelector('#bag').style.left = s.bag[0];
+      document.querySelector('#bag').style.top = s.bag[1];
+      document.querySelector('#dot').style.left = s.dot[0];
+      document.querySelector('#dot').style.top = s.dot[1];
+      document.querySelector('#arm').style.transform = 'rotate(' + s.arm + ')';
+      document.querySelector('#status').textContent = s.text;
+    }));
+  </script>
+</body>
+</html>

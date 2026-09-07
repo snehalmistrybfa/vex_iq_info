@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levers: How a Small Force Lifts a Big Load</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#E87722; --primary-dark:#c95d12; --secondary:#2D2D2D; --accent:#00A3E0; --accent-dark:#0082b3; --success:#2ECC71; --warning:#F39C12; --danger:#E74C3C; --light:#F8F9FA; --light-gray:#E9ECEF; --medium-gray:#6C757D; --dark-gray:#343A40; --white:#FFFFFF; --shadow-sm:0 1px 3px rgba(0,0,0,0.08); --shadow-md:0 4px 12px rgba(0,0,0,0.10); --shadow-lg:0 8px 28px rgba(0,0,0,0.12); --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --font-heading:'Poppins',system-ui,-apple-system,sans-serif; --font-body:'Inter',system-ui,-apple-system,sans-serif; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:linear-gradient(180deg,#fff7e9,#edfbff,#f3efff); color:var(--secondary); font-family:var(--font-body); font-size:18px; line-height:1.65; min-width:320px; }
+    h1,h2,h3 { font-family:var(--font-heading); line-height:1.15; }
+    a { color:var(--accent-dark); font-weight:700; }
+    .wrap { margin:0 auto; max-width:1050px; padding:18px; }
+    .top,.nav { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; margin-bottom:18px; }
+    .pill,.nav a { align-items:center; background:var(--white); border:2px solid rgba(0,0,0,.06); border-radius:999px; box-shadow:var(--shadow-sm); display:inline-flex; min-height:46px; padding:10px 16px; text-decoration:none; }
+    .progress { background:#fff1d8; border-color:#ffc06e; color:#8a3d00; }
+    .hero { background:var(--white); border:4px solid #b48cff; border-radius:24px; box-shadow:var(--shadow-lg); display:grid; gap:22px; grid-template-columns:1.05fr .95fr; padding:28px; }
+    h1 { font-size:clamp(2rem,6vw,3.8rem); margin-bottom:14px; }
+    .hook { background:#f3efff; border-left:8px solid #8e44ad; border-radius:var(--radius-lg); font-size:clamp(1.3rem,3vw,2rem); font-weight:800; padding:18px; }
+    .big-question { color:#6a2b86; display:block; font-family:var(--font-heading); margin-bottom:6px; }
+    .diagram { background:linear-gradient(145deg,#ffffff,#e8f8ff); border-radius:22px; min-height:310px; padding:22px; position:relative; }
+    .beam { background:var(--primary); border-radius:999px; height:28px; left:10%; position:absolute; top:150px; transform:rotate(-7deg); transition:.2s; width:80%; }
+    .fulcrum { border-left:38px solid transparent; border-right:38px solid transparent; border-bottom:84px solid var(--accent); left:45%; position:absolute; top:172px; transform:translateX(-50%); transition:.2s; }
+    .load { background:#9b59b6; border-radius:16px; color:white; font-size:2rem; left:70%; padding:10px 18px; position:absolute; top:94px; }
+    .push { background:#2ecc71; border-radius:16px; color:white; font-family:var(--font-heading); font-weight:800; left:12%; padding:10px 14px; position:absolute; top:88px; }
+    .grid { display:grid; gap:18px; grid-template-columns:repeat(3,1fr); margin-top:22px; }
+    .card,.try,.robot,.think { background:var(--white); border-radius:22px; box-shadow:var(--shadow-md); padding:22px; }
+    .card h2,.try h2,.robot h2,.think h2 { font-size:1.55rem; margin-bottom:10px; }
+    .think { border:4px solid #ffd166; margin-top:22px; }
+    .try { border:4px solid #b48cff; margin-top:22px; }
+    .robot { border:4px solid #7be495; margin-top:22px; }
+    label { font-weight:800; }
+    input[type=range] { accent-color:#8e44ad; min-height:44px; width:100%; }
+    .meters { display:grid; gap:12px; grid-template-columns:1fr 1fr; margin-top:14px; }
+    .meter { background:#edf1f5; border-radius:999px; height:34px; overflow:hidden; }
+    .fill { background:linear-gradient(90deg,var(--success),var(--accent)); height:100%; transition:.2s; }
+    .result { color:#6a2b86; font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
+    @media (max-width:760px) { .hero,.grid,.meters { grid-template-columns:1fr; } .diagram { min-height:280px; } }
+    @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><span class="pill progress">📏 Concept 4 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 4</a></nav></div>
+    <section class="hero">
+      <div><h1>Levers: How a Small Force Lifts a Big Load</h1><p class="hook"><span class="big-question">Think first!</span>Where should you push on a beam if you want one finger to lift something heavy?</p></div>
+      <div class="diagram" role="img" aria-label="CSS diagram of a lever beam with effort, fulcrum, and load labels."><div class="push">effort ↓</div><div class="load">load</div><div class="beam" id="beam"></div><div class="fulcrum" id="fulcrum"></div></div>
+    </section>
+    <section class="grid">
+      <article class="card"><h2>⚖️ Class 1</h2><p>Fulcrum in the middle, like a seesaw. Push one side, lift the other.</p></article>
+      <article class="card"><h2>🛒 Class 2</h2><p>Load in the middle, like a wheelbarrow. Great for lifting heavy stuff.</p></article>
+      <article class="card"><h2>🎣 Class 3</h2><p>Effort in the middle, like a fishing rod. It moves far and fast.</p></article>
+    </section>
+    <section class="think"><h2>❓ Think About This!</h2><p>If the fulcrum moves closer to the Bean Bag, does lifting get easier or does the bag move farther?</p></section>
+    <section class="try">
+      <h2>⭐ Try It! Move the Fulcrum</h2>
+      <p>Slide the pivot. Close to the load makes lifting easier. Farther away can move the load farther.</p>
+      <label for="pivot">Fulcrum position</label><input id="pivot" type="range" min="25" max="70" value="45">
+      <div class="meters"><div><strong>Easy lift</strong><div class="meter"><div class="fill" id="easy" style="width:60%"></div></div></div><div><strong>Far movement</strong><div class="meter"><div class="fill" id="far" style="width:40%"></div></div></div></div>
+      <p class="result" id="leverResult">Balanced tradeoff: medium force and medium movement.</p>
+    </section>
+    <section class="robot"><h2>🤖 Connect to Flop</h2><p>When Flop lifts a Bean Bag, the arm is a turning beam. The farther the bag is from the pivot, the more torque the motor needs.</p></section>
+    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 4</a></nav>
+  </main>
+  <script>
+    const pivot = document.querySelector('#pivot');
+    const fulcrum = document.querySelector('#fulcrum');
+    const easy = document.querySelector('#easy');
+    const far = document.querySelector('#far');
+    const result = document.querySelector('#leverResult');
+    pivot.addEventListener('input', () => {
+      const v = Number(pivot.value);
+      fulcrum.style.left = v + '%';
+      const easyScore = Math.max(10, 100 - Math.abs(72 - v) * 2.2);
+      const farScore = Math.max(15, Math.abs(72 - v) * 2.2);
+      easy.style.width = easyScore + '%';
+      far.style.width = farScore + '%';
+      result.textContent = v > 58 ? 'Easy lift! The fulcrum is close to the load, but the load moves less.' : v < 36 ? 'Big movement! The load can move farther, but it needs more force.' : 'Balanced tradeoff: medium force and medium movement.';
+    });
+  </script>
+</body>
+</html>

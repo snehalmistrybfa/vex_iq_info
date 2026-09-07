@@ -1,0 +1,174 @@
+=== DAY 23: Coding arm and intake mechanisms ===
+
+VIDEO 1:
+- Title: VEX IQ - Controlling Motors
+- Channel: Kai Nakamura
+- Video ID: cKZAaWWCTpU
+- URL: https://www.youtube.com/watch?v=cKZAaWWCTpU
+- Duration: 3:20
+- Description excerpt: This video shows how to control individual motors on your robot. It covers how to set up the motors, how to program them, and how to move them with the controller. VEX IQ Tutorial Playlist. Chapters: 0:00 Intro, 0:12 Motor Setup, 1:02 Motor Blocks, 1:34 Spin for Degrees, 2:22 Using the Controller.
+- Why it fits Day 23: This is the single best all-in-one video for Day 23 — it walks through motor setup in Robot Configuration, shows the motor Blocks, demonstrates spin-for-degrees for precise arm positioning, and then connects controller buttons to mechanism motors. It is exactly the arm/intake button-binding workflow a 5th grader needs. Clear chapters, short, VEXcode IQ Blocks throughout.
+- Concept covered: Motor device setup, motor Blocks, spin for degrees (arm positioning), controller button → motor binding
+
+VIDEO 2:
+- Title: VEXcode IQ Blocks - "Device Setup - Motors" Tutorial
+- Channel: VEX Robotics
+- Video ID: TbaOMMKLGG4
+- URL: https://www.youtube.com/watch?v=TbaOMMKLGG4
+- Duration: 1:05
+- Description excerpt: How to use the Robot Configuration to set up Motors. For more information, visit: https://www.vexrobotics.com/vexcode
+- Why it fits Day 23: Official VEX Robotics tutorial on the foundational step every mechanism coding day requires — naming and configuring motor ports in Robot Configuration before any Blocks code will work. Pair with Video 1 so students see both the "why device setup matters" (official source) and the full coding flow (Kai Nakamura). Short and authoritative.
+- Concept covered: Robot Configuration → Motors, port naming, reversing direction, setting gear cartridge — the prerequisite for all mechanism code
+
+VIDEO 3:
+- Title: VEXcode IQ Blocks - "Device Setup - Controller" Tutorial
+- Channel: VEX Robotics
+- Video ID: PxSzAq0-upE
+- URL: https://www.youtube.com/watch?v=PxSzAq0-upE
+- Duration: 1:37
+- Description excerpt: How to use the Robot Configuration to set up the Controller. For more information, visit: https://www.vexrobotics.com/vexcode
+- Why it fits Day 23: The other half of device setup — configuring the Controller so buttons can talk to mechanism motors. Students often miss this step and wonder why buttons do nothing. Official VEX source, pairs naturally with the Motors setup video above.
+- Concept covered: Robot Configuration → Controller, pairing, button/axis mapping preparation
+
+VIDEO 4:
+- Title: VEXcode IQ Blocks - "Moving the Arm" Tutorial
+- Channel: VEX Robotics
+- Video ID: H0W3Lf-VHcI
+- URL: https://www.youtube.com/watch?v=H0W3Lf-VHcI
+- Duration: 0:52
+- Description excerpt: Moving the arm of a VEX IQ Clawbot with VEXcode. For more information, visit: https://www.vexrobotics.com/vexcode
+- Why it fits Day 23: Official, ultra-short demo of using Blocks to move an arm — the exact mechanism on Day 23. Great as a "see it done in 52 seconds" hook before students try it themselves. VEXcode IQ Blocks (not Python), Clawbot arm example directly transferable to Hero Bot intake/arm.
+- Concept covered: Arm motor Blocks, spin to position, stop behavior on an arm mechanism
+
+VALIDATION NOTES:
+- The RoboTech Slovenia video (wQvtcUmoJEw, 18s) looked promising by title ("program a controller buttons for adjusting the robot's arm") but at 18 seconds it is effectively a Shorts clip with no tutorial depth — rejected as a primary, though the concept is covered better by Kai Nakamura's full video.
+- Ben Lipper's "Coding Huey, Pinhead, and Clawbot" (NoxCacvxoiI, ~12 min) covers coding multiple robots including mechanism control and is a reasonable alternate if a longer combined build+code video is wanted; it is broader than arm/intake specifically.
+- No search returned a clean "intake motor" specific tutorial — intake is coded the same way as any mechanism motor (spin while button pressed, stop on release), which is exactly what Kai Nakamura's Video 1 demonstrates. The curriculum should call out that intake = a motor with a spinner, coded identically to the arm.
+- All 4 selected videos use VEXcode IQ Blocks (not Python, not V5), matching the curriculum requirement.
+
+=== DAY 28: VEXcode IQ debugging ===
+
+VIDEO 1:
+- Title: VEX 1961Z VexCode Lesson 4: Debugging and Autonomous Left and Right Functions
+- Channel: Eagles 1961Z
+- Video ID: TkxUQsWnBEw
+- URL: https://www.youtube.com/watch?v=TkxUQsWnBEw
+- Duration: 22:52
+- Description excerpt: Hello there! This is our fourth lesson through VexCode. It focuses on figuring out how to debug autonomous functions and on how to make simple left and right autonomous functions! VEXCode Download link: https://www.vexrobotics.com/vexcode-download
+- Why it fits Day 28: This is the strongest debugging-process video found — a full lesson dedicated to debugging autonomous functions. It models the exact process Day 28 wants: reproduce the problem, isolate left vs right behavior, inspect the code, change one thing, retest. Student-team produced, relatable for a 5th grader, VEXcode Blocks context. Longer (23 min) so it can be shown in segments.
+- Concept covered: Debugging autonomous behavior, isolating left/right motor functions, iterative test-fix-retest cycle
+
+VIDEO 2:
+- Title: VEXcode IQ Blocks - 4. Displaying Information on the Screen
+- Channel: VEX Robotics UK
+- Video ID: 9xSPQnfn390
+- URL: https://www.youtube.com/watch?v=9xSPQnfn390
+- Duration: 28:21
+- Description excerpt: Displaying data on the VEX IQ Brain screen is useful for debugging and getting the most out of the sensors on your robot.
+- Why it fits Day 28: Directly teaches the key debugging tool the day asks for — printing sensor/motor values to the Brain screen so students can see what the robot is actually reading. The description explicitly frames it as "useful for debugging." Official-adjacent channel, VEXcode IQ Blocks, covers the print-to-Brain technique that turns guessing into evidence-based debugging.
+- Concept covered: Brain screen print/debug output, reading live sensor and motor values during debugging
+
+VIDEO 3:
+- Title: VEXcode IQ Blocks - "Device Setup - Sensors" Tutorial
+- Channel: VEX Robotics
+- Video ID: voZIL4Gf7Zk
+- URL: https://www.youtube.com/watch?v=voZIL4Gf7Zk
+- Duration: 0:46
+- Description excerpt: How to use the Robot Configuration to set up Motors. For more information, visit: https://www.vexrobotics.com/vexcode Follow us on social media!
+- Why it fits Day 28: A common beginner debugging failure is a sensor that does nothing because it was never set up in Robot Configuration (or is on the wrong port). This 46-second official video covers that exact pitfall. Pair with Video 2 so students see: set up the sensor correctly (this video) → then print its values to debug (Video 2). Short, official, addresses the #1 sensor debugging mistake.
+- Concept covered: Sensor device setup in Robot Configuration — the configuration step whose absence causes the most common "sensor not working" bugs
+
+VALIDATION NOTES:
+- "VEXcode IQ debugging wrong motor port" and "VEX IQ code troubleshooting motor direction" returned NO results — these are very specific long-tail queries YouTube does not surface well. The debugging-process need is met by the Eagles 1961Z lesson instead.
+- The Creator Academy "Advanced Inertial Sensor Coding (Python)" (aVwXS54C7CE) was rejected — Python-only and advanced, wrong audience.
+- "Using Sensors with VEXcode V5" (l644KxMhe_w, Caleb B, 32 min) is V5 not IQ and long — rejected, though it is a reasonable sensor-debugging reference if a V5 cross-reference is ever wanted.
+- No single video was found that walks through a named bug (e.g., "wrong port") start-to-finish in IQ Blocks; the Eagles 1961Z lesson is the closest because it debugs real autonomous misbehavior on screen. The curriculum should have the teacher demonstrate a planted bug (wrong port, reversed motor) live, using Video 2's print technique to diagnose it — this combination covers the "common beginner failures" requirement.
+- All 3 selected videos are VEXcode IQ Blocks (no Python, no V5-only).
+
+=== DAY 29: Tournament inspection, judging, and readiness ===
+
+VIDEO 1:
+- Title: Attending a VEX IQ Robotics Competition
+- Channel: RoboticsTine
+- Video ID: VK6lzPPhuXA
+- URL: https://www.youtube.com/watch?v=VK6lzPPhuXA
+- Duration: 16:04
+- Description excerpt: This video will help prepare teams, parents and mentors to go to a VEX IQ Robots competition. I walk through the entire process, from check-in to the awards ceremony. Full chapter index: 0:00 Intro, 1:04 Check-in, 2:45 Pits, 3:29 Inspection, 6:07 Inspection Checklist, 6:27 Driver's Meeting, 6:43 VEX Via App, 7:37 Competition Fields, 8:06 Teamwork Competition, 8:27 Queuing, 10:24 Teamwork Matches, 13:20 Skills Matches, 14:10 Finals, 15:06 Awards, 15:39 Wrap-up. Links to inspection checklist and judging guide included.
+- Why it fits Day 29: This is THE anchor video for Day 29 — a full VEX IQ competition-day walkthrough from arrival to awards, with dedicated chapters for inspection, the inspection checklist, queuing, and judging/awards. It is VEX IQ specific (not VRC), family/mentor friendly, and links to the official inspection checklist and judging guide. The chapter index lets a teacher show just the inspection (3:29–6:27) and judging (15:06) segments in class.
+- Concept covered: Full competition-day readiness — check-in, pit setup, inspection, inspection checklist, queuing, match flow, judging/awards
+
+VIDEO 2:
+- Title: VEX Robotics Competition Inspection Walkthrough : ORION Robotics
+- Channel: Xing
+- Video ID: oy-iYBfZoXo
+- URL: https://www.youtube.com/watch?v=oy-iYBfZoXo
+- Duration: 9:34
+- Description excerpt: A full version of the VEX Robotics Inspection Checklist can be found here: https://www.robotevents.com/season/130/document/77/download. ORION Instagram: https://www.instagram.com/team_orion_robotics/
+- Why it fits Day 29: A dedicated inspection walkthrough showing the actual inspection process with a real robot and a link to the official checklist. Complements Video 1 by going deeper on inspection specifically — what the inspector checks, common failure points, size/build rules. Note: this is VRC-oriented, so the teacher should flag any VRC-only items (e.g., battery type) and confirm the IQ equivalents; the inspection-process mindset transfers directly.
+- Concept covered: Hands-on inspection walkthrough, using the official checklist, common inspection failure points
+
+VIDEO 3:
+- Title: How to Master the Judges Interview: Complete Guide to the VEX Judges Interview & Awards Rubric
+- Channel: The VEX Analyst
+- Video ID: zekAzwe8j0c
+- URL: https://www.youtube.com/watch?v=zekAzwe8j0c
+- Duration: 14:47
+- Description excerpt: How to Ace Your VEX Judges' Interview (Judges Award Guide). Breaking down the official VEX Judges Interview Rubric — Engineering Process, Game Strategy, Robot Design, Programming, Creativity, Team communication, professionalism, and how to impress the judges. Tips to plan, practice, and deliver a strong interview that could earn a Judges or Inspire Award.
+- Why it fits Day 29: The best judging-interview prep video found — it breaks down the official rubric section by section (Engineering Process, Game Strategy, Robot Design, Programming, Creativity) with concrete advice on planning and practicing responses. Directly addresses the "judging interview" and "presentation" requirement for Day 29. Note: the channel references VRC/Push Back in its description footer, but the interview rubric structure is shared across VEX programs; the teacher should pair it with the IQ-specific judging guide linked in Video 1.
+- Concept covered: Judges interview rubric, planning interview responses, what judges score, professionalism/teamwork in the interview
+
+VIDEO 4:
+- Title: Engineering Notebook Tips Every VEX Team Should Know
+- Channel: The VEX IQ Guide
+- Video ID: 5q_y2vifuXo
+- URL: https://www.youtube.com/watch?v=5q_y2vifuXo
+- Duration: 5:55
+- Description excerpt: In this video, you'll learn the 5 best tips to improve your VEX Robotics Engineering Notebook! Part of the VEX Notebook Mastery series. Watch the full playlist. Subscribe for more VEX IQ tutorials every week!
+- Why it fits Day 29: Short, VEX IQ Guide channel, focused on the engineering notebook — the other half of judging readiness alongside the interview (Video 3). Five concrete tips a 5th grader can act on immediately. Pairs with Video 3 to cover both judged components (notebook + interview) the day requires.
+- Concept covered: Engineering notebook best practices, 5 concrete improvement tips, notebook as a judged artifact
+
+VALIDATION NOTES:
+- "VIQRC Level Up inspection rules" returned game-reveal videos (KP0FYPW604E) and a rules-comparison video (BOE4LpT6jdY) but no inspection-specific walkthrough for the current Level Up game. The inspection process itself is game-agnostic (size, motors, batteries, safe construction), so Videos 1 and 2 cover it well; the teacher should pull the current season's inspection checklist from the link in Video 1 for any Level-Up-specific size/motor limits.
+- The Creator Academy "Level Up vs RECF Tier Takeover Rules Comparison" (BOE4LpT6jdY) is excellent context for coaches on the current season's rule split but is coach-focused and too dense for a 5th grader — not selected for the student video list, but recommended as teacher prep.
+- The official VEX Robotics "Exploring VEX | Engineering Notebook" (6YsT3gh1y1I, 4:03) is a nice official-source complement to Video 4 if a second notebook video is wanted; Video 4 was chosen because it gives actionable tips rather than just a definition.
+- "VEX IQ judging interview elementary team" returned mostly middle-school and VRC interview videos; Video 3 is the clearest rubric breakdown and the advice transfers to elementary. The teacher should emphasize that elementary IQ interviews are shorter and more conversational.
+- VEX Robotics' official Level Up game reveal (KP0FYPW604E) is worth showing for 30 seconds at the start of class so students recognize the current field, but it is not a readiness video.
+
+=== DAY 30: Mock tournament and reflection ===
+
+VIDEO 1:
+- Title: 2023 VIQC Worlds Matches & Amaze Award - Savage Bots - Team 25757A
+- Channel: Savage Bots
+- Video ID: SW4-CeAHvo8
+- URL: https://www.youtube.com/watch?v=SW4-CeAHvo8
+- Duration: 18:50
+- Description excerpt: VEX IQ Worlds, 800 teams. The Savage Bots didn't expect to win but hoped for top 20. They started strong, posted personal bests, then everything that could go wrong on the final day did: drivetrain chain popped off in match 2, a DQ (zero score) in the final match when a disk went over the bar. Full match-by-match breakdown with scores and alliance partners. Ended with a surprise Amaze Award. Summary chapter at 18:39.
+- Why it fits Day 30: This is the single best reflection video found for a 5th grader. It is a real VEX IQ team's honest, match-by-match account of a tournament where things went wrong — a popped chain, a DQ, a zero score — and how they processed it (they "laughed about it to lighten the mood"), then still earned a judged award. It models exactly what Day 30 wants: separating score from process, discussing what failed and why calmly, and finding the positive. The description is itself a written reflection, which is a great example for students writing their own.
+- Concept covered: Post-tournament reflection, match-by-match analysis, handling failure calmly, evidence-based debrief, judged awards vs match score
+
+VIDEO 2:
+- Title: Vex IQ Rise Above but we Pre-Record Skills | 351 points
+- Channel: Rogue108
+- Video ID: ARKJ8SLiaBw
+- URL: https://www.youtube.com/watch?v=ARKJ8SLiaBw
+- Duration: 5:03
+- Description excerpt: 210 driver score - 141 programming score. A video summarizing our competition for the Disco Dynamic Pre-Recorded Skills competition. Chapters: 0:00 Intro, 0:31 Pre-Recorded Skills, 0:33 Programming / Autonomous Challenge, three programming attempts, 2:20 Driver Skills, three driver attempts, 4:16 Credits, 4:28 Extra Scenes. Team and event info linked.
+- Why it fits Day 30: A compact VEX IQ skills-run video that shows multiple attempts at both programming and driver skills — which is itself a reflection structure (attempt 1, 2, 3, observe what improved). Great for teaching students to compare attempts and identify what changed between runs. Short and kid-friendly. Pair with Video 1 for the emotional/calm-debrief model and this one for the attempt-comparison model.
+- Concept covered: Multi-attempt skills analysis, comparing programming vs driver attempts, learning from repeated runs
+
+VIDEO 3:
+- Title: Becoming A Great (VEX Robotics) Team Member
+- Channel: 4004Y YNot!
+- Video ID: YvAme6r5c9M
+- URL: https://www.youtube.com/watch?v=YvAme6r5c9M
+- Duration: 13:38
+- Description excerpt: It is officially late season — time to start planning for next year: ordering a new engineering notebook, figuring out how to speed up the building process, working on adding new teammates. Tips on what to look for in teammates and how to become a better team member.
+- Why it fits Day 30: Bridges from "reflect on this tournament" to "what do we improve for next time" — the forward-looking half of a good debrief. A student team talking about team dynamics, planning, and continuous improvement. VEX (V5 team but the teamwork lessons are universal). Useful for the part of Day 30 where reflection turns into next goals.
+- Concept covered: Turning reflection into next-season goals, team dynamics, continuous improvement mindset
+
+VALIDATION NOTES:
+- "VEX IQ match debrief reflection", "VEX IQ beginner tournament reflection", and "VIQRC teamwork skills practice match review" all returned NO results — there is very little YouTube content explicitly framed as VEX IQ post-match reflection. The Savage Bots Worlds video (Video 1) is the standout because its description IS a written debrief and the video shows the matches it reflects on.
+- The "Vex IQ Full Volume Mock Tournament" (bqQmuabBYcM) would have been a natural fit by title but the video is no longer available (YouTube returned "This video is not available") — rejected.
+- "Vex IQ Mix and Match Early Season scrimmage 162" (Qn2QM99cRXE, 1:08) is a scrimmage clip but has no analysis component — rejected for lack of reflection.
+- The AAMU "Post Game Reveal Analysis" (Um-8pBDQYlQ, 14:16) is a VEXU team analyzing a game reveal, not a match debrief — wrong type of analysis, rejected.
+- For a 5th grader, the teacher should lead an in-class mock tournament debrief using the structure modeled in Video 1: (1) what happened each match, (2) what went well, (3) what failed and why, (4) what we will test before next event. The videos provide the model; the reflection is best done live.

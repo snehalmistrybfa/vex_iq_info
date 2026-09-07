@@ -1,0 +1,246 @@
+=== DAY 15: Iterative Flop Improvement ===
+VIDEO 1:
+- Title: VEX IQ Level Up | Hero Bot "Flop" | Part 2
+- Channel: VEX Robotics
+- Video ID: n_fWxHqSMPs
+- URL: https://www.youtube.com/watch?v=n_fWxHqSMPs
+- Duration: 181s (3:01)
+- Description excerpt: ORDER HERE: https://vex.com/VEXgames26-27yt SUBSCRIBE: https://vex.com/YouTube ...
+- Why it fits Day 15: Official VEX Robotics Part 2 on the Flop Hero Bot — shows the build in stages and explains what each subsystem does and why, the starting point for any "baseline then iterate" lesson. A 5th grader can follow along with their own Flop and identify the one subsystem to change first.
+- Concept covered: Hero Bot baseline build, subsystem identification, understanding-before-modifying
+
+VIDEO 2:
+- Title: Introducing the 180 Mod Flop! First Practice Runs
+- Channel: Lemon Vex Robotics
+- Video ID: KvWHQ6d3_hM
+- URL: https://www.youtube.com/watch?v=KvWHQ6d3_hM
+- Duration: 715s (11:55)
+- Description excerpt: Meet the 180 Mod Flop — v1 is finally built and running! This is my newest robot for VEX IQ Level Up, and today we're doing ...
+- Why it fits Day 15: A student creator documents a single modification (the "180 mod") to the stock Flop and then runs first practice — exactly the "one change, then retest" pattern the day teaches. The video shows the mod, the reasoning behind it, and the first results, which is the controlled-iteration loop in real form.
+- Concept covered: Single-variable modification, baseline vs. modified comparison, documenting v1 results
+
+VIDEO 3:
+- Title: Cracked 87 Points in VEX IQ Level Up Today!
+- Channel: Lemon Vex Robotics and SVT - VEX Robotics
+- Video ID: hRSUs7ChPW0
+- URL: https://www.youtube.com/watch?v=hRSUs7ChPW0
+- Duration: 66s (1:06)
+- Description excerpt: Today's practice session was IT. Switched my intake from a roller to a CLAW grabber — and the combo with my catapult finally ...
+- Why it fits Day 15: A short, clear before/after story: the creator swapped ONE mechanism (roller intake -> claw grabber) and reports the score jump that resulted. This is the single-variable-change-plus-evidence pattern at its most kid-watchable, and it names the tradeoff (claw vs. roller) honestly.
+- Concept covered: One-variable change, before/after score evidence, mechanism tradeoff (roller vs. claw)
+
+VIDEO 4:
+- Title: 99808A presents: How to use the Engineering Design Process
+- Channel: Team 99808
+- Video ID: sl7DbBqcYbA
+- URL: https://www.youtube.com/watch?v=sl7DbBqcYbA
+- Duration: 184s (3:04)
+- Description excerpt: We created this educational video to help others learn how to use the engineering design process to build better robots. Hope this ...
+- Why it fits Day 15: A student team explains the engineering design process (define, build, test, improve, repeat) in kid-friendly terms with their own robot as the example. It gives the vocabulary and the loop structure that the Flop iteration videos then demonstrate in practice.
+- Concept covered: Engineering design process steps, test-improve-repeat loop, student-friendly EDP vocabulary
+
+VALIDATION NOTES:
+- The "VEX IQ robot one variable testing" query returned mostly unrelated clips (button-controlled speed, a prototype chassis, a flywheel launcher). True "change one variable, retest" videos are rare on YouTube; the closest authentic example is Lemon Vex Robotics' intake-swap video (hRSUs7ChPW0), which is short but exactly on point.
+- "VEX IQ Level Up Flop improvements" returned several match clips and a "for sale" robot (RzWAkpqcr8Y, e6_l_zBYGZo) — these were rejected because they sell a finished robot rather than teach iteration, which violates the "don't copy a complete robot" guardrail.
+- The official VEX Flop Part 1 (jPaarRbLjaE) is a build walkthrough; Part 2 (n_fWxHqSMPs) was chosen instead because it shows the bot running and discusses the subsystems' function, which sets up the "what would you change and why?" question better.
+- RoboSTEM's "Herobot is Actually GOOD" (3CISXMLkRhM) is engaging and Level-Up-current, but it leans toward "here's why the stock bot is better than people think" rather than "here's how to iterate one change at a time," so it was set aside in favor of the Lemon Vex modification videos.
+
+=== DAY 16: Straight and Square Driving Drills ===
+VIDEO 1:
+- Title: 5 Tips to Instantly Improve Your VEX Robot Driving
+- Channel: The VEX IQ Guide
+- Video ID: tepeFAA7Gbo
+- URL: https://www.youtube.com/watch?v=tepeFAA7Gbo
+- Duration: 222s (3:42)
+- Description excerpt: What You'll Learn: In this video, you'll learn 5 quick tips that will take your driving skills to the next level! Signature events: Show ...
+- Why it fits Day 16: A VEX IQ-specific driving-tips video that covers the fundamentals a beginner drill session needs — joystick control, starting position, looking ahead, and consistency. The tips map directly onto repeatable drills a 5th grader can run on a home field or taped floor.
+- Concept covered: Joystick control fundamentals, consistent start position, anticipation/look-ahead, driving drill habits
+
+VIDEO 2:
+- Title: VEX IQ Wireless Driver Control
+- Channel: Vex ICutie
+- Video ID: sFrmMckQfqY
+- URL: https://www.youtube.com/watch?v=sFrmMckQfqY
+- Duration: 510s (8:30)
+- Description excerpt: THE RACE TO 100 SUBSCRIBERS IS ON!!!! In Episode 08, Abby shows how to operate a VEX IQ Clawbot in driver-control mode, ...
+- Why it fits Day 16: A kid-presented, step-by-step walkthrough of actually driving a VEX IQ robot with the controller — pairing, joystick feel, moving forward/backward and turning. It's the "how to hold the controller and make smooth moves" lesson that precedes structured drills, and Abby's kid-energy tone is ideal for a 5th grader.
+- Concept covered: Controller pairing, joystick feel, basic forward/backward/turning practice, smooth driving
+
+VIDEO 3:
+- Title: VEX IQ - Driving and Turning
+- Channel: Kai Nakamura
+- Video ID: 0i0oArJgu90
+- URL: https://www.youtube.com/watch?v=0i0oArJgu90
+- Duration: 404s (6:44)
+- Description excerpt: This video shows how to program your robot to drive and turn. It covers how to use the basic driving and turning blocks, the ...
+- Why it fits Day 16: Bridges the gap between "I can drive" and "my robot drives straight and turns square" by showing the code blocks that control distance and turn angle. Useful for the drill day because a 5th grader can use it to set up a programmed 90-degree turn drill and then compare their manual driving to the programmed baseline.
+- Concept covered: Drivetrain programming for distance/turn, using code as a driving-drill baseline, 90-degree turns
+
+VALIDATION NOTES:
+- The "VEX IQ driver practice 90 degree turns" query returned mostly programming/gyro content (PID loops, gyro turns in ROBOTC) rather than driver-practice drills. These are useful for programming class, not for a driver-drills day, so they were not selected.
+- "VEX IQ tank drive arcade drive practice" surfaced the VEX Camp IQ Session 2 (C-quN1bC17E, 38 min) which is a long coached session that includes driving the BaseBot — it's excellent content but too long and too broad for a focused drills day; the shorter, drill-focused videos above are a better fit.
+- True "structured driving drill" videos (e.g., "do 5 straight runs, measure deviation") barely exist on YouTube for VEX IQ. The day's drill structure will need to be teacher-built around the habits shown in these videos. The VEX IQ Guide's 5 tips and Vex ICutie's controller walkthrough give the raw skills; the teacher provides the tape and the stopwatch.
+- Several results were VRC (V5) skills runs or match highlights with no drill structure — rejected per the "avoid match highlights only" rule.
+
+=== DAY 17: Field Alignment and Navigation ===
+VIDEO 1:
+- Title: How to Build Passive Aligners (500 sub SPECIAL)
+- Channel: Lemon Vex Robotics
+- Video ID: eQTbkWwIJ-Q
+- URL: https://www.youtube.com/watch?v=eQTbkWwIJ-Q
+- Duration: 548s (9:08)
+- Description excerpt: 500 SUB SPECIAL !!!!!!!!!!! Pin claw tutorial at 600 sub! -------------------------------------------- Stop wasting your pneumatics on lining up ...
+- Why it fits Day 17: Directly teaches building passive alignment aids (little ramps/pegs that use the field wall to square the robot) — the physical embodiment of "use the field as a reference." It explains WHY aligners help (consistent scoring position without driver effort) and shows them working, which is the exact field-reference concept the day needs.
+- Concept covered: Passive alignment to field wall, using field edges as references, mechanical squaring aids
+
+VIDEO 2:
+- Title: VEX IQ: Wheel Alignment Tips
+- Channel: WIS Robotics
+- Video ID: ftq1_O9gfMQ
+- URL: https://www.youtube.com/watch?v=ftq1_O9gfMQ
+- Duration: 184s (3:04)
+- Description excerpt: In this video WIS Robotics discusses how the rubber tire may interfere with keeping your VEX IQ robot from driving straight even ...
+- Why it fits Day 17: Explains a sneaky cause of crooked driving — a misaligned rubber tire — and shows how to check and fix it. This is the "why won't my robot go straight?" debugging lesson that sits underneath every alignment drill: if the robot itself drifts, no amount of driver skill will square it to the field.
+- Concept covered: Wheel/tire alignment diagnostics, identifying mechanical drift, fixing straight-line deviation
+
+VIDEO 3:
+- Title: VEX Build Masterclass #3 - Squaring
+- Channel: Ryan Liao
+- Video ID: yC_6j7vawfk
+- URL: https://www.youtube.com/watch?v=yC_6j7vawfk
+- Duration: 188s (3:08)
+- Description excerpt: Notes: I'll add them once I get back from lunch.
+- Why it fits Day 17: A short masterclass on "squaring" — using the field wall and robot edges to align consistently before a scoring move. The concept transfers directly to VEX IQ even though the creator builds V5: the sight-line and wall-squaring technique is the same, and it's the single most important alignment habit for a beginner driver.
+- Concept covered: Wall-squaring technique, driver sight lines, consistent approach angles for scoring
+
+VALIDATION NOTES:
+- The "VEX IQ driver alignment drills" and "VEX IQ line up scoring robot driver tips" queries returned mostly skills runs and game reveals, not alignment instruction. The alignment content that does exist leans mechanical (build an aligner) rather than driver-skill (look at this mark on the field), so the day should pair the mechanical-aid video (eQTbkWwIJ-Q) with the driving-habit video (yC_6j7vawfk).
+- "VIQRC Level Up driving alignment" returned no output — the term is too specific. The Level Up game reveal (KP0FYPW604E) is useful for showing the field landmarks but is not alignment instruction; it's already recommended for Day 18.
+- XLbZ4t5BvJc (stop drift with custom RobotC program) is a coding fix for drift, not a driver alignment skill — relevant to Day 16/17 debugging but more advanced than the day's target. Mentioned here as a stretch option for a kid who notices their robot veering.
+- The VEX Build Masterclass series (Ryan Liao) is V5/VRC but the squaring technique is field-and-robot agnostic; included because no equivalent VEX IQ-specific squaring tutorial exists.
+
+=== DAY 18: Level Up Skills Strategy ===
+VIDEO 1:
+- Title: VEX IQ Robotics Competition : Level Up | 2026-2027 Game
+- Channel: VEX Robotics
+- Video ID: KP0FYPW604E
+- URL: https://www.youtube.com/watch?v=KP0FYPW604E
+- Duration: 224s (3:44)
+- Description excerpt: REGISTER or FIND EVENTS near you at: https://events.vex.com ORDER HERE: https://vex.com/VEXgames26-27yt SUBSCRIBE: ...
+- Why it fits Day 18: The official Level Up game reveal — the foundational video that shows the field, the scoring objects, the legal actions, and the point values. Every skills-route discussion starts here: a 5th grader needs to see what's scoreable and where before they can plan a 60-second path. Pair this with the route-analysis videos below.
+- Concept covered: Level Up field layout, scoring rules, legal actions, what a skills run contains
+
+VIDEO 2:
+- Title: VEX IQ Level Up Game Manual FULL BREAKDOWN
+- Channel: RoboSTEM
+- Video ID: AMZ8p5u8UHY
+- URL: https://www.youtube.com/watch?v=AMZ8p5u8UHY
+- Duration: 579s (9:39)
+- Description excerpt: join discord: https://discord.gg/robostem or in channel desc 0:00-0:27 - Intro 0:27-1:12 - Overview 1:12-1:48 - Field 1:48-2:34 ...
+- Why it fits Day 18: A thorough, timestamped walkthrough of the Level Up manual — field zones, scoring values, skills rules, and edge cases. It's the "what exactly counts and how much" reference that lets a beginner weigh route options (is going for X worth the time vs. Y?). Timestamps make it easy to jump to the skills section.
+- Concept covered: Level Up scoring breakdown, skills rules, route value comparison, rule edge cases
+
+VIDEO 3:
+- Title: Vex Iq Level Up | Solo TW PR | 102 Points!
+- Channel: Auburn Community Robotics
+- Video ID: yBdO3xBeAp4
+- URL: https://www.youtube.com/watch?v=yBdO3xBeAp4
+- Duration: 64s (1:04)
+- Description excerpt: NA
+- Why it fits Day 18: A real Level Up solo skills run with a final score, showing one complete 60-second route on the current field. It's the "here's what a route looks like end-to-end" example that a 5th grader can watch and then map onto their own field — which scoring actions did this driver choose, in what order, and was it safe or risky?
+- Concept covered: Full 60-second skills route example, Level Up current-season scoring in action, route observation
+
+VIDEO 4:
+- Title: Hero Bot Scores 92 Points?! Breaking Down This INSANE Match
+- Channel: VEX Talk
+- Video ID: EMYxGGUh_ls
+- URL: https://www.youtube.com/watch?v=EMYxGGUh_ls
+- Duration: 151s (2:31)
+- Description excerpt: For clarification, the match is a normal match not skills. Messed up the script and thumbnail. In today's video, we teamed up with ...
+- Why it fits Day 18: A breakdown of a Hero Bot scoring 92 points — useful because it shows what the stock Flop can actually achieve and analyzes WHY the points came (which actions, which zones). The creator narrates the reasoning, which is the "explain the route value" skill the day teaches. Note: it's a teamwork match, not a skills run, but the scoring logic transfers.
+- Concept covered: Hero Bot scoring potential, point-source analysis, route reasoning for Flop
+
+VALIDATION NOTES:
+- "VIQRC Level Up 60 second skills" returned mostly older-season skills runs and a practice timer (Ben Lipper's timer, D9VdmY24T-A, which is a useful practice tool but not strategy). The current Level Up solo run (yBdO3xBeAp4) is the best 60-second example found.
+- "VEX IQ Level Up skills run analysis" returned no true frame-by-frame analysis video. The closest is VEX Talk's match breakdown (EMYxGGUh_ls), which narrates point sources — it's teamwork not skills, but the analytical habit transfers.
+- Several Level Up skills clips are under 70 seconds with no narration (PSDdSdEetHc, RSS strategy clips). These show routes but don't teach reasoning, so they were set aside in favor of the narrated breakdown.
+- Dd9xYAGhI30 ("312 Point Championship Strategy") is a high-level route plan but pitched at elite teams and essentially an ad for a paid strategy service — rejected for the beginner audience and the "avoid elite-only routes" guardrail.
+- RoboSTEM's "This Catapult + Lift Combo is the META" (S5BwSeyTGws) is current and strategic but focuses on a custom build, not a Hero Bot route; better suited to a later design day than this beginner skills-strategy day.
+
+=== DAY 19: Level Up Teamwork Strategy ===
+VIDEO 1:
+- Title: Boost Your VEX IQ Teamwork Skills with These Strategies
+- Channel: RoboSTEM
+- Video ID: M_u3zQwBzyI
+- URL: https://www.youtube.com/watch?v=M_u3zQwBzyI
+- Duration: 139s (2:19)
+- Description excerpt: if you want to learn how to do this, join discord: https://discord.gg/ztCuvwgGWu or in channel desc COMING IN WITH A FULLY ...
+- Why it fits Day 19: Directly addresses VEX IQ teamwork strategy — shows two robots on the field and discusses how to coordinate them. It's the only found video that explicitly frames teamwork as a skill to practice rather than just a match to play, which is the day's core message.
+- Concept covered: Two-robot coordination, teamwork strategy concepts, field-zone awareness
+
+VIDEO 2:
+- Title: VEX IQ Level Up Explained — What Teams Need to Know First - Key Rules & Highlights
+- Channel: Vector Motion
+- Video ID: ptJ-CkMJpNY
+- URL: https://www.youtube.com/watch?v=ptJ-CkMJpNY
+- Duration: 546s (9:06)
+- Description excerpt: The VEX IQ Level Up game manual is almost 100 pages long, and many teams will not have time to read every detail. This video ...
+- Why it fits Day 19: A beginner-friendly Level Up explainer that covers the teamwork format, field zones, and what a match requires — the context a 5th grader needs before they can think about alliance roles. It's current-season and explicitly aimed at teams who haven't read the whole manual, which is exactly the audience.
+- Concept covered: Level Up teamwork format, field zones, match structure, beginner orientation
+
+VIDEO 3:
+- Title: 358 POINTS #1 Finals: 81777A & 95014X | VEX IQ Mix & Match
+- Channel: Chewbotca 7163B Robotics
+- Video ID: -Z5vRmfvT-o
+- URL: https://www.youtube.com/watch?v=-Z5vRmfvT-o
+- Duration: 68s (1:08)
+- Description excerpt: Wow--What an impressive finals match at the second Davis Robotics Competition! Congrats to 81777A Spicy Noodle and 95014X ...
+- Why it fits Day 19: A high-level teamwork finals match (Mix & Match, the prior season) that shows two robots visibly dividing the field and not colliding — a concrete example of "who does what" in a teamwork match. It's one season back, but the cooperation pattern (split zones, stay out of each other's way) is identical to Level Up teamwork.
+- Concept covered: Alliance role split, collision avoidance in teamwork, observable cooperation pattern
+
+VALIDATION NOTES:
+- "VEX IQ alliance roles driver meeting" returned no true alliance-role or pre-match-meeting video. The concept of a pre-match driver conversation is barely represented on YouTube; this is a gap the teacher will need to fill with a scripted meeting template rather than a video.
+- "VIQRC teamwork challenge strategy beginner" returned the official Level Up reveal (already used for Day 18) and several skills-only clips — the teamwork-specific content is thin.
+- "VEX IQ teamwork match communication" surfaced mostly match footage and a China teamwork championship clip (90NU3jhfCIg, 279 pts) — impressive but no analysis of communication or roles, so it was set aside.
+- N8LiwXt6r20 ("210 points Vex IQ Level Up") is a teamwork clip but with no commentary or role analysis — useful as a "spot the cooperation" exercise for the teacher to lead, but not standalone instructional.
+- The biggest gap: no video found that models a pre-match alliance conversation between two drivers. The day should include a teacher-led role-play (e.g., "I do offense, you do defense, we call out if we're stuck") since YouTube doesn't provide a kid-friendly example.
+- e6_l_zBYGZo (324 pts teamwork, Macabre Robotics) is a paid-robot ad — rejected per the "avoid copying complete robots" guardrail.
+
+=== DAY 20: Driver Practice and Logbook Evidence ===
+VIDEO 1:
+- Title: The VEX Notebook Rubric, Explained (by a 6x Excellence Winner)
+- Channel: BennyBuildsRobots
+- Video ID: GERezk11oUY
+- URL: https://www.youtube.com/watch?v=GERezk11oUY
+- Duration: 575s (9:35)
+- Description excerpt: A full breakdown of the VEX engineering notebook — how it's scored, what judges look for, and how our team (57249C Jokr) has ...
+- Why it fits Day 20: A detailed, student-presented breakdown of what a VEX engineering notebook should contain and how it's judged — including the expectation that test data and iterations appear in the notebook. It gives the "why keep a log" motivation (judges score it, and it makes your robot better) that connects practice to documentation.
+- Concept covered: Engineering notebook structure, what judges look for, documenting test data and iterations
+
+VIDEO 2:
+- Title: How to Manage Your Engineering Design Notebook [Vex Robotics Competition]
+- Channel: Last Minute Fix OCS Robotics
+- Video ID: D8JT7D8gq5g
+- URL: https://www.youtube.com/watch?v=D8JT7D8gq5g
+- Duration: 863s (14:23)
+- Description excerpt: Timestamps: 00:00 - Introduction 01:01 - First Steps 02:10 - Engineering Design Process 04:36 - The Rest of The Rubric 06:08 ...
+- Why it fits Day 20: A coach-led, timestamped walkthrough of the notebook rubric with a full section on the engineering design process — including how to record tests and improvements. It's the "here's exactly what a test entry looks like" reference that pairs with a practice-and-log session: a 5th grader can mirror the entry format for their own driving drills.
+- Concept covered: Notebook rubric, EDP documentation, recording tests and improvements, entry format examples
+
+VIDEO 3:
+- Title: 5 Tips to Instantly Improve Your VEX Robot Driving
+- Channel: The VEX IQ Guide
+- Video ID: tepeFAA7Gbo
+- URL: https://www.youtube.com/watch?v=tepeFAA7Gbo
+- Duration: 222s (3:42)
+- Description excerpt: What You'll Learn: In this video, you'll learn 5 quick tips that will take your driving skills to the next level! Signature events: Show ...
+- Why it fits Day 20: Reused from Day 16 because it's the clearest VEX IQ driving-practice primer — and the day's point is to PRACTICE these tips and RECORD the results. The teacher's job is to attach a log sheet to each tip (e.g., "5 straight runs, measure stop distance, write down the number"), turning the video into a measurable drill with notebook evidence.
+- Concept covered: Driving practice habits, measurable drill design, connecting practice to logbook entries
+
+VALIDATION NOTES:
+- "VEX IQ driver practice drills logbook" returned NO output — the exact intersection of "driving drills" and "logbook" is essentially absent from YouTube. This is the biggest content gap in the six days. The day must be teacher-built: use a driving-tips video for the skill, a notebook video for the format, and a teacher-made log sheet to connect them.
+- "VEX IQ scoring drill record sheet" returned the Level Up reveal and a build masterclass — no record-keeping content exists. The teacher will need to create a simple drill log (date, drill, attempts, best score, notes).
+- KAwuNsmZL6U ("Robot Stats App for VEX VRC") is a VRC scouting-app tutorial — it tracks match data, not practice drills, and is V5 not IQ. Rejected for audience mismatch, but the idea of an app-based log is worth mentioning to tech-comfortable kids.
+- "VEX IQ robotics practice schedule drills" surfaced the TechPoint Youth coach training series (VXmEe5qfPvM, "Competitiveness," 42 min) which does discuss practice volume and improvement — valuable for a COACH planning the season, but too long and adult-directed for a 5th grader's viewing day.
+- x0WiZHEMTKc and O0El_fts9ns are notebook tutorials that lean toward notebook aesthetics and judging rather than practice-data logging; GERezk11oUY and D8JT7D8gq5g were chosen instead because they explicitly connect test data and EDP to the notebook.
+- The Lemon Vex "Cracked 87 Points" video (hRSUs7ChPW0, also used Day 15) is a model for the day's ideal output: a short clip that says "I changed X, practiced, and got Y points." A 5th grader's logbook entry should look like that video in text form.

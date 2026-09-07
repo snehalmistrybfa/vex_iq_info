@@ -1,0 +1,296 @@
+=== DAY 2: Parts, Shafts, Support, and Friction ===
+VIDEO 1:
+- Title: Introduction to VEX: Drive Shaft and Shaft Collars
+- Channel: STEM with Steph
+- Video ID: g2nOzbhcjv4
+- URL: https://www.youtube.com/watch?v=g2nOzbhcjv4
+- Duration: 175s (2:55)
+- Description excerpt: This is a quick video for those that have never used VEX Robotics before - this video covers using the drive shaft and the shaft collars.
+- Why it fits Day 2: Short, beginner-focused introduction explicitly for newcomers, covering exactly what the day needs: drive shafts and shaft collars. Close-up camera, simple vocabulary.
+- Concept covered: Shafts, shaft collars (mounting on axles)
+
+VIDEO 2:
+- Title: VEX IQ Tip - Mounting Small Hardware on Shafts
+- Channel: VEX Robotics
+- Video ID: uh_CwnbeH9I
+- URL: https://www.youtube.com/watch?v=uh_CwnbeH9I
+- Duration: 132s (2:12)
+- Description excerpt: VEX IQ's tool-free construction system enables users to attach and remove pieces without the need for additional tools. Sometimes, small gears or pulleys may seem difficult to mount onto shafts, but a little leverage is all that's needed to get them on.
+- Why it fits Day 2: Official VEX Robotics channel, short, directly shows mounting gears/pulleys on IQ plastic shafts with practical close-up shots. Great for the beginner "how do I actually put these parts together" question.
+- Concept covered: Shafts, mounting gears/pulleys, practical build technique
+
+VIDEO 3:
+- Title: VEX IQ Building tips - Plastic Axles
+- Channel: Robolink, Inc.
+- Video ID: 4sbWrEzm0lA
+- URL: https://www.youtube.com/watch?v=4sbWrEzm0lA
+- Duration: 151s (2:31)
+- Description excerpt: Tips for how to use plastic axles and other parts to connect motors and gears.
+- Why it fits Day 2: Practical VEX IQ-specific tips on using plastic axles to connect motors and gears; reinforces how shafts interface with the rest of the motion system.
+- Concept covered: Axles, connecting motors/gears, build tips
+
+VIDEO 4:
+- Title: VEX IQ Free spin test - bad spacing (paired with good spacing)
+- Channel: Caution Tape Robotics
+- Video ID: kQNM7glk2qg
+- URL: https://www.youtube.com/watch?v=kQNM7glk2qg
+- Duration: 27s (0:27)
+- Description excerpt: (Free spin test demonstrating the effect of bad spacing on a VEX IQ mechanism.)
+- Why it fits Day 2: This is the "before" clip of a before/after pair showing exactly what binding looks like. Pair it with VIDEO 4b (the "good spacing" clip) to get the classic bad-vs-good free-spinning demo the curriculum calls for.
+- Concept covered: Friction from bad spacing, binding vs free-spinning assemblies
+
+VIDEO 4b:
+- Title: VEX IQ Free spin test - good spacing
+- Channel: Caution Tape Robotics
+- Video ID: J5P3tjDWoL8
+- URL: https://www.youtube.com/watch?v=J5P3tjDWoL8
+- Duration: 39s (0:39)
+- Description excerpt: (Free spin test demonstrating the effect of good spacing on a VEX IQ mechanism.)
+- Why it fits Day 2: The "after" half of the before/after pair. Together with kQNM7glk2qg, these two 30-second clips give the clearest possible visual of how spacers/spacing reduce friction and let an axle spin freely.
+- Concept covered: Spacers, reducing friction, free-spinning vs binding
+
+VIDEO 5 (supplemental):
+- Title: Using Shafts (VEX)
+- Channel: Oxst99
+- Video ID: 0m8dKUeG-gg
+- URL: https://www.youtube.com/watch?v=0m8dKUeG-gg
+- Duration: 204s (3:24)
+- Description excerpt: Shafts are misused every year...i decided to make a video explaining their correct use. Rules: extra supporting shafts (four recommended), always have two sides to avoid shaft tilting, ALWAYS use the small black delrins to keep the shaft in place and avoid metal-on-metal friction.
+- Why it fits Day 2: Explicitly teaches two-point support, shaft support, and using delrin bearings/bushings to reduce friction. The description itself is a mini-lesson. Note: V5/metal parts shown, but the principles (two-sided support, bushings, anti-binding) transfer directly to IQ.
+- Concept covered: Two-point support, bushings/bearings, reducing friction, shaft support
+
+VALIDATION NOTES:
+- The "VEX IQ shafts bushings support friction" and "VEX IQ reducing friction axle support" searches returned no results — this is a niche topic with thin coverage on YouTube. The best content came from "VEX IQ build tips binding shafts" and "VEX IQ building basics shaft collars spacers."
+- "VEX IQ pins connectors standoffs beginner" returned mostly kit-unboxing and connector-tutorial videos; the best pin/connector content is covered by the Robolink axle tips video and the shaft videos.
+- VEX IQ Tutorials Episode 5: Connectors (JaDpkbZtFVI, 14:48) exists but requires sign-in to fetch metadata; it may be a useful supplement if accessible in-browser.
+- "VEX IQ SUPER KIT UNBOXING" (XrVoN-94PGg) was considered but rejected — unboxing, not build technique.
+- "Introduction to Robot Design...NUTS BOLTS SHAFTS COLLARS SPACERS LOCKI" (Gvd0eiEcKoU, WPI, 4:51) is V5-oriented but covers the same vocabulary; usable as a cross-reference if the IQ-specific videos feel too short.
+- The Caution Tape free-spin pair (kQNM7glk2qg + J5P3tjDWoL8) is the single best "before/after of free-spinning vs binding" resource found and directly matches the curriculum's stated good-video criterion.
+
+=== DAY 3: Gear Ratios, Speed, Torque, and Mechanical Advantage ===
+VIDEO 1:
+- Title: VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage
+- Channel: VEX Robotics
+- Video ID: eUeGNe4eDAw
+- URL: https://www.youtube.com/watch?v=eUeGNe4eDAw
+- Duration: 178s (2:58)
+- Description excerpt: The basic concepts of speed, torque, and mechanical advantage are essential to engineering and robotics. Learn about their relationship using the VEX IQ robotics platform. Companion to the VEX IQ Curriculum lesson on Speed, Torque, and Power.
+- Why it fits Day 3: Official VEX IQ curriculum companion video. Directly covers speed, torque, and mechanical advantage using the exact VEX IQ platform the student is learning. This is the canonical anchor video for the day.
+- Concept covered: Speed, torque, mechanical advantage relationship (core concept)
+
+VIDEO 2:
+- Title: VEX IQ Mechanisms - Gear Ratio
+- Channel: VEX Robotics
+- Video ID: wau5W8Mt7Hw
+- URL: https://www.youtube.com/watch?v=wau5W8Mt7Hw
+- Duration: 263s (4:23)
+- Description excerpt: Gear ratio can be used to adjust the speed or torque of a mechanical system. With the VEX IQ gear ratio simulator, learning about different types of gear reductions is easy! Companion to the VEX IQ Curriculum lesson on Gear Ratio.
+- Why it fits Day 3: Official VEX IQ curriculum companion, uses the VEX IQ gear ratio simulator to show gear reductions visually. Pairs perfectly with VIDEO 1 to go from concept → mechanism.
+- Concept covered: Gear ratios, gear reduction, speed/torque tradeoff with gears
+
+VIDEO 3:
+- Title: NEVER be confused by GEAR RATIOS again - EXPLAINED in the MOST VISUAL WAY using LEGO
+- Channel: driving 4 answers
+- Video ID: txQs3x-UN34
+- URL: https://www.youtube.com/watch?v=txQs3x-UN34
+- Duration: 489s (8:09)
+- Description excerpt: Today's video...we're going to add gears into the equation to see how they can be used to manipulate torque and speed...We'll call the gear on our motor the driver gear...the gear on the heavy arm the driven gear...divide teeth on driven by teeth on driver = gear ratio...torque increase comes at a price: rotation speed...5:1 means 5 driver rotations for 1 driven rotation.
+- Why it fits Day 3: The single best visual gear-ratio explainer on YouTube. Uses physical LEGO gears the student can see turning, counts teeth explicitly, defines driver/driven gears, shows the torque↑=speed↓ tradeoff with a heavy arm, and even connects to car transmissions. The full description is itself a textbook-quality lesson. LEGO is an acceptable visual analog per the curriculum spec.
+- Concept covered: Driver/driven gears, tooth counting, gear ratio calculation, speed-torque inverse relationship, mechanical advantage via gears
+
+VIDEO 4:
+- Title: Understanding Gear Ratios in VEX IQ: Speed vs Torque
+- Channel: The VEX IQ Guide
+- Video ID: tr_F2PjhAnQ
+- URL: https://www.youtube.com/watch?v=tr_F2PjhAnQ
+- Duration: 393s (6:33)
+- Description excerpt: In this video, you'll learn how to use gear ratios to increase speed or torque to enhance your mechanisms. Part of the Intermediate Path series.
+- Why it fits Day 3: VEX IQ-specific tutorial from a dedicated IQ channel. Covers the practical "how to use gear ratios to increase speed or torque" application on IQ robots, complementing the official curriculum videos with a longer, more applied walkthrough.
+- Concept covered: Applying gear ratios to VEX IQ mechanisms for speed or torque
+
+VALIDATION NOTES:
+- Seed candidate "txQs3x-UN34" (NEVER be confused by GEAR RATIOS again) — VERIFIED. 8:09, by "driving 4 answers." Title and content match exactly. Excellent LEGO-based visual explainer. RECOMMENDED as the primary conceptual video.
+- Seed candidate "tr_F2PjhAnQ" (Understanding Gear Ratios in VEX IQ: Speed vs Torque) — VERIFIED. 6:33, by "The VEX IQ Guide." Title matches. VEX IQ-specific, good applied complement to the official videos. RECOMMENDED.
+- Seed candidate "eUeGNe4eDAw" (VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage) — VERIFIED. 2:58, by VEX Robotics (official). Title matches. This is the official curriculum companion video. RECOMMENDED as the anchor video.
+- Seed candidate "wau5W8Mt7Hw" (VEX IQ Mechanisms - Gear Ratio) — VERIFIED. 4:23, by VEX Robotics (official). Title matches. Official curriculum companion with gear ratio simulator. RECOMMENDED.
+- Also found: "Gear Ratios Speed Vs Torque Tutorial" (5IjG4iSJYQ4, Kelsey Ed, 4:52) — VEX IQ examples, inverse speed-torque relationship. Good backup if a 5th video is wanted.
+- Also found: "Everything about Gear Ratio in under 4 Minutes" (40RX2HRKpwA, 2in1 Bricking, 3:59) — LEGO Technic gear ratio basics with chapters on calculating ratio, 3+ gears, stacking ratios, worm gears, chains & belts. Good LEGO backup covering compound gears and worm gears.
+- Also found: "Gear Ratio Explained - Vex IQ gears" (e0PeBadhEiQ, Mechanical Max, 3:51) — VEX IQ walkthrough but requires sign-in; could not fully validate.
+- REJECTED: "AvKCsJc8wbM" (Make Your VRC Robot Faster/Stronger) — V5/VRC-only, advanced audience.
+- All 4 seed candidates validated successfully and are recommended. The day is strong.
+
+=== DAY 4: Levers, Linkages, Chain, and Rubber-Band Assistance ===
+VIDEO 1:
+- Title: VEX IQ Building Basics: Levers
+- Channel: VEX Robotics
+- Video ID: OQTAL8RsZaA
+- URL: https://www.youtube.com/watch?v=OQTAL8RsZaA
+- Duration: 107s (1:47)
+- Description excerpt: Welcome to Building Basics! In this new series, we'll be diving into the fundamentals of robotics and exploring the mechanisms that make life move! In this episode, we'll talk about levers and how easy it is to implement this simple machine into your IQ Robot!
+- Why it fits Day 4: Official VEX Robotics "Building Basics" series, specifically about levers on IQ robots. Short, beginner-friendly, and directly connects levers (a simple machine) to the student's own robot. The perfect anchor video for the levers portion of this day.
+- Concept covered: Levers as a simple machine applied to VEX IQ robots
+
+VIDEO 2:
+- Title: Simple Machines: Levers
+- Channel: MooMooMath and Science
+- Video ID: fzljPiPy9nw
+- URL: https://www.youtube.com/watch?v=fzljPiPy9nw
+- Duration: 163s (2:43)
+- Description excerpt: Levers are a type of simple machine that allows you to multiply your work. In this video, I illustrate a 1st class lever, a 2nd class lever, and a third-class lever. The type of lever depends on the location of the effort, fulcrum, and load. I also go over an easy method you can use to help memorize the types of levers.
+- Why it fits Day 4: Clear, kid-friendly illustration of all three lever classes with effort/load/fulcrum labeled. Includes a memorization trick. Covers the lever-class vocabulary the curriculum needs before the student can identify which class a robot arm uses.
+- Concept covered: Three classes of levers, effort/load/fulcrum vocabulary
+
+VIDEO 3:
+- Title: Simple Machines – Levers
+- Channel: Next Generation Science
+- Video ID: _Lz383VMfkg
+- URL: https://www.youtube.com/watch?v=_Lz383VMfkg
+- Duration: 117s (1:55)
+- Description excerpt: A lever is a machine comprising a bar moving around a fixed point, known as the fulcrum. It reduces the effort needed to move a load but increases the distance the effort travels...First-class levers: fulcrum between load and effort (see-saws, claw hammers, scissors). Second-class: load between effort and fulcrum (wheelbarrows, nutcrackers). Third-class: effort between fulcrum and load (fishing rods, baseball bats, brooms) — speed of load is multiplied.
+- Why it fits Day 4: Clean explanation of all three lever classes with real-world examples kids recognize. Notably explains the third-class lever as trading effort for speed — directly relevant to why a robot arm uses a third-class lever for fast movement. Complements VIDEO 2.
+- Concept covered: Three lever classes, force-vs-distance and force-vs-speed tradeoffs
+
+VIDEO 4:
+- Title: Vex 4 Bar Linkage
+- Channel: Mr. Mac's Technical Ed
+- Video ID: 33-IjzAr3T8
+- URL: https://www.youtube.com/watch?v=33-IjzAr3T8
+- Duration: 108s (1:48)
+- Description excerpt: Quick overview of a simple 4 bar linkage with rubber bands for suspension mock up.
+- Why it fits Day 4: Covers TWO day-4 concepts in one short video: linkages (4-bar) AND rubber bands used for assistance/counterbalance. Short, practical, shows the mechanism clearly. Bridges the lever concept to the linkage/arm concept.
+- Concept covered: 4-bar linkages, rubber-band assistance on a mechanism
+
+VIDEO 5 (supplemental — chain/sprocket):
+- Title: Sprockets, Chains and Treads
+- Channel: Jenica Wilcox
+- Video ID: VsztyaNpf3o
+- URL: https://www.youtube.com/watch?v=VsztyaNpf3o
+- Duration: 238s (3:58)
+- Description excerpt: (Tutorial covering VEX IQ sprockets, chains, and treads.)
+- Why it fits Day 4: One of the few VEX IQ-specific videos covering the chain/sprocket system. Covers the chain portion of the day that the other videos miss.
+- Concept covered: Chain and sprocket systems in VEX IQ
+
+VALIDATION NOTES:
+- Seed candidate "OQTAL8RsZaA" (VEX IQ Building Basics: Levers) — VERIFIED. 1:47, by VEX Robotics (official). Title matches exactly. The official Building Basics episode on levers for IQ robots. RECOMMENDED as the anchor video.
+- "VEX IQ levers mechanical advantage" search surfaced OQTAL8RsZaA as the top result, confirming it's the best-known VEX IQ lever video.
+- "three classes of levers LEGO for kids" returned mostly unavailable or very short clips (ILb8k2xmeQo "All about levers" — unavailable; HiVJYQYjYUs "Lego 3rd Class Lever" — 1:19, single class only). The non-LEGO lever videos (fzljPiPy9nw, _Lz383VMfkg) are superior for teaching all three classes.
+- "VEX IQ chain sprocket arm" returned mostly V5/competition content. The Jenica Wilcox IQ sprocket video (VsztyaNpf3o) and Vex IQ Tutorials Episode 8 (37D116cDEOM, requires sign-in) are the IQ-specific chain resources.
+- "VEX IQ rubber band counterbalance arm" and variants returned NO direct results — this is a very thin topic on YouTube. The 4-bar linkage video (33-IjzAr3T8) is the best found that shows rubber bands used for assist. The De-Ex4DMMG8 throwing-device video (1:30) shows elastic-force assist on a VEX IQ mechanism and could be a bonus clip.
+- "VEX IQ linkage lever lesson" returned OQTAL8RsZaA again plus some PLTW lever build clips.
+- REJECTED: "D2.6 Mechanical Advantage" (zBjgw0548e0, Spectrum3847, 39:48) — adult lecture/slides, too advanced for a 5th grader.
+- REJECTED: "Distance Learning First Class Lever" (KjzeljcThc0, 21:55) — PLTW assignment walkthrough, not a concept explainer.
+- NOTE: Day 4 is the thinnest day for YouTube content, especially on rubber-band counterbalance. The teacher may need to supplement with a live demo. The 4 videos above cover levers (3 classes), levers-on-robot, linkages, and rubber-band assist; chain is covered by the supplemental video.
+
+=== DAY 5: Center of Mass, Tipping, and Bracing ===
+VIDEO 1:
+- Title: Center of Gravity: The Key to a Stable Robot
+- Channel: Chris Briere
+- Video ID: D6cY3riTe-o
+- URL: https://www.youtube.com/watch?v=D6cY3riTe-o
+- Duration: 239s (3:59)
+- Description excerpt: Has your robot ever fallen over in a match? Learn from the physics god why it happened and how to prevent it! The omniscient but rather arrogant physics god will explain the concepts of center of gravity and support polygon that are imperative for building and driving a stable robot. If the center of gravity of your robot shifts outside the support polygon, your robot will tip over. Hence, it is advantageous to make the support polygon as large as possible and keep the center of gravity low...You'll also learn about practical applications...and perform a nifty experiment using center of gravity.
+- Why it fits Day 5: The single best match for the day's core criteria. Explicitly teaches center of gravity AND support polygon (the curriculum asks for "support polygon visually"), shows tipping thresholds, explains keeping CoG low and support polygon large. Entertaining "physics god" framing keeps a 5th grader engaged. Made for robotics students.
+- Concept covered: Center of gravity, support polygon, tipping threshold, keeping CoG low
+
+VIDEO 2:
+- Title: VEX Camp | IQ Session 1: Building with IQ
+- Channel: VEX Robotics
+- Video ID: 0UkQkdVcxWo
+- URL: https://www.youtube.com/watch?v=0UkQkdVcxWo
+- Duration: 2153s (35:53)
+- Description excerpt: Join us for the first...Chapters: 00:00 Intro / 00:41 What materials do you need? / 01:17 Introduction to IQ Beams / 03:44 Connect Beams to start your tower / 07:23 Make a base with connectors / 11:43 Build your first tower / 12:55 Add rigidity to your tower / 19:43 Add stability to your tower / 24:15 Improve your tower using center of gravity / 31:50 Tallest Tower Challenge!
+- Why it fits Day 5: Official VEX Robotics camp video. The chapter list is a perfect match: "Add rigidity to your tower" (bracing), "Add stability to your tower," and "Improve your tower using center of gravity" (CoG). This single video covers bracing, triangulation/rigidity, AND center of gravity using the exact VEX IQ parts the student has. Use the timestamped chapters to show only the relevant segments (12:55–31:50) rather than the full 35 minutes.
+- Concept covered: Bracing/rigidity, stability, center of gravity in a build (VEX IQ specific)
+
+VIDEO 3:
+- Title: Center of Gravity and Wiggly Driving Test
+- Channel: Robot Rampage
+- Video ID: XhwBI1EbspE
+- URL: https://www.youtube.com/watch?v=XhwBI1EbspE
+- Duration: 82s (1:22)
+- Description excerpt: This is an advanced FLL concept, where we explore the effect of a lower center of gravity on the robot's driving ability. Specifically we are trying to make it smoother and less wiggly.
+- Why it fits Day 5: Short, visual before/after-style demonstration of how lowering center of gravity changes a robot's driving behavior. FLL (LEGO) but the concept transfers directly. Good as a quick "see the difference" clip.
+- Concept covered: Effect of center of gravity height on robot stability (visual demo)
+
+VIDEO 4 (supplemental — tipping example):
+- Title: Agilibot
+- Channel: Brian Meierdiercks
+- Video ID: e1hRWg0WG9I
+- URL: https://www.youtube.com/watch?v=e1hRWg0WG9I
+- Duration: 74s (1:14)
+- Description excerpt: Remote-controlled "robot" built using Vex Robotics kit. The center of gravity is close to the rear axel and the front wheels are low-friction. This allows for quick turns. The bot would flip over during quick acceleration if not for two extension bars on the rear of the chassis.
+- Why it fits Day 5: A real VEX-built robot that explicitly discusses center of gravity location and shows how it affects tipping (would flip without the rear extension bars). A concrete example of CoG placement and using structure to prevent tipping.
+- Concept covered: Center of gravity placement, preventing tipping with structural extensions
+
+VALIDATION NOTES:
+- "VEX IQ center of mass tipping robot" returned D6cY3riTe-o (excellent match) and inspection/competition videos.
+- "LEGO robot center of gravity experiment" returned mostly unavailable videos (vVthicvuX3w "Center of Gravity – The Key To Building an Effective FLL Robot" — unavailable; aFMEP4obDZc "Building Center of Gravity" — available but no description, 3:08). XhwBI1EbspE was the best available FLL CoG demo.
+- "VEX IQ bracing triangulation strong frame" returned NO results. "VEX IQ structure bracing square frame" returned only an audiobook (YouTube search artifact). Bracing/triangulation as a standalone topic has very thin YouTube coverage for IQ.
+- "VEX IQ robot stability center of gravity" returned D6cY3riTe-o again plus 0UkQkdVcxWo (VEX Camp), confirming these two as the best available resources.
+- The VEX Camp video (0UkQkdVcxWo) is the KEY find for bracing — its "Add rigidity to your tower" and "Add stability to your tower" chapters are the closest thing to a bracing/triangulation lesson available for VEX IQ on YouTube. Strongly recommend using the timestamped segments.
+- REJECTED: "VEX IQ Full Inspection Guide" (afrdGr4ue9Y) — inspection process, not CoG/bracing concepts.
+- REJECTED: "Tips to Know Before Building Your Vex Chassis" (8LJfUyoZh7U) — V5-only, covers metal/nuts/structure/axles/gears/motors but not CoG or bracing specifically.
+- NOTE: Day 5's bracing/triangulation topic is the hardest to find dedicated video content for. The VEX Camp video's rigidity chapters are the best available. A teacher-led hands-on bracing demo (square vs triangulated frame) would be a valuable supplement.
+
+=== DAY 6: Drivetrain Steering Methods ===
+VIDEO 1:
+- Title: Common Steering Methods
+- Channel: ServoCity
+- Video ID: F3G0sUz3_Jw
+- URL: https://www.youtube.com/watch?v=F3G0sUz3_Jw
+- Duration: 96s (1:36)
+- Description excerpt: Camaro footage used: [link]. Tank footage used: [link].
+- Why it fits Day 6: Short, clean comparison of common steering methods (Ackermann/car-style, skid-steer/tank-style, etc.) using real vehicles and diagrams. Good for establishing the vocabulary of steering types before diving into VEX-specific drivetrains. Note: not VEX-specific, but the steering-method concepts transfer directly.
+- Concept covered: Common steering methods overview (Ackermann, skid-steer/tank, etc.)
+
+VIDEO 2:
+- Title: The Ultimate Guide To Omniwheels (Holonomic, Mecanum, Tank Drive)
+- Channel: Kepler Electronics
+- Video ID: VfuA2EqaIso
+- URL: https://www.youtube.com/watch?v=VfuA2EqaIso
+- Duration: 282s (4:42)
+- Description excerpt: A short video detailing the many different ways of setting up omniwheels, as they are cool, but can be confusing.
+- Why it fits Day 6: Covers holonomic, mecanum, and tank drive setups with omniwheels. Shows the different wheel configurations and explains how each moves. Exactly the "compares multiple drivetrains" criterion the curriculum asks for. Visual and concise.
+- Concept covered: Holonomic/omni, mecanum, and tank drive wheel configurations
+
+VIDEO 3:
+- Title: The Ultimate Guide to Holonomic Drivetrains
+- Channel: Brogan M. Pratt
+- Video ID: 5TCj6p7VnbU
+- URL: https://www.youtube.com/watch?v=5TCj6p7VnbU
+- Duration: 804s (13:24)
+- Description excerpt: Chapters: 0:00 Intro / 0:41 What is Holonomic Drive? / 2:00 Mecanum / 3:30 Kiwi / 5:28 X-Drive / 6:47 H-Drive / 8:15 Swerve (4-Pod) / 10:42 Swerve (2-Pod) / 12:45 Additional Resources.
+- Why it fits Day 3: Comprehensive, chaptered comparison of EVERY holonomic drivetrain type — mecanum, kiwi, X-drive, H-drive, and swerve. The chapter list alone is a lesson outline. Use specific chapters (X-Drive at 5:28, H-Drive at 6:47) to show only the relevant types. Explains what holonomic means and compares tradeoffs. Best single "compare multiple drivetrains side by side" video found.
+- Concept covered: Holonomic drive concept, X-drive, H-drive, mecanum, kiwi, swerve — comparison
+
+VIDEO 4:
+- Title: Vex Robotics Drivebase Types Explained
+- Channel: 9MotorGang
+- Video ID: 2Pnj9Jq9JiU
+- URL: https://www.youtube.com/watch?v=2Pnj9Jq9JiU
+- Duration: 605s (10:05)
+- Description excerpt: An explanation/overview of basic drivebase types for the Vex Robotics Competition High Stakes. Chapters: 0:00 intro / 0:45 tank drive with traction wheels / 1:55 tank drive with omni wheels / 3:06 H drive / 5:04 mecanum drive / 7:35 X drive / 9:40 outro.
+- Why it fits Day 6: VEX-specific (V5/competition, but the drivetrain types are identical in concept to IQ). Chaptered comparison of tank, H-drive, mecanum, and X-drive with CAD drawings showing each layout. The clearest VEX-ecosystem "here are all the drivetrain types" overview. Use chapters to show relevant segments.
+- Concept covered: Tank drive, H-drive, mecanum, X-drive — VEX-specific comparison
+
+VIDEO 5 (supplemental — omni wheel behavior):
+- Title: vex wheel selection: solid versus omni
+- Channel: turbodog99
+- Video ID: xQorNQ13Cyk
+- URL: https://www.youtube.com/watch?v=xQorNQ13Cyk
+- Duration: 289s (4:49)
+- Description excerpt: Shows the effects of solid wheels and omni wheels.
+- Why it fits Day 6: Demonstrates the physical difference between solid (traction) and omni wheels on a VEX robot — why omni wheels allow sideways sliding and how this enables holonomic drives. Good for the "omni wheel forces" concept before showing X-drive/H-drive configurations.
+- Concept covered: Omni wheel vs traction wheel behavior, wheel force characteristics
+
+VALIDATION NOTES:
+- Seed candidate "F3G0sUz3_Jw" (Different Steering Methods) — VERIFIED. 1:36, by ServoCity. Actual title is "Common Steering Methods" (not "Different Steering Methods" as supplied). Content is a clean comparison of steering methods (car/Ackermann, tank/skid-steer). RECOMMENDED as an intro/vocabulary video, but note it is NOT VEX-specific — it uses real vehicles. Best paired with the VEX/omni-specific videos above.
+- "VEX IQ drivetrain steering methods X drive H drive" returned mostly V5 content and unrelated videos. The best IQ-adjacent result was the drivetrain tips video (sek_rTkf2-o).
+- "VEX IQ holonomic omni drive" returned short demo clips (Tbkl8iLRvqc, EqbcMBdBWcA) but no explainer videos.
+- "omni wheel forces animation for kids" returned NO relevant results — YouTube search returned Ben 10 cartoon episodes (the word "omni" matched "Omnitrix"). This query is not useful; the omni-wheel concept is better taught via VfuA2EqaIso and xQorNQ13Cyk.
+- "VEX IQ X drive H drive tank drive" returned 9MotorGang's V5 drivebase video (2Pnj9Jq9JiU) and some short H-drive clips. The 9MotorGang video is V5 but the drivetrain types map directly to IQ.
+- "VEX IQ different steering methods" returned mostly unrelated results (Hex Bots truck steering, individual car-turning demos). The best "different steering methods" content is the ServoCity seed video.
+- REJECTED: "Types of Chassis | 14892 Venom" (7DWCRYTRdb4, 3:14) — FTC-specific, covers Nimble/H-Drive/Mecanum-Tank but not X-drive; less complete than 2Pnj9Jq9JiU.
+- REJECTED: "Robotic Drive Train Tips - Vex IQ" (-q3hwsdpp6I, Mechanical Max, 2:54) — tips, not steering-method comparison.
+- REJECTED: "Robots with the Rockettes, episode 4 - Holonomic Drive Train" (n2Q3PYVx0Qk, 2:33) — FTC team-specific, programming-focused.
+- NOTE: No single video perfectly covers "VEX IQ X-drive, H-drive, tank drive, holonomic" all at once for IQ specifically. The best approach is: (1) start with F3G0sUz3_Jw for steering vocabulary, (2) use xQorNQ13Cyk to show omni vs traction wheels, (3) use 5TCj6p7VnbU chapters or 2Pnj9Jq9JiU chapters to compare X-drive/H-drive/tank/mecanum, and (4) use VfuA2EqaIso for the omniwheel setup visual. The 9MotorGang video (2Pnj9Jq9JiU) is the closest to a VEX-ecosystem "all drivetrains" overview despite being V5.

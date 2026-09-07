@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Invisible Thief Called Friction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#E87722; --primary-dark:#c95d12; --secondary:#2D2D2D; --accent:#00A3E0; --accent-dark:#0082b3; --success:#2ECC71; --warning:#F39C12; --danger:#E74C3C; --light:#F8F9FA; --light-gray:#E9ECEF; --medium-gray:#6C757D; --dark-gray:#343A40; --white:#FFFFFF; --shadow-sm:0 1px 3px rgba(0,0,0,0.08); --shadow-md:0 4px 12px rgba(0,0,0,0.10); --shadow-lg:0 8px 28px rgba(0,0,0,0.12); --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --font-heading:'Poppins',system-ui,-apple-system,sans-serif; --font-body:'Inter',system-ui,-apple-system,sans-serif; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:linear-gradient(180deg,#f0fbff,#fff8ec,#eefcf4); color:var(--secondary); font-family:var(--font-body); font-size:18px; line-height:1.65; min-width:320px; }
+    h1,h2,h3 { font-family:var(--font-heading); line-height:1.15; }
+    a { color:var(--accent-dark); font-weight:700; }
+    .wrap { margin:0 auto; max-width:1050px; padding:18px; }
+    .top,.nav { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; margin-bottom:18px; }
+    .pill,.nav a { align-items:center; background:var(--white); border:2px solid rgba(0,0,0,.06); border-radius:999px; box-shadow:var(--shadow-sm); display:inline-flex; min-height:46px; padding:10px 16px; text-decoration:none; }
+    .progress { background:#e9fff0; border-color:#7be495; color:#126b35; }
+    .hero { background:var(--white); border:4px solid #ffd166; border-radius:24px; box-shadow:var(--shadow-lg); display:grid; gap:22px; grid-template-columns:1.05fr .95fr; padding:28px; }
+    h1 { font-size:clamp(2rem,6vw,3.8rem); margin-bottom:14px; }
+    .hook { background:#fff1d8; border-left:8px solid var(--primary); border-radius:var(--radius-lg); font-size:clamp(1.3rem,3vw,2rem); font-weight:800; padding:18px; }
+    .big-question { color:var(--primary-dark); display:block; font-family:var(--font-heading); margin-bottom:6px; }
+    .diagram { background:linear-gradient(145deg,#ffffff,#e8f8ff); border-radius:22px; min-height:310px; padding:24px; }
+    .shaft { background:#555; border-radius:999px; height:30px; margin:58px auto 20px; position:relative; width:82%; }
+    .wheel { background:#64c8ff; border:8px solid #127ea5; border-radius:50%; height:100px; left:15%; position:absolute; top:-35px; width:100px; }
+    .collar { background:var(--primary); border-radius:8px; height:70px; position:absolute; top:-20px; width:26px; }
+    .collar.left { left:41%; } .collar.right { right:27%; }
+    .rub { background:#ff6b6b; border-radius:16px; color:white; font-family:var(--font-heading); font-weight:800; margin:20px auto; max-width:360px; padding:14px; text-align:center; }
+    .grid { display:grid; gap:18px; grid-template-columns:repeat(3,1fr); margin-top:22px; }
+    .card,.try,.robot,.think { background:var(--white); border-radius:22px; box-shadow:var(--shadow-md); padding:22px; }
+    .card h2,.try h2,.robot h2,.think h2 { font-size:1.55rem; margin-bottom:10px; }
+    .think { border:4px solid #ffd166; margin-top:22px; }
+    .try { border:4px solid #b48cff; margin-top:22px; }
+    .robot { border:4px solid #7be495; margin-top:22px; }
+    .sort { display:grid; gap:16px; grid-template-columns:1fr 1fr; margin-top:14px; }
+    .examples { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .chip { background:#edf7ff; border:3px solid transparent; border-radius:999px; color:var(--secondary); cursor:pointer; font:800 1rem var(--font-heading); min-height:48px; padding:10px 14px; }
+    .chip.selected { border-color:var(--primary); background:#fff1d8; }
+    .bin { background:#f8f9fa; border:3px dashed #9aa6b2; border-radius:18px; min-height:140px; padding:14px; }
+    .bin h3 { font-size:1.2rem; }
+    .score { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
+    @media (max-width:760px) { .hero,.grid,.sort { grid-template-columns:1fr; } .diagram { min-height:270px; } }
+    @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } .chip { border:1px solid #333; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><span class="pill progress">🔧 Concept 3 of 6</span><nav class="nav" aria-label="Concept links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 2</a></nav></div>
+    <section class="hero">
+      <div><h1>The Invisible Thief Called Friction</h1><p class="hook"><span class="big-question">Think first!</span>Where did the motor's power go if the wheel barely spins but nothing looks broken?</p></div>
+      <div class="diagram" role="img" aria-label="CSS diagram of a shaft, wheel, and collars squeezing too tightly."><div class="shaft"><div class="wheel"></div><div class="collar left"></div><div class="collar right"></div></div><p class="rub">Too tight = rubbing = stolen power!</p></div>
+    </section>
+    <section class="grid">
+      <article class="card"><h2>👟 Good friction</h2><p>Wheels need grip. Intakes need grip. Claws need grip. Some friction helps robots play.</p></article>
+      <article class="card"><h2>🧱 Bad friction</h2><p>Crooked shafts, squeezed collars, rubbing gears, and bent frames waste motor effort.</p></article>
+      <article class="card"><h2>🌀 Free-spin test</h2><p>Spin the shaft by hand. If it stops fast, look for rubbing before changing code.</p></article>
+    </section>
+    <section class="think"><h2>❓ Think About This!</h2><p>If fixing spacers makes the arm move better, did the motor become stronger, or did you stop wasting force?</p></section>
+    <section class="try">
+      <h2>⭐ Try It! Good Friction or Bad Friction?</h2>
+      <p>Tap an example, then tap the correct box.</p>
+      <div class="examples">
+        <button class="chip" data-kind="good" type="button">Tire gripping tile</button><button class="chip" data-kind="bad" type="button">Gear rubbing a beam</button><button class="chip" data-kind="good" type="button">Intake roller grabbing bag</button><button class="chip" data-kind="bad" type="button">Collar squeezed tight</button><button class="chip" data-kind="bad" type="button">Bent shaft wobble</button><button class="chip" data-kind="good" type="button">Claw holding gently</button>
+      </div>
+      <div class="sort"><div class="bin" data-bin="good"><h3>✅ Good friction</h3></div><div class="bin" data-bin="bad"><h3>🛑 Bad friction</h3></div></div>
+      <p class="score" id="score">Sorted: 0 correct</p>
+    </section>
+    <section class="robot"><h2>🤖 Connect to Flop</h2><p>If Flop's arm or intake binds, it can miss scores even with correct code. A smooth mechanism makes the same motor feel stronger.</p></section>
+    <nav class="nav" aria-label="Bottom links"><a href="../index.html#curriculum">Back to Curriculum</a><a href="../index.html#kit">Use with Day 2</a></nav>
+  </main>
+  <script>
+    let selected = null;
+    let correct = 0;
+    document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+      selected = chip;
+      chip.classList.add('selected');
+    }));
+    document.querySelectorAll('.bin').forEach(bin => bin.addEventListener('click', () => {
+      if (!selected) return;
+      const wasCorrect = selected.dataset.kind === bin.dataset.bin;
+      if (wasCorrect) correct += 1;
+      selected.textContent = (wasCorrect ? '✓ ' : 'Try again: ') + selected.textContent;
+      bin.appendChild(selected);
+      selected.classList.remove('selected');
+      selected.disabled = true;
+      selected = null;
+      document.querySelector('#score').textContent = 'Sorted: ' + correct + ' correct';
+    }));
+  </script>
+</body>
+</html>

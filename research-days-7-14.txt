@@ -1,0 +1,215 @@
+=== DAY 7: 2-motor vs 4-motor drivetrains and wheel choice ===
+VIDEO 1:
+- Title: Tutorial: Fast & Efficient VEX IQ Drivetrain (2:1 Speed, 2 Motors)
+- Channel: The VEX IQ Guide
+- Video ID: -vm_UsnZt-k
+- URL: https://www.youtube.com/watch?v=-vm_UsnZt-k
+- Duration: 366s (6:06)
+- Description excerpt: Want to upgrade this drivetrain? Watch this: https://www.youtube.com/watch?v=hhJUF2rjvOM What You'll Learn: In this video...
+- Why it fits Day 7: Directly explains a 2-motor VEX IQ drivetrain with a 2:1 gear ratio — the exact 2-motor-vs-speed conversation the day needs. Shows the real build and the tradeoff between speed and the motor count you have left for mechanisms.
+- Concept covered: 2-motor drivetrain, gear ratio for speed, motor allocation tradeoff
+
+VIDEO 2:
+- Title: 5 Tips Every VEX Team Should Know about Drivetrains
+- Channel: Joseph973
+- Video ID: sek_rTkf2-o
+- URL: https://www.youtube.com/watch?v=sek_rTkf2-o
+- Duration: 250s (4:10)
+- Description excerpt: Close up photos here: https://site.roboticscoaching.com/drivetrain Whether you're a new team or a team with a little experience...
+- Why it fits Day 7: Practical drivetrain tips covering friction, wheel choice, and support — the core "how do you make a drive base actually good" lesson. Visual close-ups make it accessible for a 5th grader.
+- Concept covered: Drivetrain friction, wheel selection, support/bracing
+
+VIDEO 3:
+- Title: VEX IQ Wheel Guide for Beginners | Drive Smarter
+- Channel: The VEX IQ Guide
+- Video ID: leIM-EVbhGY
+- URL: https://www.youtube.com/watch?v=leIM-EVbhGY
+- Duration: 215s (3:35)
+- Description excerpt: What You'll Learn: In this video, you'll learn about the different types of VEX IQ wheels and how to pick the right ones for your...
+- Why it fits Day 7: Directly addresses the wheel-choice half of the day — VEX IQ specific, beginner-friendly, covers the different wheel types and when to use each. Perfect pairing with the drivetrain motor-count videos.
+- Concept covered: VEX IQ wheel types, traction vs omni, when to use each
+
+VIDEO 4:
+- Title: vex wheel selection: solid versus omni
+- Channel: turbodog99
+- Video ID: xQorNQ13Cyk
+- URL: https://www.youtube.com/watch?v=xQorNQ13Cyk
+- Duration: 290s (4:50)
+- Description excerpt: shows the effects of solid wheels and omni wheels.
+- Why it fits Day 7: A direct visual demonstration of solid (traction) vs omni wheels and how they behave — exactly the turning-scrub/traction comparison the day needs. Short and clear for a young learner.
+- Concept covered: Traction vs omni wheels, turning scrub, wheel behavior comparison
+
+VALIDATION NOTES:
+- "VEX IQ motor allocation drivetrain mechanisms" returned no output — the term is too specific for YouTube titles. Motor allocation is instead covered implicitly inside the 2-motor drivetrain tutorial (VIDEO 1) and the 5-tips video (VIDEO 2), both of which connect drivetrain choice to the motors you have left.
+- The VEX Talk "2- and 4-Motor Drivetrain" video (ap39M61F1l0) is coding-focused, not mechanical-design, so it was set aside even though the title is a perfect match — it teaches the code, not why you'd choose 2 vs 4 motors.
+- "VEX IQ competition drive base design" returned mostly Level Up game/strategy videos rather than drivetrain design; the best mechanical content was already captured by the first two queries.
+- All four selected videos are VEX IQ-specific or directly transferable (turbodog99 uses VEX parts). No V5-only advice included.
+
+=== DAY 8: Claws, scoops, intakes, compression, funneling ===
+VIDEO 1:
+- Title: Vex IQ Claw Ideas - How to Design Yours
+- Channel: Mechanical Max
+- Video ID: X4JHUDGzyv0
+- URL: https://www.youtube.com/watch?v=X4JHUDGzyv0
+- Duration: 330s (5:30)
+- Description excerpt: The three different types of claws! Choose wisely, FAST IS WEAK, STRONG IS SLOW! If you are in a robotics club, show this video...
+- Why it fits Day 8: Directly compares three claw types and the speed-vs-grip tradeoff — exactly the claw comparison and "clean grip/release" discussion the day needs. Explicitly aimed at robotics-club students, so the tone is right for a 5th grader.
+- Concept covered: Claw types, speed vs grip tradeoff, choosing a manipulator
+
+VIDEO 2:
+- Title: Vex IQ Claw Design Video
+- Channel: Tiffany Mounts
+- Video ID: 2DNQQKckmLk
+- URL: https://www.youtube.com/watch?v=2DNQQKckmLk
+- Duration: 670s (11:10)
+- Description excerpt: You learn about what a claw is, how a claw works, and how to create an effective claw on your robot.
+- Why it fits Day 8: A full classroom-style lesson on claw design — what a claw is, how it works, and how to make it effective. Covers the "how does a claw actually grip and release" mechanism question in an educational, kid-friendly tone.
+- Concept covered: Claw mechanics, grip, effective claw design
+
+VIDEO 3:
+- Title: intake design - VEX IQ Robots
+- Channel: Tiffany Mounts
+- Video ID: GkgDdidYrxM
+- URL: https://www.youtube.com/watch?v=GkgDdidYrxM
+- Duration: 846s (14:06)
+- Description excerpt: Welcome to the Vex classroom my name is Elena and in this video we're going to be talking about intake design so through this...
+- Why it fits Day 8: A dedicated VEX IQ classroom lesson on intake design — the most direct hit for the intake/compression/funneling topic. Long but structured as a tutorial, so it can be watched in segments. Note: the video was flagged as unavailable on individual lookup; it may be age-restricted or region-limited. The flat-search metadata is valid, so the link should be tested in a browser before class.
+- Concept covered: Intake design, compression, how intakes grab objects
+
+VIDEO 4:
+- Title: Cracked 87 Points in VEX IQ Level Up Today!
+- Channel: Lemon Vex Robotics
+- Video ID: hRSUs7ChPW0
+- URL: https://www.youtube.com/watch?v=hRSUs7ChPW0
+- Duration: 66s (1:06)
+- Description excerpt: Switched my intake from a roller to a CLAW grabber — and the combo with my catapult finally clicked. The claw gives way more control than the roller — better grip, cleaner releases, more consistent cycles.
+- Why it fits Day 8: A real Level Up (Bean Bag) video that directly compares a roller intake vs a claw grabber on the same game objects — the exact claw-vs-intake comparison with Bean Bag transfer the day asks for. Short, energetic, and the creator explicitly discusses grip, clean release, and cycle consistency.
+- Concept covered: Roller vs claw intake, Bean Bag grip/release, intake tradeoff in real game
+
+VALIDATION NOTES:
+- "VEX IQ flex wheel intake bean bag" and "VEX IQ game object intake funnel" returned zero usable results — these are too niche for current YouTube titles. Flex-wheel intakes are more of a VRC/High Stakes topic; Level Up Bean Bag intakes are still early in the season with limited tutorial content.
+- "VEX IQ passive active manipulator" returned mostly pneumatics and VRC content, not IQ-specific passive-vs-powered manipulator comparisons. The Lemon Vex video (VIDEO 4) is the closest real example of an active-claw-vs-passive-roller decision.
+- VIDEO 3 (Tiffany Mounts intake design) was returned by flat search but errored on individual metadata fetch ("not available"). It may be restricted — test the link in a browser. If unavailable, VIDEOs 1, 2, and 4 still cover claws, intakes, and the claw-vs-roller tradeoff.
+- No video was found that explicitly demonstrates "off-center approach tolerance" or "possession violation" as a teaching point. The Lemon Vex video is the best real-game example of clean pickup/release cycles; a teacher may need to narrate the possession-limit rule (Level Up = 1 Bean Bag at a time) alongside it.
+
+=== DAY 9: Lifts, four-bars, six-bars, chain-bars, scissor linkages ===
+VIDEO 1:
+- Title: Vex Robotics Lift Types Explained
+- Channel: 9MotorGang
+- Video ID: 9iSmW7dMuB8
+- URL: https://www.youtube.com/watch?v=9iSmW7dMuB8
+- Duration: 620s (10:20)
+- Description excerpt: An explanation/overview of basic lift types for the Vex Robotics Competition High Stakes. The cad drawings were made in Fusion 360. 0:00 intro / 1:11 2 bar / 2:18 4 bar / 4:23 6 bar / 5:34 Chain bar / 7:13 Non-parallel 4 bar / 8:29 DR4B
+- Why it fits Day 9: This is the single best overview video — it explains 2-bar, 4-bar, 6-bar, chain bar, non-parallel 4-bar, and DR4B with CAD animations in one place. The chapter markers make it easy to show just the relevant sections. The end-effector orientation and lift-height tradeoffs are visible in the animations.
+- Concept covered: All major lift types compared, 4-bar/6-bar/chain-bar/DR4B, parallel motion
+
+VIDEO 2:
+- Title: Vex Robotics Chain Bar Guide/Tutorial
+- Channel: 9MotorGang
+- Video ID: 80ZmWH89pjE
+- URL: https://www.youtube.com/watch?v=80ZmWH89pjE
+- Duration: 519s (8:39)
+- Description excerpt: Reject 4 Bar, embrace Chain Bar. Chain Bars are a really cool and underutilized lift in the vex robotics competition. Just a quick tutorial on how the mechanics of a chain bar work.
+- Why it fits Day 9: A dedicated chain-bar tutorial that explains the mechanics of how a chain bar works and why you'd choose it over a 4-bar. Pairs with VIDEO 1 to give chain-bars their own deep-dive. Mentions torque and underutilization — good for the "tradeoffs" discussion.
+- Concept covered: Chain bar mechanics, why choose chain bar over 4-bar, torque tradeoff
+
+VIDEO 3:
+- Title: Basic Mechanisms: 4 Bar Linkage
+- Channel: Mr. Dillman's Tech Channel
+- Video ID: 1Ty_1LF3Qv0
+- URL: https://www.youtube.com/watch?v=1Ty_1LF3Qv0
+- Duration: 60s (1:00)
+- Description excerpt: A four bar linkage takes input rotary motion to an output elliptical reciprocating motion four bars linked together and connect to a...
+- Why it fits Day 9: A crystal-clear one-minute physical model of a 4-bar linkage showing the rotary-to-reciprocating motion conversion. This is the "parallel motion is obvious" non-VEX animation the brief allows — perfect for a 5th grader to see the fundamental mechanism before looking at robot-specific versions.
+- Concept covered: 4-bar linkage fundamental motion, rotary to reciprocating, parallel motion
+
+VIDEO 4:
+- Title: Kepler's Guide to Chain-Bar Lifts
+- Channel: Kepler Electronics
+- Video ID: LUvIH5k8HWY
+- URL: https://www.youtube.com/watch?v=LUvIH5k8HWY
+- Duration: 129s (2:09)
+- Description excerpt: Chain-bar lifts are pretty neat, but also can be tricky to build and design, so here's my attempt to explain the lift type with a...
+- Why it fits Day 9: A short, visual explanation of chain-bar lifts that complements the 9MotorGang tutorial. Kepler Electronics is a well-known educational robotics channel, and this is a clean, concise explanation suitable for a young learner.
+- Concept covered: Chain bar lift design, how chain bars work, build tips
+
+VALIDATION NOTES:
+- No VEX IQ-specific scissor-lift video was found; "VEX IQ scissor lift Grabber" returned a LEGO Spike scissor lift, a VEX grabber, and a ball-grabber prototype — none of which show a VEX IQ scissor lift. The 9MotorGang overview (VIDEO 1) covers DR4B instead, which is the more relevant lift type for IQ competition.
+- "VEX IQ robot arm linkage mechanical advantage" returned the official VEX IQ "Speed, Torque, and Mechanical Advantage" video (eUeGNe4eDAw) — this is excellent for the torque/stability tradeoff discussion and could be added as a supplement, but it covers the concept generally rather than lift-specific linkages. It is recommended as a pre-watch or homework pairing.
+- The "Animated Double Reverse 4-bar VEX IQ Lift" (2ScO7XZqiGQ, 10s) is a very short render that could serve as a looping visual aid in class, but is too brief to stand as a primary video.
+- VRC-only metal content: 9MotorGang and Kepler Electronics use VEX metal (VRC-scale), but the linkage mechanics are identical to IQ. A teacher should note "the links are bigger metal pieces but the motion is the same as your IQ plastic bars."
+
+=== DAY 13: Flop drivetrain analysis ===
+VIDEO 1:
+- Title: VEX IQ Level Up | Hero Bot "Flop" | Part 1
+- Channel: VEX Robotics
+- Video ID: jPaarRbLjaE
+- URL: https://www.youtube.com/watch?v=jPaarRbLjaE
+- Duration: 142s (2:22)
+- Description excerpt: ORDER HERE: https://vex.com/VEXgames26-27yt SUBSCRIBE: https://vex.com/YouTube...
+- Why it fits Day 13: The official VEX Robotics build video for the Flop hero bot — this is the canonical reference for what the stock Flop drivetrain looks like (wheel layout, motor count, gearing). It is the baseline against which all the "mod" videos should be compared. Short and authoritative.
+- Concept covered: Stock Flop drivetrain, official build, wheel layout and motor allocation
+
+VIDEO 2:
+- Title: VEX IQ Level Up | Hero Bot "Flop" | Part 2
+- Channel: VEX Robotics
+- Video ID: n_fWxHqSMPs
+- URL: https://www.youtube.com/watch?v=n_fWxHqSMPs
+- Duration: 181s (3:01)
+- Description excerpt: ORDER HERE: https://vex.com/VEXgames26-27yt SUBSCRIBE: https://vex.com/YouTube...
+- Why it fits Day 13: The second half of the official Flop build — completes the drivetrain picture and shows the rest of the robot. Pair with Part 1 to get the full stock Flop before any modifications.
+- Concept covered: Stock Flop completion, full robot overview, drivetrain-to-mechanism connection
+
+VIDEO 3:
+- Title: Introducing the 180 Mod Flop! First Practice Runs
+- Channel: Lemon Vex Robotics
+- Video ID: KvWHQ6d3_hM
+- URL: https://www.youtube.com/watch?v=KvWHQ6d3_hM
+- Duration: 714s (11:54)
+- Description excerpt: Meet the 180 Mod Flop — v1 is finally built and running! This is my newest robot for VEX IQ Level Up, and today we're doing two things at once: showing off the very first build, AND putting it through its first practice runs on the field. No editing out the fails — you get the real first-day footage.
+- Why it fits Day 13: A modified Flop with real driving footage and honest first-day fails — exactly what the brief asks for ("shows real Flop or close IQ drivetrain, explains build and behavior, includes driving footage"). The "180 Mod" name implies a drivetrain reconfiguration, and the creator shows the build and the on-field behavior without hiding failures.
+- Concept covered: Flop drivetrain modification, real driving footage, build-and-test cycle
+
+VALIDATION NOTES:
+- "VEX IQ Flop drivetrain analysis" returned only the Level Up game reveal and the V5 Override game — no standalone drivetrain analysis video exists yet for the Flop. The season is new (2026-2027), so deep analysis content is still emerging.
+- "VIQRC Level Up Flop Hero Bot drive base" returned the same two results as the Flop Part 1/2 search — the official build videos are the primary stock-Flop source.
+- The RoboSTEM video "The VEX IQ Herobot for Level Up is Actually GOOD..." (3CISXMLkRhM) appeared in multiple Flop searches and analyzes the hero bot's competitiveness, but it focuses on overall strategy rather than drivetrain specifics. It is recommended as a supplemental class discussion starter ("is the stock Flop good enough?") but not as a drivetrain-analysis video.
+- The SWITCH "VEX IQ LEVEL UP META ROBOT EXPLANATION" (xFrpqQBrfHo) is a custom-meta robot, not a Flop analysis — correctly excluded per the "avoid elite custom robots" guidance.
+
+=== DAY 14: Flop arm and intake analysis ===
+VIDEO 1:
+- Title: Cracked 87 Points in VEX IQ Level Up Today!
+- Channel: Lemon Vex Robotics
+- Video ID: hRSUs7ChPW0
+- URL: https://www.youtube.com/watch?v=hRSUs7ChPW0
+- Duration: 66s (1:06)
+- Description excerpt: Switched my intake from a roller to a CLAW grabber — and the combo with my catapult finally clicked. The claw gives way more control than the roller — better grip, cleaner releases, more consistent cycles. 6 bean bags on Level 3, 2 on Level 2, 1 on Level 1 = 87 pts.
+- Why it fits Day 14: Real Bean Bag pickup, lift, and scoring attempts with an explicit arm/intake subsystem comparison (roller vs claw). The creator discusses grip, release consistency, and cycle reliability — the exact "arm/intake as subsystems" and "repeated mechanism cycles" the day needs. Short and high-energy for a 5th grader.
+- Concept covered: Claw vs roller intake on Bean Bags, scoring cycles, arm+intake as subsystems, release reliability
+
+VIDEO 2:
+- Title: Introducing the 180 Mod Flop! First Practice Runs
+- Channel: Lemon Vex Robotics
+- Video ID: KvWHQ6d3_hM
+- URL: https://www.youtube.com/watch?v=KvWHQ6d3_hM
+- Duration: 714s (11:54)
+- Description excerpt: Meet the 180 Mod Flop — v1 is finally built and running! No editing out the fails — you get the real first-day footage.
+- Why it fits Day 14: Shows repeated mechanism cycles (arm + intake) on a Flop-derived robot with real Bean Bag practice and visible failures. The "no editing out the fails" promise means students see jams, missed pickups, and alignment issues — exactly the "reveals jams/releases" and "alignment tolerance" content the day asks for.
+- Concept covered: Flop arm/intake cycles, real practice with failures, alignment and jam observation
+
+VIDEO 3:
+- Title: VEX IQ Level Up | Hero Bot "Flop" | Part 2
+- Channel: VEX Robotics
+- Video ID: n_fWxHqSMPs
+- URL: https://www.youtube.com/watch?v=n_fWxHqSMPs
+- Duration: 181s (3:01)
+- Description excerpt: ORDER HERE: https://vex.com/VEXgames26-27yt SUBSCRIBE: https://vex.com/YouTube...
+- Why it fits Day 14: The official Flop Part 2 completes the arm and intake build — this is the stock mechanism baseline. Students should analyze how the stock Flop arm and intake are designed before seeing the modified versions in VIDEOs 1 and 2.
+- Concept covered: Stock Flop arm mechanism, stock Flop intake, baseline for comparison
+
+VALIDATION NOTES:
+- "VEX IQ Flop arm motor intake motor" returned pneumatics videos — there is no standalone video analyzing the Flop's arm and intake motor allocation yet. The season is new; this content will likely appear as teams iterate.
+- "VIQRC Level Up Flop intake Bean Bag" returned the official Flop Part 2 and pneumatics content — the Bean Bag intake specifics are best seen in the Lemon Vex practice videos.
+- The Mocha Cookie Crumble "Intake and Catapult in Action" prototype (ESYufLcmGtw, 18s) shows a Level Up intake+catapult prototype but is very short and on a custom robot, not a Flop — excluded per the Flop-specific requirement.
+- The RoboSTEM "Catapult + Lift Combo is the META" video (S5BwSeyTGws, 7:20) is a strong Level Up mechanism discussion but covers a custom robot, not the Flop. Recommended as a supplemental "where does the Flop fall short of the meta?" discussion video.
+- Gaps: No video was found that explicitly labels the Flop's arm motor vs intake motor as separate subsystems or discusses their gearing. The Lemon Vex 180 Mod video comes closest by showing the whole mechanism cycling; a teacher will need to narrate the arm-vs-intake subsystem split.
