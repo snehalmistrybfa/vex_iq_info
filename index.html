@@ -60,6 +60,56 @@
     .back-to-top { align-items: center; background: var(--primary); border-radius: 50%; bottom: 18px; box-shadow: var(--shadow-lg); color: var(--white); display: flex; font-family: var(--font-heading); font-size: 1.2rem; height: 48px; justify-content: center; opacity: 0; pointer-events: none; position: fixed; right: 18px; text-decoration: none; transform: translateY(10px); transition: opacity 0.2s, transform 0.2s; width: 48px; z-index: 1001; }
     .back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
     .back-to-top:hover { background: var(--primary-dark); color: var(--white); text-decoration: none; }
+
+    .curriculum-intro { background: linear-gradient(135deg, rgba(255, 247, 214, 0.96), rgba(224, 246, 255, 0.96)); border-left: 5px solid var(--warning); }
+    .curriculum-intro h3 { margin-bottom: 8px; }
+    .curriculum-search { background: var(--white); border: 2px solid var(--light-gray); border-radius: var(--radius-sm); color: var(--secondary); display: block; font: inherit; margin: 0 0 16px; min-height: 44px; padding: 12px 14px; width: 100%; }
+    .curriculum-search:focus, .phase-chip:focus-visible, .phase-toggle:focus-visible, .day-toggle:focus-visible { outline: 3px solid rgba(0, 163, 224, 0.35); outline-offset: 3px; }
+    .phase-filters { display: flex; gap: 10px; margin: 0 0 24px; overflow-x: auto; padding: 2px 0 10px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+    .phase-chip { background: var(--white); border: 1px solid rgba(0,0,0,0.1); border-radius: 999px; color: var(--secondary); cursor: pointer; flex: 0 0 auto; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; min-height: 44px; padding: 10px 16px; transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s; }
+    .phase-chip:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .phase-chip.active { background: var(--accent); border-color: var(--accent); color: var(--white); }
+    .curriculum-phase { background: rgba(255,255,255,0.72); border: 1px solid rgba(0,0,0,0.08); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); margin-bottom: 18px; overflow: hidden; }
+    .phase-toggle { align-items: center; background: var(--secondary); border: 0; color: var(--white); cursor: pointer; display: flex; gap: 12px; justify-content: space-between; min-height: 54px; padding: 16px 18px; text-align: left; width: 100%; }
+    .phase-toggle strong { color: var(--white); font-family: var(--font-heading); font-size: 1rem; line-height: 1.25; }
+    .phase-toggle-hint { color: rgba(255,255,255,0.75); flex: 0 0 auto; font-size: 0.8rem; font-weight: 700; }
+    .phase-toggle[aria-expanded="true"] .phase-toggle-hint { color: var(--primary); }
+    .phase-days { display: grid; gap: 14px; padding: 16px; }
+    .day-card { background: var(--white); border: 1px solid rgba(0,0,0,0.07); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); overflow: hidden; }
+    .day-toggle { align-items: center; background: var(--white); border: 0; color: var(--secondary); cursor: pointer; display: grid; gap: 10px; grid-template-columns: 48px 1fr auto; min-height: 56px; padding: 12px 14px; text-align: left; width: 100%; }
+    .day-toggle[aria-expanded="true"] { background: rgba(0, 163, 224, 0.08); }
+    .day-number { align-items: center; background: var(--primary); border-radius: 50%; color: var(--white); display: inline-flex; font-family: var(--font-heading); font-weight: 800; height: 38px; justify-content: center; width: 38px; }
+    .day-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; line-height: 1.25; }
+    .day-meta { color: var(--medium-gray); font-size: 0.84rem; font-weight: 700; white-space: nowrap; }
+    .day-panel { border-top: 1px solid rgba(0,0,0,0.06); display: grid; gap: 12px; padding: 16px; }
+    .day-block { background: rgba(248,249,250,0.95); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-sm); padding: 14px 16px; }
+    .day-block h3 { font-size: 0.98rem; margin-bottom: 8px; }
+    .day-block p, .day-block li { color: #4f5b65; font-size: 0.94rem; }
+    .day-block ul, .day-block ol { padding-left: 22px; }
+    .day-hook { background: #fff7d6; border-color: rgba(243,156,18,0.28); }
+    .day-think { background: #eaf7ff; border-color: rgba(0,163,224,0.22); }
+    .day-learn { background: #f8fbff; }
+    .day-learn li { margin-bottom: 8px; }
+    .day-learn a { font-size: 1rem; font-weight: 700; }
+    .day-connect { background: #eafaf1; border-color: rgba(46,204,113,0.24); }
+    .day-try { background: #fff0e4; border-color: rgba(232,119,34,0.24); }
+    .day-reflect { background: #f7f4ff; border-color: rgba(110,84,180,0.18); font-style: italic; }
+    .day-rubric { display: grid; gap: 8px; }
+    .rubric-level { align-items: start; background: var(--white); border: 1px solid rgba(0,0,0,0.08); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); color: #4f5b65; display: grid; gap: 10px; grid-template-columns: 34px 1fr; padding: 12px 14px; }
+    .rubric-level strong { align-items: center; background: var(--accent); border-radius: 50%; color: var(--white); display: inline-flex; font-family: var(--font-heading); height: 28px; justify-content: center; width: 28px; }
+    .day-note { background: #fff3cd; border: 1px solid rgba(243,156,18,0.3); border-radius: var(--radius-sm); color: #705000; font-size: 0.9rem; padding: 12px 14px; }
+    @media (max-width: 600px) {
+      .phase-days { padding: 12px; }
+      .day-toggle { grid-template-columns: 42px 1fr; }
+      .day-meta { grid-column: 2; white-space: normal; }
+      .day-panel { padding: 12px; }
+      .rubric-level { grid-template-columns: 30px 1fr; }
+    }
+    @media print {
+      .navbar, .hero, .footer, .back-to-top, .phase-filters, .curriculum-search { display: none !important; }
+      .day-panel[hidden] { display: block !important; }
+      .curriculum-phase, .day-card, .day-block, .rubric-level { box-shadow: none; break-inside: avoid; }
+    }
     @media (min-width: 769px) and (max-width: 1099px) {
       .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .parts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -129,6 +179,7 @@
         <li><a href="#code">Programming</a></li>
         <li><a href="#academy">Academy</a></li>
         <li><a href="#videos">Videos &amp; Creators</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
       </ul>
     </div>
   </nav>
@@ -639,7 +690,6 @@
     </section>
 
     <section id="academy">
-      <div id="curriculum" style="scroll-margin-top:82px;"></div>
       <div class="section-header"><div class="section-number">6</div><h2>Academy</h2><p>A compact Placer Academy map with cross-links back to the matching site sections.</p></div>
       <div class="table-scroll">
         <table class="topic-table">
@@ -697,11 +747,1989 @@
       <div class="section-subhead"><h3>Competition Prep</h3></div>
       <div class="creator-group-list"><div class="creator-card"><span class="card-tag tag-game">Competition Prep</span><h4><a href="https://www.youtube.com/@CautionTapeRobotics" target="_blank" rel="noopener">Caution Tape Robotics (@CautionTapeRobotics)</a></h4><p>Inspection guides and tournament preparation videos.</p></div><div class="creator-card"><span class="card-tag tag-game">Competition Prep</span><h4><a href="https://www.youtube.com/@8931BV-BotsTrifecta" target="_blank" rel="noopener">8931B V-Bots Trifecta</a></h4><p>Engineering notebook guidance from a VEX IQ team.</p></div></div>
     </section>
+
+    <section id="curriculum">
+      <div class="section-header">
+        <div class="section-number">8</div>
+        <h2>30-Day Curriculum</h2>
+        <p>Six phases from game detective to tournament-ready. Each day starts with a puzzle, makes you think, then teaches you exactly what you need.</p>
+      </div>
+
+      <div class="info-box curriculum-intro">
+        <h3>How This Works</h3>
+        <p>Every day follows the same rhythm: <strong>Hook</strong> (a puzzle that makes you curious) → <strong>Think First</strong> (write your guess) → <strong>Learn</strong> (watch videos) → <strong>Connect</strong> (the aha moment) → <strong>Try It</strong> (hands-on challenge) → <strong>Reflect</strong> (deepen understanding).</p>
+        <p>You won't get answers spoon-fed. You'll discover them. That's how real engineers think.</p>
+      </div>
+
+      <input id="curriculum-search" class="curriculum-search" type="search" placeholder="Search days: torque, Flop, sensors, driving..." aria-label="Search curriculum days">
+      <div class="phase-filters" role="tablist" aria-label="Curriculum phases">
+        <button class="phase-chip active" type="button" data-phase-filter="all">All 30 Days</button>
+        <button class="phase-chip" type="button" data-phase-filter="phase-a">A: Detective</button>
+        <button class="phase-chip" type="button" data-phase-filter="phase-b">B: Drivetrains</button>
+        <button class="phase-chip" type="button" data-phase-filter="phase-c">C: Build Flop</button>
+        <button class="phase-chip" type="button" data-phase-filter="phase-d">D: Driving</button>
+        <button class="phase-chip" type="button" data-phase-filter="phase-e">E: Coding</button>
+        <button class="phase-chip" type="button" data-phase-filter="phase-f">F: Tournament</button>
+      </div>
+      <div class="curriculum-phase" data-phase="phase-a">
+        <button class="phase-toggle" type="button" aria-expanded="false">
+          <strong>Phase A — Days 1-5: Game Detective &amp; Mechanical Thinker</strong>
+          <span class="phase-toggle-hint">Expand phase</span>
+        </button>
+        <div class="phase-days">
+          <article class="day-card" id="day-1" data-day="1" data-phase="phase-a" data-keywords="game scoring strategy rules reveal">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-1-panel">
+              <span class="day-number">1</span>
+              <span class="day-title">The Level Up Score Detective</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-1-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>Two robots each move four Bean Bags. One earns far more points, while the other finishes sooner. How could both outcomes be sensible—and what would you need to know before designing either robot?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before watching, sketch the field from memory and write three facts you think determine a winning score. Circle every fact you are unsure about.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>reading a game reveal critically</li>
+                  <li>manual as source of truth</li>
+                  <li>scoring breakdown</li>
+                  <li>one-object possession</li>
+                  <li>time, distance, accuracy, and goal-height tradeoffs</li>
+                  <li>teamwork versus skills</li>
+                  <li>turning game requirements into robot jobs</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
+                  <li><a href="#video-AMZ8p5u8UHY">Game Manual Breakdown</a> — RoboSTEM</li>
+                  <li><a href="#video-wJpjTm775Q0">Level Up Worlds Reveal</a> — VEX Robotics</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A robot is not &quot;good&quot; in isolation; it is good at valuable game jobs under rules and time pressure. Higher goals promise more points but demand reach, stability, placement accuracy, and travel time, so the first design tool is a requirement-and-risk list, not a pile of parts.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Make a one-page &quot;Team 295U Game Detective&quot; sheet with columns for Job, Points/benefit, Difficulty, Robot feature needed, and Rule to verify. Add at least five jobs, then choose one as the first reliable scoring goal. Do not optimize yet.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: lists jobs without evidence</div>
+                <div class="rubric-level"><strong>2</strong> Developing: connects five jobs to scoring/manual facts and identifies uncertainties</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: compares value, time, and risk, cites rule sections, and defends a first-goal choice while naming what test could change the decision.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if a low goal can be scored twice as reliably as a high goal—what data would decide which is better?</li>
+                  <li>Which sentence in the manual changed one of your original guesses?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-2" data-day="2" data-phase="phase-a" data-keywords="shafts friction pins connectors bushings spacers">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-2-panel">
+              <span class="day-number">2</span>
+              <span class="day-title">Why Does One Axle Spin and Another Bind?</span>
+              <span class="day-meta">45 min</span>
+            </button>
+            <div class="day-panel" id="day-2-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>Build or hold two simple wheel-and-shaft assemblies: one supported cleanly and one crooked or rubbing. Why does the same motor seem stronger on one than the other?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Draw where you think energy is being lost. Before watching, label each unfamiliar part you believe could fix or cause the problem.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>beams</li>
+                  <li>plates</li>
+                  <li>pins</li>
+                  <li>connector pins</li>
+                  <li>corner connectors</li>
+                  <li>standoffs</li>
+                  <li>shafts</li>
+                  <li>shaft collars</li>
+                  <li>bushings/bearings</li>
+                  <li>spacers</li>
+                  <li>idler pins</li>
+                  <li>shaft capture</li>
+                  <li>two-point shaft support</li>
+                  <li>alignment</li>
+                  <li>friction</li>
+                  <li>pin tool</li>
+                  <li>proper versus forced connections</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=kQNM7glk2qg" target="_blank" rel="noopener">VEX IQ Free spin test - bad spacing</a> — Caution Tape Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=J5P3tjDWoL8" target="_blank" rel="noopener">VEX IQ Free spin test - good spacing</a> — Caution Tape Robotics</li>
+                  <li><a href="#video-g2nOzbhcjv4">Introduction to VEX: Drive Shaft and Shaft Collars</a> — STEM with Steph</li>
+                  <li><a href="#video-uh_CwnbeH9I">VEX IQ Tip - Mounting Small Hardware on Shafts</a> — VEX Robotics</li>
+                  <li><a href="concepts/friction.html">Friction</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Motors do not deliver all their effort to the task. Misaligned holes, rubbing gears, squeezed wheels, and one-point shaft support spend effort as friction or flex; correct connectors and spacing create a straight, captured, freely rotating motion path.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build two 10-minute axle test rigs that differ in exactly one support/spacing choice. Spin each by hand, then use the same motor speed and count coast time or rotations. Photograph both and annotate the force path and friction points.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: assembles a rig but changes many things or records no comparison</div>
+                <div class="rubric-level"><strong>2</strong> Developing: makes a one-variable comparison and records a clear observation</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: repeats the test, explains the role of support/alignment/capture, and improves the weaker rig based on evidence.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if you tighten/capture a shaft so well that it cannot slide at all—could that ever create more friction?</li>
+                  <li>Why do heavy arms need stronger shaft support than a light decoration?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-3" data-day="3" data-phase="phase-a" data-keywords="gear ratio speed torque mechanical advantage">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-3-panel">
+              <span class="day-number">3</span>
+              <span class="day-title">The Gearbox That Lies About &quot;Power&quot;</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-3-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>One gear train lifts a heavy load slowly; another spins fast but stalls. Both use the same motor, so where did the extra &quot;strength&quot; or speed come from?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Predict which will be faster and which will lift more: a 12-tooth gear driving a 36-tooth gear, or a 36-tooth driving a 12-tooth. Explain without using a formula.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>driver and driven gears</li>
+                  <li>gear ratio</li>
+                  <li>speed versus torque</li>
+                  <li>mechanical advantage</li>
+                  <li>direction reversal</li>
+                  <li>idler gears</li>
+                  <li>compound trains</li>
+                  <li>efficiency</li>
+                  <li>selecting ratios for drive, arm, and intake</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-eUeGNe4eDAw">VEX IQ Key Concepts - Speed, Torque, and Mechanical Advantage</a> — VEX Robotics</li>
+                  <li><a href="#video-txQs3x-UN34">NEVER be confused by GEAR RATIOS again</a> — driving 4 answers</li>
+                  <li><a href="#video-wau5W8Mt7Hw">VEX IQ Mechanisms - Gear Ratio</a> — VEX Robotics</li>
+                  <li><a href="#video-tr_F2PjhAnQ">Understanding Gear Ratios in VEX IQ: Speed vs Torque</a> — The VEX IQ Guide</li>
+                  <li><a href="concepts/what-is-torque.html">What is Torque?</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Gears trade rotational speed for turning force; they do not create free energy. The tooth-count relationship predicts the trade, while friction, flex, and motor limits explain why the physical result is never perfectly ideal.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build two gear pairs with opposite input/output sizes. Under identical motor settings, measure output rotations in 10 seconds and test which lifts the same small load. Write a claim supported by both measurements.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: builds one ratio or reports only &quot;fast/slow&quot;</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares two ratios with rotation and load evidence</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: predicts the numerical relationship, repeats trials, explains torque/speed tradeoff and direction, then chooses a justified ratio for Flop&#x27;s arm or intake.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if you add an idler gear of any size between the driver and driven gears—what changes and what might stay the same?</li>
+                  <li>Why might the mathematically fastest drivetrain lose a real match?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-4" data-day="4" data-phase="phase-a" data-keywords="levers linkages chain rubber band fulcrum">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-4-panel">
+              <span class="day-number">4</span>
+              <span class="day-title">Move a Load With One Finger</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-4-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>You must lift the same Bean Bag with one finger using a beam and pivot. Where would you place the pivot and push point so it feels easiest—and what do you lose in return?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Sketch three arrangements of load, effort, and fulcrum. Predict which gives the most force and which gives the most movement at the end.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>first-, second-, and third-class levers</li>
+                  <li>effort/load/fulcrum</li>
+                  <li>lever mechanical advantage</li>
+                  <li>linkage motion</li>
+                  <li>pivot friction</li>
+                  <li>chain and sprockets for power transfer over distance</li>
+                  <li>rubber bands as counterbalance/energy storage</li>
+                  <li>tradeoffs between force, travel, and control</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-OQTAL8RsZaA">VEX IQ Building Basics: Levers</a> — VEX Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=fzljPiPy9nw" target="_blank" rel="noopener">Simple Machines: Levers</a> — MooMooMath and Science</li>
+                  <li><a href="#video-33-IjzAr3T8">Vex 4 Bar Linkage</a> — Mr. Mac&#x27;s Technical Ed</li>
+                  <li><a href="#video-VsztyaNpf3o">Sprockets, Chains and Treads</a> — Jenica Wilcox</li>
+                  <li><a href="concepts/levers.html">Levers</a> — concept page</li>
+                  <li><a href="concepts/linkages.html">Linkages</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>The location of effort, load, and pivot decides whether a mechanism multiplies force, multiplies motion, or changes direction. Chain moves rotation to a distant shaft; rubber bands can help a motor fight gravity, but their changing tension also changes behavior through the motion.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build a lever with movable fulcrum and effort points. Test two arrangements lifting the same bag, then add either a chain drive or rubber-band assist and compare effort, range, and controllability. Do not copy a finished lift.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: mechanism moves but positions are not identified</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares two arrangements and labels effort/load/fulcrum</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains the mechanical-advantage tradeoff, documents one controlled counterbalance or chain test, and selects an arrangement for a stated game job.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if the load moves twice as far from the fulcrum—what must happen to required effort?</li>
+                  <li>When could a rubber band make a lift less predictable even while helping the motor?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-5" data-day="5" data-phase="phase-a" data-keywords="center of mass tipping bracing stability structure">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-5-panel">
+              <span class="day-number">5</span>
+              <span class="day-title">The Tall Robot That Falls</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-5-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A tall robot and a short robot make the same sharp turn. Why might only one tip, and why might adding a heavy piece at the bottom change everything?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Draw a tipping line at the wheel edge and mark where you believe the robot&#x27;s balance point is. Predict what happens when the arm reaches forward.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>center of mass versus support polygon</li>
+                  <li>balance and tipping moment</li>
+                  <li>momentum during turns/stops</li>
+                  <li>wheelbase and track width</li>
+                  <li>keeping mass low</li>
+                  <li>square frames</li>
+                  <li>bracing</li>
+                  <li>triangulation</li>
+                  <li>two-point connections</li>
+                  <li>flex and structural integrity</li>
+                  <li>useful and unwanted friction</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-D6cY3riTe-o">Center of Gravity: The Key to a Stable Robot</a> — Chris Briere</li>
+                  <li><a href="https://www.youtube.com/watch?v=0UkQkdVcxWo" target="_blank" rel="noopener">VEX Camp | IQ Session 1: Building with IQ</a> — VEX Robotics; use chapters 12:55-31:50</li>
+                  <li><a href="https://www.youtube.com/watch?v=XhwBI1EbspE" target="_blank" rel="noopener">Center of Gravity and Wiggly Driving Test</a> — Robot Rampage</li>
+                  <li><a href="https://www.youtube.com/watch?v=e1hRWg0WG9I" target="_blank" rel="noopener">Agilibot</a> — Brian Meierdiercks</li>
+                  <li><a href="concepts/center-of-gravity.html">Center of Gravity</a> — concept page</li>
+                  <li><a href="concepts/friction.html">Friction</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A robot tips when the combined effect of gravity and acceleration moves beyond its support area. A wide, square, braced base and low central mass resist tipping and flex; a long raised arm and abrupt momentum make both worse.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build a small tower on a rolling base. Find its repeatable tipping threshold on a gentle ramp or in a controlled turn, then change only one of mass height, base width, or bracing and retest three times. Use no human catching inside the measurement zone.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: changes the build without a baseline</div>
+                <div class="rubric-level"><strong>2</strong> Developing: runs a controlled before/after test and records results</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: repeats trials, explains the center-of-mass/support relationship, and makes a second evidence-based improvement without simply adding random parts.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if a wider robot cannot fit the shortcut—how would you decide the best width?</li>
+                  <li>Can a frame be very rigid but still be a poor competition design? Why?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="curriculum-phase" data-phase="phase-b">
+        <button class="phase-toggle" type="button" aria-expanded="false">
+          <strong>Phase B — Days 6-10: Drivetrains &amp; Scoring Mechanisms</strong>
+          <span class="phase-toggle-hint">Expand phase</span>
+        </button>
+        <div class="phase-days">
+          <article class="day-card" id="day-6" data-day="6" data-phase="phase-b" data-keywords="steering drivetrain omni holonomic X-drive H-drive tank">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-6-panel">
+              <span class="day-number">6</span>
+              <span class="day-title">Five Ways to Reach the Same Spot</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-6-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A robot must move from a start tile to a bag beside it without turning its front away from the goal. Which drivetrains can do it directly, and what mechanical price might they pay?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before watching, draw wheel arrows for tank/skid steering and for a robot that can slide sideways. What forces must cancel or combine?</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>differential/skid/tank drive</li>
+                  <li>tank versus arcade as control mappings</li>
+                  <li>standard/traction wheels</li>
+                  <li>omni wheels</li>
+                  <li>holonomic motion</li>
+                  <li>X-drive</li>
+                  <li>H-drive</li>
+                  <li>strafing</li>
+                  <li>maneuverability, traction, complexity, motor use, and driver-learning tradeoffs</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-F3G0sUz3_Jw">Common Steering Methods</a> — ServoCity</li>
+                  <li><a href="#video-xQorNQ13Cyk">vex wheel selection: solid versus omni</a> — turbodog99</li>
+                  <li><a href="#video-VfuA2EqaIso">The Ultimate Guide To Omniwheels</a> — Kepler Electronics</li>
+                  <li><a href="https://www.youtube.com/watch?v=2Pnj9Jq9JiU" target="_blank" rel="noopener">Vex Robotics Drivebase Types Explained</a> — 9MotorGang; use tank/H/mecanum/X chapters</li>
+                  <li><a href="concepts/omni-wheels.html">Omni Wheels</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Tank and arcade usually command the same left/right mechanical drivetrain in different ways. Holonomic designs angle or add omni wheels so force components create sideways motion, gaining alignment options while spending motors, traction, build simplicity, and practice time.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>On paper or with loose wheels, create force-arrow diagrams for standard, X-, and H-drive. Then drive or simulate the same three-waypoint path with two available control/drive configurations and record time, corrections, and missed alignments.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: names drivetrains but cannot connect wheel forces to motion</div>
+                <div class="rubric-level"><strong>2</strong> Developing: predicts and tests motion with a usable data table</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains force combinations and chooses a Level Up architecture using shortcut width, motor budget, traction, and driver evidence.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if strafing saves one alignment but the extra motor removes a motor from the lift—when is it worthwhile?</li>
+                  <li>Why can tank and arcade feel different even when the robot underneath is identical?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-7" data-day="7" data-phase="phase-b" data-keywords="motors drivetrain wheels traction motor allocation">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-7-panel">
+              <span class="day-number">7</span>
+              <span class="day-title">Two Motors or Four?</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-7-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>Four drive motors sound twice as good as two. Why might a winning team deliberately choose only two—and why might another team regret that choice?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Allocate a maximum of six motors among drive, intake, lift, and any other job. Write what you gain and risk with each allocation.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>2-motor versus 4-motor drives</li>
+                  <li>motor groups</li>
+                  <li>traction versus speed</li>
+                  <li>wheel diameter and tread</li>
+                  <li>omni versus traction wheels</li>
+                  <li>gear ratio</li>
+                  <li>turning scrub</li>
+                  <li>rigidity and alignment</li>
+                  <li>center of gravity</li>
+                  <li>footprint/shortcut requirements</li>
+                  <li>battery and reliability</li>
+                  <li>motor-budget tradeoffs</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=-vm_UsnZt-k" target="_blank" rel="noopener">Tutorial: Fast &amp; Efficient VEX IQ Drivetrain (2:1 Speed, 2 Motors)</a> — The VEX IQ Guide</li>
+                  <li><a href="https://www.youtube.com/watch?v=sek_rTkf2-o" target="_blank" rel="noopener">5 Tips Every VEX Team Should Know about Drivetrains</a> — Joseph973</li>
+                  <li><a href="https://www.youtube.com/watch?v=leIM-EVbhGY" target="_blank" rel="noopener">VEX IQ Wheel Guide for Beginners | Drive Smarter</a> — The VEX IQ Guide</li>
+                  <li><a href="#video-xQorNQ13Cyk">vex wheel selection: solid versus omni</a> — turbodog99</li>
+                  <li><a href="concepts/omni-wheels.html">Omni Wheels</a> — concept page</li>
+                  <li><a href="concepts/what-is-torque.html">What is Torque?</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>More drive motors can increase available torque and robustness, but the rule-limited motor budget means fewer powered mechanisms. Wheel size, gearing, mass, friction, and frame alignment can matter as much as motor count, so the answer must come from the Level Up job list and tests.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Create two drivetrain proposals for Team 295U. Include top view, dimensions, wheel type/size, gearing, motor allocation, predicted shortcut fit, and three tests. If hardware permits, perform one timed straight/push/turn comparison.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: chooses by preference alone</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares two designs against at least three requirements</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: makes a weighted decision with test evidence, identifies a failure risk, and explains what new result would reverse the choice.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if the 4-motor drive is faster unloaded but slower with the arm raised—what could explain it?</li>
+                  <li>Which is more valuable for Level Up: top speed or time-to-align-and-score?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-8" data-day="8" data-phase="phase-b" data-keywords="claw scoop intake compression funneling manipulator">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-8-panel">
+              <span class="day-number">8</span>
+              <span class="day-title">Grab, Scoop, or Swallow?</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-8-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A claw holds a Bean Bag securely but needs perfect alignment; a scoop is forgiving but may lose it during a turn. What third approach could collect quickly, and what new problems would it introduce?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Without building, sketch a passive scoop, an active claw, and a powered intake. Predict how each behaves when the bag enters off-center.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>passive versus active manipulators</li>
+                  <li>claw, scoop, fork, roller/flex-wheel intake</li>
+                  <li>compression</li>
+                  <li>compliance</li>
+                  <li>funneling</li>
+                  <li>grip/friction</li>
+                  <li>intake/eject direction</li>
+                  <li>object centering</li>
+                  <li>possession limit</li>
+                  <li>release reliability</li>
+                  <li>motor and space cost</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=X4JHUDGzyv0" target="_blank" rel="noopener">Vex IQ Claw Ideas - How to Design Yours</a> — Mechanical Max</li>
+                  <li><a href="https://www.youtube.com/watch?v=hRSUs7ChPW0" target="_blank" rel="noopener">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=2DNQQKckmLk" target="_blank" rel="noopener">Vex IQ Claw Design Video</a> — Tiffany Mounts</li>
+                  <li><a href="#video-d8gI02Ecig0">Opening the Claw</a> — VEX Robotics</li>
+                  <li><a href="concepts/friction.html">Friction</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A manipulator succeeds when its geometry and friction tolerate imperfect approaches, control the object, and release it on demand. Compression creates holding force and compliance; funnels reduce the accuracy burden on the driver; passive systems save motors but surrender some control.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Prototype two non-motorized front-end shapes from loose VEX parts. Using the same five approach angles, record capture and clean-release success; then change one dimension such as funnel width or compression gap.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: demonstrates one successful pickup</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares two designs across five repeatable approaches</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: calculates success rates, explains friction/compression/funneling, and produces a justified revision that respects one-bag possession.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if more compression improves holding but jams release—where would you search for the useful middle?</li>
+                  <li>Which driver mistakes should the mechanism forgive automatically?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-9" data-day="9" data-phase="phase-b" data-keywords="lift 4-bar 6-bar chain-bar scissor linkage">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-9-panel">
+              <span class="day-number">9</span>
+              <span class="day-title">How Can the Hand Stay Level While the Arm Rises?</span>
+              <span class="day-meta">60 min</span>
+            </button>
+            <div class="day-panel" id="day-9-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A simple arm swings in an arc and tilts its hand. How could connected bars make the hand stay almost level—and why might reaching higher make the whole robot easier to tip?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Draw a four-sided linkage and predict which lines remain parallel as it moves. Then rank a swing arm, 4-bar, 6-bar, chain-bar, and scissor lift by expected reach and complexity.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>swing arms</li>
+                  <li>4-bar and 6-bar parallelogram linkages</li>
+                  <li>chain-bar</li>
+                  <li>scissor linkage</li>
+                  <li>double-reverse 4-bar as extension</li>
+                  <li>range/path</li>
+                  <li>maintaining end-effector orientation</li>
+                  <li>gearing and chain transfer</li>
+                  <li>bracing</li>
+                  <li>center of mass</li>
+                  <li>torque and rubber-band assistance</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-1Ty_1LF3Qv0">Basic Mechanisms: 4 Bar Linkage</a> — Mr. Dillman&#x27;s Tech Channel</li>
+                  <li><a href="#video-9iSmW7dMuB8">Vex Robotics Lift Types Explained</a> — 9MotorGang; use chapters 2-bar/4-bar/6-bar/chain-bar/DR4B</li>
+                  <li><a href="https://www.youtube.com/watch?v=80ZmWH89pjE" target="_blank" rel="noopener">Vex Robotics Chain Bar Guide/Tutorial</a> — 9MotorGang</li>
+                  <li><a href="https://www.youtube.com/watch?v=LUvIH5k8HWY" target="_blank" rel="noopener">Kepler&#x27;s Guide to Chain-Bar Lifts</a> — Kepler Electronics</li>
+                  <li><a href="concepts/linkages.html">Linkages</a> — concept page</li>
+                  <li><a href="concepts/center-of-gravity.html">Center of Gravity</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Linkages constrain a path rather than merely rotating one beam. Parallel bars can preserve manipulator angle; adding stages increases reach but also mass, flex, collision zones, torque demand, and tipping risk. Chain-bar transmits orientation over distance; scissor motion converts direction and multiplies travel with its own stability costs.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build a small free-moving 4-bar model and a simple swing-arm model. Attach a paper &quot;bag tray,&quot; move both through three heights, photograph tilt, and add one test weight; use the evidence to recommend a lift family for one Level Up goal.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: builds/copies a linkage without measuring behavior</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares orientation and reach at three positions</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains the constraint, torque/stability tradeoffs, and recommends a design based on goal height, shortcut fit, and measured behavior.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if the 6-bar reaches L3 but needs twice the alignment time—how would you judge it?</li>
+                  <li>Where would you add bracing without blocking the linkage?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-10" data-day="10" data-phase="phase-b" data-keywords="catapult ratchet rubber band stored energy release">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-10-panel">
+              <span class="day-number">10</span>
+              <span class="day-title">Release Energy at Exactly the Right Moment</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-10-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A motor cannot flick a Bean Bag far enough directly, but a rubber-band catapult can. Where was the energy waiting, and how does the mechanism decide when to let it go?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Sketch a cycle with four labels: load, store, hold, release. Predict what changes distance more: extra band stretch, launch angle, or release timing—and say how you would test only one.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>elastic potential energy</li>
+                  <li>rubber bands</li>
+                  <li>catapult/shooter cycle</li>
+                  <li>latch and ratchet</li>
+                  <li>pawl</li>
+                  <li>one-way motion</li>
+                  <li>hard stops</li>
+                  <li>release timing</li>
+                  <li>launch consistency</li>
+                  <li>trajectory</li>
+                  <li>gear ratio during reset</li>
+                  <li>safety and legal design</li>
+                  <li>comparison with lifts/intakes for Level Up</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-rSOqphR0N2s">Ratchet + Catapult</a> — Hackers IQ</li>
+                  <li><a href="#video-7_E9J5yBB4o">Catapult Launcher</a> — Ben Lipper</li>
+                  <li><a href="#video-nCA_dIps6qQ">Shooting Robot Step-by-Step Starter</a> — Ben Lipper</li>
+                  <li><a href="#video-GR4DzbxyPp8">Shooting Robot Step-by-Step</a> — Ben Lipper</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A motor can load energy slowly into elastic bands, a ratchet can prevent backward unwinding, and a release can deliver energy quickly. Consistency depends on returning to the same loaded position, angle, object placement, and release event—not merely using more bands.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build a low-energy tabletop lever launcher or inspect an existing VEX catapult. Mark a safe launch zone; run three trials at each of two controlled settings and measure landing spread, not just maximum distance. Never aim at a person and use adult-approved band tension.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: launches once without a controlled setting</div>
+                <div class="rubric-level"><strong>2</strong> Developing: identifies load/store/hold/release and records repeated trials</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: compares averages and consistency, explains the ratchet/release role, and argues with evidence whether a shooter belongs in Team 295U&#x27;s Level Up concept.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What if the farthest launch is also the least repeatable—is it the best competition setting?</li>
+                  <li>How could a hard stop change both safety and release consistency?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="curriculum-phase" data-phase="phase-c">
+        <button class="phase-toggle" type="button" aria-expanded="false">
+          <strong>Phase C — Days 11-15: Build, Analyze &amp; Improve Flop</strong>
+          <span class="phase-toggle-hint">Expand phase</span>
+        </button>
+        <div class="phase-days">
+          <article class="day-card" id="day-11" data-day="11" data-phase="phase-c" data-keywords="Flop unbox subsystems kit systems engineer">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-11-panel">
+              <span class="day-number">11</span>
+              <span class="day-title">Unbox Flop Like a Systems Engineer</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-11-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>The same pile of parts can become a robot that drives, lifts, intakes, scores, or fails quietly because one tiny spacer is missing. Before building, how can you tell which parts will become which robot jobs?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Sort the parts you expect Flop to use into four guessed groups: drive, arm, intake, electronics, and structure. Circle the parts you cannot name yet and predict which group they probably support.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>kit familiarity</li>
+                  <li>official build instructions as a map</li>
+                  <li>subsystem identification</li>
+                  <li>drivetrain, arm, intake, Brain, Controller, battery, motors, sensors, shafts, collars, gears, wheels, beams, plates, pins, standoffs, spacers</li>
+                  <li>build trays and part staging</li>
+                  <li>checking inventory without losing momentum</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-KbBNJlZNqeI">VEX IQ 2nd Gen Kit Walkthrough</a> — Mark Johnston</li>
+                  <li><a href="#video-w7yXXJmg1Do">What&#x27;s in the Box</a> — Unknown Creator</li>
+                  <li><a href="#video-JvohEXX-FiY">Getting Started with VEX IQ Gen 2</a> — VEX Robotics</li>
+                  <li><a href="#video-jPaarRbLjaE">Flop Part 1</a> — VEX Robotics</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A build instruction is not just a recipe; it is a sequence of subsystem decisions. If Arian can name what each part is doing before it disappears into the robot, he will debug faster later because he knows whether a problem belongs to structure, motion, power, control, or game interaction.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Create a &quot;Flop subsystem map&quot; before building. For each staged part group, write the likely subsystem, motion it supports, and one failure that part could prevent. Then open the official instructions and update the guesses in a second color as evidence appears.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: sorts parts mostly by shape or color without explaining robot jobs</div>
+                <div class="rubric-level"><strong>2</strong> Developing: identifies the major Flop subsystems and labels at least ten parts by function</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: updates predictions from the instructions and explains how at least three small parts prevent friction, flex, slipping, or electrical trouble.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which small part seems least important at first but could stop a whole subsystem from working?</li>
+                  <li>What evidence tells you whether a part belongs to the drivetrain, arm, intake, electronics, or structure?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-12" data-day="12" data-phase="phase-c" data-keywords="build Flop instructions assembly construction">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-12-panel">
+              <span class="day-number">12</span>
+              <span class="day-title">Build Flop Without Rushing Past the Evidence</span>
+              <span class="day-meta">60-90 min</span>
+            </button>
+            <div class="day-panel" id="day-12-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>Two students follow the same official instructions. One robot drives smoothly; the other binds, leans, and drops parts. If the instructions were identical, where did the difference enter the build?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before building, write three checkpoints where you predict mistakes are most likely: shaft capture, motor orientation, wire routing, gear alignment, spacing, frame squareness, or something else. Explain why each checkpoint matters.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>following official instructions</li>
+                  <li>patience and order</li>
+                  <li>step verification</li>
+                  <li>orientation</li>
+                  <li>symmetry</li>
+                  <li>shaft collars and spacers</li>
+                  <li>gear mesh</li>
+                  <li>motor ports and labels</li>
+                  <li>cable routing</li>
+                  <li>build checkpoints</li>
+                  <li>peer/adult inspection without adult takeover</li>
+                  <li>documenting corrections</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-jPaarRbLjaE">Flop Part 1</a> — VEX Robotics</li>
+                  <li><a href="#video-n_fWxHqSMPs">Flop Part 2</a> — VEX Robotics</li>
+                  <li><a href="#video-pghmsMOFOc4">Build Phase: Building Flop</a> — TechPoint Youth</li>
+                  <li><a href="#video-2gTnF5b_krE">HEROBOT FLOP from Instructions</a> — Ben Lipper</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Building is the first engineering test. A correct-looking robot can still hide friction, reversed motors, unsupported shafts, or pin stress; a good builder pauses after each subsystem, spins moving parts by hand, checks symmetry, labels ports, and records corrections instead of treating mistakes as embarrassment.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build Flop from the official instructions with a checkpoint sheet. At the end of every major subsystem, perform a &quot;look, wiggle, spin, compare&quot; check: look at orientation, wiggle for unwanted looseness, spin moving shafts by hand, and compare left/right symmetry or the 3D model. Record every correction.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: completes some build steps but skips checks or relies on an adult to find errors</div>
+                <div class="rubric-level"><strong>2</strong> Developing: follows instructions in order and records at least three useful checkpoints/corrections</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: completes or meaningfully advances the build with documented self-checks, explains one caught mistake, and leaves the robot ready for subsystem analysis.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>When did going slowly save time later?</li>
+                  <li>Which type of mistake is hardest to notice from the picture alone?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-13" data-day="13" data-phase="phase-c" data-keywords="Flop drivetrain analysis drive base wheels">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-13-panel">
+              <span class="day-number">13</span>
+              <span class="day-title">What Does Flop&#x27;s Drivetrain Reveal?</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-13-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>Flop can move across the field, but what hidden choices are inside that movement? If you only watched it drive for 20 seconds, could you infer its wheel type, motor allocation, turning behavior, and likely weaknesses?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before watching any explanation, lift Flop safely, turn each wheel by hand, and sketch the drivetrain from above. Predict whether it will prefer straight paths, tight turns, pushing, or careful alignment.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>drivetrain subsystem analysis</li>
+                  <li>wheelbase and track width</li>
+                  <li>wheel type and diameter</li>
+                  <li>motor count</li>
+                  <li>gear train observation</li>
+                  <li>tank/skid behavior</li>
+                  <li>turning scrub</li>
+                  <li>center of mass during driving</li>
+                  <li>motor ports and controller mapping</li>
+                  <li>inspection by evidence rather than assumptions</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-jPaarRbLjaE">Flop Part 1</a> — VEX Robotics</li>
+                  <li><a href="#video-n_fWxHqSMPs">Flop Part 2</a> — VEX Robotics</li>
+                  <li><a href="#video-ZI7Kc7Y2X0k">Hero Bot Breakdown</a> — CosmosTech</li>
+                  <li><a href="https://www.youtube.com/watch?v=KvWHQ6d3_hM" target="_blank" rel="noopener">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
+                  <li><a href="concepts/friction.html">Friction</a> — concept page</li>
+                  <li><a href="concepts/omni-wheels.html">Omni Wheels</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A drivetrain is a bundle of choices, not merely four wheels. Flop&#x27;s drive behavior will reveal how much traction, turning scrub, rigidity, and motor power it has; those observations decide whether the driver should favor long straight paths, careful pivots, short corrections, or future mechanical changes.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Run three drivetrain tests with Flop: straight-line drift over a fixed distance, square-turn accuracy, and a controlled push or ramp/resistance test if safe. Record the setup, battery level, controller behavior, and result. Change nothing between trials except the test itself.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: drives Flop and gives a general opinion</div>
+                <div class="rubric-level"><strong>2</strong> Developing: completes three repeatable tests and records observations</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains the results using drivetrain geometry, friction, motor allocation, and build quality, then names one drivetrain improvement or driver habit to test later.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What evidence would convince you that a driving problem is mechanical instead of driver-control code?</li>
+                  <li>Which Level Up path would you avoid until Flop proves it can drive that path repeatably?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-14" data-day="14" data-phase="phase-c" data-keywords="Flop arm intake mechanism scoring bean bag">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-14-panel">
+              <span class="day-number">14</span>
+              <span class="day-title">What Does Flop&#x27;s Arm and Intake Reveal?</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-14-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A mechanism can pick up a Bean Bag once and still be a poor scorer. What must Flop&#x27;s arm and intake do repeatedly, and what clues show whether each mechanism is forgiving or fragile?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Without powering the robot first, move Flop&#x27;s arm and intake by hand if safe. Predict where friction, flex, gear load, bag alignment, or release trouble will appear.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>mechanism inspection</li>
+                  <li>arm path</li>
+                  <li>intake direction</li>
+                  <li>powered versus passive control</li>
+                  <li>compression and funneling</li>
+                  <li>torque load</li>
+                  <li>gear ratio clues</li>
+                  <li>motor ports</li>
+                  <li>hard stops</li>
+                  <li>one-bag possession</li>
+                  <li>release reliability</li>
+                  <li>interaction between arm height, robot stability, and driver accuracy</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-n_fWxHqSMPs">Flop Part 2</a> — VEX Robotics</li>
+                  <li><a href="#video-ZI7Kc7Y2X0k">Hero Bot Breakdown</a> — CosmosTech</li>
+                  <li><a href="https://www.youtube.com/watch?v=hRSUs7ChPW0" target="_blank" rel="noopener">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=KvWHQ6d3_hM" target="_blank" rel="noopener">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
+                  <li><a href="concepts/what-is-torque.html">What is Torque?</a> — concept page</li>
+                  <li><a href="concepts/friction.html">Friction</a> — concept page</li>
+                  <li><a href="concepts/linkages.html">Linkages</a> — concept page</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>An intake reduces the driver&#x27;s alignment burden only if it guides and controls the bag consistently. An arm only scores reliably if its path, torque, stopping position, and robot balance match the target goal; watching the mechanism fail is useful because each failure points to geometry, friction, speed, or driver-positioning evidence.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Run a four-step mechanism test: approach a Bean Bag, collect it, carry it through a short turn, and release/score it at a chosen target. Repeat five times from the same starting mark. Record where each failure occurs and whether it is intake, arm, drive alignment, or release.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: demonstrates one pickup or score without repeat data</div>
+                <div class="rubric-level"><strong>2</strong> Developing: runs five trials and identifies the failure step</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: calculates success rate, explains the likely mechanical cause, and proposes one geometry, speed, or driver-positioning change to test.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Does Flop&#x27;s mechanism forgive bad alignment, or does the driver have to be very precise?</li>
+                  <li>Which is more important first: a higher score target or a more repeatable pickup-and-release cycle?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-15" data-day="15" data-phase="phase-c" data-keywords="improve iteration design process one variable test">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-15-panel">
+              <span class="day-number">15</span>
+              <span class="day-title">Improve One Thing on Flop</span>
+              <span class="day-meta">60 min</span>
+            </button>
+            <div class="day-panel" id="day-15-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>If Flop misses a score, should you rebuild the intake, change the arm, practice driving, alter code, or do nothing until more data exists? How can one improvement beat five guesses?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Choose one problem from Days 13-14 and write a claim: &quot;I think this happens because...&quot; Then write the smallest change that could test that claim without changing the rest of the robot.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>iterative design</li>
+                  <li>one-variable testing</li>
+                  <li>baseline data</li>
+                  <li>modification choice</li>
+                  <li>failure mode</li>
+                  <li>mechanism geometry</li>
+                  <li>friction reduction</li>
+                  <li>bracing</li>
+                  <li>driver-positioning change</li>
+                  <li>speed limiting</li>
+                  <li>legal and size checks</li>
+                  <li>documenting before/after evidence</li>
+                  <li>knowing when not to modify</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-azJmUY9SMWo">How to Design and Build</a> — Ben Lipper</li>
+                  <li><a href="https://www.youtube.com/watch?v=sl7DbBqcYbA" target="_blank" rel="noopener">99808A presents: How to use the Engineering Design Process</a> — Team 99808</li>
+                  <li><a href="https://www.youtube.com/watch?v=KvWHQ6d3_hM" target="_blank" rel="noopener">Introducing the 180 Mod Flop! First Practice Runs</a> — Lemon Vex Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=hRSUs7ChPW0" target="_blank" rel="noopener">Cracked 87 Points in VEX IQ Level Up Today!</a> — Lemon Vex Robotics</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Iteration is not random upgrading. A useful change starts with a measured baseline, changes one variable, repeats the same test, and compares evidence; if the improvement helps one metric but hurts another, the notebook must capture the tradeoff instead of hiding it.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Improve one thing on Flop: friction, bracing, intake guide, arm stop, driver-control speed, wire routing, or scoring alignment. Run the exact same before/after test with at least five trials each. Keep the old result visible and write whether the change should stay.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: changes the robot based on preference and declares it better</div>
+                <div class="rubric-level"><strong>2</strong> Developing: uses a baseline and after-test to compare one variable</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: repeats trials, records success rate or time, explains the tradeoff, checks legality/size, and decides whether to keep, revise, or revert the change.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What result would prove your favorite improvement did not actually help?</li>
+                  <li>Why might a slower robot or mechanism score more points in a real match?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="curriculum-phase" data-phase="phase-d">
+        <button class="phase-toggle" type="button" aria-expanded="false">
+          <strong>Phase D — Days 16-20: Drive Precisely &amp; Turn Data Into Strategy</strong>
+          <span class="phase-toggle-hint">Expand phase</span>
+        </button>
+        <div class="phase-days">
+          <article class="day-card" id="day-16" data-day="16" data-phase="phase-d" data-keywords="driving drills straight turn precision square">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-16-panel">
+              <span class="day-number">16</span>
+              <span class="day-title">Drive Straight, Turn Square</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-16-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A robot that is fast but crooked may lose to a slower robot that stops exactly where planned. What makes &quot;drive forward&quot; and &quot;turn 90 degrees&quot; harder than they sound?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Place two tape lines on the floor or field. Predict which will cause more error: starting angle, joystick smoothness, wheel friction, battery level, or robot weight distribution. Rank them before driving.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>precision driving</li>
+                  <li>straight-line drift</li>
+                  <li>square turns</li>
+                  <li>acceleration and deceleration</li>
+                  <li>joystick control</li>
+                  <li>tank versus arcade feel</li>
+                  <li>field reference marks</li>
+                  <li>battery consistency</li>
+                  <li>drivetrain trim by practice or code</li>
+                  <li>measurement tables</li>
+                  <li>repeatability over best single attempt</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-tepeFAA7Gbo">5 Tips to Instantly Improve Your VEX Robot Driving</a> — The VEX IQ Guide</li>
+                  <li><a href="https://www.youtube.com/watch?v=sFrmMckQfqY" target="_blank" rel="noopener">VEX IQ Wireless Driver Control</a> — Vex ICutie</li>
+                  <li><a href="https://www.youtube.com/watch?v=0i0oArJgu90" target="_blank" rel="noopener">VEX IQ - Driving and Turning</a> — Kai Nakamura</li>
+                  <li><a href="#video-PwLPVbLclqk">Drive and Code a VEX IQ Robot</a> — Unknown Creator</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Precision is a skill and a measurement problem. The driver learns by turning vague mistakes into repeatable numbers: distance from line, turn angle error, time, corrections, and consistency across trials.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Create a straight-and-square drill: drive forward to a line, stop with the front axle on the mark, turn 90 degrees, drive to a second mark, and stop. Run ten trials and record stop error, turn error, and number of corrections.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: completes the path but records only a best run</div>
+                <div class="rubric-level"><strong>2</strong> Developing: records ten trials and identifies the most common error</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: uses the data to change one driving habit or controller setting, reruns the drill, and explains whether consistency improved.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Why is the average run often more useful than the best run?</li>
+                  <li>What driver habit creates the same kind of error again and again?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-17" data-day="17" data-phase="phase-d" data-keywords="alignment field navigation lineup scoring">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-17-panel">
+              <span class="day-number">17</span>
+              <span class="day-title">Line Up and Align</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-17-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A robot can arrive near the goal and still fail because it approaches from the wrong angle. What field clues could help the driver line up the same way every time?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Pick one Level Up target and draw three possible approach paths. Mark where the driver should look: robot corner, wheel, intake edge, field line, wall, goal post, or bag position.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>repeatable positioning</li>
+                  <li>alignment references</li>
+                  <li>approach angle</li>
+                  <li>bumper/wall contact as a reference</li>
+                  <li>intake centering</li>
+                  <li>sight lines</li>
+                  <li>staging marks</li>
+                  <li>path correction</li>
+                  <li>driver station perspective</li>
+                  <li>using field geometry without relying on luck</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=eQTbkWwIJ-Q" target="_blank" rel="noopener">How to Build Passive Aligners</a> — Lemon Vex Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=yC_6j7vawfk" target="_blank" rel="noopener">VEX Build Masterclass #3 - Squaring</a> — Ryan Liao</li>
+                  <li><a href="https://www.youtube.com/watch?v=ftq1_O9gfMQ" target="_blank" rel="noopener">VEX IQ: Wheel Alignment Tips</a> — WIS Robotics</li>
+                  <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Good drivers do not merely aim at a goal; they build a repeatable setup. If the same robot corner, wheel, or intake edge reaches the same field reference at the same angle, the mechanism has a much easier problem to solve.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Design one alignment routine for Flop: start from a fixed mark, drive to a chosen field reference, square up, collect or place one Bean Bag, and retreat. Run eight trials, recording whether the miss came from path, angle, distance, or mechanism timing.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: tries to score from different starts without knowing why results change</div>
+                <div class="rubric-level"><strong>2</strong> Developing: uses a fixed start and records alignment failure types</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: chooses a field reference, improves one approach cue, and shows better repeatability across a second set of trials.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which is more repeatable for you: lining up by the robot&#x27;s front, a wheel, an intake edge, or a field object?</li>
+                  <li>When should a driver intentionally touch a wall or field element for alignment, and when could that waste time?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-18" data-day="18" data-phase="phase-d" data-keywords="skills strategy 60 second route planning">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-18-panel">
+              <span class="day-number">18</span>
+              <span class="day-title">Design a 60-Second Skills Run</span>
+              <span class="day-meta">60 min</span>
+            </button>
+            <div class="day-panel" id="day-18-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>In Driver Skills, a risky high-value path might score 20 points once, while a safe path scores fewer points three times. Which one wins after 60 seconds?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before driving, list every scoring action Flop can do today, not someday. Estimate time, success rate, and point value for each. Circle the action that is most reliable, not most exciting.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>60-second skills planning</li>
+                  <li>cycle time</li>
+                  <li>success rate</li>
+                  <li>expected value</li>
+                  <li>route ordering</li>
+                  <li>reset/recovery plan</li>
+                  <li>one-bag possession</li>
+                  <li>field traffic absent in skills</li>
+                  <li>balancing high-value goals with reliable low-risk points</li>
+                  <li>using current manual scoring</li>
+                  <li>practice data as strategy evidence</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
+                  <li><a href="#video-AMZ8p5u8UHY">Game Manual Breakdown</a> — RoboSTEM</li>
+                  <li><a href="https://www.youtube.com/watch?v=yBdO3xBeAp4" target="_blank" rel="noopener">Vex Iq Level Up | Solo TW PR | 102 Points!</a> — Auburn Community Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=EMYxGGUh_ls" target="_blank" rel="noopener">Hero Bot Scores 92 Points?! Breaking Down This INSANE Match</a> — VEX Talk</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Strategy is not the biggest possible score on paper; it is the best expected score for the robot and driver today. A 60-second plan must include travel time, setup time, failure recovery, and the current scoring rules.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build a one-minute skills plan with three route options: safe, medium, and stretch. For each, estimate score, time, and failure risk. Then run the safe route twice with a timer and update the plan using real data.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: writes a route with no time or reliability estimate</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares three routes and tests one with a timer</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: updates expected score from evidence, includes a recovery rule, and chooses a competition-ready first route with manual-based scoring.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which action should be repeated because it is reliable, even if it is not the highest-value action?</li>
+                  <li>What should the driver do after a miss: retry immediately, abandon, or switch route?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-19" data-day="19" data-phase="phase-d" data-keywords="teamwork alliance strategy collaboration roles">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-19-panel">
+              <span class="day-number">19</span>
+              <span class="day-title">Win the Match With an Alliance Plan</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-19-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>Two good robots can get in each other&#x27;s way and score less than one organized pair. What must alliance partners decide before the match starts?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Imagine Flop is paired with a faster robot that scores differently. Write three roles Flop could play: collector, low-goal scorer, high-goal assister, traffic controller, endgame cleaner, or backup plan. Which role avoids collisions?</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>Teamwork Challenge strategy</li>
+                  <li>alliance communication</li>
+                  <li>role assignment</li>
+                  <li>field zones</li>
+                  <li>first 10 seconds</li>
+                  <li>traffic lanes</li>
+                  <li>complementary mechanisms</li>
+                  <li>verbal match plan</li>
+                  <li>contingency if partner fails</li>
+                  <li>current manual constraints</li>
+                  <li>respectful collaboration</li>
+                  <li>scouting observations</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=M_u3zQwBzyI" target="_blank" rel="noopener">Boost Your VEX IQ Teamwork Skills with These Strategies</a> — RoboSTEM</li>
+                  <li><a href="https://www.youtube.com/watch?v=ptJ-CkMJpNY" target="_blank" rel="noopener">VEX IQ Level Up Explained - What Teams Need to Know First</a> — Vector Motion</li>
+                  <li><a href="https://www.youtube.com/watch?v=-Z5vRmfvT-o" target="_blank" rel="noopener">358 POINTS #1 Finals: 81777A &amp; 95014X | VEX IQ Mix &amp; Match</a> — Chewbotca</li>
+                  <li><a href="#video-KP0FYPW604E">Level Up Game Reveal</a> — VEX Robotics</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Teamwork strategy rewards complementary jobs. A reliable robot with a clear role can help an alliance more than a robot trying to do every task; pre-match communication turns two separate drivers into one 60-second system.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Create two alliance scripts for Flop: one with a fast low-goal partner and one with a high-reach partner. Each script must include starting location, first route, field zone, callouts, collision-avoidance rule, and backup plan. Practice one script with cones or taped &quot;partner path&quot; markers.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: lists what Flop will do without considering a partner</div>
+                <div class="rubric-level"><strong>2</strong> Developing: assigns roles and routes for two partner types</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: tests a traffic plan, identifies a collision risk, and revises the script using time or scoring evidence.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What information should you ask an alliance partner before choosing a route?</li>
+                  <li>When is it smarter to let the partner score while Flop clears space or collects?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-20" data-day="20" data-phase="phase-d" data-keywords="practice logbook data improvement drills">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-20-panel">
+              <span class="day-number">20</span>
+              <span class="day-title">Driver Practice Drills and Logbook</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-20-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>If a driver says, &quot;I practiced for an hour,&quot; does that prove improvement? What data would show the practice actually made the robot score better?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Choose one measurable weakness from Days 16-19. Write how to measure it today and how many trials would be enough to trust the result.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>deliberate practice</li>
+                  <li>drill design</li>
+                  <li>baseline, repetition, feedback, revision</li>
+                  <li>time trials</li>
+                  <li>success rate</li>
+                  <li>score per minute</li>
+                  <li>driver fatigue</li>
+                  <li>battery tracking</li>
+                  <li>engineering notebook/logbook</li>
+                  <li>graphs</li>
+                  <li>evidence-based goals</li>
+                  <li>separating driver errors from robot errors</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-tepeFAA7Gbo">5 Tips to Improve Driving</a> — The VEX IQ Guide</li>
+                  <li><a href="https://www.youtube.com/watch?v=GERezk11oUY" target="_blank" rel="noopener">The VEX Notebook Rubric, Explained</a> — BennyBuildsRobots</li>
+                  <li><a href="https://www.youtube.com/watch?v=D8JT7D8gq5g" target="_blank" rel="noopener">How to Manage Your Engineering Design Notebook</a> — Last Minute Fix OCS Robotics</li>
+                  <li><a href="#video-O0El_fts9ns">Award Winning Notebook</a> — 8931B V-Bots Trifecta</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Practice becomes engineering when it creates evidence. A good logbook turns vague effort into a trend: what was tried, what changed, what improved, what stayed weak, and what the next practice should attack.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Run a three-round practice cycle: baseline drill, focused practice, retest. Use the same drill and same scoring method each time. Add a notebook entry with a table, one graph or tally, a driver observation, and a next-practice goal.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: practices without a baseline or written result</div>
+                <div class="rubric-level"><strong>2</strong> Developing: records before/after data for one drill</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: shows a measurable trend, explains the cause of improvement or plateau, and creates a next drill based on the weakest evidence.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What number best describes today&#x27;s improvement: time, success rate, score, corrections, or consistency?</li>
+                  <li>How can you tell the difference between a robot that improved and a driver who simply learned to work around a flaw?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="curriculum-phase" data-phase="phase-e">
+        <button class="phase-toggle" type="button" aria-expanded="false">
+          <strong>Phase E — Days 21-25: Driver-Control Code &amp; Sensor Thinking</strong>
+          <span class="phase-toggle-hint">Expand phase</span>
+        </button>
+        <div class="phase-days">
+          <article class="day-card" id="day-21" data-day="21" data-phase="phase-e" data-keywords="VEXcode setup first program sequencing download">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-21-panel">
+              <span class="day-number">21</span>
+              <span class="day-title">VEXcode IQ Setup and First Program</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-21-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A robot can be mechanically correct and still do nothing because the Brain is not paired, the wrong device is configured, or the program is not downloaded. Where can a first program fail before the robot ever moves?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Draw a chain from laptop/tablet to VEXcode to Brain to motor to wheel. Mark every link where a setup mistake could break the chain.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>VEXcode IQ interface</li>
+                  <li>Blocks project</li>
+                  <li>Brain connection</li>
+                  <li>firmware/update awareness</li>
+                  <li>device configuration</li>
+                  <li>motor ports</li>
+                  <li>Controller pairing</li>
+                  <li>download and run</li>
+                  <li>project naming</li>
+                  <li>first sequence</li>
+                  <li>safe test stand</li>
+                  <li>documenting screenshots</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-nzM0JE7vFaQ">VEXcode IQ Getting Started</a> — VEX Robotics</li>
+                  <li><a href="#video-MSX9LLQLvmk">Downloading and Running</a> — VEX Robotics</li>
+                  <li><a href="#video-yJvA-QpKvKI">Example Projects</a> — VEX Robotics</li>
+                  <li><a href="#video-IGbHbtC5wKU">VEXcode IQ Blocks Tutorial Beginner</a> — TechPoint Youth</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Programming begins with a reliable communication chain. If the Brain, Controller, motors, ports, and project configuration match the physical robot, code can become an experiment; if they do not, every debugging guess becomes noisy.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Create a first VEXcode IQ Blocks project for Flop or BaseBot. Configure at least the drivetrain or one motor, download it, run a short safe movement, and capture a screenshot of the project plus a notebook note describing each setup step.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: opens VEXcode but needs adult help to run the program</div>
+                <div class="rubric-level"><strong>2</strong> Developing: downloads and runs a simple program with correct device setup</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains the full software-to-robot chain and fixes or documents one setup issue using evidence.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which setup error would look like a code problem even though the code is fine?</li>
+                  <li>Why should the first program be tiny instead of impressive?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-22" data-day="22" data-phase="phase-e" data-keywords="code drivetrain tank arcade 2-motor 4-motor">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-22-panel">
+              <span class="day-number">22</span>
+              <span class="day-title">Code the Drivetrain</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-22-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>The same two joysticks can make a robot feel smooth, twitchy, backward, or impossible. How can code change the driver&#x27;s experience without changing the wheels?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Predict how tank drive and arcade drive differ in the driver&#x27;s brain. Which one would help you drive straight? Which one would help quick turns? Why?</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>drivetrain device setup</li>
+                  <li>2-motor and 4-motor groups</li>
+                  <li>left/right motor direction</li>
+                  <li>tank drive</li>
+                  <li>arcade drive</li>
+                  <li>controller axis mapping</li>
+                  <li>deadband</li>
+                  <li>speed scaling</li>
+                  <li>motor velocity</li>
+                  <li>brake/coast/hold</li>
+                  <li>driver preference as testable evidence</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-ap39M61F1l0">Code 2- and 4-Motor Drivetrain</a> — VEX Talk</li>
+                  <li><a href="#video-PwLPVbLclqk">Drive and Code a VEX IQ Robot</a> — Unknown Creator</li>
+                  <li><a href="#video-q-X4Q_mXOfY">Basic BaseBot Blocks Programming</a> — Coding with Culp</li>
+                  <li><a href="#video-IGbHbtC5wKU">VEXcode IQ Blocks Tutorial Beginner</a> — TechPoint Youth</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Driver-control code is part of the robot design. Tank and arcade mappings turn human joystick input into left/right motor commands; speed limits, deadbands, and brake modes can make the same mechanical robot easier or harder to score with.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Program and test two driver modes or settings: tank versus arcade, or full speed versus reduced speed. Use the same alignment drill from Day 16 and record time, corrections, and success rate for each.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: makes the robot drive but cannot explain the mapping</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares two control settings with drill data</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains how joystick axes become motor commands, chooses a setting based on evidence, and documents motor-port/direction fixes.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which control mode makes the robot easier to place accurately, not merely faster?</li>
+                  <li>What code setting could hide a mechanical drivetrain problem, and why would that matter?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-23" data-day="23" data-phase="phase-e" data-keywords="code mechanisms arm intake claw controller buttons">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-23-panel">
+              <span class="day-number">23</span>
+              <span class="day-title">Code the Mechanisms</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-23-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>If the driver must think about driving, intaking, lifting, and releasing at the same time, which buttons should do what? How can code make a mechanism easier to control under pressure?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Draw the Controller and assign buttons for intake in/out, arm up/down, and emergency stop or hold. Predict which controls will be easy to remember during a match.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>mechanism motor configuration</li>
+                  <li>button events</li>
+                  <li>while-button control</li>
+                  <li>motor spin direction</li>
+                  <li>velocity limits</li>
+                  <li>hold/brake/coast behavior</li>
+                  <li>intake in/out</li>
+                  <li>arm up/down</li>
+                  <li>motor stopping</li>
+                  <li>preventing overdriving</li>
+                  <li>Controller ergonomics</li>
+                  <li>matching code names to physical labels</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=cKZAaWWCTpU" target="_blank" rel="noopener">VEX IQ - Controlling Motors</a> — Kai Nakamura</li>
+                  <li><a href="https://www.youtube.com/watch?v=TbaOMMKLGG4" target="_blank" rel="noopener">VEXcode IQ Blocks - Device Setup - Motors Tutorial</a> — VEX Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=PxSzAq0-upE" target="_blank" rel="noopener">VEXcode IQ Blocks - Device Setup - Controller Tutorial</a> — VEX Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=H0W3Lf-VHcI" target="_blank" rel="noopener">VEXcode IQ Blocks - Moving the Arm Tutorial</a> — VEX Robotics</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Mechanism code should reduce driver thinking. Clear button mapping, correct motor direction, appropriate speed, and reliable stop behavior let the driver focus on the field instead of remembering which way each motor spins.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Program Flop&#x27;s arm and intake controls. Test each button with the robot lifted safely first, then run five pickup-lift-release cycles on the field. Change only one control setting if a problem appears, such as speed, direction, or stop mode.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: gets one mechanism moving but controls are confusing or undocumented</div>
+                <div class="rubric-level"><strong>2</strong> Developing: maps all required buttons and completes repeated cycles</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: uses cycle evidence to tune speed/stop behavior, labels ports/buttons in the notebook, and explains why the final mapping is match-friendly.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which button choice reduces driver mistakes the most?</li>
+                  <li>When should a mechanism motor coast, brake, or hold?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-24" data-day="24" data-phase="phase-e" data-keywords="sensors distance optical gyro bumper touch">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-24-panel">
+              <span class="day-number">24</span>
+              <span class="day-title">Intro to Sensors: What Does the Robot Know?</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-24-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A driver sees the field, but the robot only gets numbers from devices. What can a Distance Sensor, Optical Sensor, and gyro tell the robot that a timer cannot?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>For each sensor, write one question the robot could answer: &quot;How far?&quot;, &quot;What color?&quot;, &quot;How turned?&quot;, &quot;Did I hit?&quot;, or &quot;Is something present?&quot; Then write one thing that sensor still cannot know.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>sensors as evidence</li>
+                  <li>Distance Sensor</li>
+                  <li>Optical Sensor</li>
+                  <li>inertial/gyro heading</li>
+                  <li>Bumper Switch and Touch LED as optional inputs/outputs</li>
+                  <li>device setup</li>
+                  <li>sensor units</li>
+                  <li>threshold</li>
+                  <li>noise</li>
+                  <li>calibration</li>
+                  <li>sensor placement</li>
+                  <li>data display</li>
+                  <li>using sensors for decisions rather than magic</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-voZIL4Gf7Zk">Device Setup Sensors</a> — VEX Robotics</li>
+                  <li><a href="#video-13Rsxcc9T-w">Programming Sensors</a> — Mitch Norris</li>
+                  <li><a href="#video-nF0kPc77mxo">Sensing Distance</a> — Kai Nakamura</li>
+                  <li><a href="#video-PMvg_vx1MQY">Code the Optical Sensor</a> — Chewbotca</li>
+                  <li><a href="#video-uv_YP8dgVMY">Accurately Turn with Gyro</a> — AllDayStem</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>A sensor does not understand the game; it reports evidence. The programmer decides what number matters, where to place the sensor, when to trust it, and what the robot should do when the reading changes.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Connect or inspect one available sensor. Display its value on the Brain or in VEXcode, then collect readings for three real situations: near/far object, light/dark/color object, or different headings. Write a threshold rule the robot could use.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: names sensors but records no actual readings</div>
+                <div class="rubric-level"><strong>2</strong> Developing: records readings in three situations and proposes a threshold</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains what the sensor can and cannot know, identifies noise/placement issues, and writes a useful if/then rule.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What sensor reading would be reliable enough to make the robot stop automatically?</li>
+                  <li>How could a sensor be correct but placed in the wrong location for the job?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-25" data-day="25" data-phase="phase-e" data-keywords="sensor data driving code feedback">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-25-panel">
+              <span class="day-number">25</span>
+              <span class="day-title">Sensor-Informed Driving</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-25-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A human driver can overcorrect after the robot drifts. Could the robot quietly help by limiting speed, warning about distance, or keeping turns more consistent?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Choose one driver problem from Week 4. Write whether a Distance Sensor, Optical Sensor, gyro, or no sensor is most likely to help. Explain what reading would trigger the help.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>driver assist</li>
+                  <li>sensor-informed control</li>
+                  <li>feedback</li>
+                  <li>thresholds</li>
+                  <li>if/then logic</li>
+                  <li>alerts</li>
+                  <li>speed limiting</li>
+                  <li>heading correction</li>
+                  <li>distance stop</li>
+                  <li>optical alignment</li>
+                  <li>human override</li>
+                  <li>avoiding overautomation</li>
+                  <li>testing assistance against baseline driving</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-13Rsxcc9T-w">Programming Sensors</a> — Mitch Norris</li>
+                  <li><a href="#video-uv_YP8dgVMY">Accurately Turn with Gyro</a> — AllDayStem</li>
+                  <li><a href="#video-nF0kPc77mxo">Sensing Distance</a> — Kai Nakamura</li>
+                  <li><a href="#video-uKL38GKP0zE">If-Then-Else</a> — VEX Robotics</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Driver-assist code should solve a specific measured problem. A sensor threshold can help with stopping distance, turn consistency, or warnings, but extra automation can distract the driver unless the assist is predictable and easy to override.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Build one driver assist: distance-based slow/stop, gyro-based turn cue, optical color cue, or Controller/Touch LED warning. Test the original driver drill with and without the assist and compare success rate or time.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: adds sensor code but does not compare it to baseline</div>
+                <div class="rubric-level"><strong>2</strong> Developing: creates one assist and tests before/after performance</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains the threshold choice, documents false positives/negatives, and decides whether the assist helps the driver under match pressure.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>When should the robot make the decision, and when should it only warn the driver?</li>
+                  <li>What failure would make a sensor assist less reliable than simple driver practice?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="curriculum-phase" data-phase="phase-f">
+        <button class="phase-toggle" type="button" aria-expanded="false">
+          <strong>Phase F — Days 26-30: Autonomous Routines &amp; Tournament Readiness</strong>
+          <span class="phase-toggle-hint">Expand phase</span>
+        </button>
+        <div class="phase-days">
+          <article class="day-card" id="day-26" data-day="26" data-phase="phase-f" data-keywords="autonomous programming time-based movement">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-26-panel">
+              <span class="day-number">26</span>
+              <span class="day-title">Autonomous Programming With Time</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-26-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>If you tell the robot to drive for two seconds, will it stop at the same place every time? What invisible conditions might change the distance?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Predict how battery level, floor friction, robot load, starting angle, and motor speed will affect a time-based autonomous path. Rank the two biggest risks.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>autonomous sequence</li>
+                  <li>time-based movement</li>
+                  <li>motor velocity</li>
+                  <li>waits</li>
+                  <li>stop commands</li>
+                  <li>repeatability limits</li>
+                  <li>starting position</li>
+                  <li>battery and friction</li>
+                  <li>simple scoring route</li>
+                  <li>debugging one command at a time</li>
+                  <li>comments/procedure naming</li>
+                  <li>safe testing</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-ucOT-ENP21M">Autonomous Programming Step-by-Step</a> — The VEX IQ Guide</li>
+                  <li><a href="#video-w6g0GOcKUYg">Autonomous Coding with BaseBot</a> — TechyRobot Teacher</li>
+                  <li><a href="#video-3q-AZdmNImY">Autonomous Programming</a> — TUSD Robotics</li>
+                  <li><a href="#video-2ZhxhHAEDB0">Master Procedures</a> — STEAM Labs</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Time-based autonomous is easy to start and easy to fool. It teaches sequencing, starting position, and command order, but its accuracy depends on conditions that are not measured by the program.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Program a three-step time-based autonomous route: drive, turn, drive or operate one mechanism. Run five trials from the same start, mark the final location each time, and adjust only one duration or speed before retesting.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: writes a sequence that works once</div>
+                <div class="rubric-level"><strong>2</strong> Developing: repeats five trials and tunes one timing value</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains variation sources, keeps a versioned record of changes, and produces a route that is reliable enough for a simple autonomous score or setup.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which command caused the largest final error, and how do you know?</li>
+                  <li>Why should an autonomous program begin from the exact same physical starting position every time?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-27" data-day="27" data-phase="phase-f" data-keywords="autonomous sensors programming feedback">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-27-panel">
+              <span class="day-number">27</span>
+              <span class="day-title">Sensor-Based Autonomous</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-27-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A timer says &quot;drive for 1.4 seconds,&quot; but a sensor can say &quot;drive until you reach the line, wall, angle, or object.&quot; Which instruction is more trustworthy, and when?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Choose one step from Day 26 that varied too much. Write what sensor evidence could replace time: heading, distance, color, or contact. Predict one new failure the sensor might introduce.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>sensor feedback</li>
+                  <li>wait until</li>
+                  <li>repeat until</li>
+                  <li>conditional decisions</li>
+                  <li>gyro heading turns</li>
+                  <li>distance-based stop</li>
+                  <li>optical line/color detection</li>
+                  <li>thresholds</li>
+                  <li>calibration</li>
+                  <li>sensor noise</li>
+                  <li>fail-safe timeout</li>
+                  <li>comparing time-based and sensor-based routines</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="#video-_QuhyOZFfLU">Sensor-Based Autonomous</a> — Travis Burroughs</li>
+                  <li><a href="#video-uv_YP8dgVMY">Accurately Turn with Gyro</a> — AllDayStem</li>
+                  <li><a href="#video-nF0kPc77mxo">Sensing Distance</a> — Kai Nakamura</li>
+                  <li><a href="#video-PMvg_vx1MQY">Code the Optical Sensor</a> — Chewbotca</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Sensor-based autonomous can reduce one kind of uncertainty by measuring the world, but it adds a new responsibility: choosing trustworthy thresholds, handling bad readings, and keeping a timeout so the robot does not wait forever.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Replace one time-based step from Day 26 with a sensor-based condition. Add a timeout or backup stop. Run five trials and compare final position, success rate, and failure type against the time-based version.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: adds a sensor block without proving it changes reliability</div>
+                <div class="rubric-level"><strong>2</strong> Developing: compares sensor-based and time-based versions with repeated trials</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: explains threshold, calibration, noise, timeout, and selects the better version for a specific autonomous job.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What did the sensor make more repeatable, and what did it make more complicated?</li>
+                  <li>How would the autonomous fail if the sensor were unplugged, blocked, or aimed poorly?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-28" data-day="28" data-phase="phase-f" data-keywords="debugging troubleshooting code problems fix">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-28-panel">
+              <span class="day-number">28</span>
+              <span class="day-title">Debugging and Iteration</span>
+              <span class="day-meta">45-60 min</span>
+            </button>
+            <div class="day-panel" id="day-28-panel" hidden>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A program fails on the third move. Should you change the third block, the second block, the start position, the motor direction, the sensor threshold, or the robot itself?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before editing code, write the exact expected behavior and exact observed behavior for the failed step. Underline the first moment where they differ.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>debugging method</li>
+                  <li>reproduce the bug</li>
+                  <li>isolate one step</li>
+                  <li>print/display values</li>
+                  <li>Brain screen feedback</li>
+                  <li>motor-port verification</li>
+                  <li>sensor readings</li>
+                  <li>comments</li>
+                  <li>versioning</li>
+                  <li>one-change-at-a-time</li>
+                  <li>rollback</li>
+                  <li>test logs</li>
+                  <li>mechanical versus code failures</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=TkxUQsWnBEw" target="_blank" rel="noopener">VEX 1961Z VexCode Lesson 4: Debugging and Autonomous Left and Right Functions</a> — Eagles 1961Z</li>
+                  <li><a href="https://www.youtube.com/watch?v=9xSPQnfn390" target="_blank" rel="noopener">VEXcode IQ Blocks - 4. Displaying Information on the Screen</a> — VEX Robotics UK</li>
+                  <li><a href="#video-voZIL4Gf7Zk">Device Setup Sensors</a> — VEX Robotics</li>
+                  <li><a href="#video-2ZhxhHAEDB0">Master Procedures</a> — STEAM Labs</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Debugging is disciplined observation. The goal is not to try edits until the robot behaves; the goal is to find the first false assumption, change one thing, and prove whether that assumption was the cause.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Choose one bug from driver or autonomous code. Create a debug log with Expected, Observed, First bad step, Hypothesis, One change, Result, and Next change. Use Brain screen output, small test programs, or unplugged-motor checks to isolate the cause.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: changes several blocks and stops when it seems better</div>
+                <div class="rubric-level"><strong>2</strong> Developing: isolates one bug with a written hypothesis and one controlled change</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: identifies the root cause with evidence, keeps a rollback path, and explains whether the issue was code, configuration, sensor, build, or driver setup.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What was the first moment the robot stopped matching your plan?</li>
+                  <li>How can a very small test program be more powerful than staring at the full program?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-29" data-day="29" data-phase="phase-f" data-keywords="tournament inspection judging notebook presentation">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-29-panel">
+              <span class="day-number">29</span>
+              <span class="day-title">Tournament Preparation</span>
+              <span class="day-meta">60 min</span>
+            </button>
+            <div class="day-panel" id="day-29-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>A robot can score well at home and still lose tournament time because it fails inspection, the battery is uncharged, the notebook is messy, or the team cannot explain its design. What must be ready before the first match?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Make a tournament failure checklist from memory: robot size, parts legality, battery, tools, spare parts, code, Controller, notebook, schedule, alliance talk, pit behavior, and presentation. Which item would cost the most if forgotten?</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>inspection</li>
+                  <li>current manual check</li>
+                  <li>robot size and legal parts</li>
+                  <li>motor and battery rules</li>
+                  <li>firmware</li>
+                  <li>spare parts and tools</li>
+                  <li>match schedule</li>
+                  <li>queuing</li>
+                  <li>notebook organization</li>
+                  <li>design explanation</li>
+                  <li>judging/presentation</li>
+                  <li>scouting</li>
+                  <li>sportsmanship</li>
+                  <li>pit checklist</li>
+                  <li>driver meeting</li>
+                  <li>pre-match routine</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=VK6lzPPhuXA" target="_blank" rel="noopener">Attending a VEX IQ Robotics Competition</a> — RoboticsTine</li>
+                  <li><a href="#video-afrdGr4ue9Y">Full Inspection Guide</a> — Caution Tape Robotics</li>
+                  <li><a href="https://www.youtube.com/watch?v=5q_y2vifuXo" target="_blank" rel="noopener">Engineering Notebook Tips Every VEX Team Should Know</a> — The VEX IQ Guide</li>
+                  <li><a href="https://www.youtube.com/watch?v=zekAzwe8j0c" target="_blank" rel="noopener">How to Master the Judges Interview</a> — The VEX Analyst</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Tournament readiness is an engineering system too. The robot, code, batteries, notebook, team explanation, and match routine all affect performance; the current manual and inspection process define the boundary conditions.</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Run a mock inspection and pit-prep checklist. Measure the robot against current size rules, verify motor count and battery readiness, open the correct program, pack a small repair kit, and practice a two-minute design explanation using notebook evidence.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: checks the robot informally and packs tools from memory</div>
+                <div class="rubric-level"><strong>2</strong> Developing: completes a written inspection/pit checklist and practices a short explanation</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: cites current manual constraints, fixes one readiness issue, and gives a clear evidence-based design explanation with roles for team members.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>What tournament problem can be prevented before leaving home?</li>
+                  <li>Which notebook page best proves that Team 295U tested and improved the robot?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="day-card" id="day-30" data-day="30" data-phase="phase-f" data-keywords="compete reflect mock tournament debrief">
+            <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-30-panel">
+              <span class="day-number">30</span>
+              <span class="day-title">Compete, Measure, and Reflect</span>
+              <span class="day-meta">60-90 min</span>
+            </button>
+            <div class="day-panel" id="day-30-panel" hidden>
+              <div class="day-note"><strong>Manual check:</strong> Level Up rules can change during the season. Check the current official manual and Q&amp;A before teaching this day.</div>
+              <div class="day-block day-hook">
+                <h3>Hook</h3>
+                <p>After a mock tournament, the scoreboard tells only part of the story. What evidence would tell you whether the robot, driver, code, strategy, or teamwork should improve next?</p>
+              </div>
+              <div class="day-block day-think">
+                <h3>Think First</h3>
+                <p>Before the mock matches, write three success measures besides score: clean pickups, missed alignments, autonomous success, partner collisions, cycle time, recovery decisions, or driver calm. Predict the weakest one.</p>
+              </div>
+              <div class="day-block">
+                <h3>Concepts</h3>
+                <ul>
+                  <li>mock tournament</li>
+                  <li>match schedule</li>
+                  <li>skills run</li>
+                  <li>teamwork run</li>
+                  <li>autonomous run</li>
+                  <li>scouting notes</li>
+                  <li>post-match debrief</li>
+                  <li>score versus process evidence</li>
+                  <li>root-cause reflection</li>
+                  <li>celebration without stopping improvement</li>
+                  <li>next design cycle</li>
+                  <li>season goals</li>
+                  <li>current manual verification</li>
+                </ul>
+              </div>
+              <div class="day-block day-learn">
+                <h3>Learn</h3>
+                <ol>
+                  <li><a href="https://www.youtube.com/watch?v=SW4-CeAHvo8" target="_blank" rel="noopener">2023 VIQC Worlds Matches &amp; Amaze Award</a> — Savage Bots</li>
+                  <li><a href="https://www.youtube.com/watch?v=ARKJ8SLiaBw" target="_blank" rel="noopener">Vex IQ Rise Above but we Pre-Record Skills | 351 points</a> — Rogue108</li>
+                  <li><a href="#video-tepeFAA7Gbo">5 Tips to Improve Driving</a> — The VEX IQ Guide</li>
+                  <li><a href="#video-O0El_fts9ns">Award Winning Notebook</a> — 8931B V-Bots Trifecta</li>
+                  <li><a href="https://link.vex.com/docs/26-27/viqrc-levelup-manual" target="_blank" rel="noopener">Current Level Up Game Manual</a> — verify the latest rules before teaching</li>
+                </ol>
+              </div>
+              <div class="day-block day-connect">
+                <h3>Connect the Dots</h3>
+                <p>Competition is a concentrated test, not the end of learning. The useful question after each run is not &quot;Did we win?&quot; but &quot;What evidence shows the highest-leverage next improvement?&quot;</p>
+              </div>
+              <div class="day-block day-try">
+                <h3>Try It</h3>
+                <p>Run a mini event: one Driver Skills run, one Autonomous Coding Skills run if available, and two Teamwork-style practice matches with a partner or taped partner path. After each run, record score, main failure, best success, and next change. End by choosing the first Week 7 improvement.</p>
+              </div>
+              <div class="day-rubric">
+                <div class="rubric-level"><strong>1</strong> Beginner: completes matches and remembers a few moments</div>
+                <div class="rubric-level"><strong>2</strong> Developing: records score and one useful debrief note after each run</div>
+                <div class="rubric-level"><strong>3</strong> Proficient: separates robot, driver, code, and strategy evidence, identifies the highest-leverage improvement, and writes a specific next-cycle test plan.</div>
+              </div>
+              <div class="day-block day-reflect">
+                <h3>Reflect</h3>
+                <ul>
+                  <li>Which result surprised you most, and what evidence explains it?</li>
+                  <li>If you could improve only one thing before the next tournament, what would it be and how would you test it?</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <ul class="footer-links">
-      <li><a href="#path">Start Here</a></li><li><a href="#kit">Kit &amp; Parts</a></li><li><a href="#builds">Robot Builds</a></li><li><a href="#game">Game &amp; Strategy</a></li><li><a href="#code">Programming</a></li><li><a href="#academy">Academy</a></li><li><a href="#videos">Videos &amp; Creators</a></li>
+      <li><a href="#path">Start Here</a></li><li><a href="#kit">Kit &amp; Parts</a></li><li><a href="#builds">Robot Builds</a></li><li><a href="#game">Game &amp; Strategy</a></li><li><a href="#code">Programming</a></li><li><a href="#academy">Academy</a></li><li><a href="#videos">Videos &amp; Creators</a></li><li><a href="#curriculum">Curriculum</a></li>
     </ul>
     <div class="footer-brand">Built for Arian Mistry, Team 295U</div>
     <p>VEX, VEX Robotics, VEX IQ, and VIQRC are trademarks or registered trademarks of Innovation First International, Inc. This independent resource hub links to official and community resources.</p>
@@ -752,6 +2780,68 @@
             const title = card.querySelector('h4')?.textContent.toLowerCase() || '';
             card.style.display = title.includes(query) ? '' : 'none';
           });
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let activeCurriculumPhase = 'all';
+      let activeCurriculumQuery = '';
+
+      const applyCurriculumFilters = () => {
+        document.querySelectorAll('.curriculum-phase').forEach(phase => {
+          const phaseMatches = activeCurriculumPhase === 'all' || phase.getAttribute('data-phase') === activeCurriculumPhase;
+          phase.style.display = phaseMatches ? '' : 'none';
+          phase.querySelectorAll('.day-card').forEach(card => {
+            const title = card.querySelector('.day-title')?.textContent.toLowerCase() || '';
+            const keywords = card.getAttribute('data-keywords')?.toLowerCase() || '';
+            const text = `${title} ${keywords}`;
+            card.style.display = text.includes(activeCurriculumQuery) ? '' : 'none';
+          });
+        });
+      };
+
+      document.querySelectorAll('.phase-chip').forEach(chip => {
+        chip.addEventListener('click', function() {
+          document.querySelectorAll('.phase-chip').forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          activeCurriculumPhase = this.getAttribute('data-phase-filter') || 'all';
+          applyCurriculumFilters();
+        });
+      });
+
+      document.querySelectorAll('.day-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const panel = this.nextElementSibling;
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          if (panel) panel.hidden = expanded;
+        });
+      });
+
+      document.querySelectorAll('.phase-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function() {
+          const phase = this.closest('.curriculum-phase');
+          const days = phase ? phase.querySelectorAll('.day-toggle') : [];
+          const anyExpanded = Array.from(days).some(d => d.getAttribute('aria-expanded') === 'true');
+          days.forEach(d => {
+            d.setAttribute('aria-expanded', String(!anyExpanded));
+            const panel = d.nextElementSibling;
+            if (panel) panel.hidden = anyExpanded;
+          });
+          this.setAttribute('aria-expanded', String(!anyExpanded));
+          const hint = this.querySelector('.phase-toggle-hint');
+          if (hint) hint.textContent = anyExpanded ? 'Expand phase' : 'Collapse phase';
+        });
+      });
+
+      const curriculumSearch = document.querySelector('#curriculum-search');
+      if (curriculumSearch) {
+        curriculumSearch.addEventListener('input', function() {
+          activeCurriculumQuery = this.value.trim().toLowerCase();
+          applyCurriculumFilters();
         });
       }
     });
