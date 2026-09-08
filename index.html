@@ -111,6 +111,47 @@
       .day-panel[hidden] { display: block !important; }
       .curriculum-phase, .day-card, .day-block, .rubric-level { box-shadow: none; break-inside: avoid; }
     }
+    .phase-a-theme { --phase-main:#F6B900; --phase-dark:#7A4C00; --phase-soft:#FFF6CC; --phase-accent:#00A3E0; }
+    .phase-b-theme { --phase-main:#00A3E0; --phase-dark:#075875; --phase-soft:#E0F6FF; --phase-accent:#2ECC71; }
+    .phase-c-theme { --phase-main:#E87722; --phase-dark:#8A3D00; --phase-soft:#FFF0E4; --phase-accent:#343A40; }
+    .phase-d-theme { --phase-main:#E74C3C; --phase-dark:#8F241A; --phase-soft:#FFE9E6; --phase-accent:#2775D1; }
+    .phase-e-theme { --phase-main:#7C4DFF; --phase-dark:#3D237A; --phase-soft:#F0EAFF; --phase-accent:#20C997; }
+    .phase-f-theme { --phase-main:#F39C12; --phase-dark:#705000; --phase-soft:#FFF3CD; --phase-accent:#008C8C; }
+    .curriculum-phase { border-left: 6px solid var(--phase-main); border-radius: 0 12px 12px 0; margin-bottom: 18px; overflow: hidden; }
+    .phase-toggle { background: linear-gradient(135deg, var(--phase-main), var(--phase-accent)); color: #fff; border: none; border-radius: 12px; padding: 16px 20px; font-size: 1.05rem; cursor: pointer; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 10px; font-family: var(--font-heading); }
+    .phase-toggle:hover { opacity: 0.92; }
+    .phase-toggle[aria-expanded="true"] { border-radius: 12px 12px 0 0; }
+    .day-card { border-left: 4px solid var(--phase-main); scroll-margin-top: 82px; transition: transform .2s ease, box-shadow .2s ease; }
+    .day-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .day-toggle[aria-expanded="true"] { background: linear-gradient(90deg, var(--phase-soft), #fff); }
+    .day-hook { border-left: 4px solid #FFD166; background: #fffef7; }
+    .day-think { border-left: 4px solid #5DADE2; background: #f0f8ff; }
+    .day-learn { border-left: 4px solid #2ECC71; background: #f0fff4; }
+    .day-learn ol li a { font-weight: 600; }
+    .day-learn ol li a:hover { text-decoration: underline; }
+    .day-connect { border-left: 4px solid #2ECC71; background: #f4fef6; }
+    .day-try { border-left: 4px solid #E87722; background: linear-gradient(135deg,#fffaf5,#fff5ee); border-radius: 0 10px 10px 0; }
+    .day-reflect { border-left: 4px solid #9B59B6; background: #faf5ff; font-style: italic; }
+    .day-rubric .rubric-level { display: flex; gap: 10px; align-items: flex-start; padding: 10px 14px; border-radius: 8px; margin: 4px 0; }
+    .day-rubric .rubric-level strong { background: var(--phase-main); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.9rem; }
+    .day-rubric .rubric-level:nth-child(1) strong { background: #E74C3C; }
+    .day-rubric .rubric-level:nth-child(2) strong { background: #F39C12; }
+    .day-rubric .rubric-level:nth-child(3) strong { background: #2ECC71; }
+    .day-icon { font-size: 1.4rem; margin-right: 4px; }
+    .day-badges { display: inline-flex; gap: 6px; flex-wrap: wrap; margin-left: 8px; }
+    .mini-badge { background: var(--phase-soft); color: var(--phase-dark); border: 1px solid var(--phase-main); border-radius: 999px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; }
+    .day-complete { background: #fff; border: 2px solid #ccc; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; flex-shrink: 0; transition: all .2s; }
+    .day-complete:hover { border-color: #2ECC71; }
+    .day-complete[aria-pressed="true"] { background: #2ECC71; border-color: #2ECC71; color: #fff; }
+    .curriculum-progress { background: #e0e0e0; border-radius: 999px; height: 28px; margin: 16px 0; overflow: hidden; position: relative; }
+    .curriculum-progress-fill { background: linear-gradient(90deg, #2ECC71, #27AE60); height: 100%; width: 0%; transition: width .4s ease; }
+    #curriculumProgressText { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.82rem; font-weight: 700; color: #333; }
+    .phase-progress { background: rgba(255,255,255,0.25); border-radius: 999px; padding: 2px 10px; font-size: 0.82rem; font-weight: 700; }
+    @media (max-width: 480px) {
+      .day-badges { display: none; }
+      .day-icon { font-size: 1.1rem; }
+      .phase-toggle { font-size: 0.9rem; padding: 12px 14px; }
+    }
     @media (min-width: 769px) and (max-width: 1099px) {
       .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .parts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -816,6 +857,11 @@
         <p>You won't get answers spoon-fed. You'll discover them. That's how real engineers think.</p>
       </div>
 
+      <div class="curriculum-progress" role="progressbar" aria-valuenow="0" aria-valuemax="30" id="curriculumProgressBar">
+        <div class="curriculum-progress-fill" id="curriculumProgressFill"></div>
+        <span id="curriculumProgressText">0 of 30 days complete</span>
+      </div>
+
       <input id="curriculum-search" class="curriculum-search" type="search" placeholder="Search days: torque, Flop, sensors, driving..." aria-label="Search curriculum days">
       <div class="phase-filters" role="tablist" aria-label="Curriculum phases">
         <button class="phase-chip active" type="button" data-phase-filter="all">All 30 Days</button>
@@ -826,17 +872,20 @@
         <button class="phase-chip" type="button" data-phase-filter="phase-e">E: Coding</button>
         <button class="phase-chip" type="button" data-phase-filter="phase-f">F: Tournament</button>
       </div>
-      <div class="curriculum-phase" data-phase="phase-a">
+      <div class="curriculum-phase phase-a-theme" data-phase="phase-a">
         <button class="phase-toggle" type="button" aria-expanded="false">
           <strong>Phase A — Days 1-5: Game Detective &amp; Mechanical Thinker</strong>
+          <span class="phase-progress" data-phase-progress="phase-a">0/5 done</span>
           <span class="phase-toggle-hint">Expand phase</span>
         </button>
         <div class="phase-days">
           <article class="day-card" id="day-1" data-day="1" data-phase="phase-a" data-keywords="game scoring strategy rules reveal">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-1-panel">
               <span class="day-number">1</span>
+              <span class="day-icon">🕵️</span>
               <span class="day-title">The Level Up Score Detective</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="1" onclick="event.stopPropagation()" aria-label="Mark Day 1 complete">✓</button>
             </button>
             <div class="day-panel" id="day-1-panel" hidden>
               <div class="day-block day-hook">
@@ -894,8 +943,10 @@
           <article class="day-card" id="day-2" data-day="2" data-phase="phase-a" data-keywords="shafts friction pins connectors bushings spacers">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-2-panel">
               <span class="day-number">2</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Why Does One Axle Spin and Another Bind?</span>
               <span class="day-meta">45 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="2" onclick="event.stopPropagation()" aria-label="Mark Day 2 complete">✓</button>
             </button>
             <div class="day-panel" id="day-2-panel" hidden>
               <div class="day-block day-hook">
@@ -963,8 +1014,10 @@
           <article class="day-card" id="day-3" data-day="3" data-phase="phase-a" data-keywords="gear ratio speed torque mechanical advantage">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-3-panel">
               <span class="day-number">3</span>
+              <span class="day-icon">⚙️</span>
               <span class="day-title">The Gearbox That Lies About &quot;Power&quot;</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="3" onclick="event.stopPropagation()" aria-label="Mark Day 3 complete">✓</button>
             </button>
             <div class="day-panel" id="day-3-panel" hidden>
               <div class="day-block day-hook">
@@ -1024,8 +1077,10 @@
           <article class="day-card" id="day-4" data-day="4" data-phase="phase-a" data-keywords="levers linkages chain rubber band fulcrum">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-4-panel">
               <span class="day-number">4</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Move a Load With One Finger</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="4" onclick="event.stopPropagation()" aria-label="Mark Day 4 complete">✓</button>
             </button>
             <div class="day-panel" id="day-4-panel" hidden>
               <div class="day-block day-hook">
@@ -1085,8 +1140,10 @@
           <article class="day-card" id="day-5" data-day="5" data-phase="phase-a" data-keywords="center of mass tipping bracing stability structure">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-5-panel">
               <span class="day-number">5</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">The Tall Robot That Falls</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="5" onclick="event.stopPropagation()" aria-label="Mark Day 5 complete">✓</button>
             </button>
             <div class="day-panel" id="day-5-panel" hidden>
               <div class="day-block day-hook">
@@ -1148,17 +1205,20 @@
           </article>
         </div>
       </div>
-      <div class="curriculum-phase" data-phase="phase-b">
+      <div class="curriculum-phase phase-b-theme" data-phase="phase-b">
         <button class="phase-toggle" type="button" aria-expanded="false">
           <strong>Phase B — Days 6-10: Drivetrains &amp; Scoring Mechanisms</strong>
+          <span class="phase-progress" data-phase-progress="phase-b">0/5 done</span>
           <span class="phase-toggle-hint">Expand phase</span>
         </button>
         <div class="phase-days">
           <article class="day-card" id="day-6" data-day="6" data-phase="phase-b" data-keywords="steering drivetrain omni holonomic X-drive H-drive tank">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-6-panel">
               <span class="day-number">6</span>
+              <span class="day-icon">🎮</span>
               <span class="day-title">Five Ways to Reach the Same Spot</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="6" onclick="event.stopPropagation()" aria-label="Mark Day 6 complete">✓</button>
             </button>
             <div class="day-panel" id="day-6-panel" hidden>
               <div class="day-block day-hook">
@@ -1218,8 +1278,10 @@
           <article class="day-card" id="day-7" data-day="7" data-phase="phase-b" data-keywords="motors drivetrain wheels traction motor allocation">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-7-panel">
               <span class="day-number">7</span>
+              <span class="day-icon">⚙️</span>
               <span class="day-title">Two Motors or Four?</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="7" onclick="event.stopPropagation()" aria-label="Mark Day 7 complete">✓</button>
             </button>
             <div class="day-panel" id="day-7-panel" hidden>
               <div class="day-block day-hook">
@@ -1283,8 +1345,10 @@
           <article class="day-card" id="day-8" data-day="8" data-phase="phase-b" data-keywords="claw scoop intake compression funneling manipulator">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-8-panel">
               <span class="day-number">8</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Grab, Scoop, or Swallow?</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="8" onclick="event.stopPropagation()" aria-label="Mark Day 8 complete">✓</button>
             </button>
             <div class="day-panel" id="day-8-panel" hidden>
               <div class="day-block day-hook">
@@ -1346,8 +1410,10 @@
           <article class="day-card" id="day-9" data-day="9" data-phase="phase-b" data-keywords="lift 4-bar 6-bar chain-bar scissor linkage">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-9-panel">
               <span class="day-number">9</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">How Can the Hand Stay Level While the Arm Rises?</span>
               <span class="day-meta">60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="9" onclick="event.stopPropagation()" aria-label="Mark Day 9 complete">✓</button>
             </button>
             <div class="day-panel" id="day-9-panel" hidden>
               <div class="day-block day-hook">
@@ -1410,8 +1476,10 @@
           <article class="day-card" id="day-10" data-day="10" data-phase="phase-b" data-keywords="catapult ratchet rubber band stored energy release">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-10-panel">
               <span class="day-number">10</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Release Energy at Exactly the Right Moment</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="10" onclick="event.stopPropagation()" aria-label="Mark Day 10 complete">✓</button>
             </button>
             <div class="day-panel" id="day-10-panel" hidden>
               <div class="day-block day-hook">
@@ -1473,17 +1541,20 @@
           </article>
         </div>
       </div>
-      <div class="curriculum-phase" data-phase="phase-c">
+      <div class="curriculum-phase phase-c-theme" data-phase="phase-c">
         <button class="phase-toggle" type="button" aria-expanded="false">
           <strong>Phase C — Days 11-15: Build, Analyze &amp; Improve Flop</strong>
+          <span class="phase-progress" data-phase-progress="phase-c">0/5 done</span>
           <span class="phase-toggle-hint">Expand phase</span>
         </button>
         <div class="phase-days">
           <article class="day-card" id="day-11" data-day="11" data-phase="phase-c" data-keywords="Flop unbox subsystems kit systems engineer">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-11-panel">
               <span class="day-number">11</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Unbox Flop Like a Systems Engineer</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="11" onclick="event.stopPropagation()" aria-label="Mark Day 11 complete">✓</button>
             </button>
             <div class="day-panel" id="day-11-panel" hidden>
               <div class="day-block day-hook">
@@ -1539,8 +1610,10 @@
           <article class="day-card" id="day-12" data-day="12" data-phase="phase-c" data-keywords="build Flop instructions assembly construction">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-12-panel">
               <span class="day-number">12</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Build Flop Without Rushing Past the Evidence</span>
               <span class="day-meta">60-90 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="12" onclick="event.stopPropagation()" aria-label="Mark Day 12 complete">✓</button>
             </button>
             <div class="day-panel" id="day-12-panel" hidden>
               <div class="day-block day-hook">
@@ -1602,8 +1675,10 @@
           <article class="day-card" id="day-13" data-day="13" data-phase="phase-c" data-keywords="Flop drivetrain analysis drive base wheels">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-13-panel">
               <span class="day-number">13</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">What Does Flop&#x27;s Drivetrain Reveal?</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="13" onclick="event.stopPropagation()" aria-label="Mark Day 13 complete">✓</button>
             </button>
             <div class="day-panel" id="day-13-panel" hidden>
               <div class="day-block day-hook">
@@ -1665,8 +1740,10 @@
           <article class="day-card" id="day-14" data-day="14" data-phase="phase-c" data-keywords="Flop arm intake mechanism scoring bean bag">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-14-panel">
               <span class="day-number">14</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">What Does Flop&#x27;s Arm and Intake Reveal?</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="14" onclick="event.stopPropagation()" aria-label="Mark Day 14 complete">✓</button>
             </button>
             <div class="day-panel" id="day-14-panel" hidden>
               <div class="day-block day-hook">
@@ -1731,8 +1808,10 @@
           <article class="day-card" id="day-15" data-day="15" data-phase="phase-c" data-keywords="improve iteration design process one variable test">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-15-panel">
               <span class="day-number">15</span>
+              <span class="day-icon">🔧</span>
               <span class="day-title">Improve One Thing on Flop</span>
               <span class="day-meta">60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="15" onclick="event.stopPropagation()" aria-label="Mark Day 15 complete">✓</button>
             </button>
             <div class="day-panel" id="day-15-panel" hidden>
               <div class="day-block day-hook">
@@ -1796,17 +1875,20 @@
           </article>
         </div>
       </div>
-      <div class="curriculum-phase" data-phase="phase-d">
+      <div class="curriculum-phase phase-d-theme" data-phase="phase-d">
         <button class="phase-toggle" type="button" aria-expanded="false">
           <strong>Phase D — Days 16-20: Drive Precisely &amp; Turn Data Into Strategy</strong>
+          <span class="phase-progress" data-phase-progress="phase-d">0/5 done</span>
           <span class="phase-toggle-hint">Expand phase</span>
         </button>
         <div class="phase-days">
           <article class="day-card" id="day-16" data-day="16" data-phase="phase-d" data-keywords="driving drills straight turn precision square">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-16-panel">
               <span class="day-number">16</span>
+              <span class="day-icon">🎮</span>
               <span class="day-title">Drive Straight, Turn Square</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="16" onclick="event.stopPropagation()" aria-label="Mark Day 16 complete">✓</button>
             </button>
             <div class="day-panel" id="day-16-panel" hidden>
               <div class="day-block day-hook">
@@ -1867,8 +1949,10 @@
           <article class="day-card" id="day-17" data-day="17" data-phase="phase-d" data-keywords="alignment field navigation lineup scoring">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-17-panel">
               <span class="day-number">17</span>
+              <span class="day-icon">🎮</span>
               <span class="day-title">Line Up and Align</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="17" onclick="event.stopPropagation()" aria-label="Mark Day 17 complete">✓</button>
             </button>
             <div class="day-panel" id="day-17-panel" hidden>
               <div class="day-block day-hook">
@@ -1928,8 +2012,10 @@
           <article class="day-card" id="day-18" data-day="18" data-phase="phase-d" data-keywords="skills strategy 60 second route planning">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-18-panel">
               <span class="day-number">18</span>
+              <span class="day-icon">🕵️</span>
               <span class="day-title">Design a 60-Second Skills Run</span>
               <span class="day-meta">60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="18" onclick="event.stopPropagation()" aria-label="Mark Day 18 complete">✓</button>
             </button>
             <div class="day-panel" id="day-18-panel" hidden>
               <div class="day-block day-hook">
@@ -1992,8 +2078,10 @@
           <article class="day-card" id="day-19" data-day="19" data-phase="phase-d" data-keywords="teamwork alliance strategy collaboration roles">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-19-panel">
               <span class="day-number">19</span>
+              <span class="day-icon">🕵️</span>
               <span class="day-title">Win the Match With an Alliance Plan</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="19" onclick="event.stopPropagation()" aria-label="Mark Day 19 complete">✓</button>
             </button>
             <div class="day-panel" id="day-19-panel" hidden>
               <div class="day-block day-hook">
@@ -2057,8 +2145,10 @@
           <article class="day-card" id="day-20" data-day="20" data-phase="phase-d" data-keywords="practice logbook data improvement drills">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-20-panel">
               <span class="day-number">20</span>
+              <span class="day-icon">🎮</span>
               <span class="day-title">Driver Practice Drills and Logbook</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="20" onclick="event.stopPropagation()" aria-label="Mark Day 20 complete">✓</button>
             </button>
             <div class="day-panel" id="day-20-panel" hidden>
               <div class="day-block day-hook">
@@ -2121,17 +2211,20 @@
           </article>
         </div>
       </div>
-      <div class="curriculum-phase" data-phase="phase-e">
+      <div class="curriculum-phase phase-e-theme" data-phase="phase-e">
         <button class="phase-toggle" type="button" aria-expanded="false">
           <strong>Phase E — Days 21-25: Driver-Control Code &amp; Sensor Thinking</strong>
+          <span class="phase-progress" data-phase-progress="phase-e">0/5 done</span>
           <span class="phase-toggle-hint">Expand phase</span>
         </button>
         <div class="phase-days">
           <article class="day-card" id="day-21" data-day="21" data-phase="phase-e" data-keywords="VEXcode setup first program sequencing download">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-21-panel">
               <span class="day-number">21</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">VEXcode IQ Setup and First Program</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="21" onclick="event.stopPropagation()" aria-label="Mark Day 21 complete">✓</button>
             </button>
             <div class="day-panel" id="day-21-panel" hidden>
               <div class="day-block day-hook">
@@ -2193,8 +2286,10 @@
           <article class="day-card" id="day-22" data-day="22" data-phase="phase-e" data-keywords="code drivetrain tank arcade 2-motor 4-motor">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-22-panel">
               <span class="day-number">22</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Code the Drivetrain</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="22" onclick="event.stopPropagation()" aria-label="Mark Day 22 complete">✓</button>
             </button>
             <div class="day-panel" id="day-22-panel" hidden>
               <div class="day-block day-hook">
@@ -2255,8 +2350,10 @@
           <article class="day-card" id="day-23" data-day="23" data-phase="phase-e" data-keywords="code mechanisms arm intake claw controller buttons">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-23-panel">
               <span class="day-number">23</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Code the Mechanisms</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="23" onclick="event.stopPropagation()" aria-label="Mark Day 23 complete">✓</button>
             </button>
             <div class="day-panel" id="day-23-panel" hidden>
               <div class="day-block day-hook">
@@ -2318,8 +2415,10 @@
           <article class="day-card" id="day-24" data-day="24" data-phase="phase-e" data-keywords="sensors distance optical gyro bumper touch">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-24-panel">
               <span class="day-number">24</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Intro to Sensors: What Does the Robot Know?</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="24" onclick="event.stopPropagation()" aria-label="Mark Day 24 complete">✓</button>
             </button>
             <div class="day-panel" id="day-24-panel" hidden>
               <div class="day-block day-hook">
@@ -2383,8 +2482,10 @@
           <article class="day-card" id="day-25" data-day="25" data-phase="phase-e" data-keywords="sensor data driving code feedback">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-25-panel">
               <span class="day-number">25</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Sensor-Informed Driving</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="25" onclick="event.stopPropagation()" aria-label="Mark Day 25 complete">✓</button>
             </button>
             <div class="day-panel" id="day-25-panel" hidden>
               <div class="day-block day-hook">
@@ -2446,17 +2547,20 @@
           </article>
         </div>
       </div>
-      <div class="curriculum-phase" data-phase="phase-f">
+      <div class="curriculum-phase phase-f-theme" data-phase="phase-f">
         <button class="phase-toggle" type="button" aria-expanded="false">
           <strong>Phase F — Days 26-30: Autonomous Routines &amp; Tournament Readiness</strong>
+          <span class="phase-progress" data-phase-progress="phase-f">0/5 done</span>
           <span class="phase-toggle-hint">Expand phase</span>
         </button>
         <div class="phase-days">
           <article class="day-card" id="day-26" data-day="26" data-phase="phase-f" data-keywords="autonomous programming time-based movement">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-26-panel">
               <span class="day-number">26</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Autonomous Programming With Time</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="26" onclick="event.stopPropagation()" aria-label="Mark Day 26 complete">✓</button>
             </button>
             <div class="day-panel" id="day-26-panel" hidden>
               <div class="day-block day-hook">
@@ -2518,8 +2622,10 @@
           <article class="day-card" id="day-27" data-day="27" data-phase="phase-f" data-keywords="autonomous sensors programming feedback">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-27-panel">
               <span class="day-number">27</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Sensor-Based Autonomous</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="27" onclick="event.stopPropagation()" aria-label="Mark Day 27 complete">✓</button>
             </button>
             <div class="day-panel" id="day-27-panel" hidden>
               <div class="day-block day-hook">
@@ -2581,8 +2687,10 @@
           <article class="day-card" id="day-28" data-day="28" data-phase="phase-f" data-keywords="debugging troubleshooting code problems fix">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-28-panel">
               <span class="day-number">28</span>
+              <span class="day-icon">💻</span>
               <span class="day-title">Debugging and Iteration</span>
               <span class="day-meta">45-60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="28" onclick="event.stopPropagation()" aria-label="Mark Day 28 complete">✓</button>
             </button>
             <div class="day-panel" id="day-28-panel" hidden>
               <div class="day-block day-hook">
@@ -2645,8 +2753,10 @@
           <article class="day-card" id="day-29" data-day="29" data-phase="phase-f" data-keywords="tournament inspection judging notebook presentation">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-29-panel">
               <span class="day-number">29</span>
+              <span class="day-icon">🏁</span>
               <span class="day-title">Tournament Preparation</span>
               <span class="day-meta">60 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="29" onclick="event.stopPropagation()" aria-label="Mark Day 29 complete">✓</button>
             </button>
             <div class="day-panel" id="day-29-panel" hidden>
               <div class="day-block day-hook">
@@ -2714,8 +2824,10 @@
           <article class="day-card" id="day-30" data-day="30" data-phase="phase-f" data-keywords="compete reflect mock tournament debrief">
             <button class="day-toggle" type="button" aria-expanded="false" aria-controls="day-30-panel">
               <span class="day-number">30</span>
+              <span class="day-icon">🏁</span>
               <span class="day-title">Compete, Measure, and Reflect</span>
               <span class="day-meta">60-90 min</span>
+              <button class="day-complete" type="button" aria-pressed="false" data-day-complete="30" onclick="event.stopPropagation()" aria-label="Mark Day 30 complete">✓</button>
             </button>
             <div class="day-panel" id="day-30-panel" hidden>
               <div class="day-block day-hook">
@@ -2899,6 +3011,49 @@
           applyCurriculumFilters();
         });
       }
+
+      // Day completion tracking
+      const completeButtons = document.querySelectorAll('.day-complete');
+      const progressFill = document.getElementById('curriculumProgressFill');
+      const progressText = document.getElementById('curriculumProgressText');
+      const progressBar = document.getElementById('curriculumProgressBar');
+
+      function updateProgress() {
+        const completed = document.querySelectorAll('.day-complete[aria-pressed="true"]').length;
+        const total = 30;
+        const pct = (completed / total) * 100;
+        if (progressFill) progressFill.style.width = pct + '%';
+        if (progressText) progressText.textContent = completed + ' of ' + total + ' days complete';
+        if (progressBar) progressBar.setAttribute('aria-valuenow', completed);
+        // Update phase progress
+        document.querySelectorAll('.phase-progress').forEach(pp => {
+          const phase = pp.getAttribute('data-phase-progress');
+          const phaseDays = document.querySelectorAll('.day-card[data-phase="' + phase + '"]');
+          const phaseDone = Array.from(phaseDays).filter(d => {
+            const btn = d.querySelector('.day-complete');
+            return btn && btn.getAttribute('aria-pressed') === 'true';
+          }).length;
+          pp.textContent = phaseDone + '/' + phaseDays.length + ' done';
+        });
+      }
+
+      completeButtons.forEach(btn => {
+        // Restore from localStorage
+        const dayNum = btn.getAttribute('data-day-complete');
+        const saved = localStorage.getItem('vex-curriculum-day-' + dayNum);
+        if (saved === 'true') {
+          btn.setAttribute('aria-pressed', 'true');
+        }
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isDone = this.getAttribute('aria-pressed') === 'true';
+          this.setAttribute('aria-pressed', !isDone);
+          localStorage.setItem('vex-curriculum-day-' + dayNum, !isDone);
+          updateProgress();
+        });
+      });
+
+      updateProgress();
     });
   </script>
 </body>

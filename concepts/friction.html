@@ -44,7 +44,125 @@
     .bin { background:#f8f9fa; border:3px dashed #9aa6b2; border-radius:18px; min-height:140px; padding:14px; }
     .bin h3 { font-size:1.2rem; }
     .score { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
-    @media (max-width:760px) { .hero,.grid,.sort { grid-template-columns:1fr; } .diagram { min-height:270px; } }
+    body::before {
+      background-image: radial-gradient(rgba(45,45,45,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: -1;
+    }
+    .hero { position: relative; overflow: hidden; }
+    .diagram { overflow: hidden; }
+    .hero-photo {
+      border: 4px solid rgba(255,255,255,.9);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      display: block;
+      height: 128px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .why-matters {
+      background: linear-gradient(135deg, #fff7d6, #e8f8ff);
+      border: 4px solid #ffd166;
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      margin-top: 22px;
+      padding: 22px 22px 22px 86px;
+      position: relative;
+    }
+    .why-matters::before {
+      align-items: center;
+      background: var(--primary);
+      border-radius: 18px;
+      color: var(--white);
+      content: attr(data-icon);
+      display: flex;
+      font-size: 2rem;
+      height: 52px;
+      justify-content: center;
+      left: 20px;
+      position: absolute;
+      top: 22px;
+      width: 52px;
+    }
+    .why-matters h2 { font-size: 1.55rem; margin-bottom: 8px; }
+    .why-matters p { font-weight: 700; }
+    .photo-strip {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 22px;
+    }
+    .photo-card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .photo-card:hover,
+    .photo-card:focus-within {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px) rotate(-.4deg);
+    }
+    .photo-card img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      transition: transform .25s ease;
+      width: 100%;
+    }
+    .photo-card:hover img { transform: scale(1.04); }
+    .photo-card figcaption {
+      border-top: 5px solid var(--primary);
+      font-size: .95rem;
+      font-weight: 800;
+      line-height: 1.35;
+      padding: 12px 14px;
+    }
+    .card { border-bottom: 5px solid rgba(0,163,224,.32); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .try { background: linear-gradient(135deg, #ffffff, #f7f4ff); position: relative; overflow: hidden; }
+    .challenge-row, .reward-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .reward-badge {
+      background: #e9fff0;
+      border: 2px solid #7be495;
+      border-radius: 999px;
+      color: #126b35;
+      display: none;
+      font-family: var(--font-heading);
+      font-size: .9rem;
+      font-weight: 800;
+      padding: 8px 12px;
+    }
+    .reward-badge.show { display: inline-flex; }
+    .shake { animation: shake .25s ease; }
+    @keyframes shake {
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-2px); }
+    }
+    .photo-placeholder { color:#fff; text-shadow:0 3px 10px rgba(0,0,0,.22); }
+    .chip { transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .chip:hover,.chip:focus { transform: scale(1.04) rotate(1deg); }
+    .bin.correct-flash { animation: pulseBin .45s ease; border-color: var(--success); }
+    @keyframes pulseBin { 50% { background:#e9fff0; transform:scale(1.02); } }
+    .power-wrap { margin-top:14px; }
+    .power-label { display:flex; font-family:var(--font-heading); font-weight:800; justify-content:space-between; }
+    .power-meter { background:#ffe0db; border:3px solid #ffb4a8; border-radius:999px; height:34px; overflow:hidden; }
+    .power-fill { background:linear-gradient(90deg,var(--danger),var(--warning),var(--success)); border-radius:999px; height:100%; transition:width .25s ease; width:100%; }
+    .target { background:#fff7d6; border:2px dashed #ffd166; border-radius:16px; font-weight:800; margin-top:12px; padding:10px 12px; }
+    .rub { animation: rubPulse 1.6s ease-in-out infinite; }
+    .diagram:hover .wheel,.diagram:focus-within .wheel { animation: wheelSpin 1.4s linear infinite; }
+    @keyframes rubPulse { 50% { transform:scale(1.02); } }
+    @keyframes wheelSpin { to { transform:rotate(360deg); } }
+    @media (min-width:761px) { body { background-attachment: fixed; } }
+    @media (max-width:760px) { .hero,.grid,.sort { grid-template-columns:1fr; } .diagram { min-height:270px; } .photo-strip { grid-template-columns: 1fr; } .why-matters { padding: 18px; } .why-matters::before { position: static; margin-bottom: 10px; } }
     @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } .chip { border:1px solid #333; } }
   </style>
 </head>
@@ -55,6 +173,24 @@
       <div><h1>The Invisible Thief Called Friction</h1><p class="hook"><span class="big-question">Think first!</span>Where did the motor's power go if the wheel barely spins but nothing looks broken?</p></div>
       <div class="diagram" role="img" aria-label="CSS diagram of a shaft, wheel, and collars squeezing too tightly."><div class="shaft"><div class="wheel"></div><div class="collar left"></div><div class="collar right"></div></div><p class="rub">Too tight = rubbing = stolen power!</p></div>
     </section>
+    <section class="why-matters" data-icon="🕵️">
+      <h2>Why This Matters</h2>
+      <p>Friction is sneaky because Flop can look perfectly built and still waste motor power. If your arm binds or your intake rubs, the same motor feels weak, Bean Bags slip away, and match time disappears. A smooth-spinning robot is like getting free strength without adding a single part.</p>
+    </section>
+    <section class="photo-strip" aria-label="Real robot examples">
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Close-up of a VEX IQ wheel with a tiny gap next to the shaft collar." loading="lazy" style="background:linear-gradient(135deg,#00A3E0,#2ECC71);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">🌀</div>
+        <figcaption>Look for the tiny spacer gap that lets a wheel free-spin.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="A gear touching a robot beam where rubbing could steal motor power." loading="lazy" style="background:linear-gradient(135deg,#E87722,#E74C3C);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">⚙️</div>
+        <figcaption>A rubbing gear can quietly steal motor power before Flop scores.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="A student spinning a robot wheel by hand to test friction." loading="lazy" style="background:linear-gradient(135deg,#8e44ad,#00A3E0);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">🔍</div>
+        <figcaption>The free-spin test catches bad friction before match time starts.</figcaption>
+      </figure>
+    </section>
     <section class="grid">
       <article class="card"><h2>👟 Good friction</h2><p>Wheels need grip. Intakes need grip. Claws need grip. Some friction helps robots play.</p></article>
       <article class="card"><h2>🧱 Bad friction</h2><p>Crooked shafts, squeezed collars, rubbing gears, and bent frames waste motor effort.</p></article>
@@ -62,14 +198,20 @@
     </section>
     <section class="think"><h2>❓ Think About This!</h2><p>If fixing spacers makes the arm move better, did the motor become stronger, or did you stop wasting force?</p></section>
     <section class="try">
-      <h2>⭐ Try It! Good Friction or Bad Friction?</h2>
-      <p>Tap an example, then tap the correct box. Wrong picks stay so you can try again!</p>
+      <h2>⭐ Try It! Friction Detective Challenge</h2>
+      <p>Tap a case card, then tap the correct box. Find the bad friction before it steals too much match power.</p>
+      <div class="power-wrap" aria-label="Flop power meter">
+        <div class="power-label"><span>⚡ Power saved</span><span id="powerValue">100</span></div>
+        <div class="power-meter"><div class="power-fill" id="powerFill"></div></div>
+      </div>
+      <p class="target">Target: Save 80+ power for Flop before match start.</p>
       <div class="examples" id="examples">
         <button class="chip" data-kind="good" type="button">Tire gripping tile</button><button class="chip" data-kind="bad" type="button">Gear rubbing a beam</button><button class="chip" data-kind="good" type="button">Intake roller grabbing bag</button><button class="chip" data-kind="bad" type="button">Collar squeezed tight</button><button class="chip" data-kind="bad" type="button">Bent shaft wobble</button><button class="chip" data-kind="good" type="button">Claw holding gently</button>
       </div>
-      <div class="sort"><div class="bin" data-bin="good"><h3>✅ Good friction</h3></div><div class="bin" data-bin="bad"><h3>🛑 Bad friction</h3></div></div>
+      <div class="sort"><div class="bin" data-bin="good" role="button" tabindex="0"><h3>✅ Good friction</h3></div><div class="bin" data-bin="bad" role="button" tabindex="0"><h3>🛑 Bad friction</h3></div></div>
       <p class="score" id="score">Sorted: 0 correct</p>
       <p class="feedback" id="feedback" style="font-weight:800;min-height:28px;"></p>
+      <div class="reward-row"><span class="reward-badge" id="rewardBadge">⚡ Flop rolls smoother!</span></div>
       <div style="margin-top:12px;"><button type="button" id="resetBtn" style="background:var(--medium-gray);">↺ Reset</button></div>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>If Flop's arm or intake binds, it can miss scores even with correct code. A smooth mechanism makes the same motor feel stronger.</p></section>
@@ -79,18 +221,30 @@
   <script>
     let selected = null;
     let correct = 0;
+    let power = 100;
     const examplesArea = document.querySelector('#examples');
     const scoreEl = document.querySelector('#score');
     const feedbackEl = document.querySelector('#feedback');
+    const powerEl = document.querySelector('#powerValue');
+    const powerFill = document.querySelector('#powerFill');
+    const rewardBadge = document.querySelector('#rewardBadge');
     const originalChips = Array.from(document.querySelectorAll('.chip')).map(c => c.cloneNode(true));
 
-    document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => {
-      document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
-      selected = chip;
-      chip.classList.add('selected');
-      feedbackEl.textContent = '';
-    }));
-    document.querySelectorAll('.bin').forEach(bin => bin.addEventListener('click', () => {
+    function updateMeter() {
+      powerEl.textContent = power;
+      powerFill.style.width = power + '%';
+      scoreEl.textContent = 'Sorted: ' + correct + ' correct';
+      rewardBadge.classList.toggle('show', correct === originalChips.length && power >= 80);
+    }
+    function attachChip(chip) {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+        selected = chip;
+        chip.classList.add('selected');
+        feedbackEl.textContent = '';
+      });
+    }
+    function sortSelected(bin) {
       if (!selected) return;
       const wasCorrect = selected.dataset.kind === bin.dataset.bin;
       if (wasCorrect) {
@@ -99,34 +253,50 @@
         selected.classList.remove('selected');
         selected.disabled = true;
         selected = null;
-        feedbackEl.textContent = '✓ Correct!';
+        bin.classList.add('correct-flash');
+        window.setTimeout(() => bin.classList.remove('correct-flash'), 450);
+        feedbackEl.textContent = '✓ Correct! Bad friction found means power stays with Flop.';
         feedbackEl.style.color = 'var(--success)';
       } else {
-        feedbackEl.textContent = 'Try again! That one belongs in the other box.';
+        power = Math.max(0, power - 5);
+        selected.classList.remove('shake');
+        void selected.offsetWidth;
+        selected.classList.add('shake');
+        feedbackEl.textContent = 'Try again! Wrong case costs 5 power.';
         feedbackEl.style.color = 'var(--danger)';
       }
-      scoreEl.textContent = 'Sorted: ' + correct + ' correct';
-    }));
+      updateMeter();
+    }
+    document.querySelectorAll('.chip').forEach(attachChip);
+    document.querySelectorAll('.bin').forEach(bin => {
+      bin.addEventListener('click', () => sortSelected(bin));
+      bin.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          sortSelected(bin);
+        }
+      });
+    });
     document.querySelector('#resetBtn').addEventListener('click', () => {
       correct = 0;
+      power = 100;
       selected = null;
-      scoreEl.textContent = 'Sorted: 0 correct';
       feedbackEl.textContent = '';
-      originalChips.forEach(chip => {
-        const fresh = chip.cloneNode(true);
-        fresh.addEventListener('click', () => {
-          document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
-          selected = fresh;
-          fresh.classList.add('selected');
-          feedbackEl.textContent = '';
-        });
-        examplesArea.appendChild(fresh);
-      });
-      document.querySelectorAll('.chip').forEach(c => c.remove());
+      rewardBadge.classList.remove('show');
+      examplesArea.innerHTML = '';
       document.querySelectorAll('.bin').forEach(bin => {
         bin.querySelectorAll('.chip').forEach(c => c.remove());
       });
+      originalChips.forEach(chip => {
+        const fresh = chip.cloneNode(true);
+        fresh.disabled = false;
+        fresh.classList.remove('selected','shake');
+        attachChip(fresh);
+        examplesArea.appendChild(fresh);
+      });
+      updateMeter();
     });
+    updateMeter();
   </script>
 </body>
 </html>

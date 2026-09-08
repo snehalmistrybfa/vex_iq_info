@@ -1,0 +1,929 @@
+VEX IQ CONCEPT PAGES VISUAL IMPROVEMENT PLAN
+Current source line numbers are from the files as read before this plan was written. After edits, line numbers will shift.
+
+GOALS FROM FEEDBACK
+- Add real photos/pictures so the pages stop feeling text-heavy.
+- Make the pages feel playful and exciting for a 9-year-old without weakening the engineering.
+- Make every "Try It" feel like a clickable mini challenge, not a worksheet.
+- Add a clear "Why This Matters" moment that connects the concept to Flop, Bean Bags, Level Up scoring, and the student's own robot.
+- Keep the current page structure, accessibility labels, navigation, and concept accuracy.
+
+
+PART 1 - PER PAGE IMPROVEMENTS
+
+1. friction.html
+File: /Users/snehal/vex_iq_arian/vex_iq_info/concepts/friction.html
+Current structure:
+- Inline CSS: lines 10-49.
+- Hero: lines 54-57.
+- Three concept cards: lines 58-62.
+- Think: line 63.
+- Try It sorter: lines 64-74.
+- Connect/Reflect/Nav: lines 75-77.
+- Script: lines 79-130.
+
+Why This Matters box text:
+"Friction is sneaky because Flop can look perfectly built and still waste motor power. If your arm binds or your intake rubs, the same motor feels weak, Bean Bags slip away, and match time disappears. A smooth-spinning robot is like getting free strength without adding a single part."
+
+Images to add:
+1. Hero photo: two VEX IQ shaft/wheel assemblies, one with a small spacer gap and one squeezed by collars.
+   Search term: Pexels/Unsplash "robotics kit wheel axle close up" or "STEM robotics kit gears close up"; best option is a local photo of Arian's VEX IQ shaft rig.
+   Where: inside the hero's `.diagram` at line 56, above or behind the existing shaft diagram.
+   Alt text: "Two VEX IQ wheel shafts side by side showing loose spacing and tight rubbing spacing."
+2. Photo card: close-up of a wheel spinning freely on a shaft with collars not touching.
+   Search term: "robotics wheel axle close up" or local VEX IQ photo.
+   Where: new `.photo-strip` inserted after the hero, before the current grid at line 58.
+   Alt text: "Close-up of a VEX IQ wheel with a tiny gap next to the shaft collar."
+3. Photo card: gear or wheel rubbing against a beam.
+   Search term: "plastic gears robotics kit close up" or local photo of a rubbing VEX IQ gear.
+   Where: new `.photo-strip` after line 57.
+   Alt text: "A gear touching a robot beam where rubbing could steal motor power."
+4. Try It visual: child hand doing a free-spin test on a robot shaft.
+   Search term: "child building robot close up" or "kids robotics club hands".
+   Where: inside Try It section after line 65 as a `.challenge-photo`.
+   Alt text: "A student spinning a robot wheel by hand to test friction."
+5. Connect visual: intake roller gripping a Bean Bag or soft object.
+   Search term: "robotics intake wheel close up" or local Flop/Bean Bag photo.
+   Where: inside or immediately before `.robot` at line 75.
+   Alt text: "Robot intake roller gripping a soft game object."
+
+CSS visual improvements:
+- Add shared concept visual CSS before the `@media` block at line 47:
+  - `.why-matters` with a bright yellow/orange border, large icon badge, and a "mission briefing" feel.
+  - `.photo-strip` as a responsive 3-card grid with real images, captions, and colored bottom borders.
+  - `.photo-card img` with fixed `aspect-ratio: 4 / 3`, `object-fit: cover`, and hover zoom.
+  - `.hero-photo` with rounded corners, box shadow, and a small label ribbon.
+  - `.try` background changed from plain white to a subtle challenge-board gradient.
+  - `.chip:hover` should scale to 1.04 and rotate 1 degree; `.bin.correct-flash` should pulse green.
+  - Add friction-themed micro animation: `.rub` gently pulses and `.wheel` rotates slowly only on hover/focus within `.diagram`.
+- Use emojis already established in the page, but make them more purposeful:
+  - Add "🕵️ Friction Detective" to the Why box.
+  - Add "⚡ Power saved" reward badge in Try It.
+  - Add "🔍 Look here" labels over photo cards.
+- Use a background that feels like a workbench, not a flat page:
+  - Add `body::before` with a faint dot-grid pattern.
+  - Keep current gradient at line 13 but add subtle `background-attachment: fixed` only for desktop.
+
+Interactive element upgrade:
+- Replace the simple two-bin sorter at lines 64-74 with a "Friction Detective Challenge":
+  - Keep the current examples, but display each chip as a draggable/tappable "case card".
+  - Add a power meter starting at 100. Correct "bad friction" findings restore/save power; wrong answers shake the case card and subtract 5 power.
+  - Add a target: "Save 80+ power for Flop before match start."
+  - Add a final success badge when all 6 are sorted: "Flop rolls smoother!"
+  - Fix the current reset bug in lines 110-129: the reset handler appends fresh chips at lines 115-123 and then removes all `.chip` elements at line 125. Remove old chips before appending fresh ones, or rebuild the examples area using `examplesArea.innerHTML = ''` and then append fresh chips.
+  - Preserve current IDs `#examples`, `#score`, `#feedback`, and `#resetBtn` so CSS/JS stay easy to inspect.
+
+Exact insertion targets:
+- Add CSS before line 47, just before `@media (max-width:760px)`.
+- Insert `<section class="why-matters">...</section>` after line 57.
+- Insert `<section class="photo-strip">...</section>` after the new Why section and before current line 58.
+- Add one `<img class="hero-photo">` inside `.diagram` at line 56 before `<div class="shaft">`.
+- Upgrade Try It markup between lines 64-74.
+- Replace or patch the reset logic between lines 110-129.
+
+
+2. what-is-torque.html
+File: /Users/snehal/vex_iq_arian/vex_iq_info/concepts/what-is-torque.html
+Current structure:
+- Inline CSS: lines 10-55.
+- Hero: lines 63-72.
+- Three concept cards: lines 73-77.
+- Think: line 78.
+- Try It torque meter: lines 79-88.
+- Connect/Reflect/Nav: lines 89-91.
+- Script: lines 93-113.
+
+Why This Matters box text:
+"Torque is what lets Flop lift a Bean Bag instead of just buzzing sadly at the bottom. When you choose gears, arm length, and motor speed, you are choosing whether your robot wins a pushing/lifting fight or stalls in front of the goal. Learn this and you can make Flop feel stronger without pretending the motor got bigger."
+
+Images to add:
+1. Hero photo: VEX IQ gears meshed together, ideally a small gear driving a larger gear.
+   Search term: "plastic gears robotics kit close up" or local photo of 12T and 36T VEX IQ gears.
+   Where: inside `.diagram` at lines 68-71, behind or below the CSS gear animation.
+   Alt text: "Small VEX IQ gear driving a larger gear to increase torque."
+2. Photo card: robot arm lifting a Bean Bag or soft object.
+   Search term: "student robotics robot arm lifting" or local Flop arm photo.
+   Where: new `.photo-strip` after hero line 72.
+   Alt text: "Robot arm lifting a soft game object away from the floor."
+3. Photo card: close-up of a long robot arm pivot.
+   Search term: "robot arm pivot close up" or local VEX IQ arm pivot photo.
+   Where: after line 72.
+   Alt text: "Long robot arm pivot showing why distant loads need more turning force."
+4. Photo card: a gear train or crank with labels "fast" and "strong".
+   Search term: "mechanical gears close up" or local annotated photo.
+   Where: after line 72 or in the Try It section.
+   Alt text: "Gear train labeled to compare fast output and strong output."
+5. Connect visual: Flop lined up near a Level Up scoring area with the arm raised.
+   Search term: local Level Up field/Flop photo preferred; fallback "robotics competition field robot".
+   Where: inside `.robot` at line 89.
+   Alt text: "Flop robot preparing to lift a Bean Bag toward a Level Up goal."
+
+CSS visual improvements:
+- Add visual CSS before the `@media` block at line 53.
+- Make the gear hero feel more alive:
+  - Add a real image panel under the CSS gears with a semi-transparent label "Speed trade: slow = strong".
+  - Keep `@keyframes spin` at line 29 but pause animation unless `.diagram:hover` or `.diagram:focus-within` to make it feel interactive.
+  - Add `.stall-zone` on the meter when torque is too high; use red stripes and shake.
+- Add `.why-matters` with a "💪 Robot Strength Secret" icon badge.
+- Add `.challenge-panel` with a darker arcade-machine-style border for the torque meter.
+- Add small gear-tooth badge corners on the cards using `.card::before { content:"⚙️"; }`, varied by card with nth-child colors.
+- Add hover states for ratio buttons at line 86: selected answer gets `.is-correct` or `.is-risky`.
+
+Interactive element upgrade:
+- Turn lines 79-88 into "Can Flop Lift It?":
+  - Keep arm length and bag weight sliders.
+  - Add a gear ratio selector: `Fast 36T -> 12T`, `Balanced 24T -> 24T`, `Strong 12T -> 36T`.
+  - Compute "motor strain" from arm length * weight / ratio advantage.
+  - Meter labels: Green "Easy lift", yellow "Careful", red "Stall risk".
+  - Add a target card: "Challenge: lift 2 bags at 6 holes without entering Stall Risk."
+  - On success, show "Gear choice unlocked: strong but slower."
+  - On red zone, animate the arm photo/diagram with a small wobble and message "Flop stalls before scoring."
+  - Preserve IDs `#arm`, `#weight`, `#meterFill`, `#result`, `#answer`; add `#ratioChoice` and `#challengeStatus`.
+
+Exact insertion targets:
+- Add CSS before line 53.
+- Insert Why section after line 72 and before line 73.
+- Insert photo strip after the Why section.
+- Add a hero real image inside `.diagram` after line 70 or immediately before the caption at line 70.
+- Upgrade Try It markup at lines 79-88.
+- Extend `updateTorque()` at lines 100-106 to include ratio advantage and stall-zone class.
+- Extend answer button logic at lines 109-111 or replace with ratio button state handling.
+
+
+3. levers.html
+File: /Users/snehal/vex_iq_arian/vex_iq_info/concepts/levers.html
+Current structure:
+- Inline CSS: lines 10-47.
+- Hero: lines 52-55.
+- Three concept cards: lines 56-60.
+- Think: line 61.
+- Try It fulcrum slider: lines 62-68.
+- Connect/Reflect/Nav: lines 69-71.
+- Script: lines 73-88.
+
+Why This Matters box text:
+"Every time Flop lifts a Bean Bag, the arm is playing a lever game. Put the pivot, motor, or load in the wrong place and the robot struggles; put them in the right place and a small motor can do a big job. This is how builders make a lift that scores instead of just looking tall."
+
+Images to add:
+1. Hero photo: VEX IQ beam acting as a lever with a pivot and load.
+   Search term: "robotics kit lever pivot close up" or local VEX IQ lever photo.
+   Where: inside `.diagram` at line 54 behind the CSS lever.
+   Alt text: "VEX IQ beam pivoting as a lever with a small load on one end."
+2. Photo card: simple seesaw or playground lever.
+   Search term: "seesaw playground close up" or "child seesaw lever".
+   Where: new `.photo-strip` after line 55.
+   Alt text: "Seesaw showing how a lever balances effort and load."
+3. Photo card: wheelbarrow or hand truck as a class 2 lever.
+   Search term: "wheelbarrow handles close up" or "hand truck lifting load".
+   Where: after line 55.
+   Alt text: "Wheelbarrow showing a class 2 lever with the load in the middle."
+4. Photo card: fishing rod or long stick moving fast at the end.
+   Search term: "fishing rod bending close up".
+   Where: after line 55 or next to the class 3 card.
+   Alt text: "Fishing rod showing how a long lever can move the tip far and fast."
+5. Connect visual: Flop arm pivot and Bean Bag location.
+   Search term: local Flop photo preferred; fallback "student robot arm close up".
+   Where: inside `.robot` at line 69.
+   Alt text: "Flop arm pivot showing where the Bean Bag load acts on the lever."
+
+CSS visual improvements:
+- Add visual CSS before the `@media` block at line 45.
+- Make `.beam` at line 25 respond more visibly when the slider moves:
+  - Add color gradient from green effort end to purple load end.
+  - Add `.load.easy` and `.load.hard` classes that bounce or shake based on pivot position.
+- Add `.why-matters` styled as "🦾 Lift Power Trick".
+- Add `.lever-label` badges in the hero for fulcrum, effort, and load; avoid relying only on text paragraphs.
+- Add hover lift and colored top stripes to the three class cards at lines 57-59.
+- Add a faint diagonal construction-grid background to `.diagram`.
+
+Interactive element upgrade:
+- Turn lines 62-68 into "Lever Rescue: Lift the Bean Bag":
+  - Slider remains, but add a mission target: "Lift the bag with at least 70 Easy Lift and at least 35 Far Movement."
+  - Add two stars: one for easy lift, one for useful movement.
+  - Add a movable "motor mount" option with three buttons: near pivot, middle, far from pivot.
+  - Add feedback that makes the tradeoff personal: "Great for heavy bag, but the tray barely rises" or "Huge motion, but Flop's motor complains."
+  - Animate the load rising/falling in the hero when the slider changes.
+  - Preserve `#pivot`, `#fulcrum`, `#easy`, `#far`, and `#leverResult`; add `#leverStars`.
+
+Exact insertion targets:
+- Add CSS before line 45.
+- Insert Why section after line 55 and before line 56.
+- Insert photo strip after Why section.
+- Add `<img class="hero-photo">` inside `.diagram` at line 54 before `.push`.
+- Upgrade Try It markup at lines 62-68.
+- Extend the slider logic at lines 79-87 to update star badges and hero classes.
+
+
+4. center-of-gravity.html
+File: /Users/snehal/vex_iq_arian/vex_iq_info/concepts/center-of-gravity.html
+Current structure:
+- Inline CSS: lines 10-48.
+- Hero: lines 53-56.
+- Three concept cards: lines 57-61.
+- Think: line 62.
+- Try It button states: lines 63-68.
+- Connect/Reflect/Nav: lines 69-71.
+- Script: lines 73-89.
+
+Why This Matters box text:
+"Flop can score only if it stays on its wheels. A tall arm, fast turn, or Bean Bag held too far forward can move the balance point toward the tipping edge right when you need control most. If you understand center of gravity, you can drive braver and build smarter."
+
+Images to add:
+1. Hero photo: side view of a VEX IQ robot with arm raised high.
+   Search term: "student robotics competition robot arm" or local Flop side photo.
+   Where: inside `.diagram` at line 55 as a faded background or top photo card.
+   Alt text: "Side view of a VEX IQ robot with its arm raised, making tipping more likely."
+2. Photo card: low wide robot base.
+   Search term: "robotics drive base close up" or local Flop base photo.
+   Where: new `.photo-strip` after hero line 56.
+   Alt text: "Low wide robot base that helps keep the center of gravity inside the wheels."
+3. Photo card: tape rectangle on floor showing support polygon around wheels.
+   Search term: local photo preferred; fallback "robot wheels tape floor".
+   Where: after line 56.
+   Alt text: "Tape on the floor connecting wheel contact points to show the support polygon."
+4. Photo card: robot tipping on a ramp or while turning.
+   Search term: "robotics robot tipping ramp" or staged local photo with safe support.
+   Where: after line 56 or inside Try It.
+   Alt text: "Robot leaning near a tipping point during a controlled stability test."
+5. Analogy photo: balancing tower of blocks or stack leaning.
+   Search term: "stack of blocks balance" or "balancing blocks tower".
+   Where: near Think section line 62.
+   Alt text: "Stack of blocks leaning to show how a high center of gravity becomes unstable."
+
+CSS visual improvements:
+- Add visual CSS before the `@media` block at line 46.
+- Make the tipping danger impossible to miss:
+  - Add `.danger-zone` red glow when the dot moves near the edge.
+  - Add `.safe-zone` green glow when the dot is centered.
+  - Add `.diagram.tipping` animation that tilts the robot by 2-3 degrees for the front/high state.
+- Add `.why-matters` styled as "🎯 Stay Upright Mission".
+- Add the support polygon as a bright neon outline and the balance dot as a pulsing target.
+- Add a "driver speed" visual in Try It: faster turn means more warning.
+- Add card hover states where the card icon pops and the border color changes to match safety/risk.
+
+Interactive element upgrade:
+- Turn lines 63-68 into "Don't Tip Flop!":
+  - Keep existing position buttons: low, middle, high, high + front.
+  - Add speed buttons: slow, medium, fast turn.
+  - Add base width buttons: narrow, normal, wide.
+  - Stability score = base width safety - bag height/front risk - speed risk.
+  - Meter labels: "Safe", "Wobbly", "Tip danger".
+  - Add an animated warning if score enters danger: hero robot tilts and `#status` says "Back off: lower the arm or slow the turn."
+  - Add a win condition: "Find 2 safe ways to score high."
+  - Preserve existing button `data-pos` pattern and `#status`; add `#stabilityMeter`, `#speedChoice`, and `#baseChoice`.
+
+Exact insertion targets:
+- Add CSS before line 46.
+- Insert Why section after line 56 and before line 57.
+- Insert photo strip after Why section.
+- Add hero photo inside `.diagram` at line 55 before `.bag`.
+- Upgrade Try It markup at lines 63-68.
+- Extend `states` at lines 74-79 or add separate `speedStates` and `baseStates`.
+- Update click handler at lines 80-88 to update diagram classes and meter status.
+
+
+5. omni-wheels.html
+File: /Users/snehal/vex_iq_arian/vex_iq_info/concepts/omni-wheels.html
+Current structure:
+- Inline CSS: lines 10-48.
+- Hero: lines 53-56.
+- Three concept cards: lines 57-61.
+- Think: line 62.
+- Try It drivetrain picker: lines 63-69.
+- Connect/Reflect/Nav: lines 70-72.
+- Script: lines 74-86.
+
+Why This Matters box text:
+"Omni wheels can help Flop line up faster, slide around mistakes, and reach a scoring spot without wasting a big turn. But they can also cost traction, motors, and build simplicity. Picking wheels is not about what looks coolest; it is about which movement helps your Level Up route score more points."
+
+Images to add:
+1. Hero photo: close-up of an omni wheel showing the small rollers.
+   Search term: "omni wheel close up robot" or local VEX IQ omni wheel photo.
+   Where: inside `.diagram` at line 55 behind or beside the CSS wheel.
+   Alt text: "Omni wheel close-up showing the small sideways rollers around the rim."
+2. Photo card: traction wheel next to omni wheel.
+   Search term: "robot wheels comparison omni traction" or local photo.
+   Where: new `.photo-strip` after hero line 56.
+   Alt text: "Traction wheel and omni wheel side by side for comparison."
+3. Photo card: top-down tank drivetrain.
+   Search term: "robot drivetrain top view wheels" or local Flop drivetrain photo.
+   Where: after line 56.
+   Alt text: "Top-down robot drivetrain with wheels arranged for tank driving."
+4. Photo card: X-drive or H-drive wheel layout.
+   Search term: "holonomic robot drive omni wheels" or local loose-wheel layout photo.
+   Where: after line 56 or inside Try It.
+   Alt text: "Omni wheels arranged to create sideways holonomic motion."
+5. Connect visual: robot aligning sideways near a goal or object.
+   Search term: "robotics competition robot field alignment" or local staged photo.
+   Where: inside `.robot` at line 70.
+   Alt text: "Robot lining up near a scoring target where sideways movement could save time."
+
+CSS visual improvements:
+- Add visual CSS before the `@media` block at line 46.
+- Make the omni wheel hero interactive:
+  - Rotate `.wheel` slowly on hover.
+  - Make `.roller` pieces glow blue and slide a few pixels sideways to show roller direction.
+  - Add trail arrows behind `.side-arrow`.
+- Add `.why-matters` styled as "🛞 Shortcut or Tradeoff?"
+- Add `.drive-card` or enhanced `.card` state with a small motor-budget badge.
+- Add field-tile pattern to `.movement` at line 42.
+- Change selected drivetrain button to stay highlighted with `.selected-drive`.
+
+Interactive element upgrade:
+- Turn lines 63-69 into "Drivebase Arena":
+  - Keep tank, H-drive, and X-drive buttons.
+  - Add a mini field with three target paths: straight, sidestep, diagonal.
+  - When a drivetrain is selected, show easy paths bright and hard paths dim.
+  - Add a score card with four categories: "alignment speed", "motor cost", "traction", "easy to build".
+  - Add a challenge prompt: "Choose a drive for Flop's 6-motor budget."
+  - Let the child click one of the path cards and get feedback like "Tank can do this, but it must turn first" or "H-drive wins the sidestep but spends a motor."
+  - Preserve `data-drive`, `[data-dir]`, and `#status`; add `#driveScore`, `#routeChoice`, and selected button classes.
+
+Exact insertion targets:
+- Add CSS before line 46.
+- Insert Why section after line 56 and before line 57.
+- Insert photo strip after Why section.
+- Add hero photo inside `.diagram` at line 55 before `.wheel`.
+- Upgrade Try It markup at lines 63-69.
+- Extend the `drives` object at lines 75-79 with score data.
+- Update click handler at lines 80-84 to set selected state and score bars.
+
+
+6. linkages.html
+File: /Users/snehal/vex_iq_arian/vex_iq_info/concepts/linkages.html
+Current structure:
+- Inline CSS: lines 10-52.
+- Hero: lines 57-60.
+- Three concept cards: lines 61-65.
+- Think: line 66.
+- Try It lift slider: lines 67-73.
+- Connect/Reflect/Nav: lines 74-76.
+- Script: lines 78-114.
+
+Why This Matters box text:
+"A lift is not useful if it dumps the Bean Bag right before scoring. Linkages help Flop move a tray or hand upward while keeping the game object controlled. Once you see the bar pattern, you can spot why some lifts are smooth scorers and others twist, bind, or tip the whole robot."
+
+Images to add:
+1. Hero photo: real VEX IQ 4-bar linkage close-up.
+   Search term: "VEX IQ four bar linkage" if using web manually; Pexels/Unsplash fallback "robot arm linkage close up"; best option is local staged VEX IQ 4-bar.
+   Where: inside `.diagram` at line 59 behind or above the CSS linkage.
+   Alt text: "VEX IQ four-bar linkage lifting a tray while the tray stays nearly level."
+2. Photo card: simple swing arm tilted at high position.
+   Search term: local VEX beam swing-arm photo; fallback "robot arm pivot close up".
+   Where: new `.photo-strip` after line 60.
+   Alt text: "Simple robot swing arm tilting its tray as it rises."
+3. Photo card: four-bar at low, middle, and high positions.
+   Search term: local sequence photo preferred.
+   Where: after line 60.
+   Alt text: "Four-bar linkage shown at low, middle, and high lift positions."
+4. Photo card: chain-bar or scissor lift example.
+   Search term: "robot scissor lift mechanism close up" or "robot chain lift close up".
+   Where: after line 60 or near the tradeoffs card at line 64.
+   Alt text: "More complex robot lift mechanism showing extra reach and extra complexity."
+5. Connect visual: Flop scoring mechanism holding a Bean Bag level.
+   Search term: local Flop photo; fallback "robotics competition robot arm game object".
+   Where: inside `.robot` at line 74.
+   Alt text: "Flop lift holding a Bean Bag level while moving upward."
+
+CSS visual improvements:
+- Add visual CSS before the `@media` block at line 50.
+- Make linkage motion feel mechanical:
+  - Add joint shadows and small highlight rings on `.joint`.
+  - Add ghost path dots showing tray path.
+  - Add `.tray.level-good` green glow and `.swing-tray.show` red warning glow.
+- Add `.why-matters` styled as "🔗 Keep the Bag Level".
+- Add photo cards with "low / middle / high" labels.
+- Add a moving background grid to `.diagram` only on hover/focus.
+- Add selected state for `#compareBtn` so the swing-arm comparison feels like toggling a mode.
+
+Interactive element upgrade:
+- Turn lines 67-73 into "Keep the Bag Level":
+  - Keep lift height slider and comparison toggle.
+  - Add target heights: L1, L2, L3 buttons. Higher targets require more lift but add torque/stability risk.
+  - Add "level score" meter that stays high for the 4-bar and drops for swing-arm comparison.
+  - Add "risk chips": Torque ↑, Friction ↑, Tipping ↑ as height increases.
+  - Add a challenge: "Score high without spilling the Bean Bag."
+  - When swing-arm mode is shown, animate the dashed tray tilt and display "spill risk" feedback.
+  - Preserve `#lift`, `#result`, `#compareBtn`, `#swingTray`, and `#swingLabel`; add `#levelScore`, `#targetHeight`, and `#riskChips`.
+
+Exact insertion targets:
+- Add CSS before line 50.
+- Insert Why section after line 60 and before line 61.
+- Insert photo strip after Why section.
+- Add hero photo inside `.diagram` at line 59 before `.base`.
+- Upgrade Try It markup at lines 67-73.
+- Extend `updateLift()` at lines 80-91 to update level score and risk chips.
+- Extend `updateSwing()` at lines 104-111 to update spill risk messaging.
+
+
+PART 2 - CURRICULUM DAY CARD IMPROVEMENTS
+
+Files involved:
+- Main curriculum HTML and inline CSS: /Users/snehal/vex_iq_arian/vex_iq_info/index.html
+- Current curriculum CSS is inline at index.html lines 65-101.
+- Current curriculum markup starts at index.html line 806.
+- Phase filter buttons are lines 820-828.
+- Phase containers begin at:
+  - Phase A: line 829
+  - Phase B: line 1151
+  - Phase C: line 1476
+  - Phase D: line 1799
+  - Phase E: line 2124
+  - Phase F: line 2449
+- Current curriculum JS is index.html lines 2843-2903.
+
+Phase color schemes:
+1. Phase A - Game Detective & Mechanical Thinker
+   Theme: detective yellow + blueprint blue.
+   Variables: `--phase-main:#F6B900; --phase-dark:#7A4C00; --phase-soft:#FFF6CC; --phase-accent:#00A3E0;`
+   Visual mood: clue cards, magnifier badges, blueprint hints.
+2. Phase B - Drivetrains & Scoring Mechanisms
+   Theme: motion cyan + traction green.
+   Variables: `--phase-main:#00A3E0; --phase-dark:#075875; --phase-soft:#E0F6FF; --phase-accent:#2ECC71;`
+   Visual mood: arrows, wheel tracks, motor budget chips.
+3. Phase C - Build, Analyze & Improve Flop
+   Theme: build orange + graphite.
+   Variables: `--phase-main:#E87722; --phase-dark:#8A3D00; --phase-soft:#FFF0E4; --phase-accent:#343A40;`
+   Visual mood: checklist stamps, tool badges, subsystem labels.
+4. Phase D - Drive Precisely & Turn Data Into Strategy
+   Theme: field red + data blue.
+   Variables: `--phase-main:#E74C3C; --phase-dark:#8F241A; --phase-soft:#FFE9E6; --phase-accent:#2775D1;`
+   Visual mood: field lanes, stopwatch badges, route cards.
+5. Phase E - Driver-Control Code & Sensor Thinking
+   Theme: code violet + sensor mint.
+   Variables: `--phase-main:#7C4DFF; --phase-dark:#3D237A; --phase-soft:#F0EAFF; --phase-accent:#20C997;`
+   Visual mood: block-code chips, sensor pulses, controller icons.
+6. Phase F - Autonomous & Tournament Ready
+   Theme: tournament gold + victory teal.
+   Variables: `--phase-main:#F39C12; --phase-dark:#705000; --phase-soft:#FFF3CD; --phase-accent:#008C8C;`
+   Visual mood: match cards, trophy/check badges, readiness meter.
+
+Day card visual enhancements:
+- Add phase variables to each `.curriculum-phase` at index.html lines 829, 1151, 1476, 1799, 2124, and 2449:
+  - Example: `<div class="curriculum-phase phase-a-theme" data-phase="phase-a">`
+  - Add CSS classes `.phase-a-theme` through `.phase-f-theme` near index.html line 73.
+- Replace the flat dark phase header at line 74 with phase-colored headers:
+  - `.phase-toggle { background: linear-gradient(135deg, var(--phase-main), var(--phase-accent)); }`
+  - Add a subtle gear/grid pattern with `.phase-toggle::after`.
+- Add day header badges:
+  - In each `.day-toggle` currently shaped as lines 836-840, add a small badge row after `.day-title`.
+  - Example:
+    `<span class="day-title-wrap"><span class="day-title">...</span><span class="day-badges"><span class="mini-badge">Concept</span><span class="mini-badge">Hands-on</span></span></span>`
+  - Days with concept pages should include `Concept` badges:
+    - Day 2 line 894: Friction
+    - Day 3 line 963: Torque
+    - Day 4 line 1024: Levers + Linkages
+    - Day 5 line 1085: Center of Gravity
+    - Day 6 line 1157: Omni Wheels
+    - Day 9 line 1346: Linkages
+- Add day icons based on lesson type:
+  - Game/rules: 🕵️
+  - Mechanical/build: 🔧
+  - Gears/torque: ⚙️
+  - Driving: 🎮
+  - Coding/sensors: 💻
+  - Tournament: 🏁
+  - Put icon in a new `.day-icon` span between `.day-number` and `.day-title-wrap`.
+- Add visual borders:
+  - `.day-card { border-left: 6px solid var(--phase-main); }`
+  - `.day-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }`
+  - `.day-toggle[aria-expanded="true"] { background: linear-gradient(90deg, var(--phase-soft), #fff); }`
+- Make expanded day panels feel less flat:
+  - Keep current `day-block` classes at lines 90-97, but add icon labels using CSS `h3::before` per block type.
+  - Add colored left borders to `.day-hook`, `.day-think`, `.day-learn`, `.day-connect`, `.day-try`, `.day-reflect`.
+  - Add a tiny "mission card" look to `.day-try`.
+- Add phase completion summary:
+  - In each `.phase-toggle` line group, add `<span class="phase-progress" data-phase-progress="phase-a">0/5 done</span>` before `.phase-toggle-hint`.
+  - Update the flex layout at index.html lines 74-77 to support the extra progress text.
+
+Progress tracking ideas:
+1. Local checkbox per day
+   - Add a checkbox or button to each `.day-toggle`: `<button class="day-complete" type="button" aria-pressed="false" data-day-complete="2">✓</button>`.
+   - Save completed days in `localStorage` from index.html script lines 2843-2903.
+   - Do not submit anywhere; this is local to the browser.
+2. Curriculum progress bar
+   - Add after the intro box at line 817 and before search line 819:
+     `<div class="curriculum-progress"><div class="curriculum-progress-fill" id="curriculumProgressFill"></div><span id="curriculumProgressText">0 of 30 days complete</span></div>`
+   - Update it whenever a day-complete button is clicked.
+3. Phase progress badges
+   - Each phase header should show "0/5 done", "2/5 done", etc.
+   - Use `data-phase` and `data-day` attributes already present on `.day-card` lines 835, 894, 963, etc.
+4. "Next Mission" helper
+   - After the progress bar, add a small `#nextMission` link that points to the first incomplete day.
+   - Text example: "Next mission: Day 3 - The Gearbox That Lies About Power".
+5. Reward badges
+   - Add non-distracting badges for completing phase groups:
+     - Phase A: "Mechanical Thinker"
+     - Phase B: "Drivebase Designer"
+     - Phase C: "Flop Builder"
+     - Phase D: "Practice Engineer"
+     - Phase E: "Code Pilot"
+     - Phase F: "Tournament Ready"
+   - Display these in a `.badge-shelf` near line 819.
+
+Exact curriculum CSS additions:
+- Add near index.html line 65, after `.curriculum-intro`:
+  `.curriculum-progress`, `.curriculum-progress-fill`, `.badge-shelf`, `.earned-badge`, `.next-mission`.
+- Add near line 73:
+  `.phase-a-theme` through `.phase-f-theme`.
+- Replace or extend line 74 `.phase-toggle`.
+- Extend line 80 `.day-toggle` to use 48px 36px 1fr auto auto if adding day icon and completion button.
+- Extend line 82 `.day-number` to use `background: var(--phase-main)`.
+- Add `.day-icon`, `.day-title-wrap`, `.day-badges`, `.mini-badge`, `.day-complete`, `.phase-progress`.
+- Update mobile media lines 102-108 so `.day-toggle` becomes `grid-template-columns: 42px 1fr auto` and hides `.day-icon` if space is tight.
+
+Exact curriculum JS additions:
+- Extend index.html script lines 2843-2903.
+- Add helpers:
+  - `const completedDays = new Set(JSON.parse(localStorage.getItem('vexIqCompletedDays') || '[]'));`
+  - `const saveCompletedDays = () => localStorage.setItem('vexIqCompletedDays', JSON.stringify([...completedDays]));`
+  - `function updateProgressUI() { ... }`
+- Add click listeners for `.day-complete` buttons. Use `event.stopPropagation()` so clicking complete does not expand/collapse the day.
+- In `updateProgressUI`, update:
+  - all `.day-card.is-complete`
+  - `#curriculumProgressFill`
+  - `#curriculumProgressText`
+  - each `[data-phase-progress]`
+  - `#nextMission`
+- Do not change existing filter logic at lines 2848-2859 except to avoid hiding completed state.
+- Do not change existing accordion behavior at lines 2870-2892 except if adding "expand first incomplete" later.
+
+
+PART 3 - IMAGE STRATEGY
+
+Overall image rules:
+- Use local photos for VEX IQ-specific content whenever possible. Unsplash/Pexels rarely have accurate VEX IQ parts, so generic stock photos should support the page but not pretend to show exact parts.
+- Download images locally into `/Users/snehal/vex_iq_arian/vex_iq_info/assets/images/concepts/`.
+- Use filenames that explain the concept, for example `friction-free-spin-rig.jpg` and `torque-gear-ratio-closeup.jpg`.
+- Do not hotlink Unsplash/Pexels images in production; download optimized copies and credit only if license/source requires it.
+- Keep CSS/SVG diagrams as overlays for labels, arrows, and motion. Use real photos for object reality.
+- Target image size: 1200px wide for hero images, 800px wide for cards, compressed JPEG/WebP.
+- Every image needs useful alt text, not "image".
+
+Top 20 images ranked by impact:
+1. Flop on the Level Up field with a Bean Bag
+   Best source: local photo.
+   Use: hero/Connect image on multiple concept pages and curriculum intro.
+   Search fallback: "robotics competition field robot".
+   Download locally or CSS/SVG: local/downloaded photo.
+2. VEX IQ omni wheel close-up with rollers visible
+   Best source: local photo.
+   Use: omni-wheels hero.
+   Search fallback: "omni wheel close up robot".
+   Download locally or CSS/SVG: local/downloaded photo.
+3. VEX IQ 12T gear driving 36T gear
+   Best source: local staged photo.
+   Use: torque hero and card.
+   Search fallback: "plastic gears robotics kit close up".
+   Download locally or CSS/SVG: local photo plus CSS labels.
+4. Good spacing vs bad spacing shaft comparison
+   Best source: local staged photo.
+   Use: friction hero.
+   Search fallback: "robotics kit wheel axle close up".
+   Download locally or CSS/SVG: local photo plus CSS warning arrows.
+5. Flop arm raised with Bean Bag, side view
+   Best source: local photo.
+   Use: center of gravity hero/Connect.
+   Search fallback: "robot arm lifting object robotics".
+   Download locally or CSS/SVG: local photo plus CSS balance dot overlay.
+6. VEX IQ four-bar linkage close-up
+   Best source: local staged 4-bar.
+   Use: linkages hero.
+   Search fallback: "robot arm linkage close up".
+   Download locally or CSS/SVG: local photo plus CSS joint labels.
+7. Child hands building/testing a robot
+   Best source: Pexels/Unsplash.
+   Use: general excitement photo strip on friction/build pages.
+   Search term: "kids robotics club hands building robot".
+   Download locally or CSS/SVG: downloaded photo.
+8. Top-down drivetrain with visible wheel layout
+   Best source: local Flop or loose-wheel layout.
+   Use: omni wheels and curriculum Days 6-7.
+   Search fallback: "robot drivetrain top view wheels".
+   Download locally or CSS/SVG: local photo plus CSS arrows.
+9. Support polygon tape around robot wheels
+   Best source: local staged photo.
+   Use: center of gravity page.
+   Search fallback: "robot wheels tape floor".
+   Download locally or CSS/SVG: local photo plus SVG/CSS polygon overlay.
+10. Intake roller gripping a soft game object
+   Best source: local Flop/Bean Bag photo.
+   Use: friction and curriculum Day 8/14.
+   Search fallback: "robot intake roller object".
+   Download locally or CSS/SVG: local photo.
+11. VEX IQ lever with pivot/load labels
+   Best source: local staged photo.
+   Use: levers hero.
+   Search fallback: "robotics kit lever pivot".
+   Download locally or CSS/SVG: local photo plus CSS labels.
+12. Swing arm vs four-bar comparison
+   Best source: local staged two-position photo.
+   Use: linkages photo strip.
+   Search fallback: "robot arm pivot linkage comparison".
+   Download locally or CSS/SVG: local photo plus CSS/SVG ghost outline.
+13. Low wide robot base
+   Best source: local Flop/base photo.
+   Use: center of gravity safe example.
+   Search fallback: "robotics drive base close up".
+   Download locally or CSS/SVG: local/downloaded photo.
+14. Wheel tread on tile/floor surface
+   Best source: local wheel on floor.
+   Use: friction good-friction and omni/traction comparison.
+   Search fallback: "robot wheel floor close up" or "rubber wheel surface close up".
+   Download locally or CSS/SVG: downloaded/local photo.
+15. Gears under load lifting a small arm
+   Best source: local staged photo.
+   Use: torque Try It.
+   Search fallback: "gear train lifting arm robot".
+   Download locally or CSS/SVG: local photo.
+16. Student holding VEX Controller while robot drives
+   Best source: local or Pexels.
+   Use: curriculum Phase D/E day-card visuals.
+   Search term: "student robotics controller".
+   Download locally or CSS/SVG: downloaded/local photo.
+17. VEXcode or coding screen with robot in foreground
+   Best source: local photo/screenshot.
+   Use: curriculum Phase E.
+   Search fallback: "student coding robot laptop".
+   Download locally or CSS/SVG: local photo; avoid exposing private data.
+18. Engineering notebook with robot sketch/test data
+   Best source: local staged notebook page.
+   Use: curriculum progress/reflect visual.
+   Search fallback: "engineering notebook robotics".
+   Download locally or CSS/SVG: local/downloaded photo.
+19. Competition pit or team table with robot/tools
+   Best source: Pexels/Unsplash or local tournament photo.
+   Use: Phase F cards.
+   Search term: "youth robotics competition team table".
+   Download locally or CSS/SVG: downloaded/local photo.
+20. Stopwatch/score tracking sheet
+   Best source: local staged photo.
+   Use: curriculum Days 16-20, progress tracking.
+   Search fallback: "stopwatch clipboard data table".
+   Download locally or CSS/SVG: local/downloaded photo.
+
+Recommended image folder and filenames:
+- `assets/images/concepts/friction-free-spin-rig.jpg`
+- `assets/images/concepts/friction-rubbing-gear.jpg`
+- `assets/images/concepts/friction-intake-grip.jpg`
+- `assets/images/concepts/torque-gear-ratio-closeup.jpg`
+- `assets/images/concepts/torque-arm-lifting-bag.jpg`
+- `assets/images/concepts/torque-long-arm-pivot.jpg`
+- `assets/images/concepts/levers-vex-pivot-load.jpg`
+- `assets/images/concepts/levers-seesaw-analogy.jpg`
+- `assets/images/concepts/levers-flop-arm-pivot.jpg`
+- `assets/images/concepts/cog-flop-arm-raised.jpg`
+- `assets/images/concepts/cog-support-polygon-tape.jpg`
+- `assets/images/concepts/cog-low-wide-base.jpg`
+- `assets/images/concepts/omni-wheel-closeup.jpg`
+- `assets/images/concepts/omni-vs-traction-wheel.jpg`
+- `assets/images/concepts/omni-drive-layout.jpg`
+- `assets/images/concepts/linkage-four-bar-closeup.jpg`
+- `assets/images/concepts/linkage-swing-arm-tilt.jpg`
+- `assets/images/concepts/linkage-low-mid-high.jpg`
+- `assets/images/concepts/curriculum-kid-building-robot.jpg`
+- `assets/images/concepts/curriculum-notebook-test-data.jpg`
+
+
+PART 4 - BUILD INSTRUCTIONS FOR IMPLEMENTATION
+
+Exact files to modify:
+1. `/Users/snehal/vex_iq_arian/vex_iq_info/concepts/friction.html`
+   - Add CSS before current line 47.
+   - Add hero image inside line 56 `.diagram`.
+   - Add Why and photo strip after current line 57.
+   - Upgrade Try It at lines 64-74.
+   - Patch/reset script at lines 110-129.
+2. `/Users/snehal/vex_iq_arian/vex_iq_info/concepts/what-is-torque.html`
+   - Add CSS before current line 53.
+   - Add hero image around lines 68-70.
+   - Add Why and photo strip after current line 72.
+   - Upgrade Try It at lines 79-88.
+   - Extend script at lines 100-111.
+3. `/Users/snehal/vex_iq_arian/vex_iq_info/concepts/levers.html`
+   - Add CSS before current line 45.
+   - Add hero image inside line 54 `.diagram`.
+   - Add Why and photo strip after current line 55.
+   - Upgrade Try It at lines 62-68.
+   - Extend script at lines 79-87.
+4. `/Users/snehal/vex_iq_arian/vex_iq_info/concepts/center-of-gravity.html`
+   - Add CSS before current line 46.
+   - Add hero image inside line 55 `.diagram`.
+   - Add Why and photo strip after current line 56.
+   - Upgrade Try It at lines 63-68.
+   - Extend script at lines 74-88.
+5. `/Users/snehal/vex_iq_arian/vex_iq_info/concepts/omni-wheels.html`
+   - Add CSS before current line 46.
+   - Add hero image inside line 55 `.diagram`.
+   - Add Why and photo strip after current line 56.
+   - Upgrade Try It at lines 63-69.
+   - Extend script at lines 75-84.
+6. `/Users/snehal/vex_iq_arian/vex_iq_info/concepts/linkages.html`
+   - Add CSS before current line 50.
+   - Add hero image inside line 59 `.diagram`.
+   - Add Why and photo strip after current line 60.
+   - Upgrade Try It at lines 67-73.
+   - Extend script at lines 80-111.
+7. `/Users/snehal/vex_iq_arian/vex_iq_info/index.html`
+   - Add curriculum visual/progress CSS after current line 65 and extend lines 70-101.
+   - Add progress UI after current line 817 and before line 819.
+   - Add theme classes to phase containers at lines 829, 1151, 1476, 1799, 2124, 2449.
+   - Add day icons/badges/progress controls to day toggles throughout lines 835-2779.
+   - Extend curriculum JS lines 2843-2903 with localStorage completion tracking.
+8. `/Users/snehal/vex_iq_arian/vex_iq_info/assets/css/style.css`
+   - Do not move concept-page CSS here during the first pass. The six concept pages currently do not load this stylesheet, and the user requested inline head CSS.
+   - Optional later cleanup: extract repeated concept visual CSS into a shared concept stylesheet and add a `<link>` to all six concept pages.
+9. Add image files under:
+   - `/Users/snehal/vex_iq_arian/vex_iq_info/assets/images/concepts/`
+
+CSS to add inline in each concept page head:
+Add this shared block before each page's `@media` rule, then add page-specific theme tweaks below it.
+
+```
+    body::before {
+      background-image: radial-gradient(rgba(45,45,45,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: -1;
+    }
+    .hero { position: relative; overflow: hidden; }
+    .diagram { overflow: hidden; }
+    .hero-photo {
+      border: 4px solid rgba(255,255,255,.9);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      display: block;
+      height: 128px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .why-matters {
+      background: linear-gradient(135deg, #fff7d6, #e8f8ff);
+      border: 4px solid #ffd166;
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      margin-top: 22px;
+      padding: 22px 22px 22px 86px;
+      position: relative;
+    }
+    .why-matters::before {
+      align-items: center;
+      background: var(--primary);
+      border-radius: 18px;
+      color: var(--white);
+      content: attr(data-icon);
+      display: flex;
+      font-size: 2rem;
+      height: 52px;
+      justify-content: center;
+      left: 20px;
+      position: absolute;
+      top: 22px;
+      width: 52px;
+    }
+    .why-matters h2 { font-size: 1.55rem; margin-bottom: 8px; }
+    .why-matters p { font-weight: 700; }
+    .photo-strip {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 22px;
+    }
+    .photo-card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .photo-card:hover,
+    .photo-card:focus-within {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px) rotate(-.4deg);
+    }
+    .photo-card img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      transition: transform .25s ease;
+      width: 100%;
+    }
+    .photo-card:hover img { transform: scale(1.04); }
+    .photo-card figcaption {
+      border-top: 5px solid var(--primary);
+      font-size: .95rem;
+      font-weight: 800;
+      line-height: 1.35;
+      padding: 12px 14px;
+    }
+    .card { border-bottom: 5px solid rgba(0,163,224,.32); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .try { background: linear-gradient(135deg, #ffffff, #f7f4ff); position: relative; overflow: hidden; }
+    .challenge-row, .reward-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .reward-badge {
+      background: #e9fff0;
+      border: 2px solid #7be495;
+      border-radius: 999px;
+      color: #126b35;
+      font-family: var(--font-heading);
+      font-size: .9rem;
+      font-weight: 800;
+      padding: 8px 12px;
+    }
+    .shake { animation: shake .25s ease; }
+    @keyframes shake {
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-2px); }
+    }
+```
+
+Add to each page's existing mobile media rule:
+```
+      .photo-strip { grid-template-columns: 1fr; }
+      .why-matters { padding: 18px; }
+      .why-matters::before { position: static; margin-bottom: 10px; }
+```
+
+HTML sections to add to each concept page:
+1. Why This Matters:
+```
+    <section class="why-matters" data-icon="🚀">
+      <h2>Why This Matters</h2>
+      <p>PAGE-SPECIFIC TEXT FROM PART 1.</p>
+    </section>
+```
+Use per-page icons:
+- Friction: `🕵️`
+- Torque: `💪`
+- Levers: `🦾`
+- Center of Gravity: `🎯`
+- Omni Wheels: `🛞`
+- Linkages: `🔗`
+
+2. Photo strip:
+```
+    <section class="photo-strip" aria-label="Real robot examples">
+      <figure class="photo-card">
+        <img src="../assets/images/concepts/FILE.jpg" alt="ALT TEXT" loading="lazy">
+        <figcaption>Short kid-readable caption that names what to notice.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="../assets/images/concepts/FILE.jpg" alt="ALT TEXT" loading="lazy">
+        <figcaption>Short kid-readable caption that names what to notice.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img src="../assets/images/concepts/FILE.jpg" alt="ALT TEXT" loading="lazy">
+        <figcaption>Short kid-readable caption that names what to notice.</figcaption>
+      </figure>
+    </section>
+```
+
+3. Hero image:
+```
+        <img class="hero-photo" src="../assets/images/concepts/FILE.jpg" alt="ALT TEXT" loading="eager">
+```
+Place inside each hero `.diagram` before the existing CSS diagram elements. Keep the existing `role="img"` and `aria-label` on `.diagram`, but update the aria-label if the real image changes the meaning.
+
+4. Try It challenge additions:
+- Add a `.reward-row` inside every `.try` section.
+- Add at least one score/meter element per page.
+- Add selected states to clicked controls.
+- Keep controls keyboard-accessible as buttons/ranges; do not convert everything to divs.
+
+What NOT to change:
+- Do not remove the six-page sequence or bottom navigation links:
+  - friction bottom nav line 77
+  - torque bottom nav line 91
+  - levers bottom nav line 71
+  - center of gravity bottom nav line 71
+  - omni wheels bottom nav line 72
+  - linkages bottom nav line 76
+- Do not delete the existing Think, Connect, or Reflect sections. The improvement is additive plus Try It upgrades.
+- Do not replace engineering terms with vague fun language. Keep friction, torque, lever, center of gravity, support polygon, omni wheel, holonomic, and linkage vocabulary.
+- Do not add in-app instructional paragraphs explaining that the page is more interactive. Let buttons, meters, and labels show what to do.
+- Do not rely only on generic stock photos. At least the hero image on each concept page should ideally be a local VEX IQ/Flop photo.
+- Do not hotlink production images from Unsplash/Pexels.
+- Do not change external video links or curriculum Learn lists while doing visual improvements.
+- Do not remove current ARIA labels or keyboard-friendly controls.
+- Do not use oversized marketing hero layouts on concept pages. These are learning tools, not landing pages.
+- Do not create nested cards inside cards. Use photo cards and challenge panels as top-level elements inside sections.
+- Do not let text overlap images on mobile. Use fixed aspect ratios and media queries.
+- Do not make the whole site one color theme. Each concept can have its own accent, and curriculum phases should have distinct themes.
+- Do not edit `/assets/css/style.css` for concept-page changes unless the implementation intentionally adds a shared stylesheet link to all six concept pages.
+
+Recommended implementation order:
+1. Create `/assets/images/concepts/` and add the top local/staged images first.
+2. Implement the shared concept CSS and Why/photo sections on `friction.html`.
+3. Upgrade friction Try It and verify keyboard/mouse reset behavior.
+4. Copy/adapt the shared visual CSS and section pattern to the other five concept pages.
+5. Upgrade one Try It at a time, testing each page after the script change.
+6. Add curriculum phase/day-card visual CSS to `index.html`.
+7. Add progress UI and localStorage only after the visual day-card changes are stable.
+8. Test desktop and mobile widths: 360px, 768px, 1024px, and 1280px.
+9. Check every image path, alt text, button focus outline, and `#day-N` curriculum deep link.

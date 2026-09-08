@@ -43,7 +43,126 @@
     button { background:var(--primary); border:0; border-radius:16px; color:white; cursor:pointer; font:800 1rem var(--font-heading); min-height:48px; padding:12px 16px; transition:.2s; }
     button:hover,button:focus { background:var(--primary-dark); transform:translateY(-1px); }
     .status { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.25rem; margin-top:12px; }
-    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:310px; } }
+    body::before {
+      background-image: radial-gradient(rgba(45,45,45,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: -1;
+    }
+    .hero { position: relative; overflow: hidden; }
+    .diagram { overflow: hidden; transition:transform .25s ease, box-shadow .25s ease; }
+    .hero-photo {
+      border: 4px solid rgba(255,255,255,.9);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      display: block;
+      height: 128px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .why-matters {
+      background: linear-gradient(135deg, #fff7d6, #e8f8ff);
+      border: 4px solid #ffd166;
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      margin-top: 22px;
+      padding: 22px 22px 22px 86px;
+      position: relative;
+    }
+    .why-matters::before {
+      align-items: center;
+      background: var(--primary);
+      border-radius: 18px;
+      color: var(--white);
+      content: attr(data-icon);
+      display: flex;
+      font-size: 2rem;
+      height: 52px;
+      justify-content: center;
+      left: 20px;
+      position: absolute;
+      top: 22px;
+      width: 52px;
+    }
+    .why-matters h2 { font-size: 1.55rem; margin-bottom: 8px; }
+    .why-matters p { font-weight: 700; }
+    .photo-strip {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 22px;
+    }
+    .photo-card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .photo-card:hover,
+    .photo-card:focus-within {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px) rotate(-.4deg);
+    }
+    .photo-card img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      transition: transform .25s ease;
+      width: 100%;
+    }
+    .photo-card:hover img { transform: scale(1.04); }
+    .photo-card figcaption {
+      border-top: 5px solid var(--primary);
+      font-size: .95rem;
+      font-weight: 800;
+      line-height: 1.35;
+      padding: 12px 14px;
+    }
+    .card { border-bottom: 5px solid rgba(0,163,224,.32); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .try { background: linear-gradient(135deg, #ffffff, #f7f4ff); position: relative; overflow: hidden; }
+    .challenge-row, .reward-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .reward-badge {
+      background: #e9fff0;
+      border: 2px solid #7be495;
+      border-radius: 999px;
+      color: #126b35;
+      display:none;
+      font-family: var(--font-heading);
+      font-size: .9rem;
+      font-weight: 800;
+      padding: 8px 12px;
+    }
+    .reward-badge.show { display:inline-flex; }
+    .shake { animation: shake .25s ease; }
+    @keyframes shake {
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-2px); }
+    }
+    .photo-placeholder { color:#fff; text-shadow:0 3px 10px rgba(0,0,0,.22); }
+    .support { border-color:#2ecc71; box-shadow:0 0 18px rgba(46,204,113,.22); }
+    .dot { animation:targetPulse 1.4s ease-in-out infinite; }
+    @keyframes targetPulse { 50% { box-shadow:0 0 0 8px rgba(231,76,60,.18), var(--shadow-md); } }
+    .diagram.tipping { box-shadow:0 0 0 5px rgba(231,76,60,.22); transform:rotate(2deg); }
+    .diagram.safe-zone { box-shadow:0 0 0 5px rgba(46,204,113,.2); }
+    .meter { background:#edf1f5; border-radius:999px; height:34px; overflow:hidden; margin-top:12px; }
+    .meter-fill { background:linear-gradient(90deg,var(--danger),var(--warning),var(--success)); border-radius:999px; height:100%; transition:width .25s ease; }
+    .indicator { border-radius:999px; display:inline-flex; font-family:var(--font-heading); font-weight:800; margin-top:10px; padding:8px 12px; }
+    .indicator.safe { background:#e9fff0; color:#126b35; }
+    .indicator.tip { background:#ffe0db; color:#9d2b22; }
+    button.selected { background:var(--accent-dark); box-shadow:0 0 0 3px rgba(0,163,224,.22); }
+    label { font-weight:800; }
+    input[type=range] { accent-color:var(--primary); min-height:44px; width:100%; }
+    .target { background:#fff7d6; border:2px dashed #ffd166; border-radius:16px; font-weight:800; margin-top:12px; padding:10px 12px; }
+    @media (min-width:761px) { body { background-attachment: fixed; } }
+    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:310px; } .photo-strip { grid-template-columns: 1fr; } .why-matters { padding: 18px; } .why-matters::before { position: static; margin-bottom: 10px; } }
     @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } button { display:none; } }
   </style>
 </head>
@@ -54,6 +173,24 @@
       <div><h1>Why Does My Robot Tip Over? Center of Gravity Explained</h1><p class="hook"><span class="big-question">Think first!</span>Why does a robot feel brave when its arm is down, then suddenly wobble when the arm rises?</p></div>
       <div class="diagram" role="img" aria-label="CSS diagram of a robot base with a support polygon and a red balance dot."><div class="bag" id="bag">🟪</div><div class="arm" id="arm"></div><div class="bot"></div><div class="support"></div><div class="floor"></div><div class="dot" id="dot"></div><div class="label">balance dot</div></div>
     </section>
+    <section class="why-matters" data-icon="🎯">
+      <h2>Why This Matters</h2>
+      <p>Flop can score only if it stays on its wheels. A tall arm, fast turn, or Bean Bag held too far forward can move the balance point toward the tipping edge right when you need control most. If you understand center of gravity, you can drive braver and build smarter.</p>
+    </section>
+    <section class="photo-strip" aria-label="Real robot examples">
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Low wide robot base that helps keep the center of gravity inside the wheels." loading="lazy" style="background:linear-gradient(135deg,#2ECC71,#00A3E0);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">🚙</div>
+        <figcaption>A low wide base keeps the balance point inside the wheels.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Tape on the floor connecting wheel contact points to show the support polygon." loading="lazy" style="background:linear-gradient(135deg,#ffd166,#E87722);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">🔲</div>
+        <figcaption>The support polygon is the safe floor shape under the robot.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Robot leaning near a tipping point during a controlled stability test." loading="lazy" style="background:linear-gradient(135deg,#E74C3C,#8e44ad);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">⚠️</div>
+        <figcaption>A tall load near the edge can turn a fast move into a tip.</figcaption>
+      </figure>
+    </section>
     <section class="grid">
       <article class="card"><h2>🎯 Balance point</h2><p>Center of gravity is the spot where the robot's weight feels balanced.</p></article>
       <article class="card"><h2>🔲 Support polygon</h2><p>The wheels make a floor shape. If the balance dot stays inside, the robot stays up.</p></article>
@@ -61,10 +198,17 @@
     </section>
     <section class="think"><h2>❓ Think About This!</h2><p>Would a wide, low robot or a skinny, tall robot feel safer when it turns quickly?</p></section>
     <section class="try">
-      <h2>⭐ Try It! Move the Bean Bag</h2>
-      <p>Tap a button. Watch the bag and balance dot move toward or away from the tipping edge.</p>
+      <h2>⭐ Try It! Don't Tip Flop!</h2>
+      <p>Move the Bean Bag, choose driver speed, and change base width. Keep the dot inside the safe zone.</p>
+      <p class="target">Challenge: Find 2 safe ways to score high.</p>
+      <label for="bagPosition">Bean Bag position</label><input id="bagPosition" type="range" min="0" max="3" value="0">
       <div class="buttons"><button type="button" data-pos="low">Bag low</button><button type="button" data-pos="middle">Bag middle</button><button type="button" data-pos="high">Bag high</button><button type="button" data-pos="front">Bag high + front</button></div>
+      <div class="buttons" id="speedChoice" aria-label="Driver speed selector"><button type="button" data-speed="slow">Slow turn</button><button type="button" data-speed="medium">Medium turn</button><button type="button" data-speed="fast">Fast turn</button></div>
+      <div class="buttons" id="baseChoice" aria-label="Base width selector"><button type="button" data-base="narrow">Narrow base</button><button type="button" data-base="normal">Normal base</button><button type="button" data-base="wide">Wide base</button></div>
+      <div class="meter" aria-label="Stability score"><div class="meter-fill" id="stabilityMeter" style="width:90%"></div></div>
+      <span class="indicator safe" id="tipIndicator">Safe</span>
       <p class="status" id="status">Low is safest. The balance dot is deep inside the wheels.</p>
+      <div class="reward-row"><span class="reward-badge" id="rewardBadge">🎯 Two safe high-score setups found!</span></div>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>Flop must drive, turn, collect, and score while its arm changes balance. Smooth driving and a low, wide base help it stay brave.</p></section>
     <section class="reflect"><h2>🔍 Reflect</h2><ul><li>If you could add weight anywhere on Flop, where would you put it to prevent tipping? Why?</li><li>What happens to the balance point when Flop's arm is fully extended forward?</li></ul></section>
@@ -72,20 +216,63 @@
   </main>
   <script>
     const states = {
-      low: { bag:['50%','190px'], dot:['50%','218px'], arm:'20deg', text:'Low is safest. The balance dot is deep inside the wheels.' },
-      middle: { bag:['57%','124px'], dot:['56%','205px'], arm:'-25deg', text:'Middle is okay, but the dot starts walking toward the edge.' },
-      high: { bag:['62%','62px'], dot:['61%','198px'], arm:'-55deg', text:'High is wobblier. Slow turns help.' },
-      front: { bag:['72%','58px'], dot:['72%','198px'], arm:'-48deg', text:'Danger zone! The dot is near the edge, so tipping is much easier.' }
+      low: { bag:['50%','190px'], dot:['50%','218px'], arm:'20deg', risk:5, text:'Low is safest. The balance dot is deep inside the wheels.' },
+      middle: { bag:['57%','124px'], dot:['56%','205px'], arm:'-25deg', risk:18, text:'Middle is okay, but the dot starts walking toward the edge.' },
+      high: { bag:['62%','62px'], dot:['61%','198px'], arm:'-55deg', risk:34, text:'High is wobblier. Slow turns help.' },
+      front: { bag:['72%','58px'], dot:['72%','198px'], arm:'-48deg', risk:54, text:'Danger zone! The dot is near the edge, so tipping is much easier.' }
     };
-    document.querySelectorAll('button[data-pos]').forEach(button => button.addEventListener('click', () => {
-      const s = states[button.dataset.pos];
+    const speedStates = { slow:0, medium:12, fast:28 };
+    const baseStates = { narrow:0, normal:15, wide:30 };
+    const posKeys = ['low','middle','high','front'];
+    const safeHighConfigs = new Set();
+    let pos = 'low';
+    let speed = 'slow';
+    let base = 'normal';
+    function updateStability() {
+      const s = states[pos];
+      const score = Math.max(0, Math.min(100, 70 + baseStates[base] - s.risk - speedStates[speed]));
       document.querySelector('#bag').style.left = s.bag[0];
       document.querySelector('#bag').style.top = s.bag[1];
       document.querySelector('#dot').style.left = s.dot[0];
       document.querySelector('#dot').style.top = s.dot[1];
       document.querySelector('#arm').style.transform = 'rotate(' + s.arm + ')';
-      document.querySelector('#status').textContent = s.text;
+      document.querySelector('#stabilityMeter').style.width = score + '%';
+      const indicator = document.querySelector('#tipIndicator');
+      const heroDiagram = document.querySelector('.diagram');
+      const isTip = score < 45;
+      indicator.textContent = isTip ? 'TIP!' : score < 65 ? 'Wobbly' : 'Safe';
+      indicator.className = 'indicator ' + (isTip ? 'tip' : 'safe');
+      heroDiagram.classList.toggle('tipping', isTip);
+      heroDiagram.classList.toggle('safe-zone', score >= 65);
+      document.querySelector('#status').textContent = isTip ? 'Back off: lower the arm or slow the turn.' : s.text + ' Stability score: ' + score + '.';
+      if ((pos === 'high' || pos === 'front') && score >= 65) safeHighConfigs.add(pos + '-' + speed + '-' + base);
+      document.querySelector('#rewardBadge').classList.toggle('show', safeHighConfigs.size >= 2);
+    }
+    document.querySelectorAll('button[data-pos]').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('button[data-pos]').forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
+      pos = button.dataset.pos;
+      document.querySelector('#bagPosition').value = posKeys.indexOf(pos);
+      updateStability();
     }));
+    document.querySelector('#bagPosition').addEventListener('input', event => {
+      document.querySelector('[data-pos="' + posKeys[Number(event.target.value)] + '"]').click();
+    });
+    document.querySelectorAll('button[data-speed]').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('button[data-speed]').forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
+      speed = button.dataset.speed;
+      updateStability();
+    }));
+    document.querySelectorAll('button[data-base]').forEach(button => button.addEventListener('click', () => {
+      document.querySelectorAll('button[data-base]').forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
+      base = button.dataset.base;
+      updateStability();
+    }));
+    document.querySelector('[data-pos="low"]').click();
+    document.querySelector('[data-speed="slow"]').click();
+    document.querySelector('[data-base="normal"]').click();
   </script>
 </body>
 </html>

@@ -50,7 +50,125 @@
     button:hover,button:focus { background:var(--accent-dark); transform:translateY(-1px); }
     .answer { color:var(--primary-dark); font-weight:800; margin-top:10px; min-height:30px; }
     .nav { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
-    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:260px; } .large { height:128px; width:128px; } }
+    body::before {
+      background-image: radial-gradient(rgba(45,45,45,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: -1;
+    }
+    .hero { position: relative; overflow: hidden; }
+    .diagram { overflow: hidden; }
+    .hero-photo {
+      border: 4px solid rgba(255,255,255,.9);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      display: block;
+      height: 128px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .why-matters {
+      background: linear-gradient(135deg, #fff7d6, #e8f8ff);
+      border: 4px solid #ffd166;
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      margin-top: 22px;
+      padding: 22px 22px 22px 86px;
+      position: relative;
+    }
+    .why-matters::before {
+      align-items: center;
+      background: var(--primary);
+      border-radius: 18px;
+      color: var(--white);
+      content: attr(data-icon);
+      display: flex;
+      font-size: 2rem;
+      height: 52px;
+      justify-content: center;
+      left: 20px;
+      position: absolute;
+      top: 22px;
+      width: 52px;
+    }
+    .why-matters h2 { font-size: 1.55rem; margin-bottom: 8px; }
+    .why-matters p { font-weight: 700; }
+    .photo-strip {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 22px;
+    }
+    .photo-card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .photo-card:hover,
+    .photo-card:focus-within {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px) rotate(-.4deg);
+    }
+    .photo-card img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      transition: transform .25s ease;
+      width: 100%;
+    }
+    .photo-card:hover img { transform: scale(1.04); }
+    .photo-card figcaption {
+      border-top: 5px solid var(--primary);
+      font-size: .95rem;
+      font-weight: 800;
+      line-height: 1.35;
+      padding: 12px 14px;
+    }
+    .card { border-bottom: 5px solid rgba(0,163,224,.32); position:relative; transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .card::before { content:"⚙️"; position:absolute; right:14px; top:10px; }
+    .try { background: linear-gradient(135deg, #ffffff, #f7f4ff); position: relative; overflow: hidden; }
+    .challenge-row, .reward-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .reward-badge {
+      background: #e9fff0;
+      border: 2px solid #7be495;
+      border-radius: 999px;
+      color: #126b35;
+      display:none;
+      font-family: var(--font-heading);
+      font-size: .9rem;
+      font-weight: 800;
+      padding: 8px 12px;
+    }
+    .reward-badge.show { display:inline-flex; }
+    .shake { animation: shake .25s ease; }
+    @keyframes shake {
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-2px); }
+    }
+    .photo-placeholder { color:#fff; text-shadow:0 3px 10px rgba(0,0,0,.22); }
+    .small,.large { animation-play-state: paused; }
+    .diagram:hover .small,.diagram:hover .large,.diagram:focus-within .small,.diagram:focus-within .large { animation-play-state: running; }
+    .challenge-panel { background:#172033; border:4px solid #263a61; border-radius:20px; color:#fff; margin-top:14px; padding:16px; }
+    .ratio-card { background:#263a61; border:3px solid transparent; }
+    .ratio-card.selected { border-color:#ffd166; box-shadow:0 0 0 3px rgba(255,209,102,.24); }
+    .ratio-card.is-correct { background:#1d7f45; }
+    .ratio-card.is-risky { background:#9d2b22; }
+    .dual-meter { display:grid; gap:12px; grid-template-columns:1fr 1fr; margin-top:12px; }
+    .bar-label { display:flex; font-family:var(--font-heading); font-weight:800; justify-content:space-between; }
+    .bar { background:#edf1f5; border-radius:999px; height:28px; overflow:hidden; }
+    .bar-fill { background:linear-gradient(90deg,var(--accent),var(--success)); border-radius:999px; height:100%; transition:width .25s ease; }
+    .meter.stall-zone { background:repeating-linear-gradient(45deg,#ffe0db 0 10px,#ffd0c9 10px 20px); animation: shake .35s ease; }
+    @media (min-width:761px) { body { background-attachment: fixed; } }
+    @media (max-width:760px) { .hero,.grid,.dual-meter { grid-template-columns:1fr; } .diagram { min-height:260px; } .large { height:128px; width:128px; } .photo-strip { grid-template-columns: 1fr; } .why-matters { padding: 18px; } .why-matters::before { position: static; margin-bottom: 10px; } }
     @media print { body { background:white; } .top,.nav,.card,.robot,.think,.hero { box-shadow:none; } .try { break-inside:avoid; } button { display:none; } }
   </style>
 </head>
@@ -70,6 +188,24 @@
         <p class="caption">Fast little gear + big gear = slower output, stronger turning force.</p>
       </div>
     </section>
+    <section class="why-matters" data-icon="💪">
+      <h2>Why This Matters</h2>
+      <p>Torque is what lets Flop lift a Bean Bag instead of just buzzing sadly at the bottom. When you choose gears, arm length, and motor speed, you are choosing whether your robot wins a pushing/lifting fight or stalls in front of the goal. Learn this and you can make Flop feel stronger without pretending the motor got bigger.</p>
+    </section>
+    <section class="photo-strip" aria-label="Real robot examples">
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Robot arm lifting a soft game object away from the floor." loading="lazy" style="background:linear-gradient(135deg,#2ECC71,#00A3E0);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">🏋️</div>
+        <figcaption>A lifting arm needs torque when the Bean Bag leaves the floor.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Long robot arm pivot showing why distant loads need more turning force." loading="lazy" style="background:linear-gradient(135deg,#E87722,#ffd166);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">📏</div>
+        <figcaption>A longer arm makes the same load feel harder at the pivot.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Gear train labeled to compare fast output and strong output." loading="lazy" style="background:linear-gradient(135deg,#8e44ad,#E74C3C);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">⚙️</div>
+        <figcaption>Gear trains trade speed for stronger lifting force.</figcaption>
+      </figure>
+    </section>
     <section class="grid">
       <article class="card"><h2>🔬 What is it?</h2><p>Torque means <strong>turning force</strong>. It is the twist that helps a shaft, wheel, gear, or arm move.</p></article>
       <article class="card"><h2>📏 Why arms matter</h2><p>A Bean Bag far from the pivot is harder to lift. Long arm means more torque needed.</p></article>
@@ -77,14 +213,27 @@
     </section>
     <section class="think"><h2>❓ Think About This!</h2><p>If a lift works with no Bean Bag but stops with one Bean Bag, should you first blame the code, the battery, or the gearing?</p></section>
     <section class="try">
-      <h2>⭐ Try It! Torque Meter</h2>
-      <p>Move the sliders. Longer arm plus heavier bag means the motor needs more turning force.</p>
+      <h2>⭐ Try It! Can Flop Lift It?</h2>
+      <p>Set the arm, load, and gear choice. The meter warns when Flop is about to stall.</p>
+      <p class="target">Challenge: lift 2 bags at 6 holes without entering Stall Risk.</p>
       <div class="control"><label for="arm">Arm length: <span id="armValue">3</span> holes</label><input id="arm" type="range" min="1" max="10" value="3"></div>
-      <div class="control"><label for="weight">Bag weight: <span id="weightValue">2</span> scoops</label><input id="weight" type="range" min="1" max="8" value="2"></div>
-      <div class="meter" aria-label="Torque needed meter"><div class="meter-fill" id="meterFill"></div></div>
-      <p class="result" id="result">Torque needed: 6 twist points</p>
-      <div class="choice-row"><button type="button" data-answer="strong">12T drives 36T</button><button type="button" data-answer="fast">36T drives 12T</button></div>
+      <div class="control"><label for="weight">Bag weight: <span id="weightValue">2</span> bags</label><input id="weight" type="range" min="1" max="4" value="2"></div>
+      <div class="choice-row" id="ratioChoice" aria-label="Gear ratio selector">
+        <button class="ratio-card" type="button" data-answer="fast" data-ratio="0.35">Fast 36T → 12T</button>
+        <button class="ratio-card" type="button" data-answer="balanced" data-ratio="1">Balanced 24T → 24T</button>
+        <button class="ratio-card" type="button" data-answer="strong" data-ratio="3">Strong 12T → 36T</button>
+      </div>
+      <div class="challenge-panel">
+        <div class="meter" aria-label="Motor strain meter"><div class="meter-fill" id="meterFill"></div></div>
+        <p class="result" id="result">Motor strain: Easy lift</p>
+        <div class="dual-meter">
+          <div><div class="bar-label"><span>Lifting force</span><span id="forceValue">100</span></div><div class="bar"><div class="bar-fill" id="forceFill" style="width:100%"></div></div></div>
+          <div><div class="bar-label"><span>Speed</span><span id="speedValue">33</span></div><div class="bar"><div class="bar-fill" id="speedFill" style="width:33%"></div></div></div>
+        </div>
+      </div>
       <p class="answer" id="answer"></p>
+      <p class="answer" id="challengeStatus"></p>
+      <div class="reward-row"><span class="reward-badge" id="rewardBadge">💪 Gear choice unlocked: strong but slower.</span></div>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>Flop's arm must lift Bean Bags again and again. Slow gearing can make the lift stronger and easier to control, but if it is too slow, match time disappears.</p></section>
     <section class="reflect"><h2>🔍 Reflect</h2><ul><li>If you could have both fast AND strong, why wouldn't you? What stops a real motor from doing both?</li><li>Where on Flop do you think torque matters most — the arm, the intake, or the wheels? Why?</li></ul></section>
@@ -97,18 +246,46 @@
     const weightValue = document.querySelector('#weightValue');
     const meterFill = document.querySelector('#meterFill');
     const result = document.querySelector('#result');
+    const meter = document.querySelector('.meter');
+    const answer = document.querySelector('#answer');
+    const challengeStatus = document.querySelector('#challengeStatus');
+    const rewardBadge = document.querySelector('#rewardBadge');
+    const forceFill = document.querySelector('#forceFill');
+    const speedFill = document.querySelector('#speedFill');
+    const forceValue = document.querySelector('#forceValue');
+    const speedValue = document.querySelector('#speedValue');
+    let selectedRatio = 3;
+    let selectedKind = 'strong';
     function updateTorque() {
-      const torque = Number(arm.value) * Number(weight.value);
+      const rawTorque = Number(arm.value) * Number(weight.value);
+      const strain = rawTorque / selectedRatio;
+      const strainPct = Math.min(100, strain * 7);
+      const force = Math.round(Math.min(100, selectedRatio * 34));
+      const speed = Math.round(Math.min(100, 100 / selectedRatio));
       armValue.textContent = arm.value;
       weightValue.textContent = weight.value;
-      meterFill.style.width = Math.min(100, torque * 1.3) + '%';
-      result.textContent = 'Torque needed: ' + torque + ' twist points';
+      meterFill.style.width = strainPct + '%';
+      meter.classList.toggle('stall-zone', strainPct > 78);
+      forceFill.style.width = force + '%';
+      speedFill.style.width = speed + '%';
+      forceValue.textContent = force;
+      speedValue.textContent = speed;
+      result.textContent = strainPct > 78 ? 'Motor strain: Stall risk' : strainPct > 48 ? 'Motor strain: Careful' : 'Motor strain: Easy lift';
+      challengeStatus.textContent = Number(arm.value) >= 6 && Number(weight.value) >= 2 && strainPct <= 78 ? 'Challenge clear: Flop can lift without stalling.' : 'Tune the gears, arm length, or bag load to beat the challenge.';
+      rewardBadge.classList.toggle('show', Number(arm.value) >= 6 && Number(weight.value) >= 2 && selectedKind === 'strong' && strainPct <= 78);
+      document.querySelector('.diagram').classList.toggle('shake', strainPct > 78);
     }
     arm.addEventListener('input', updateTorque);
     weight.addEventListener('input', updateTorque);
     document.querySelectorAll('button[data-answer]').forEach(button => button.addEventListener('click', () => {
-      document.querySelector('#answer').textContent = button.dataset.answer === 'strong' ? 'Yes! Small gear to big gear is slower but stronger.' : 'That one is faster, but it gives less lifting torque.';
+      document.querySelectorAll('button[data-answer]').forEach(b => b.classList.remove('selected','is-correct','is-risky'));
+      selectedRatio = Number(button.dataset.ratio);
+      selectedKind = button.dataset.answer;
+      button.classList.add('selected', selectedKind === 'strong' ? 'is-correct' : 'is-risky');
+      answer.textContent = selectedKind === 'strong' ? 'Yes! Small gear to big gear is slower but stronger.' : 'That choice is faster, but it gives less lifting torque.';
+      updateTorque();
     }));
+    document.querySelector('[data-answer="strong"]').click();
     updateTorque();
   </script>
 </body>

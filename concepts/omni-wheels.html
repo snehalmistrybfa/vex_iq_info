@@ -43,7 +43,129 @@
     .movement span { opacity:.18; transition:.2s; }
     .movement span.on { color:var(--primary); opacity:1; transform:scale(1.18); }
     .status { color:var(--primary-dark); font-family:var(--font-heading); font-size:1.2rem; margin-top:10px; }
-    @media (max-width:760px) { .hero,.grid { grid-template-columns:1fr; } .diagram { min-height:285px; } }
+    body::before {
+      background-image: radial-gradient(rgba(45,45,45,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: -1;
+    }
+    .hero { position: relative; overflow: hidden; }
+    .diagram { overflow: hidden; }
+    .hero-photo {
+      border: 4px solid rgba(255,255,255,.9);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      display: block;
+      height: 128px;
+      margin-bottom: 12px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .why-matters {
+      background: linear-gradient(135deg, #fff7d6, #e8f8ff);
+      border: 4px solid #ffd166;
+      border-radius: 22px;
+      box-shadow: var(--shadow-md);
+      margin-top: 22px;
+      padding: 22px 22px 22px 86px;
+      position: relative;
+    }
+    .why-matters::before {
+      align-items: center;
+      background: var(--primary);
+      border-radius: 18px;
+      color: var(--white);
+      content: attr(data-icon);
+      display: flex;
+      font-size: 2rem;
+      height: 52px;
+      justify-content: center;
+      left: 20px;
+      position: absolute;
+      top: 22px;
+      width: 52px;
+    }
+    .why-matters h2 { font-size: 1.55rem; margin-bottom: 8px; }
+    .why-matters p { font-weight: 700; }
+    .photo-strip {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 22px;
+    }
+    .photo-card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .photo-card:hover,
+    .photo-card:focus-within {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px) rotate(-.4deg);
+    }
+    .photo-card img {
+      aspect-ratio: 4 / 3;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      transition: transform .25s ease;
+      width: 100%;
+    }
+    .photo-card:hover img { transform: scale(1.04); }
+    .photo-card figcaption {
+      border-top: 5px solid var(--primary);
+      font-size: .95rem;
+      font-weight: 800;
+      line-height: 1.35;
+      padding: 12px 14px;
+    }
+    .card { border-bottom: 5px solid rgba(0,163,224,.32); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .try { background: linear-gradient(135deg, #ffffff, #f7f4ff); position: relative; overflow: hidden; }
+    .challenge-row, .reward-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .reward-badge {
+      background: #e9fff0;
+      border: 2px solid #7be495;
+      border-radius: 999px;
+      color: #126b35;
+      display:none;
+      font-family: var(--font-heading);
+      font-size: .9rem;
+      font-weight: 800;
+      padding: 8px 12px;
+    }
+    .reward-badge.show { display:inline-flex; }
+    .shake { animation: shake .25s ease; }
+    @keyframes shake {
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-2px); }
+    }
+    .photo-placeholder { color:#fff; text-shadow:0 3px 10px rgba(0,0,0,.22); }
+    .diagram:hover .wheel,.diagram:focus-within .wheel { animation:omniSpin 2s linear infinite; }
+    .diagram:hover .roller,.diagram:focus-within .roller { background:#a8eeff; box-shadow:0 0 12px rgba(103,214,255,.8); }
+    @keyframes omniSpin { to { transform:translateX(-50%) rotate(360deg); } }
+    .movement { background-image:linear-gradient(#f8f9fa,#f8f9fa), linear-gradient(90deg,rgba(0,163,224,.12) 1px,transparent 1px), linear-gradient(rgba(0,163,224,.12) 1px,transparent 1px); background-size:auto, 32px 32px, 32px 32px; }
+    .selected-drive { background:var(--primary); box-shadow:0 0 0 3px rgba(232,119,34,.22); }
+    .target { background:#fff7d6; border:2px dashed #ffd166; border-radius:16px; font-weight:800; margin-top:12px; padding:10px 12px; }
+    .route-choice { display:grid; gap:10px; grid-template-columns:repeat(3,1fr); margin-top:12px; }
+    .route-choice button { background:#f8f9fa; border:3px solid #d7e2eb; color:var(--secondary); }
+    .route-choice button.bright { border-color:var(--success); background:#e9fff0; }
+    .route-choice button.dim { opacity:.55; }
+    .score-grid { display:grid; gap:10px; grid-template-columns:repeat(2,1fr); margin-top:12px; }
+    .score-item { background:#fff; border:2px solid #dce7ef; border-radius:14px; padding:10px; }
+    .score-bar { background:#edf1f5; border-radius:999px; height:18px; overflow:hidden; }
+    .score-fill { background:linear-gradient(90deg,var(--accent),var(--success)); height:100%; transition:width .2s ease; }
+    .indicator { border-radius:999px; display:inline-flex; font-family:var(--font-heading); font-weight:800; margin-top:10px; padding:8px 12px; }
+    .indicator.yes { background:#e9fff0; color:#126b35; }
+    .indicator.no { background:#ffe0db; color:#9d2b22; }
+    @media (min-width:761px) { body { background-attachment: fixed; } }
+    @media (max-width:760px) { .hero,.grid,.route-choice,.score-grid { grid-template-columns:1fr; } .diagram { min-height:285px; } .photo-strip { grid-template-columns: 1fr; } .why-matters { padding: 18px; } .why-matters::before { position: static; margin-bottom: 10px; } }
     @media print { body { background:white; } .top,.nav,.hero,.card,.try,.robot,.think { box-shadow:none; } .try { break-inside:avoid; } button { display:none; } }
   </style>
 </head>
@@ -54,6 +176,24 @@
       <div><h1>Omni Wheels: The Wheels That Slide Sideways</h1><p class="hook"><span class="big-question">Think first!</span>How can a wheel roll forward but also slide sideways without fighting the robot?</p></div>
       <div class="diagram" role="img" aria-label="CSS diagram of an omni wheel with small rollers and a sideways arrow."><div class="wheel"><div class="roller r1"></div><div class="roller r2"></div><div class="roller r3"></div><div class="roller r4"></div></div><div class="side-arrow">⇆</div></div>
     </section>
+    <section class="why-matters" data-icon="🛞">
+      <h2>Why This Matters</h2>
+      <p>Omni wheels can help Flop line up faster, slide around mistakes, and reach a scoring spot without wasting a big turn. But they can also cost traction, motors, and build simplicity. Picking wheels is not about what looks coolest; it is about which movement helps your Level Up route score more points.</p>
+    </section>
+    <section class="photo-strip" aria-label="Real robot examples">
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Traction wheel and omni wheel side by side for comparison." loading="lazy" style="background:linear-gradient(135deg,#00A3E0,#2ECC71);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">🛞</div>
+        <figcaption>Compare grip wheels with omni rollers before picking a drive.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Top-down robot drivetrain with wheels arranged for tank driving." loading="lazy" style="background:linear-gradient(135deg,#343A40,#00A3E0);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">⬆️</div>
+        <figcaption>Tank drive is simple, strong, and easy to keep straight.</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <div class="photo-placeholder" role="img" aria-label="Omni wheels arranged to create sideways holonomic motion." loading="lazy" style="background:linear-gradient(135deg,#8e44ad,#E87722);height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;">↔️</div>
+        <figcaption>H-drive and X-drive layouts can make sideways movement possible.</figcaption>
+      </figure>
+    </section>
     <section class="grid">
       <article class="card"><h2>🛞 Traction wheels</h2><p>They grip strongly. Great for pushing, but they can fight sideways turning.</p></article>
       <article class="card"><h2>🧃 Omni wheels</h2><p>Little rollers let the wheel slide sideways more easily.</p></article>
@@ -61,11 +201,20 @@
     </section>
     <section class="think"><h2>❓ Think About This!</h2><p>If you spend extra motors on sideways driving, what motors are left for the arm and intake?</p></section>
     <section class="try">
-      <h2>⭐ Try It! Pick a Drivetrain</h2>
-      <p>Tap a drive type. The bright arrows show the moves that are easy for that drive.</p>
+      <h2>⭐ Try It! Drivebase Arena</h2>
+      <p>Pick a drive type. Bright paths are easy, dim paths cost time or practice.</p>
+      <p class="target">Challenge: Choose a drive for Flop's 6-motor budget.</p>
       <div class="buttons"><button type="button" data-drive="tank">Tank drive</button><button type="button" data-drive="h">H-drive</button><button type="button" data-drive="x">X-drive</button></div>
       <div class="movement" aria-label="Movement arrows"><span data-dir="diag1">↖</span><span data-dir="forward">↑</span><span data-dir="diag2">↗</span><span data-dir="left">←</span><span>🤖</span><span data-dir="right">→</span><span data-dir="diag3">↙</span><span data-dir="back">↓</span><span data-dir="diag4">↘</span></div>
+      <span class="indicator no" id="strafeIndicator">Can strafe? No</span>
+      <div class="route-choice" id="routeChoice" aria-label="Target paths">
+        <button type="button" data-route="straight">Straight path</button>
+        <button type="button" data-route="sidestep">Sidestep path</button>
+        <button type="button" data-route="diagonal">Diagonal path</button>
+      </div>
+      <div class="score-grid" id="driveScore" aria-label="Drivebase score card"></div>
       <p class="status" id="status">Tank drive: forward, backward, and turning are simple and strong.</p>
+      <div class="reward-row"><span class="reward-badge show" id="rewardBadge">🛞 Motor budget checked.</span></div>
     </section>
     <section class="robot"><h2>🤖 Connect to Flop</h2><p>Strafing can help Flop line up near goals, but extra drive motors mean fewer motors for arm and intake under the 6-motor limit.</p></section>
     <section class="reflect"><h2>🔍 Reflect</h2><ul><li>If strafing saves time but costs a motor, when is it worth it for Level Up?</li><li>Why might a robot with omni wheels slide differently on different floor surfaces?</li></ul></section>
@@ -73,14 +222,41 @@
   </main>
   <script>
     const drives = {
-      tank: { dirs:['forward','back'], text:'Tank drive: forward, backward, and turning are simple and strong.' },
-      h: { dirs:['forward','back','left','right'], text:'H-drive: it can strafe left and right, but it uses an extra sideways wheel and motor.' },
-      x: { dirs:['forward','back','left','right','diag1','diag2','diag3','diag4'], text:'X-drive: many directions are possible, but building and driving take more practice.' }
+      tank: { dirs:['forward','back'], routes:['straight'], strafe:false, scores:{ 'alignment speed':55, 'motor cost':95, traction:90, 'easy to build':95 }, text:'Tank drive: forward, backward, and turning are simple and strong.' },
+      h: { dirs:['forward','back','left','right'], routes:['straight','sidestep'], strafe:true, scores:{ 'alignment speed':85, 'motor cost':62, traction:65, 'easy to build':58 }, text:'H-drive: it can strafe left and right, but it uses an extra sideways wheel and motor.' },
+      x: { dirs:['forward','back','left','right','diag1','diag2','diag3','diag4'], routes:['straight','sidestep','diagonal'], strafe:true, scores:{ 'alignment speed':95, 'motor cost':55, traction:58, 'easy to build':42 }, text:'X-drive: many directions are possible, but building and driving take more practice.' }
     };
+    let selectedDrive = 'tank';
+    function renderScores(drive) {
+      const score = document.querySelector('#driveScore');
+      score.innerHTML = '';
+      Object.entries(drive.scores).forEach(([label,value]) => {
+        const item = document.createElement('div');
+        item.className = 'score-item';
+        item.innerHTML = '<strong>' + label + '</strong><div class="score-bar"><div class="score-fill" style="width:' + value + '%"></div></div>';
+        score.appendChild(item);
+      });
+    }
     document.querySelectorAll('button[data-drive]').forEach(button => button.addEventListener('click', () => {
+      selectedDrive = button.dataset.drive;
+      document.querySelectorAll('button[data-drive]').forEach(b => b.classList.remove('selected-drive'));
+      button.classList.add('selected-drive');
       document.querySelectorAll('[data-dir]').forEach(arrow => arrow.classList.remove('on'));
-      drives[button.dataset.drive].dirs.forEach(dir => document.querySelector('[data-dir="' + dir + '"]').classList.add('on'));
-      document.querySelector('#status').textContent = drives[button.dataset.drive].text;
+      drives[selectedDrive].dirs.forEach(dir => document.querySelector('[data-dir="' + dir + '"]').classList.add('on'));
+      document.querySelectorAll('[data-route]').forEach(route => {
+        const easy = drives[selectedDrive].routes.includes(route.dataset.route);
+        route.classList.toggle('bright', easy);
+        route.classList.toggle('dim', !easy);
+      });
+      const strafe = document.querySelector('#strafeIndicator');
+      strafe.textContent = 'Can strafe? ' + (drives[selectedDrive].strafe ? 'Yes' : 'No');
+      strafe.className = 'indicator ' + (drives[selectedDrive].strafe ? 'yes' : 'no');
+      renderScores(drives[selectedDrive]);
+      document.querySelector('#status').textContent = drives[selectedDrive].text;
+    }));
+    document.querySelectorAll('[data-route]').forEach(route => route.addEventListener('click', () => {
+      const easy = drives[selectedDrive].routes.includes(route.dataset.route);
+      document.querySelector('#status').textContent = easy ? 'That route fits this drive well.' : route.dataset.route === 'sidestep' ? 'Tank can do this, but it must turn first.' : 'This path needs extra driver practice or a different drive.';
     }));
     document.querySelector('[data-drive="tank"]').click();
   </script>
